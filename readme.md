@@ -2,6 +2,4 @@
 
  - base url : https://flintlab-fzoo.github.io/ytscrap/
 
-   - ex url : <a href="https://flintlab-fzoo.github.io/ytscrap/03.투자/월 100만 원씩 투자해서 400만 원씩 따박따박 받는 방법.html">https://flintlab-fzoo.github.io/ytscrap/03.투자/월 100만 원씩 투자해서 400만 원씩 따박따박 받는 방법.html</a>
-
  - tool : extractVideoSubtitle
