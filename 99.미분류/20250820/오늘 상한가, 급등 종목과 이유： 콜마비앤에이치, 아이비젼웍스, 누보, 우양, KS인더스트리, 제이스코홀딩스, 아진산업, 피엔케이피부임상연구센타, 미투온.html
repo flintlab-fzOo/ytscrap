@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 상한가, 급등 종목과 이유： 콜마비앤에이치, 아이비젼웍스, 누보, 우양, KS인더스트리, 제이스코홀딩스, 아진산업, 피엔케이피부임상연구센타, 미투온</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body { margin: 0; padding: 0; background-color: #f0f2f5; font-family: 'Noto Sans KR', sans-serif; color: #333; }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .content-container {
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 16px;
+            font-family: 'Noto Sans KR', sans-serif;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .meta-description {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 15px;
+            border: 1px solid #b2ebf2;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content-container { padding: 20px; margin: 10px auto; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; padding: 8px 20px; }
+            h3 { font-size: 18px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+        }
+        @media (max-width: 480px) {
+            .content-container { padding: 15px; margin: 5px auto; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 18px; padding: 6px 15px; }
+            h3 { font-size: 16px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>오늘 상한가, 급등 종목과 이유： 콜마비앤에이치, 아이비젼웍스, 누보, 우양, KS인더스트리, 제이스코홀딩스, 아진산업, 피엔케이피부임상연구센타, 미투온</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> othqc2qUGes</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=othqc2qUGes" target="_blank">https://www.youtube.com/watch?v=othqc2qUGes</a></p>
+            <p><strong>영상 길이:</strong> 00시간10분57초(11분)</p>
+        </div>
+
+        <div class="meta-description">
+            8월 20일 수요일, 코스피와 코스닥 시장의 전반적인 하락세 속에서 10% 이상 급등한 주요 코스닥 종목 9개의 상승 원인을 분석합니다. 콜마비앤에이치의 경영권 분쟁, 아이비젼웍스의 AI 팩토리 선정, 누보의 우량 비료 지정 및 우크라이나 재건 기대감, 냉동김밥 관련주의 인기, 조선 기자재 기업의 미국 시장 진출 논의, 제이스코홀딩스의 니켈 선적 임박, 아진산업의 호실적, 미투온의 넷플릭스 파트너십 기대감 등 개별 기업 이슈가 주가 상승을 견인했습니다. 또한, 시장별 거래량 및 거래대금 상위 종목들도 함께 살펴보며 당일 시장의 특징을 짚어봅니다.
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 오늘의 시장 동향 및 급등 종목 분석 🤔</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>주요 시장 지수 및 거래량</b></h3>
+        <ul>
+            <li><strong>8월 20일 수요일 시장 동향 발표.</strong> (00:00:00)</li>
+            <li><strong>코스피 지수:</strong> 0.68% 하락한 3,130.90 포인트로 마감. 외국인 매도, 기관 매수, 개인 매도로 대응. 거래 대금 11조 원. (00:00:05)</li>
+            <li><strong>코스닥 지수:</strong> 1.31% 하락한 777.61 포인트로 마감. 외국인/기관 매도, 개인 매수로 대응. 거래 대금 4조 원. (00:00:21)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>급등 종목 개요</b></h3>
+        <ul>
+            <li>10% 이상 급등 종목 총 9종목 (코스피 0, 코스닥 9). (00:00:37)</li>
+            <li>상한가 종목: 콜마비앤에이치 1종목. (00:00:45)</li>
+            <li>하한가 종목은 없었음. (00:00:48)</li>
+            <li>특별히 강세를 보인 테마는 없었음. (00:00:51)</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📈 개별 급등 종목 상세 분석 📊</b></h2>
+
+        <h3><b>콜마비앤에이치 (콜마비앤에이치)</b> (00:00:56 - 00:01:56)</h3>
+        <p><strong>상승 이유:</strong> 경영권 분쟁 격화 소식에 상한가 마감.</p>
+        <ul>
+            <li>어제 장 마감 후 윤동한 외 1인이 임시주주총회 소집 허가 소송 제기 공시. (00:01:02)</li>
+            <li>최대주주 특별 관계자가 16,749주(발행 주식 총수 대비 0.05%) 장내 매수. (00:01:09)</li>
+            <li>윤동한 씨의 아버지인 윤상현 콜마홀딩스 부회장이 이사회 개편을 위한 임시주주총회 개최 요구 중. (00:01:30)</li>
+            <li>윤여원 콜마비앤에이치 대표의 어머니와 남편도 주식 장내 매수 등 지분 경쟁 본격화. (00:01:38)</li>
+            <li>최대주주인 콜마홀딩스도 8% 상승 마감. (00:01:56)</li>
+        </ul>
+
+        <h3><b>아이비젼웍스 (아이비젼웍스)</b> (00:01:56 - 00:02:32)</h3>
+        <p><strong>상승 이유:</strong> 산업부와 한국산업기술기획평가원이 주관하는 AI 팩토리 전문기업으로 선정.</p>
+        <ul>
+            <li>AI 자율 제조 기술 개발 및 공급 기업 발굴을 통한 AI 기반 제조 생태계 조성 및 생산 고도화 목표 제도. (00:02:10)</li>
+            <li>향후 선도 프로젝트 사업 신청 시 우대 가산점, 기업 홍보, 금융 지원 등 혜택. (00:02:21)</li>
+            <li><span class="highlight">(참고: 어제도 특별한 호재 없이 15% 상승)</span> (00:02:02)</li>
+        </ul>
+
+        <h3><b>누보 (누보)</b> (00:02:32 - 00:03:24)</h3>
+        <p><strong>상승 이유:</strong> 자사의 코팅 비료 '하이코트'가 우량 비료에 지정.</p>
+        <ul>
+            <li>우량 비료는 국내에서 새로 개발되거나 품질이 개선된 비료를 의미. (00:02:39)</li>
+            <li>우크라이나에 비료 지속 공급 중, 다음 달에도 25톤 규모 비료 선적 예정. (00:02:44)</li>
+            <li>우크라이나 재건 시 코팅 비료 수요 증가 기대감. (00:02:52)</li>
+            <li><span class="highlight">(참고: 어제 러시아-우크라이나 트럼프 중재 정상회담 개최 추진 소식으로 재건 관련주 상승)</span> (00:03:01)</li>
+        </ul>
+
+        <h3><b>우양 (우양) 및 냉동김밥 관련주</b> (00:03:24 - 00:04:13)</h3>
+        <p><strong>상승 이유:</strong> 넷플릭스 애니메이션 '케이팝 데몬 헌터스'에 김밥 먹는 장면이 나오면서 김밥 재조명.</p>
+        <ul>
+            <li>대통령의 케이팝 주역들과 만남 예정 소식 동반. (00:03:37)</li>
+            <li>냉동김밥 수출 기업 우양, 풀무원, 김밥용 재료 제조 한성기업 등 상승. (00:03:44)</li>
+            <li><span class="highlight">(참고: 우양 2분기 실적 발표)</span> (00:03:53)
+                <ul>
+                    <li>매출액 453억 원 (전년 동기 대비 3% 증가). (00:03:56)</li>
+                    <li>영업이익 9억 원 (전년 동기 대비 151% 증가). (00:04:02)</li>
+                    <li>영국과 유럽에서 한국식 핫도그 인기 상승으로 하반기 성과 기대. (00:04:05)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><b>KS인더스트리 (케이슨인더스트리) 및 조선/조선기자재 기업</b> (00:04:14 - 00:05:25)</h3>
+        <p><strong>상승 이유:</strong> 미국 상원 의원들의 한국 방문 중 국내 조선업계 및 유관부처 간담회 개최 소식.</p>
+        <ul>
+            <li>조선업계는 한미 간 조선 협력 위한 규제 완화 필요성 피력. (00:04:31)</li>
+            <li>미국 의원들 요청 사항 적극 검토 약속. (00:04:43)</li>
+            <li><span class="highlight">(참고: 어제 중국 언론이 한미 조선 협력 '마스갓 프로젝트'가 한국에 잠재적 위험 초래 가능성 언급, 기획재정부도 기금 신설 반대 입장을 보이며 조선 테마 전반적으로 하락세 보인 바 있음)</span> (00:04:53)</li>
+            <li><span class="highlight">(참고: KS인더스트리 2분기 실적 발표)</span> (00:05:12)
+                <ul>
+                    <li>매출액 112억 원 (전년 동기 대비 103% 증가). (00:05:16)</li>
+                    <li>영업이익 -14억 원 (적자 전환). (00:05:22)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><b>JSC홀딩스 (제이스코홀딩스)</b> (00:05:25 - 00:05:58)</h3>
+        <p><strong>상승 이유:</strong> 필리핀 광산 니켈 첫 물량 선적 임박 소식.</p>
+        <ul>
+            <li>독립리서치 밸류파인더는 3분기부터 니켈 원광 최초 선적 전망. (00:05:33)</li>
+            <li>필리핀 발렌시아 지역 제2포트 건설 완료, 현지 수출 인프라 마련으로 해외 공급 본격화 기대. (00:05:44)</li>
+        </ul>
+
+        <h3><b>아진산업 (아진산업)</b> (00:05:59 - 00:06:15)</h3>
+        <p><strong>상승 이유:</strong> 2분기 실적 발표 후 강세 지속.</p>
+        <ul>
+            <li>매출액 2,555억 원 (전년 동기 대비 28% 증가). (00:06:05)</li>
+            <li>영업이익 474억 원 (전년 동기 대비 376% 증가). (00:06:11)</li>
+        </ul>
+
+        <h3><b>P&K피부임상연구센타 (피엔케이피부임상연구센타)</b> (00:06:15 - 00:06:33)</h3>
+        <p><strong>상승 이유:</strong> 급등 이유는 파악되지 않음.</p>
+        <ul>
+            <li><span class="highlight">(참고: 지난주 2분기 실적 발표)</span> (00:06:20)
+                <ul>
+                    <li>매출액 54억 원 (전년 동기 대비 43% 증가). (00:06:25)</li>
+                    <li>영업이익 8억 원 (전년 동기 대비 80% 증가). (00:06:30)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><b>미투온 (미투온)</b> (00:06:33 - 00:08:18)</h3>
+        <p><strong>상승 이유:</strong> 넷플릭스와의 파트너십 구축 기대감.</p>
+        <ul>
+            <li>미투온 그룹, 넷플릭스 방영 예정 작품 2개(당신이 죽였다, 사냥개들 시즌2) 제작 가속. (00:06:38)</li>
+            <li>해당 작품들 올해 4분기와 내년 초 방영 예정, 흥행 여부에 따라 넷플릭스 파트너십 기대. (00:06:58)</li>
+            <li><span class="highlight">(참고: 어제 중국 광전총국, 드라마/콘텐츠 제작 분야 혁신 증진 회의 개최. 한국/일본 드라마 리메이크 국가 제한 철폐 및 수입 제한 없애는 내용 담겼다는 소식으로 콘텐츠/엔터 기업 상승세 보인 바 있음)</span> (00:07:05)</li>
+            <li><span class="highlight">(참고: 스테이블 코인 관련주로도 묶임. 한국은행의 스테이블 코인 규제 강화 촉구 소식으로 관련주 전반 하락)</span> (00:07:48)
+                <ul>
+                    <li>한국은행, 통화 주권 위협 이유로 규제 강화 촉구. (00:08:01)</li>
+                    <li>글로벌 스테이블 코인 발행사 서클 총괄사장 방한 앞두고 요청. (00:08:08)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 시장별 거래량/거래대금 상위 종목 📈</b></h2>
+
+        <h3><b>코스피 시장 거래량 상위 10종목</b> (00:08:34)</h3>
+        <ul>
+            <li>1. 두산애너빌리티</li>
+            <li>2. 삼성전자 <span class="highlight">(미국 정부의 반도체 보조금 대가로 지분 요구 검토 소식에 소폭 상승)</span></li>
+            <li>3. 한국전력</li>
+            <li>4. TP</li>
+            <li>5. 한온시스템</li>
+            <li>6. TYM</li>
+            <li>7. 콜마홀딩스</li>
+            <li>8. 삼성중공업</li>
+            <li>9. HJ중공업</li>
+            <li>10. 아센디오</li>
+        </ul>
+
+        <h3><b>코스닥 시장 거래량 상위 10종목</b> (00:09:30)</h3>
+        <ul>
+            <li>1. 아이비젼웍스 <span class="highlight">(10% 이상 상승)</span></li>
+            <li>2. 한라캐스트</li>
+            <li>3. 사마네트웍스</li>
+            <li>4. 우양 <span class="highlight">(10% 이상 상승)</span></li>
+            <li>5. 누보 <span class="highlight">(10% 이상 상승)</span></li>
+            <li>6. 스튜디오미르</li>
+            <li>7. 썸에이지</li>
+            <li>8. SMC</li>
+            <li>9. 조광ILI</li>
+            <li>10. 미투온 <span class="highlight">(10% 이상 상승)</span></li>
+        </ul>
+
+        <h3><b>코스피 시장 거래대금 상위 10종목</b> (00:10:14)</h3>
+        <ul>
+            <li>1. 두산애너빌리티</li>
+            <li>2. 삼성전자</li>
+            <li>3. 하이닉스</li>
+            <li>4. 한국전력</li>
+            <li>5. 카카오</li>
+            <li>6. 하나오션</li>
+            <li>7. 하나에어로스페이스</li>
+            <li>8. 현대차</li>
+            <li>9. 현대건설</li>
+            <li>10. 두산</li>
+        </ul>
+
+        <h3><b>코스닥 시장 거래대금 상위 10종목</b> (00:10:43)</h3>
+        <ul>
+            <li>1. 할라캐스트</li>
+            <li>2. 우양 <span class="highlight">(10% 이상 상승)</span></li>
+            <li>3. 알테오젠</li>
+            <li>4. 스튜디오미르</li>
+            <li>5. 콜마비앤에이치 <span class="highlight">(10% 이상 상승)</span></li>
+            <li>6. 지투지바이오</li>
+            <li>7. ABL바이오</li>
+            <li>8. 삼천대학</li>
+            <li>9. 올릭스</li>
+            <li>10. BHI</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📝 요약 및 핵심 요약 🔍</b></h2>
+
+        <p style="margin-bottom: 15px;">본 영상은 8월 20일 수요일 국내 주식 시장의 주요 동향과 급등 종목들의 개별적인 상승 요인을 상세히 설명합니다. 코스피와 코스닥 지수는 하락했지만, 콜마비앤에이치의 경영권 분쟁, 아이비젼웍스의 AI 팩토리 선정, 누보의 우크라이나 재건 수혜 기대감, 냉동김밥의 글로벌 인기 상승, 제이스코홀딩스의 니켈 채굴 및 수출 가속화, 아진산업의 견조한 실적, 미투온의 넷플릭스 콘텐츠 제작 기대 등 다양한 호재가 개별 종목들의 주가를 끌어올렸습니다. 특히 조선 관련주는 한미 협력 기대감과 중국의 마스갓 프로젝트 비판, 기재부 반대 등의 복합적인 이슈가 얽혀있음을 언급하며 주의를 당부했습니다. 또한 스테이블 코인 규제 강화 소식으로 미투온을 포함한 관련주들은 하락 압력을 받았습니다.</p>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 시장 전반:</b> <span class="highlight">8월 20일 코스피/코스닥 하락장 속 개별 종목 장세.</span>
+                    </div>
+                    <div class="section">
+                        <b>📊 콜마비앤에이치:</b> <span class="highlight">경영권 분쟁 격화로 상한가.</span>
+                    </div>
+                    <div class="section">
+                        <b>🌿 누보 & 우양:</b> 우량 비료 지정 및 우크라이나 재건 기대 지속. <span class="highlight">냉동김밥 인기 및 2분기 실적 호조.</span>
+                    </div>
+                    <div class="section">
+                        <b>🛠️ 아이비젼웍스 & 제이스코홀딩스 & 아진산업:</b> <span class="highlight">AI 팩토리 선정, 니켈 첫 선적 임박, 견조한 실적 기반 상승.</span>
+                    </div>
+                    <div class="section">
+                        <b>🎬 미투온:</b> 넷플릭스 파트너십 기대감 존재, <span class="highlight">단 스테이블 코인 규제 강화 이슈는 주의.</span>
+                    </div>
+                    <div class="section">
+                        <b>🚢 조선/조선기자재:</b> 한미 협력 기대 vs. <span class="highlight">중국 비판 및 기재부 반대 등 복합 요인.</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    본 요약은 8월 20일자 영상 내용을 기반으로 합니다. 투자 결정 시에는 추가적인 분석이 필요합니다.
+                </div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🧐 투자 판단: 생각해볼 사항 👩‍💼👨‍💻</b></h2>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
+                <h3 style="font-size: 20px; color: #00796b; margin: 0 0 8px;"><b>경영권 분쟁 종목</b></h3>
+                <p>콜마비앤에이치처럼 경영권 분쟁은 단기적인 주가 급등을 유발할 수 있으나, 분쟁의 지속성, 해결 방식, 그리고 기업 펀더멘털에 미치는 장기적 영향 등을 면밀히 검토해야 합니다. 단기 변동성이 매우 크므로 신중한 접근이 필요합니다.</p>
+            </li>
+            <li style="margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
+                <h3 style="font-size: 20px; color: #00796b; margin: 0 0 8px;"><b>테마성 급등주</b></h3>
+                <p>냉동김밥 관련주나 우크라이나 재건 관련주처럼 특정 이슈로 급등하는 종목은 이슈의 지속성, 실질적인 매출 기여도, 테마 소멸 시의 위험 등을 고려해야 합니다. 특히 K-POP 애니메이션 등 일시적 노출로 인한 테마는 단기 성향이 강할 수 있으므로 주의해야 합니다.</p>
+            </li>
+            <li style="margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
+                <h3 style="font-size: 20px; color: #00796b; margin: 0 0 8px;"><b>실적 호조 기업</b></h3>
+                <p>아진산업, 우양, P&K 피부임상연구센터처럼 견조한 실적 발표 후 상승세를 이어가는 종목은 펀더멘털을 기반으로 한 상승이므로 비교적 안정적일 수 있습니다. 하지만 이미 주가에 긍정적인 요인이 반영되었을 가능성도 있으므로 추가 상승 여력을 판단해야 합니다.</p>
+            </li>
+            <li style="margin-bottom: 10px; border-bottom: 1px dashed #eee; padding-bottom: 10px;">
+                <h3 style="font-size: 20px; color: #00796b; margin: 0 0 8px;"><b>복합 이슈 종목</b></h3>
+                <p>조선 관련주(KS인더스트리)나 미투온처럼 긍정적/부정적 이슈가 혼재하는 종목은 양측의 파급력을 종합적으로 분석하고 대응하는 것이 중요합니다. 특히 미투온처럼 여러 테마에 묶이는 경우 한 테마의 악재가 다른 테마의 호재를 상쇄할 수 있습니다.</p>
+            </li>
+            <li style="margin-bottom: 0; padding-bottom: 0;">
+                <h3 style="font-size: 20px; color: #00796b; margin: 0 0 8px;"><b>정부 정책 및 규제 변화</b></h3>
+                <p>미국 정부의 반도체 보조금 관련 지분 요구 검토(삼성전자), 한국은행의 스테이블 코인 규제 강화 촉구(미투온) 등 정부 정책이나 규제 변화는 기업 및 산업 전반에 큰 영향을 미치므로, 관련 뉴스를 지속적으로 모니터링하고 투자에 반영하는 것이 필수적입니다.</p>
+            </li>
+        </ul>
+
+        <div class="disclaimer-box">
+            <h3>⚠️면책조항</h3>
+            <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
