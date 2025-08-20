@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[속보효] 간밤에 급락한 팔란티어, 제 생각은 이렇습니다</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 25px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #004d40;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        h1 {
+            font-size: 28px;
+            color: #00796b;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: bold;
+            color: #004d40;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .disclaimer {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer h3 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .disclaimer p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container { padding: 20px; margin: 15px auto; }
+            h1 { font-size: 24px; padding-bottom: 10px; }
+            h2 { font-size: 20px; padding: 8px 15px; }
+            h3 { font-size: 18px; margin: 20px 0 10px; }
+            .video-meta p { font-size: 14px; }
+            .single-summary-card { padding: 18px; height: auto; min-height: unset; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 15px; margin: 10px auto; }
+            h1 { font-size: 22px; padding-bottom: 8px; }
+            h2 { font-size: 18px; padding: 6px 10px; }
+            h3 { font-size: 16px; margin: 15px 0 8px; }
+            p { font-size: 14px; }
+            .video-meta p { font-size: 13px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+            .disclaimer p { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[속보효] 간밤에 급락한 팔란티어, 제 생각은 이렇습니다</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> 5QTBiPX5ECM</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=5QTBiPX5ECM" target="_blank">https://www.youtube.com/watch?v=5QTBiPX5ECM</a></p>
+        </div>
+
+        <p data-ke-size="size8">&nbsp;</p>
+        <div style="color: #333; line-height: 1.7; max-width: 800px; margin: 0 auto; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;">
+            <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+                최근 미국 시장의 급락, 특히 팔란티어, 마이크로스트레티지, 비트코인 등 주도주들의 하락에 대해 이호석 투자 전문가의 개인적인 생각과 대응 전략을 공유하는 영상입니다. 시장 하락의 주요 원인을 분석하고, 이러한 변동성에 어떻게 대처해야 할지 개인적인 경험과 투자 철학을 바탕으로 설명합니다.
+            </div>
+            <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 현재 기준으로 작성되었습니다.</p>
+             
+
+            <p style="margin-bottom: 15px;">안녕하세요, 이호석입니다! 간밤 미국 시장이 좀 많이 빠졌습니다. 특히 제가 관심 있게 지켜보던 팔란티어, 마이크로스트레티지, 비트코인 등이 크게 하락했죠. 아침에 일어났는데 기분이 좋지 않더군요. 그래서 어떻게 해야 할지 고민하다가 달리기를 통해 마음을 다잡고, 이 시장 상황에 대한 저의 생각을 여러분과 공유하기 위해 카메라를 켰습니다. 함께 시장의 흐름과 대응 전략에 대해 이야기 나눠보시죠!</p>
+             
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 최근 시장 하락의 원인 분석 🤔</b></h2>
+
+            <p style="margin-bottom: 15px;">최근 시장 하락, 특히 AI 관련 주식과 비트코인 등이 동반 하락한 데에는 몇 가지 주요 원인이 있습니다. 하나씩 살펴보겠습니다.</p>
+            <p style="margin-bottom: 15px;"><b>[샘 알트만(OpenAI)의 'AI 버블' 발언]</b> (00:01:14)</p>
+            <p style="margin-bottom: 15px;">오픈AI의 샘 알트만이 직접 "AI가 과열된 것 같다, 버블인 것 같다"는 발언을 했습니다. 저는 이 발언에 명확한 의도가 있다고 봅니다. 오픈AI는 아직 순이익이 나는 구조가 아니어서 과감한 투자가 어렵습니다. 반면 메타나 구글 같은 빅테크 기업들은 막대한 CAPEX 투자를 하며 AI 인재들을 비싼 값에 데려가고 있죠. 오픈AI 입장에서는 이를 방어해야 하는데, 이 발언이 시장의 과열을 식히고 인재 유치 경쟁을 완화하려는 <span class="highlight">전략적 의도</span>가 있다고 해석됩니다.</p>
+
+            <div style="background-color: #e0f2f7; border-left: 4px solid #4dd0e1; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+                <b>💡 알아두세요!</b><br>
+                샘 알트만의 발언은 단순한 시장 경고를 넘어, 오픈AI의 사업적 입지를 고려한 전략적인 메시지로 볼 수 있습니다.
+            </div>
+            <p data-ke-size="size16">&nbsp;</p>
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>시트론 리서치와 하워드 막스의 경고 📢</b></h2>
+
+            <p style="margin-bottom: 15px;"><b>[시트론 리서치의 팔란티어 공매도 선언]</b> (00:01:56)</p>
+            <p style="margin-bottom: 15px;">시트론 리서치라는 곳에서 팔란티어가 너무 비싸다며 공개적으로 공매도할 것이라고 선언했습니다. 이로 인해 주가가 빠졌는데, 제가 보기엔 그 <span class="highlight">논리가 매우 빈약</span>합니다. 오픈AI의 시총과 팔란티어의 PSR을 대충 비교하며 비싸다고 주장하는데, 팔란티어 같은 혁신 기업은 원래 비싸며 앞으로도 계속 비쌀 가능성이 큽니다. 미래 이익 추정이 어려워 PER이나 PSR 같은 숫자가 변동성이 클 뿐, 이 지표만으로 이 회사를 평가하는 것은 어렵습니다.</p>
+
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>[하워드 막스의 '투자자 심리 과열' 언급]</b> (00:03:05)</h3>
+            <p style="margin-bottom: 15px;">하워드 막스님은 AI 전문가는 아니지만, <span class="highlight">시장의 심리를 꿰뚫어 보는 뛰어난 통찰력</span>을 가졌다고 생각합니다. 그분이 월요일에 공개한 메모에서 "좀 과열된 것 같다"고 말씀하셨는데, 이는 AI 기술 자체가 아니라 <span class="highlight">투자자들의 생각이 과열되었다</span>는 의미입니다. 저는 그분의 "바이콜(Buy Call)"과 "비싼 건 팔아야 한다"는 의견에 100% 동감하며, 조정이 있을 수 있다고 생각합니다.</p>
+
+            <div style="background-color: #fffde7; border-left: 4px solid #fbc02d; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+                <b>⚠️ 주의하세요!</b><br>
+                시장 전문가들의 의견은 중요하지만, 그들의 발언에 담긴 의도나 맥락을 함께 이해하는 것이 중요합니다. 특히 공매도 리포트와 같이 특정 의도를 가진 정보는 비판적인 시각으로 접근해야 합니다.
+            </div>
+            <p data-ke-size="size16">&nbsp;</p>
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🧐 투자 판단: 지금 어떻게 대응해야 할까? 👩‍💼👨‍💻</b></h2>
+
+            <p style="margin-bottom: 15px;">가장 중요한 것은 지금부터 어떻게 할 것인가입니다. 제가 여러분께 직접적인 투자를 권하기보다는, 제가 달리기를 하며 생각했던 것들을 공유해드리겠습니다. <span class="highlight">이 내용은 저의 개인적인 판단이며, 투자는 항상 신중하게 본인의 책임하에 진행되어야 합니다.</span></p>
+
+            <div class="info-box">
+                <b>💡 알아두세요!</b><br>
+                <b>[주가 하락 가능성 인정]</b> (00:03:58)<br>
+                AI라는 거대한 흐름이 있더라도, 시장은 <span class="highlight">과도하게 반영했다가 제자리로 돌아오는 과정을 반복</span>합니다. 팔란티어 기준으로도 <span class="highlight">30% 정도는 얼마든지 빠질 수 있다</span>고 생각하는 것이 중요합니다. 내가 이 정도 하락을 버틸 수 있는지 계산해보고 판단하세요.
+            </div>
+
+            <div class="info-box">
+                 <b>[개인별 감내 능력 평가 및 대응]</b> (00:04:21)<br>
+                만약 계산 결과 <span class="highlight">"나는 못 버텨, 망할 것 같아"</span>라고 생각했다면, <span class="highlight">지금이라도 비중을 줄이는 것이 맞습니다.</span> 준비가 되지 않은 상태에서 주가가 더 빠지면 결국 바닥에서 팔 가능성이 높기 때문입니다.
+            </div>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🎯 투자 전략: 저는 이렇게 접근합니다 📚</b></h2>
+
+            <p style="margin-bottom: 15px;">저는 개인적으로는 주식 비중을 <span class="highlight">줄이지 않을 생각</span>입니다. 그 이유는 다음과 같습니다.</p>
+
+            <div class="info-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[과거 엔비디아 사례에서 배우는 교훈]</b> (00:04:49)</h3>
+                <ul style="margin: 0 0 15px 20px; padding: 0;">
+                    <li style="margin-bottom: 6px;"><b>2016년 12월, 엔비디아 공격:</b> 지금 팔란티어를 비싸다고 하는 바로 그 회사(시트론)에서 2016년 12월에도 엔비디아가 너무 비싸다는 의견을 냈고, 그 트윗 하나 때문에 엔비디아 주가가 크게 빠졌습니다.</li>
+                    <li style="margin-bottom: 6px;"><b>놀라운 결과:</b> 당시 엔비디아 주가는 2불이 안 됐습니다. 하지만 지금은 180불입니다. 100배 이상 올랐다는 얘기죠.</li>
+                    <li style="margin-bottom: 0;"><b>시사점:</b> 단기적인 노이즈와 밸류에이션 논란이 있었음에도 불구하고, <span class="highlight">산업의 거대한 흐름(AI)을 탄 기업은 결국 장기적으로 크게 성장</span>한다는 것을 보여줍니다.</li>
+                </ul>
+
+                <h3 style="font-size: 20px; color: #333; margin: 18px 0 12px;"><b>[연사의 장기적 관점]</b></h3>
+                <p style="margin-bottom: 8px;">저는 제가 주목하고 있는 <span class="highlight">AI의 거대한 흐름</span>, <span class="highlight">에너지의 중요성</span>, 그리고 <span class="highlight">비트코인이 앞으로 많이 올라갈 수 있다는 생각</span>은 단기적인 관점이 아닙니다. 지금 단기적인 흔들림이 좀 셀 수 있고 아플 수 있다고 생각하지만, 스스로에게 <span class="highlight">예방주사를 맞추고 차분하게 대응</span>해나가려고 합니다.</p>
+            </div>
+
+            <p style="margin-bottom: 15px;">사례를 통해 보셨듯이, 단기적인 시장의 잡음과 분석에 흔들리기보다는, 자신이 믿는 장기적인 투자 테마와 기업의 본질적인 가치를 굳건히 하는 것이 중요합니다.</p>
+
+            <p data-ke-size="size16">&nbsp;</p>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+            <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+            <div style="background-color: #e0f7fa; padding: 18px; border-radius: 8px; margin: 20px 0; border: 1px solid #b2ebf2;">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+                <div style="margin-bottom: 10px;">
+                    <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+                    <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+                    <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+                    <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+                    <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+                </div>
+
+                <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+                <div id="wateringResultBox" style="margin-top: 20px; padding: 15px; border: 1px solid #b0bec5; border-radius: 4px; background-color: #fff; display: none;">
+                    <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                    <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                </div>
+            </div>
+            <p data-ke-size="size16">&nbsp;</p>
+
+            <script>
+                function calculateWatering() {
+                    const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+                    const currentShares = parseFloat(document.getElementById('currentShares').value);
+                    const addPrice = parseFloat(document.getElementById('addPrice').value);
+                    const addShares = parseFloat(document.getElementById('addShares').value);
+
+                    if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares <= 0 || addShares <= 0) {
+                        alert("모든 필드를 올바르게 입력해주세요.");
+                        return;
+                    }
+
+                    const currentTotal = avgPrice * currentShares;
+                    const addTotal = addPrice * addShares;
+                    const newTotalShares = currentShares + addShares;
+                    const newAvgPrice = (currentTotal + addTotal) / newTotalShares;
+                    const totalInvestment = currentTotal + addTotal;
+
+                    document.getElementById('newAvgPrice').innerText = newAvgPrice.toFixed(2);
+                    document.getElementById('totalInvestment').innerText = totalInvestment.toLocaleString();
+                    document.getElementById('wateringResultBox').style.display = 'block';
+                }
+            </script>
+
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>마무리: 핵심 내용 요약 📝</b></h2>
+
+            <p style="margin-bottom: 15px;">
+                최근 시장 하락에 대한 제 생각을 정리해 보았습니다. 시장의 단기적인 변동성은 피할 수 없지만, 중요한 것은 그 배경을 이해하고 자신만의 확고한 투자 원칙을 지키는 것입니다.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                미국 증시 하락의 주요 원인은 샘 알트만의 'AI 버블' 발언(OpenAI의 전략적 의도), 시트론 리서치의 팔란티어 공매도 선언(논리적 빈약), 그리고 하워드 막스의 '투자 심리 과열' 지적이라는 세 가지로 요약할 수 있습니다.
+                이러한 단기 조정 가능성(팔란티어 30% 하락 가능성 언급)을 인정하고, 각자의 투자 감내 능력을 평가하여 필요한 경우 비중 축소를 고려해야 합니다.
+                저 개인적으로는 장기적인 AI, 에너지, 비트코인의 '거대 흐름'을 믿고 있으며, 과거 엔비디아 사례에서 보듯 단기적 흔들림에도 불구하고 비중을 유지하며 차분하게 대응할 계획입니다.
+            </p>
+
+            <p style="margin-bottom: 15px;">
+                마음이 진정되지 않는다면 저처럼 달리기를 하거나 자신만의 방법으로 생각을 정리해 보는 것도 좋습니다. 모두 성투하시길 바라며, 궁금한 점은 댓글로 물어봐주세요! 😊 화이팅입니다.
+            </p>
+
+            <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+            <div class="single-summary-card-container">
+                <div class="single-summary-card">
+                    <div class="card-header">
+                        <span class="card-header-icon">💡</span>
+                        <h3><b>핵심 요약</b></h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="section">
+                            <b>✨ 시장 하락 원인:</b> <span class="highlight">샘 알트만의 AI 버블 발언 (전략적 의도), 시트론의 팔란티어 공매도 (논리 빈약), 하워드 막스의 투자 심리 과열 경고.</span>
+                        </div>
+                        <div class="section">
+                            <b>📊 단기 조정 가능성:</b> <span class="highlight">팔란티어 30% 하락 가능성 인정. 시장 심리의 과열 및 회귀 반복.</span>
+                        </div>
+                        <div class="section">
+                            <b>🧮 투자 전략 점검:</b>
+                            <div class="formula">내 하락 감내 능력 &gt;= 예상 하락폭 ? 유지 : 비중 축소</div>
+                        </div>
+                        <div class="section">
+                            <b>👩‍💻 연사 견해:</b> <span class="highlight">장기 AI, 에너지, 비트코인 거대 흐름 신뢰. 과거 엔비디아 사례처럼 단기 조정에도 비중 유지 및 차분한 대응.</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        모든 투자의 최종 결정과 책임은 투자자 본인에게 있습니다.
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+                <div style="margin: 30px 0;">
+                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+                        <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 최근 시장 급락의 주요 원인이 무엇인가요?</div>
+                        <div style="padding-left: 15px; color: #555;">A: 주요 원인으로는 샘 알트만(OpenAI)의 'AI 버블' 발언, 시트론 리서치의 팔란티어 공매도 선언, 그리고 하워드 막스의 '투자자 심리 과열' 언급 등이 제시되었습니다.</div>
+                    </div>
+
+                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+                        <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 팔란티어 주가 하락은 왜 일어난 건가요?</div>
+                        <div style="padding-left: 15px; color: #555;">A: 시트론 리서치에서 팔란티어가 너무 비싸다며 공매도를 선언한 것이 직접적인 원인 중 하나로 작용했습니다. 연사는 이 공매도 논리가 빈약하다고 평가했습니다.</div>
+                    </div>
+
+                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+                        <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 샘 알트만의 'AI 버블' 발언은 정말 시장을 걱정해서 나온 건가요?</div>
+                        <div style="padding-left: 15px; color: #555;">A: 연사는 샘 알트만의 발언이 오픈AI가 아직 수익 구조를 갖추지 못했기에, 과감한 투자와 인재 유치 경쟁에서 불리한 상황을 타개하기 위한 전략적 발언일 가능성이 높다고 해석했습니다.</div>
+                    </div>
+
+                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+                        <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 주가가 더 빠질 수도 있다고 하는데, 어떻게 대응해야 할까요?</div>
+                        <div style="padding-left: 15px; color: #555;">A: 팔란티어 기준으로 30% 정도의 하락은 얼마든지 있을 수 있다고 인정하고, 본인이 그 하락을 감내할 수 있는지 스스로 평가해야 합니다. 만약 감내하기 어렵다면 지금이라도 비중을 줄이는 것을 고려하는 것이 좋습니다.</div>
+                    </div>
+
+                    <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+                        <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 연사님은 이 상황에서 어떤 투자 전략을 취하실 건가요?</div>
+                        <div style="padding-left: 15px; color: #555;">A: 연사는 개인적으로 주식 비중을 줄이지 않을 생각이라고 밝혔습니다. 과거 엔비디아 사례처럼 단기적인 노이즈에도 불구하고 AI, 에너지, 비트코인 등 장기적인 '거대 흐름'을 믿고 차분하게 대응할 계획이라고 합니다.</div>
+                    </div>
+            <div class="disclaimer">
+                <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+                <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+            </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>앵커브리핑 작심비판, 코스피 5000만든다면서요! 이렇다 2000가겠네!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #00796b;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 700;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+        }
+
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .intro-box {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 15px;
+            border: 1px solid #b2ebf2;
+        }
+
+        .analysis-date {
+            font-size: 14px;
+            color: #757575;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .summary-card { padding: 18px; }
+            .summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .summary-card .card-header h3 { font-size: 20px; }
+            .summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .summary-card .card-content .section { margin-bottom: 8px; }
+            .summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            .summary-card { padding: 15px; }
+            .summary-card .card-header-icon { font-size: 26px; }
+            .summary-card .card-header h3 { font-size: 18px; }
+            .summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .summary-card .card-content .section { margin-bottom: 6px; }
+            .summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-item .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-item .answer {
+            padding-left: 15px;
+            color: #555;
+        }
+
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>앵커브리핑 작심비판, 코스피 5000만든다면서요! 이렇다 2000가겠네!</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> jmf_kCATpH4</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=jmf_kCATpH4" target="_blank">https://www.youtube.com/watch?v=jmf_kCATpH4</a></p>
+        </div>
+
+        <div class="intro-box">
+            최근 한국 주식 시장이 정부의 불확실한 정책 방향과 시장에 대한 낮은 이해도로 인해 큰 어려움을 겪고 있습니다. 조선 산업 지원, 세제 개편안 논의, 기획재정부 장관의 PBR 오인 발언 등이 투자자들의 신뢰를 떨어뜨리며 시장 하락을 부추기고 있으며, 이는 국내 자본의 해외 유출로 이어질 수 있다는 경고를 담고 있습니다.
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📰 내용 분석: 현재 시장의 핵심 문제 📉</b></h2>
+
+        <p>본 영상은 현재 한국 주식 시장의 불안정성과 그 원인을 분석하고 있습니다. 특히 정부의 미온적인 대응과 불확실한 정책이 시장에 미치는 부정적인 영향에 대해 깊이 비판하고 있습니다.</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>시장 상황 및 업종별 하락세</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>한국 시장의 어려움 지속:</b> 코스피 지수 하락 우려 제기 (00:00:00 - 00:00:17)</li>
+            <li style="margin-bottom: 6px;"><b>도미노식 업종 하락:</b> 지주회사/금융사, 방산주, 화장품주, 원전 관련주, 조선주 등 순차적 하락 (00:00:10 - 00:00:48)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>정부의 뚜렷한 방향성 부재</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>정책 불확실성:</b> 대외 악재, 실적 문제 외에 정부의 뚜렷한 정책 방향성 부재가 시장 혼란의 주원인으로 지적 (00:00:52 - 00:01:05)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>조선 산업 지원 관련 기재부 논란</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>MARAD Act 지원 관련 혼란:</b> 기획재정부가 별도 재원 마련 계획이 없다고 보도했으나, 이후 적극 지원으로 입장 번복하며 시장에 혼란 초래 (00:01:06 - 00:02:07)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>세제 개편안 및 양도세 대주주 기준 논란</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>양도세 대주주 기준 심사숙고 지속:</b> 민주당은 50억 원 유지 입장이지만, 기재부는 명확한 입장을 미룸 (00:02:08 - 00:02:36)</li>
+            <li style="margin-bottom: 6px;"><b>배당 소득 분리과세 논의 실종:</b> 중요한 논의가 사라진 채 양도세 기준 논란만 지속 (00:02:55 - 00:03:06)</li>
+            <li style="margin-bottom: 6px;"><b>불확실성 지속 전망:</b> 다음 달 3일 세제 개편안 국회 제출 전까지 논란 지속 예상 (00:02:40 - 00:02:49)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>기재부 장관의 PBR 인식 논란</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>PBR 오인 발언:</b> 기획재정부 장관이 코스피 PBR을 1.1배가 아닌 "10배쯤"으로 잘못 언급 (00:03:07 - 00:03:36)</li>
+            <li style="margin-bottom: 6px;"><b>정부 당국의 낮은 이해도:</b> 주식 시장에 대한 정부의 관심 및 이해 부족 지적, 투자자 실망감 증폭 (00:03:37 - 00:03:53)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>투자자 이탈 우려</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>자본 유출 가능성:</b> 정부의 미온적인 스탠스에 실망한 투자자들이 미국 주식이나 코인 시장으로 이탈할 수 있다는 경고 (00:03:54 - 00:04:09)</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📌 핵심 요약 📝</b></h2>
+
+        <div class="single-summary-card-container">
+            <div class="summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>영상 핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 정부의 명확한 시장 정책 부재:</b> <span class="highlight">국내 증시 하락의 주요 원인</span>으로 정부의 불확실한 정책 방향이 지목됩니다.
+                    </div>
+                    <div class="section">
+                        <b>📊 기재부의 불성실한 태도:</b> 조선업 지원, 세제 개편안 지연, 기재부 장관의 PBR 오인 발언 등이 <span class="highlight">시장에 대한 정부의 낮은 이해도와 관심 부족</span>을 드러냈습니다.
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 투자자 신뢰 하락 및 자본 이탈 가능성:</b> 정부의 이러한 태도는 투자자들의 실망감을 증폭시키고, <span class="highlight">국내 자본이 해외 주식이나 암호화폐 시장으로 이탈</span>하는 현상을 가속화할 수 있습니다.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    정부의 신속하고 시장 친화적인 정책 전환이 국내 증시 안정화에 필수적입니다.
+                </div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🤔 생각해볼 사항 (매매 관련 참고) 📈</b></h2>
+
+        <p style="margin-bottom: 15px;">현재 시장은 정부 정책의 불확실성이 큰 변수로 작용하고 있습니다. 투자자들은 다음 사항들을 고려하여 신중한 매매 전략을 수립해야 합니다.</p>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>정부 정책 불확실성에 대한 대응</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><b>변동성 확대 가능성:</b> 정부의 시장 친화적 정책 발표가 지연될 경우, 국내 시장의 변동성이 확대될 가능성이 높습니다.</li>
+                <li style="margin-bottom: 6px;"><b>리스크 관리 전략:</b> 단기적인 시장 흐름에 일희일비하기보다는 장기적인 관점에서 포트폴리오를 점검하고, 국내 시장 비중을 조절하는 등의 리스크 관리 전략을 고려해야 합니다.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>해외 투자 고려</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><b>분산 투자 검토:</b> 국내 시장에 대한 신뢰가 저하되고 정부의 대응이 미흡하다고 판단될 경우, 안정적인 수익률을 기대할 수 있는 미국 등 해외 주식 시장이나 다른 자산군으로의 분산 투자를 적극적으로 검토해 볼 수 있습니다.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>투자 심리 위축 장기화 가능성</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><b>신중한 접근:</b> 정부의 미온적인 태도가 지속되면 투자 심리 위축이 장기화될 수 있으므로, 매매 결정 시 이러한 거시적인 요소를 충분히 고려하여 신중하게 접근해야 합니다. 정부 정책의 변화 여부를 지속적으로 주시하는 것이 중요합니다.</li>
+            </ul>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+        <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+            <div style="margin-bottom: 10px;">
+                <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+                <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+                <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+                <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+                <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+            </div>
+
+            <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+            <div id="wateringResultBox" style="margin-top: 20px; padding: 15px; border: 1px solid #b0bec5; border-radius: 4px; background-color: #fff; display: none;">
+                <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+            </div>
+        </div>
+        <script>
+            function calculateWatering() {
+                const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+                const currentShares = parseFloat(document.getElementById('currentShares').value);
+                const addPrice = parseFloat(document.getElementById('addPrice').value);
+                const addShares = parseFloat(document.getElementById('addShares').value);
+
+                if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares)) {
+                    alert('모든 값을 숫자로 입력해주세요.');
+                    return;
+                }
+
+                const totalInvestmentBefore = avgPrice * currentShares;
+                const totalInvestmentAdded = addPrice * addShares;
+                const newTotalInvestment = totalInvestmentBefore + totalInvestmentAdded;
+                const newTotalShares = currentShares + addShares;
+                const newAvgPrice = newTotalInvestment / newTotalShares;
+
+                document.getElementById('newAvgPrice').textContent = newAvgPrice.toFixed(2);
+                document.getElementById('totalInvestment').textContent = newTotalInvestment.toLocaleString();
+                document.getElementById('wateringResultBox').style.display = 'block';
+            }
+        </script>
+        <p data-ke-size="size16">&nbsp;</p>
+
+        <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+        <div style="margin: 30px 0;">
+            <div class="faq-item">
+                <div class="question">Q: 한국 주식 시장이 최근 흔들리는 주요 원인은 무엇인가요?</div>
+                <div class="answer">A: 대외 악재, 기업 실적 부진도 있지만, 영상에서는 정부가 뚜렷한 시장 방향성을 제시하지 못하고 있는 점을 가장 큰 원인으로 지적합니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Q: 기재부의 조선 산업 지원 정책 관련 논란은 무엇인가요?</div>
+                <div class="answer">A: 'MARAD Act 지원법'에 대해 기재부가 처음에는 별도 재원 마련 계획이 없다고 보도했다가, 이후 적극 지원으로 입장을 번복하여 시장에 혼란을 주었습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Q: 양도세 대주주 기준과 관련하여 정부의 문제는 무엇인가요?</div>
+                <div class="answer">A: 민주당이 50억 원 유지 입장을 밝힌 반면, 기재부는 명확한 입장을 계속 미루고 있으며, 중요한 배당 소득 분리과세 논의는 실종된 채 양도세 기준 논란만 지속되고 있습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Q: 기획재정부 장관의 PBR 발언이 왜 문제가 되나요?</div>
+                <div class="answer">A: 코스피의 실제 PBR이 1.1배 수준임에도 불구하고 장관이 "10배쯤 되지 않나요?"라고 잘못 언급한 것은 정부 당국의 주식 시장에 대한 낮은 이해도와 무관심을 보여주어 투자자들의 실망감을 키웠습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">Q: 현재 상황이 투자자들에게 미칠 수 있는 영향은 무엇인가요?</div>
+                <div class="answer">A: 정부의 미온적인 태도와 불확실한 정책으로 인해 국내 투자 심리가 위축되고, 실망한 투자 자금이 미국 주식이나 암호화폐 시장으로 이탈할 수 있다는 우려가 제기됩니다.</div>
+            </div>
+
+            <div class="disclaimer-box">
+                <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+                <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

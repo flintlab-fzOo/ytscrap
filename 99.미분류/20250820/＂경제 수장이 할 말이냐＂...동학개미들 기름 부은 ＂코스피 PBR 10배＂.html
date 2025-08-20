@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>＂경제 수장이 할 말이냐＂...동학개미들 기름 부은 ＂코스피 PBR 10배＂</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+
+        /* Common Heading Styles */
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+
+        /* Specific Div Styles */
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .content-item {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-item .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-item .answer {
+            padding-left: 15px;
+            color: #555;
+        }
+
+        /* Disclaimer Style */
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+         /* 물타기 계산기 스타일 */
+        .calculator-box {
+            background-color: #e0f7fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b2ebf2;
+        }
+        .calculator-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .calculator-box input[type="number"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .calculator-box button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        #wateringResultBox {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            background-color: #fff;
+            display: none;
+        }
+        #wateringResultBox p {
+            margin-bottom: 8px;
+        }
+        #wateringResultBox span {
+            font-weight: bold;
+            color: #004d40;
+        }
+
+
+        /* 모바일 반응형 */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .video-meta, .info-box, .warning-box, .calculator-box, .single-summary-card, .faq-item, .disclaimer-box {
+                padding: 10px;
+                margin: 15px 0;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>＂경제 수장이 할 말이냐＂...동학개미들 기름 부은 ＂코스피 PBR 10배＂</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> ZP5lK10nZWQ</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=ZP5lK10nZWQ" target="_blank">https://www.youtube.com/watch?v=ZP5lK10nZWQ</a></p>
+        <p><strong>영상 길이:</strong> 00시간02분24초(144초)</p>
+    </div>
+
+    <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 영상 자막 내용을 기반으로 작성되었습니다.</p>
+
+    <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+        구윤철 경제부총리의 코스피 PBR 오인 발언으로 촉발된 논란은 정부의 자본시장 이해 부족과 '코리아 디스카운트'의 근본적인 원인에 대한 심각한 시각차를 드러냈습니다.
+    </div>
+
+    <h2><b>📝 개요</b></h2>
+    <p style="margin-bottom: 15px;">구윤철 경제부총리 겸 기획재정부 장관이 국회 기재위에서 국내 증시의 주가순자산비율(PBR)을 "10 정도"라고 잘못 발언하여 논란이 일었습니다. 실제 PBR은 1.0 수준으로, 10배의 큰 차이가 나는 발언에 대해 개인 투자자들의 분노가 폭발했으며, 이는 정부의 자본시장 이해 부족과 '코리아 디스카운트'의 근본적인 원인에 대한 시각차를 드러냈습니다.</p>
+
+    <h2><b>📊 내용</b></h2>
+    <ul>
+        <li class="content-item"><b>구윤철 경제부총리의 PBR 발언 논란 (00:00:00)</b>: 구윤철 경제부총리 겸 기획재정부 장관이 국회 기재위에서 국내 증시의 주가순자산비율(PBR)을 "10 정도"라고 발언하여 논란이 시작되었습니다.</li>
+        <li class="content-item"><b>이소영 의원의 지적 (00:00:12)</b>: 더불어민주당 이소영 의원은 부동산에 쏠린 국민 자산을 자본시장으로 유도하는 것이 코스피 5000의 진짜 의미이며 경제 개혁이라고 강조하며, 구 부총리에게 코스피 PBR이 얼마인지 질문했습니다.</li>
+        <li class="content-item"><b>PBR 답변의 오류 및 비교 (00:00:38)</b>: 구 부총리가 PBR을 "10 정도"라고 답하자, 이 의원은 실제 PBR은 1.0이며, 타이완 2.4, 일본 1.6, 신흥국 평균 1.8과 비교해 현저히 낮다고 지적했습니다.</li>
+        <li class="content-item"><b>실제 PBR과 발언의 차이 (00:00:46)</b>: 현재 코스피 PBR은 1배 수준으로, 구 부총리의 발언과는 약 10배의 차이가 나며, PBR이 10이 된다면 코스피는 3만이 넘어가는 수준입니다.</li>
+        <li class="content-item"><b>저평가 원인 지적 (00:00:54)</b>: 이 의원은 우리나라 기업들이 배당을 적게 하고 기업 성과를 주주에게 돌려주지 않아 투자를 유인하지 못하는 것이 저평가의 원인이라고 꼬집었습니다.</li>
+        <li class="content-item"><b>코리아 디스카운트 원인에 대한 시각차 (00:01:03)</b>: 구 부총리가 코리아 디스카운트의 원인을 남북 관계에서 찾자, 이 의원은 이는 옛날이야기이며, 우리보다 안보가 불안정한 타이완도 자본시장이 훨씬 활성화되어 있다고 반박했습니다.</li>
+        <li class="content-item"><b>정부 정책의 문제점 질타 (00:01:25)</b>: 이 의원은 우리 주식 시장의 진짜 디스카운트 요인은 정부가 일관된 정책 시그널을 주지 않고 강력하게 추진하지 않는다는 점이라고 질타했습니다.</li>
+        <li class="content-item"><b>개인 투자자들의 분노 폭발 (00:01:34)</b>: 구 부총리의 발언이 알려지자 최근 정부의 세제 개편안 발표 이후 지지부진한 증시 흐름과 맞물려 개인 투자자들의 정책 불신과 분노가 폭발했습니다.</li>
+        <li class="content-item"><b>경제 수장의 지표 혼동 비판 (00:01:54)</b>: 구 부총리가 PBR과 주가 수익 비율(PER)을 헷갈렸을 가능성도 제기되었으나, 경제정책 총괄 수장이 핵심 투자 지표를 혼동하는 것 자체가 자본시장 이해 부족을 드러낸다는 비판이 쏟아졌습니다.</li>
+        <li class="content-item"><b>부총리의 자본시장 활성화 방안에 대한 책임감 (00:02:06)</b>: 구 부총리는 한국 경제가 부동산에 과도하게 노출된 것이 리스크라면서도, 기업들이 경쟁력을 갖지 않은 상태에서 증권거래세만 낮춰 국민들을 주식시장에 뛰어들게 했다가 손실을 입을까 봐 책임감을 느낀다고 언급했습니다.</li>
+    </ul>
+
+    <h2><b>📋 요약</b></h2>
+    <p style="margin-bottom: 15px;">구윤철 경제부총리가 국회에서 코스피 PBR을 10으로 잘못 발언하여 논란이 커졌습니다. 실제 PBR은 1.0 수준으로 10배의 큰 차이가 나며, 이소영 의원은 낮은 배당성향과 불투명한 기업 지배구조를 '코리아 디스카운트'의 주된 원인으로 지목했습니다. 또한, 정부의 일관성 없는 정책 추진이 문제라고 비판했습니다. 이 발언은 최근 정부의 세제 개편안 발표와 맞물려 개인 투자자들의 큰 반발을 샀으며, 경제 수장의 자본시장 이해 부족에 대한 비판으로 이어졌습니다. 구 부총리는 부동산 쏠림 현상의 리스크를 인정하면서도 기업 경쟁력 없는 주식시장 활성화의 위험성을 언급하며 신중한 입장을 보였습니다.</p>
+
+    <h2><b>💡 핵심요약</b></h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 경제 수장의 PBR 오인 발언:</b> 구윤철 경제부총리가 코스피 PBR을 실제(1.0)보다 <span class="highlight">10배 높은 "10 정도"로 잘못 발언</span>하여 큰 논란을 야기했습니다.
+                </div>
+                <div class="section">
+                    <b>📊 '코리아 디스카운트' 원인 논쟁:</b> 기업의 <span class="highlight">낮은 배당성향 및 정부의 불확실하고 일관성 없는 정책</span>이 '코리아 디스카운트'의 주요 원인으로 지적되었습니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 개인 투자자들의 분노와 불신:</b> 정부의 세제 개편안과 맞물린 이번 발언은 개인 투자자들의 <span class="highlight">정부 정책에 대한 불신과 분노를 더욱 증폭</span>시켰습니다.
+                </div>
+                <div class="section">
+                    <b>🧮 자본시장 이해 부족 비판:</b> 경제정책을 총괄하는 수장이 핵심 투자 지표를 혼동하는 것은 <span class="highlight">자본시장에 대한 깊이 있는 이해 부족</span>을 드러낸다는 비판을 받았습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                정확한 정보와 일관된 정책이 자본시장 활성화에 필수적입니다.
+            </div>
+        </div>
+    </div>
+
+    <h2><b>🤔 생각해볼사항</b></h2>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>정부의 시장 이해도:</b> 경제 정책을 총괄하는 고위 당국자가 핵심 시장 지표에 대한 정확한 인식을 가지고 있는지 투자자들은 계속 주시해야 합니다. 이러한 인식 부족은 정책의 방향성과 효과에 영향을 미칠 수 있습니다.</li>
+        <li style="margin-bottom: 6px;"><b>'코리아 디스카운트'의 본질:</b> 영상에서 언급된 것처럼, 낮은 배당성향, 기업 지배구조 문제, 그리고 정부 정책의 일관성 부족 등이 복합적으로 작용하여 한국 증시의 저평가 현상을 야기하는 것으로 보입니다. 투자자들은 개별 기업의 펀더멘탈뿐만 아니라 이러한 거시적 요인들도 함께 고려해야 합니다.</li>
+        <li style="margin-bottom: 6px;"><b>정책 변화와 시장의 반응:</b> 정부의 세제 개편안 발표와 같은 정책 변화가 시장과 투자 심리에 미치는 영향이 큽니다. 정책 방향이 명확하고 일관될 때 시장의 신뢰를 얻을 수 있다는 점을 항상 염두에 두어야 합니다.</li>
+        <li style="margin-bottom: 0;"><b>정보의 비대칭성:</b> 공식적인 발언이라 할지라도 때로는 오정보가 포함될 수 있습니다. 투자 결정을 내리기 전에 반드시 스스로 정확한 데이터를 확인하고 다각도로 분석하는 습관이 중요합니다.</li>
+    </ul>
+
+    <h2><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+    <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+    <div class="calculator-box">
+        <h3 style="color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+        <div style="margin-bottom: 10px;">
+            <label for="avgPrice">현재 평단가 (원):</label>
+            <input type="number" id="avgPrice" placeholder="예: 50000">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="currentShares">현재 보유 수량 (주):</label>
+            <input type="number" id="currentShares" placeholder="예: 10">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="addPrice">추가 매수할 가격 (원):</label>
+            <input type="number" id="addPrice" placeholder="예: 40000">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="addShares">추가 매수할 수량 (주):</label>
+            <input type="number" id="addShares" placeholder="예: 5">
+        </div>
+
+        <button onclick="calculateWatering()">물타기 평단가 계산</button>
+
+        <div id="wateringResultBox">
+            <p><b>새로운 평단가:</b> <span id="newAvgPrice"></span> 원</p>
+            <p><b>총 매수 금액:</b> <span id="totalInvestment"></span> 원</p>
+        </div>
+    </div>
+    <script>
+        function calculateWatering() {
+            const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+            const currentShares = parseFloat(document.getElementById('currentShares').value);
+            const addPrice = parseFloat(document.getElementById('addPrice').value);
+            const addShares = parseFloat(document.getElementById('addShares').value);
+
+            if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares <= 0 || addShares <= 0) {
+                alert('모든 값을 올바르게 입력해주세요.');
+                return;
+            }
+
+            const totalCurrentValue = avgPrice * currentShares;
+            const totalAddValue = addPrice * addShares;
+            const newTotalShares = currentShares + addShares;
+            const newTotalInvestment = totalCurrentValue + totalAddValue;
+            const newAvgPrice = newTotalInvestment / newTotalShares;
+
+            document.getElementById('newAvgPrice').textContent = newAvgPrice.toFixed(2);
+            document.getElementById('totalInvestment').textContent = newTotalInvestment.toLocaleString();
+            document.getElementById('wateringResultBox').style.display = 'block';
+        }
+    </script>
+
+    <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+    <div style="margin: 30px 0;">
+        <div class="faq-item">
+            <div class="question">Q: 구윤철 부총리의 PBR 발언이 왜 논란이 되었나요?</div>
+            <div class="answer">A: 구 부총리가 코스피 PBR을 "10 정도"라고 발언했으나, 실제 코스피 PBR은 1.0 수준으로 10배의 큰 차이가 났기 때문입니다. 이는 경제 수장의 자본시장 이해 부족으로 비춰져 개인 투자자들의 분노를 샀습니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: '코리아 디스카운트'의 주요 원인으로 무엇이 지적되었나요?</div>
+            <div class="answer">A: 이소영 의원은 우리나라 기업들의 낮은 배당 성향과 기업 성과를 주주에게 돌려주지 않는 점을 지적했습니다. 또한, 정부의 일관성 없는 정책 시그널과 강력한 추진력 부족도 원인으로 꼽혔습니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: 개인 투자자들의 반응은 어떠했나요?</div>
+            <div class="answer">A: 최근 정부의 세제 개편안 발표와 국내 증시의 지지부진한 흐름 속에서 부총리의 발언이 개인 투자자들의 정책 불신과 분노를 폭발시키는 계기가 되었습니다. '정몽준 전 의원의 버스비 채 10원보다 심각하다'는 등의 성토가 쏟아졌습니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: PBR(주가순자산비율)은 무엇인가요?</div>
+            <div class="answer">A: PBR(Price-to-Book Ratio)은 주가를 주당순자산(기업의 총자산에서 총부채를 뺀 순자산)으로 나눈 값입니다. PBR이 1 미만이면 현재 주가가 기업의 장부가치보다 낮게 평가되어 있다는 의미이며, 투자자들에게는 저평가된 기업을 찾는 지표로 활용됩니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Q: 경제부총리가 자본시장 활성화에 대해 어떤 입장을 보였나요?</div>
+            <div class="answer">A: 구 부총리는 한국 경제가 부동산에 과도하게 노출된 것이 리스크임을 인정하면서도, 기업 경쟁력이 확보되지 않은 상태에서 무분별하게 증시 활성화를 추진하여 국민들에게 손실을 입힐 수 있다는 책임감을 갖고 있다고 밝혔습니다.</div>
+        </div>
+
+        <div class="disclaimer-box">
+            <h3>⚠️면책조항</h3>
+            <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>

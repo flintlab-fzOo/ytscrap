@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초연금 이제 못 받는다. 기초연금 전면 재 검토</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f4f7f6; /* Lighter background for the body */
+        }
+        h1, h2, h3 {
+            color: #00796b;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #004d40;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .intro-summary {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 15px;
+            border: 1px solid #b2ebf2;
+        }
+        .section-header {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .subsection-header {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Single Summary Card Styles */
+        .single-summary-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .single-summary-card { padding: 18px; height: auto; min-height: unset; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+        .faq-section {
+            margin: 30px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-answer {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>기초연금 전면 재검토: 지금 받는 연금, 미래에는 달라질 수 있습니다</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> XVhkYOds3EM</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=XVhkYOds3EM" target="_blank">https://www.youtube.com/watch?v=XVhkYOds3EM</a></p>
+        <p><strong>제목:</strong> 기초연금 이제 못 받는다. 기초연금 전면 재 검토</p>
+        <p><strong>영상 길이:</strong> 00시간03분27초(207분)</p>
+    </div>
+
+    <div class="intro-summary">
+        정부가 기초연금 선정 기준을 전면 재검토할 예정이라고 밝혔습니다. 현재의 산정 방식으로는 실소득이 높은 분들도 기초연금을 수급할 수 있는 구조이며, 고령화로 인한 재정 부담이 급증하고 있어 제도 개혁이 불가피하다는 입장입니다. 이에 따라 현재 기초연금을 받고 있거나 미래에 받을 예정인 분들에게 영향을 미칠 수 있습니다.
+    </div>
+
+    <h2 class="section-header"><b>📰 영상 내용 상세 분석</b></h2>
+
+    <p style="margin-bottom: 15px;">이 영상은 최근 기초연금 제도와 관련된 정부의 재검토 움직임에 대해 상세히 다루고 있습니다. 특히, 현재의 수급 기준과 그로 인한 형평성 문제, 그리고 미래 재정 부담에 대한 우려를 중심으로 설명합니다.</p>
+
+    <h3 class="subsection-header"><b>기초연금 관련 이슈 및 정부의 입장</b></h3>
+    <ul>
+        <li>현재 기초연금 관련 논의가 활발하며, 수급자들이 미래에 기초연금을 받지 못할 수도 있다는 우려 제기 (00:00:01,680)</li>
+        <li>정부 발표: 현행 산정 방식으로 실소득 400만원 이상인 분들도 공제 후 수급 대상 포함 가능 (00:00:12,760)</li>
+        <li>고령 인구 증가 및 재정 부담 급증 (2014년부터 10년간 20조원 이상 증가)으로 인한 제도 개혁 필요성 강조 (00:00:20,680)</li>
+        <li>소득 하위 70% 지급 현행 기준을 '기초연금 선정 기준 모형 분석'을 통해 전면 재검토 예정 (00:00:37,940)</li>
+    </ul>
+
+    <h3 class="subsection-header"><b>기초연금 선정 기준 모형 분석의 의미</b></h3>
+    <div class="info-box">
+        <b>💡 알아두세요!</b><br>
+        모형 분석이란 누가 기초연금을 받을 수 있는지 결정하는 기준과 산출 방식을 체계적으로 분석하는 것입니다. 이는 노인 빈곤 완화를 위한 기초연금 제도 개혁의 중요한 기초 자료로 활용될 예정이며, 수급자 선정 기준이 변경될 가능성을 내포합니다. (00:00:44,820)
+    </div>
+    <ul>
+        <li>어르신의 다양한 소득 및 재산 상황을 가정하여 수급 가능 여부 분석</li>
+        <li>제도 변화가 수급자 수와 재정에 미치는 영향 분석</li>
+        <li>정책 목표가 잘 달성되고 있는지 분석</li>
+    </ul>
+
+    <h3 class="subsection-header"><b>현행 기초연금 수급 가능/불가능 사례</b></h3>
+    <p style="margin-bottom: 15px;">현재 기초연금 수급 기준의 복잡성을 이해하기 위해 몇 가지 실제 사례를 살펴보겠습니다. (00:01:23,540)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>상황 (연령 및 자산/소득)</th>
+                <th>결과</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**예시 1**</td>
+                <td>70세, 시골 주택 1억 원, 예금 1천만 원, 소득 없음</td>
+                <td>기초연금 전액 수령 가능</td>
+                <td></td>
+            </tr>
+            <tr style="background-color: #f5f5f5;">
+                <td>**예시 2**</td>
+                <td>75세, 서울 아파트 6억 원, 소득 없음</td>
+                <td>기초연금 수급 가능</td>
+                <td>재산을 소득으로 환산 시 월 155만 원 수준으로 기준 충족</td>
+            </tr>
+            <tr>
+                <td>**예시 3**</td>
+                <td>중소도시 어르신, 국민연금 90만 원, 아파트 2억 원, 예금 3천만 원</td>
+                <td>기초연금 수급 가능</td>
+                <td>소득 인정액 약 131만 원 (기준보다 낮음), 국민연금으로 인해 감액 지급</td>
+            </tr>
+            <tr style="background-color: #f5f5f5;">
+                <td>**예시 4**</td>
+                <td>부부, 부산 아파트 4억 원, 예금 4천만 원, 소득 없음</td>
+                <td>부부 모두 기초연금 수급 가능</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>**예시 5**</td>
+                <td>대도시 어르신, 아파트 3억 원, 예금 5천만 원, 국민연금 150만 원</td>
+                <td>기초연금 수급 가능</td>
+                <td>소득 인정액 약 215만 원 (기준 228만 원보다 낮음), 국민연금으로 인해 감액 지급</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <b>⚠️ 주의하세요!</b><br>
+        위 사례들에서 볼 수 있듯이 아파트, 소득, 국민연금이 있어도 기초연금을 받을 수 있는 경우가 많지만, 동시에 국민연금을 많이 받는 경우 감액되거나 아예 받지 못할 수도 있어, 젊었을 때 노후를 열심히 준비한 사람들에게는 불공평하게 느껴질 수 있다는 지적이 있습니다. (00:02:43,040)
+    </div>
+
+    <h3 class="subsection-header"><b>국민연금 수령액과 납부액 기준</b></h3>
+    <ul>
+        <li>**국민연금 90만원 수령:** 가입 기간 30년, 월평균 소득 200만원 이상 신고 필요 (00:03:08,260)</li>
+        <li>**국민연금 100만원 수령:** 가입 기간 30년 이상, 월 소득 약 250만원 이상 신고 필요 (00:03:18,360)</li>
+    </ul>
+
+    <h2 class="section-header"><b>📝 요약 및 핵심 내용</b></h2>
+
+    <p style="margin-bottom: 15px;">정부가 고령화로 인한 기초연금 재정 부담 급증에 따라 현재의 기초연금 선정 기준을 전면 재검토한다고 밝혔습니다. 현행 기준은 실소득이 높은 경우에도 공제 후 수급 대상에 포함될 수 있으며, 재산이나 국민연금 수령액이 있어도 기초연금을 받을 수 있는 다양한 사례를 통해 그 복잡성을 보여줍니다. 특히, 국민연금을 통해 노후를 준비한 사람들이 오히려 기초연금 수급에서 불이익을 받을 수 있다는 점이 불공평하다는 지적이 나오고 있어, 향후 제도 개편을 통해 수급 기준과 방식이 크게 달라질 수 있음을 시사합니다.</p>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 번째 핵심:</b> <span class="highlight">기초연금 재정 부담 심화!</span> 고령화로 인해 기초연금 재정 부담이 급증하고 있어 제도 개혁이 시급합니다.
+                </div>
+                <div class="section">
+                    <b>📊 두 번째 핵심:</b> <span class="highlight">선정 기준 전면 재검토!</span> 정부는 현재 기초연금 수급 기준의 형평성 문제를 제기하며, '모형 분석'을 통해 수급자 선정 기준을 전면 재검토할 계획입니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 세 번째 핵심:</b> <span class="highlight">노후 준비자의 상대적 박탈감!</span> 현행 제도는 국민연금 등으로 노후를 성실히 준비한 이들이 오히려 기초연금 수급에서 감액되거나 제외될 수 있어 불공평하다는 지적을 받고 있습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                향후 기초연금 제도의 변화는 개인의 노후 준비 방식과 사회 전체의 복지 시스템에 큰 영향을 미칠 수 있습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-header"><b>🧐 생각해볼 사항</b></h2>
+    <p style="margin-bottom: 15px;">이번 기초연금 재검토 이슈는 개인의 노후 설계뿐만 아니라 국가의 복지 정책 방향에 대한 중요한 시사점을 던집니다.</p>
+
+    <ul>
+        <li style="margin-bottom: 6px;"><b>노후 준비의 방향성:</b> 기초연금 제도 개편은 개인의 노후 준비 전략에 어떤 영향을 미칠까요? 국민연금과 사적연금의 역할 비중을 어떻게 조정해야 할지 고민해볼 필요가 있습니다.</li>
+        <li style="margin-bottom: 6px;"><b>세대 간 형평성:</b> 기초연금 재정 부담이 커지는 상황에서, 젊은 세대의 부담과 노년층의 복지 혜택 사이에서 어떻게 균형점을 찾을 것인지 사회적 논의가 필요합니다.</li>
+        <li style="margin-bottom: 0;"><b>정책 변화에 대한 대비:</b> 기초연금 수급 자격이나 금액이 변경될 경우, 이에 대비하여 개인의 재정 계획을 어떻게 수정해야 할지 미리 파악하고 준비하는 것이 중요합니다.</li>
+    </ul>
+
+    <h2 class="section-header"><b>자주 묻는 질문 ❓</b></h2>
+
+    <div class="faq-section">
+        <div class="faq-item">
+            <div class="faq-question">Q: 기초연금 재검토는 왜 필요한가요?</div>
+            <div class="faq-answer">A: 고령 인구 증가로 기초연금 재정 부담이 급증하고 있으며, 현행 수급 기준이 소득이 높은 사람들에게도 혜택을 줄 수 있어 형평성 문제가 제기되고 있기 때문입니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 기초연금 선정 기준 모형 분석이란 무엇인가요?</div>
+            <div class="faq-answer">A: 기초연금을 받을 수 있는 기준과 산출 방식을 체계적으로 분석하여, 제도의 효율성과 형평성을 제고하고 미래 정책 방향을 설정하기 위한 연구입니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 국민연금을 많이 받으면 기초연금을 못 받게 되나요?</div>
+            <div class="faq-answer">A: 현행 제도에서도 국민연금 수령액이 일정 수준 이상이면 기초연금액이 감액되거나 수급 대상에서 제외될 수 있습니다. 재검토 결과에 따라 이 기준이 더 강화될 수도 있습니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 기초연금 제도 개편은 언제쯤 이루어질까요?</div>
+            <div class="faq-answer">A: 영상에서는 구체적인 시점을 언급하지 않았지만, 정부가 '전면 재검토'를 밝힌 만큼 충분한 연구와 사회적 합의를 거쳐 점진적으로 추진될 것으로 예상됩니다.</div>
+        </div>
+    </div>
+
+    <div class="disclaimer-box">
+        <h3>⚠️면책조항</h3>
+        <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+    </div>
+</body>
+</html>

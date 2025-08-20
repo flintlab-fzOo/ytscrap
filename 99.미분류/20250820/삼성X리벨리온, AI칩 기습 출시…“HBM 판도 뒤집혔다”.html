@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성X리벨리온, AI칩 기습 출시…“HBM 판도 뒤집혔다”</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+        .faq-section {
+            margin: 30px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-answer {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>삼성X리벨리온, AI칩 기습 출시…“HBM 판도 뒤집혔다”</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> r9qRNGyOyo0</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=r9qRNGyOyo0" target="_blank">https://www.youtube.com/watch?v=r9qRNGyOyo0</a></p>
+        </div>
+
+        <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+            본 영상은 미국의 철강/알루미늄 관세 확대가 한국 기업에 미치는 영향, 인텔의 재정난과 외부 지원, 그리고 엔비디아를 대체할 국산 AI 칩 개발 현황을 심층 분석합니다. 국내 AI 생태계 구축의 중요성과 주목해야 할 기업들을 통해 미래 시장의 변화를 조망합니다.
+        </div>
+
+        <p style="margin-bottom: 15px;">안녕하세요! 오늘 영상에서는 최근 시장을 뜨겁게 달구는 주요 경제 이슈들을 심층적으로 다뤄보려 합니다. 미국의 무역 정책부터 글로벌 반도체 거인의 위기와 재기 노력, 그리고 국내 AI 칩 산업의 눈부신 성장에 이르기까지, 놓치지 말아야 할 핵심 내용들을 함께 살펴보겠습니다. 변화하는 시장의 흐름 속에서 투자 아이디어를 얻어가시길 바랍니다! 😊</p>
+
+        <h2>📊 미국의 철강/알루미늄 관세 확대</h2>
+
+        <p style="margin-bottom: 15px;">미국은 철강 및 알루미늄에 대한 관세를 50%까지 부과하겠다고 발표하며, 그 대상을 크게 확대했습니다.</p>
+        <p style="margin-bottom: 15px;"><b>[관세 부과 및 대상 품목 확대]</b> (00:00:04 - 00:00:37)<br>
+        철강과 알루미늄 관세 50% 이야기가 나오면서 가전제품 관련 주가도 많이 빠졌습니다. 여기에 407개 품목이 추가됐는데, 불도저, 풍력 터빈, 중장비, 철도 차량, 가구, 펌프 등이 모두 적용됩니다. 이는 관련 기업들의 주가 흐름에도 영향을 미칠 수밖에 없습니다.</p>
+
+        <div class="info-box">
+            <b>💡 알아두세요!</b><br>
+            무역확장법 232조는 국가 안보를 이유로 특정 수입품을 제한할 수 있는 조항입니다. 미국 정부는 이번 조치가 자국 철강 및 알루미늄 사업 재건을 위한 보호 조치라고 설명하고 있습니다.
+        </div>
+
+        <p style="margin-bottom: 15px;"><b>[한국 기업에 미치는 영향]</b> (00:01:09 - 00:02:00)<br>
+        문제는 한국산 제품에도 직격탄이 될 수 있다는 점입니다. 한국무역협회 분석에 따르면 냉장고, 냉동고, 자동차 부품, 엘리베이터 등 관세 대상이 더욱 많아졌습니다. 심지어 알루미늄 함량이 높은 화장품 용기까지 포함되면서 그 영향이 상당할 것이라는 관측이 있습니다. 50% 관세로 인한 품목 추가는 대미 수출 한국 피해 규모를 크게 늘릴 것으로 추산됩니다.</p>
+
+        <h2>📈 인텔(Intel)의 현재 상황 및 투자 유치</h2>
+
+        <p style="margin-bottom: 15px;">최근 인텔은 주가가 반등하는 모습을 보였지만, 여전히 심각한 재정난에 시달리고 있습니다.</p>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[주가 흐름 및 재정 상황]</b></h3>
+            <p style="margin-bottom: 8px;">간밤에 6%까지 반등하며 지난주에 이어 상승 흐름을 보여주고 있습니다. (00:02:05 - 00:02:13) 하지만 2분기 영업이익이 크게 빠지는 등 좋지 못한 흐름이 이어지고 있습니다. 인텔은 수년째 적자를 기록 중이며, 지난해 손실만 26조 원에 달했습니다. (00:02:21 - 00:03:26) 최근 CEO 리스크와 함께 비용 절감 및 인력 감축에 집중하겠다는 발표가 있었습니다.</p>
+        </div>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[미국 정부 및 소프트뱅크의 지원]</b></h3>
+            <p style="margin-bottom: 8px;">이러한 상황에서 미국 정부가 인텔을 지원하겠다고 나섰으며, 소프트뱅크 또한 20억 달러를 투자하여 지분 2% 인수를 검토 중에 있습니다. (00:02:32 - 00:02:45) 미국 정부도 지분 10% 취득을 검토 중입니다. (00:02:46 - 00:02:52) 미국 정부뿐만 아니라 민간 투자자까지 나섰다는 점은 어느 정도 긍정적인 시그널로 보입니다.</p>
+        </div>
+
+        <div class="warning-box">
+            <b>⚠️ 주의하세요!</b><br>
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[월가의 회의적인 시각]</b></h3>
+            <p style="margin-bottom: 8px;">하지만 월가의 분위기는 싸늘합니다. (00:03:39 - 00:03:43) 인텔 문제는 단순한 돈의 문제가 아니라 혁신의 문제라는 지적이 나오고 있습니다. 칩 생산 방식에 대한 초점이 중요하며, 목표 주가 또한 이전보다 낮춘 상황입니다. (00:03:50 - 00:04:06) 월가의 해석을 함께 고려하며 앞으로의 인텔 주가 흐름을 포착하고 투자 아이디어를 세워야 합니다.</p>
+        </div>
+
+        <h2>💻 국산 AI 칩 개발 및 엔비디아 대체 움직임</h2>
+
+        <p style="margin-bottom: 15px;">엔비디아 GPU 의존도를 낮추고 한국형 AI 생태계를 구축하기 위한 국산 AI 칩 개발 노력이 본격화되고 있습니다.</p>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[한국형 AI 생태계 구축 의지]</b></h3>
+            <p style="margin-bottom: 8px;">"드디어 국산 AI 칩이 엔비디아를 대체할 수 있을까?" 라는 질문처럼, 국가에서는 국가대표 AI 선발 등을 통해 계속해서 노력을 기울이고 있습니다. (00:04:39 - 00:04:57) 이번 AI 모델 맞춤형 설계 지원 사업은 단순 기업 지원을 넘어 한국형 AI 생태계를 본격적으로 구축하겠다는 정부의 의지가 담겨 있습니다. (00:05:01 - 00:05:12) 엔비디아 GPU 의존도가 절대적이었던 상황에서, 국내에서 직접 설계한 신경망 처리 장치(NPU)를 한국형 AI 모델과 연결하려는 의도입니다. (00:05:13 - 00:05:25) 최종 선발된 기업은 30억 원의 예산 지원뿐만 아니라 소프트웨어 라이선스 확보, 맞춤형 칩 설계 구조 구현, 제3자 검증까지 지원받아 한국형 AI 모델 전용 반도체를 만들 기회를 얻게 됩니다. (00:05:25 - 00:05:44) 이는 국산 AI 칩이 글로벌 경쟁사에 대비하여 상용화 가능성을 증명할 시험대에 올랐다는 평가를 받고 있습니다. (00:05:44 - 00:05:56)</p>
+        </div>
+
+        <h3><b>주목해야 할 국내 AI 칩 기업들</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>퓨리오사AI</b> (00:06:12 - 00:06:44)
+                <ul>
+                    <li>LG AI연구원의 초대형 모델 X414.0을 실제 데이터센터에서 구동하며 성능 입증.</li>
+                    <li>메타의 과거 인수 제안을 거절하고 독자 노선 선택하며 기술력 인정받음.</li>
+                    <li>토종 AI 반도체의 상징성을 지닌 기업.</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 6px;"><b>리벨리온</b> (00:06:45 - 00:07:49)
+                <ul>
+                    <li>SK그룹 계열사 사피온과 합병하며 기업 가치 1조 3천억 원으로 평가.</li>
+                    <li>최근 삼성 계열사를 비롯한 다양한 투자자로부터 최대 2억 달러 규모의 투자금 유치 소식 (IPO 진행 중).</li>
+                    <li>삼성전자의 파운드리와 협업하여 자체 2세대 칩 '레벨'을 생산, 이를 4개 묶은 '레벨 쿼드' 상용화 계획.</li>
+                    <li>테스트 단계에서 매우 유망한 결과가 나왔으며, 박성현 대표는 이 성과가 삼성의 투자 결정에도 영향을 줬다고 설명.</li>
+                    <li>자금 조달, 기술 협력, 생산 능력까지 3박자를 모두 갖춘 상태.</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 0;"><b>디백스</b> (00:07:50 - 00:08:13)
+                <ul>
+                    <li>중국 빅테크 바이두의 드론 로봇에 AI 반도체를 공급하며 글로벌 레퍼런스 확보.</li>
+                    <li>온 디바이스 AI에 특화된 기술력으로 대형 데이터센터용보다는 엣지 AI 시장에서 새로운 경쟁력을 보여줄 가능성.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p style="margin-bottom: 15px;">AI 반도체 칩을 더 만들기 위한 지원 사업이 본격화되고 있습니다. (00:08:14 - 00:08:20) 이는 반도체 업계의 판도를 바꿀 수 있는 변수가 될 수 있으므로, 국내 기업들이 자립성을 확장해 나아갈 수 있을지 눈여겨봐야 합니다. (00:08:21 - 00:08:34)</p>
+
+        <h2>🧐 투자 판단: 지금이 기회일까?</h2>
+
+        <p style="margin-bottom: 15px;">현재 시장은 미국의 보호무역주의 강화와 글로벌 반도체 산업의 재편 움직임이 동시에 나타나는 복합적인 상황입니다. 이러한 환경 속에서 투자자들은 개별 기업의 펀더멘탈과 함께 거시적인 흐름을 면밀히 분석해야 합니다. 특히 한국 AI 칩 산업은 정부 지원과 민간 투자가 결합되며 엔비디아 의존도를 낮출 새로운 성장 동력을 확보하고 있어 장기적인 관점에서 주목할 필요가 있습니다.</p>
+
+        <div class="info-box">
+            <b>💡 알아두세요!</b><br>
+            미국의 관세 부과 확대는 국내 수출 기업들에게 직접적인 비용 증가와 시장 축소를 야기할 수 있습니다. 반면, AI 칩 산업은 국가 안보 및 기술 자립이라는 측면에서 강력한 지원을 받을 가능성이 높습니다.
+        </div>
+        <p data-ke-size="size16">&nbsp;</p>
+        <h2>🎯 투자 전략: 어떻게 접근해야 할까? 📚</h2>
+
+        <p style="margin-bottom: 15px;">각 이슈별로 투자 접근 방식을 고려해 볼 수 있습니다.</p>
+
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[미국 관세 확대 대응 전략]</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><b>리스크 관리:</b> 대미 수출 비중이 높은 철강, 알루미늄, 가전, 자동차 부품, 화장품 용기 관련 기업에 대한 신중한 접근이 필요합니다. 관세 부담이 실적에 얼마나 반영될지 지속적으로 모니터링해야 합니다.</li>
+                <li style="margin-bottom: 6px;"><b>대안 모색:</b> 내수 시장 비중이 높거나 수출 시장을 다변화할 수 있는 기업, 혹은 관세 영향을 덜 받는 품목에 집중하는 기업을 탐색해 볼 수 있습니다.</li>
+            </ul>
+
+            <h3 style="font-size: 20px; color: #333; margin: 18px 0 12px;"><b>[인텔 투자 전략]</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><b>신중한 접근:</b> 인텔의 대규모 투자 유치 소식에도 불구하고, 월가의 회의적인 시각(혁신 문제)을 고려해야 합니다. 단기적인 자금 지원보다는 장기적인 기술 로드맵과 실제적인 혁신 성과를 확인하는 것이 중요합니다.</li>
+                <li style="margin-bottom: 0;"><b>경쟁사 비교:</b> AMD, 엔비디아 등 경쟁사들과의 기술력 격차를 주시하며, 인텔이 시장 리더십을 회복할 수 있을지 면밀히 분석해야 합니다.</li>
+            </ul>
+
+            <h3 style="font-size: 20px; color: #333; margin: 18px 0 12px;"><b>[국산 AI 칩 투자 전략]</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><b>성장 테마:</b> 한국형 AI 생태계 구축은 장기적인 성장 테마로 접근할 수 있습니다. 퓨리오사AI, 리벨리온, 디백스 등 국내 AI 칩 설계 기업 및 관련 소프트웨어, 파운드리 협력 기업들을 눈여겨봐야 합니다.</li>
+                <li style="margin-bottom: 6px;"><b>선별적 투자:</b> 기술력, 상용화 가능성, 주요 파트너십(예: 리벨리온-삼성), 그리고 정부 지원의 실질적인 수혜 여부를 바탕으로 선별적인 투자를 고려해야 합니다.</li>
+                <li style="margin-bottom: 0;"><b>초기 단계 리스크:</b> 아직 상용화 초기 단계에 있는 만큼, 개별 기업의 사업 진행 상황 및 재무 상태를 꼼꼼히 확인하고 분산 투자를 고려하는 것이 좋습니다.</li>
+            </ul>
+        </div>
+        <p data-ke-size="size16">&nbsp;</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+        <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+        <div style="background-color: #e0f7fa; padding: 18px; border-radius: 8px; margin: 20px 0; border: 1px solid #b2ebf2;">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+            <div style="margin-bottom: 10px;">
+                <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+                <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+                <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+                <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+                <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+            </div>
+
+            <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+            <div id="wateringResultBox" style="margin-top: 20px; padding: 15px; border: 1px solid #b0bec5; border-radius: 4px; background-color: #fff; display: none;">
+                <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+            </div>
+        </div>
+        <script>
+            function calculateWatering() {
+                const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+                const currentShares = parseFloat(document.getElementById('currentShares').value);
+                const addPrice = parseFloat(document.getElementById('addPrice').value);
+                const addShares = parseFloat(document.getElementById('addShares').value);
+
+                if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares <= 0 || addShares <= 0) {
+                    alert("모든 필드에 유효한 숫자를 입력하고, 현재 보유 수량과 추가 매수할 수량은 0보다 커야 합니다.");
+                    return;
+                }
+
+                const totalCurrentValue = avgPrice * currentShares;
+                const totalAdditionalValue = addPrice * addShares;
+                const newTotalShares = currentShares + addShares;
+                const newTotalInvestment = totalCurrentValue + totalAdditionalValue;
+                const newAvgPrice = newTotalInvestment / newTotalShares;
+
+                document.getElementById('newAvgPrice').textContent = newAvgPrice.toLocaleString(undefined, { maximumFractionDigits: 2 });
+                document.getElementById('totalInvestment').textContent = newTotalInvestment.toLocaleString();
+                document.getElementById('wateringResultBox').style.display = 'block';
+            }
+        </script>
+        <p data-ke-size="size16">&nbsp;</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>마무리: 핵심 내용 요약 📝</b></h2>
+
+        <p style="margin-bottom: 15px;">오늘 영상에서는 미국의 무역 정책 변화부터 인텔의 재기 노력, 그리고 한국 AI 칩 산업의 급부상까지 다양한 시장의 흐름을 분석했습니다. 이러한 정보들이 여러분의 투자 의사결정에 도움이 되기를 바랍니다. 시장은 끊임없이 변하므로, 항상 최신 정보를 주시하고 신중한 투자를 이어가시길 권해드립니다.</p>
+
+        <p style="margin-bottom: 15px;">이 영상 내용에 대해 궁금한 점이나 추가적으로 다루었으면 하는 주제가 있다면 언제든지 댓글로 남겨주세요! 여러분의 의견은 다음 영상을 만드는 데 큰 힘이 됩니다. 😊</p>
+
+        <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+        <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">Q: 미국의 철강/알루미늄 관세 확대는 한국 기업에 왜 부정적인가요?</div>
+                <div class="faq-answer">A: 관세 부과는 미국으로 수출하는 한국 제품의 가격 경쟁력을 떨어뜨려 수출 물량 감소와 수익성 악화를 초래할 수 있습니다. 특히 가전, 자동차 부품 등 다양한 품목으로 대상이 확대되어 전반적인 피해가 예상됩니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 인텔에 대한 월가의 시각이 회의적인 이유는 무엇인가요?</div>
+                <div class="faq-answer">A: 월가는 인텔의 문제가 단순한 자금 부족이 아닌 '혁신 부족'에 있다고 보고 있습니다. 대규모 투자를 유치하더라도, 근본적인 기술 경쟁력과 시장 변화에 대한 대응력이 부족하다면 장기적인 회복이 어렵다고 판단하기 때문입니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 한국형 AI 생태계 구축은 어떤 의미를 가지나요?</div>
+                <div class="faq-answer">A: 현재 AI 반도체 시장은 엔비디아 GPU에 대한 의존도가 매우 높습니다. 한국형 AI 생태계 구축은 이러한 해외 의존도를 낮추고, 국내 기술로 직접 AI 칩을 설계하고 생산하여 기술 자립을 이루겠다는 의지를 담고 있습니다. 이는 장기적으로 국내 반도체 산업의 경쟁력 강화로 이어질 수 있습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 리벨리온이 주목받는 주요 강점은 무엇인가요?</div>
+                <div class="faq-answer">A: 리벨리온은 SK그룹 계열사와의 합병을 통한 기업 가치 상승, 삼성 계열사 및 다양한 투자자로부터의 대규모 투자 유치를 통한 강력한 자금력, 그리고 삼성전자 파운드리와의 협력을 통한 자체 칩 생산 능력까지 '기술, 자금, 생산'의 3박자를 모두 갖추고 있어 높은 성장 잠재력을 인정받고 있습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 국내 AI 칩 기업에 투자 시 고려할 점은 무엇인가요?</div>
+                <div class="faq-answer">A: 국내 AI 칩 기업들은 성장 잠재력이 크지만, 아직 상용화 초기 단계에 있는 만큼 기술력, 실제 상용화 가능성, 주요 파트너십(예: 파운드리 협력), 그리고 정부 지원의 실질적인 수혜 여부를 꼼꼼히 분석해야 합니다. 또한, 특정 기업에 대한 집중 투자보다는 분산 투자를 고려하는 것이 현명합니다.</div>
+            </div>
+            <div class="disclaimer-box">
+                <h3>⚠️면책조항</h3>
+                <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

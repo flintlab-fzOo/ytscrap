@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[점심시황] 코스피 -2.29%, 코스닥 -2.71% ⧸ 두산에너빌리티 3일간 -20%</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: 700;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-answer {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[점심시황] 코스피 -2.29%, 코스닥 -2.71% ⧸ 두산에너빌리티 3일간 -20%</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> m96QjOhqQbo</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=m96QjOhqQbo" target="_blank">https://www.youtube.com/watch?v=m96QjOhqQbo</a></p>
+            <p><strong>영상 길이:</strong> 00시간02분28초(2분)</p>
+        </div>
+
+        <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+            AP투자연구소의 8월 20일 장중 시황 분석 영상으로, 국내 양대 증시의 급락 원인을 다각도로 분석하고 있습니다. 미국 증시의 약세 여파와 더불어 국내 조선, 방산, 원전 등 주요 업종에 나타난 개별 악재, 그리고 불안정한 환율 동향까지 시장을 압박하는 요인들을 상세히 설명하며, 주요 종목의 움직임과 테마 흐름을 점검합니다.
+        </div>
+        <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 2024년 8월 20일 기준으로 작성되었습니다.</p>
+
+        <h2><b>📊 시장 동향 분석: 오늘의 하락장 주요 원인 🤔</b></h2>
+        <p>AP투자연구소는 8월 20일 장중 체크포인트를 통해 국내 증시의 주요 흐름과 하락 원인을 진단했습니다. 양대 증시가 급락세를 보인 배경에는 복합적인 요인들이 작용하고 있음을 확인할 수 있습니다.</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>양대 증시 하락 현황</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">**코스피**: 1.72% 하락 (00:00:09,260)</li>
+            <li style="margin-bottom: 6px;">**코스닥**: 2.36% 하락 (00:00:09,260)</li>
+            <li style="margin-bottom: 0;">저가 기준으로 양대 증시 모두 2%가 넘는 급락세를 보이기도 했습니다. (00:00:16,280)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>국내 증시 하락 원인</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">**전일 미국 증시 여파**: 전일 미국 증시에서 기술주 중심의 약세장이 연출된 후 국내 증시에도 해당 여파가 이어지는 것으로 분석됩니다. (00:00:22,740)</li>
+            <li style="margin-bottom: 6px;">**국내 고유의 약세 흐름**: 국내 증시는 미국 증시와 다르게 전일과 전전일에도 나름대로의 약세 흐름이 확인된 바, 논란의 소지가 있다고 지적되었습니다. (00:00:31,760)</li>
+            <li style="margin-bottom: 0;">**개별 업종의 악재**: 거시적인 환경에 더해 올해 국내 증시를 견인했던 조선, 방산, 원전 업종의 개별적인 악재가 큰 하락의 원인으로 지목되었습니다. (00:00:42,780)</li>
+        </ul>
+
+        <h2><b>이 회사의 매력과 리스크는? (속속들이 펀더멘탈 분석) 📊</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>[주요 업종별 개별 악재]</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">**조선업 (00:00:56,140)**: 기획재정부(기재부)에서 마스카 프로젝트 지원책에 대해 자금 조달의 회의적인 입장을 보이고 있습니다.</li>
+            <li style="margin-bottom: 6px;">**방산업 (00:01:03,560)**: 우크라이나와 러시아의 휴전 기대감이 커지는 가운데, 방산 수주 기대가 조금씩 꺾이고 있다는 내용입니다.</li>
+            <li style="margin-bottom: 0;">**원전업 (00:01:13,540)**: 한국수력원자력(한수원)과 미국 웨스팅하우스의 불공정 계약 논란이 커지며 현재 큰 차익 물량이 출회되고 있는 것으로 분석됩니다.</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>두산 애너빌리티 주가 동향</b></h3>
+        <p style="margin-bottom: 15px;">원전 관련 논란의 핵심에 있는 두산 애너빌리티는 3일간 20%가 넘는 <span class="highlight">급락세가 확인</span>되고 있습니다. 현재 시점에서는 저가를 확인한 후 외국인의 매수와 함께 반발 매수세가 들어오고 있다고는 하나, 아직까지 추이를 예측하기에는 힘든 상황으로 여겨집니다. (00:01:31,340)</p>
+        <p style="margin-bottom: 15px;">한국과 웨스팅하우스의 1월 진행 합의가 불공정 합의라는 논란이 불거지며 두산 애너빌리티를 비롯한 원전주의 급락이 확인되고 있는 시점이며, 이어지는 흐름을 계속해서 주목할 필요가 있겠습니다. (00:01:44,520)</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>환율 동향</b></h3>
+        <p style="margin-bottom: 15px;">환율도 불안정한 모습을 보이고 있습니다. 현재 1달러 환율은 <span class="highlight">1398원</span>으로, 최근 돌파하지 못했던 1390원대 초반대를 쉽게 돌파하며 1400원 돌파까지도 목전에 두고 있는 상황입니다. (00:01:58,080) 이어지는 흐름을 계속 주시해야 합니다. (00:02:08,980)</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>오늘의 테마 흐름</b></h3>
+        <p style="margin-bottom: 15px;">오늘의 테마 흐름에서는 <span class="highlight">음식료 관련주가 강세</span>를 보이고 있으며, 이외 대부분 테마 군들은 모조리 약세 흐름을 보이고 있습니다. (00:02:16,240)</p>
+
+        <h2><b>🧐 투자 판단: 지금이 매수 기회일까? 👩‍💼👨‍💻</b></h2>
+        <div class="info-box">
+            <b>💡 알아두세요!</b><br>
+            현재 시장은 거시 경제 환경(미국 증시 약세, 고환율)과 국내 특정 업종(조선, 방산, 원전)의 개별 악재가 복합적으로 작용하여 낙폭이 커지고 있음을 인지해야 합니다. 투자 결정 시에는 이 다층적인 요인들을 종합적으로 고려해야 합니다.
+        </div>
+
+        <h2><b>🎯 투자 전략: 어떻게 접근해야 할까? 📚</b></h2>
+        <div class="info-box">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[매매관련 참고 사항]</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;">**개별 악재 업종 주의**: 두산 애너빌리티와 같은 원전 관련주는 단기 낙폭이 컸지만, 불확실성이 해소되기 전까지는 추가적인 변동성에 유의하고, 해당 업종의 상황 변화를 면밀히 주시할 필요가 있습니다.</li>
+                <li style="margin-bottom: 6px;">**방산 및 조선 업종**: 개별적인 이슈(휴전 기대, 마스카 프로젝트 불확실성)로 인해 기대감이 꺾이는 모습이므로, 관련 종목 투자 시에는 해당 악재의 지속 여부와 해소 가능성을 고려해야 합니다.</li>
+                <li style="margin-bottom: 6px;">**고환율 추세 모니터링**: 고환율 추세는 수출주에 긍정적일 수 있으나, 국내 전반적인 투자 심리에는 부정적 영향을 미치므로 시장 전반의 방향성을 예측하기 어려울 수 있습니다. 환율 추이를 지속적으로 모니터링해야 합니다.</li>
+                <li style="margin-bottom: 0;">**방어주 관심 고려**: 시장 전반이 약세일 때 강세를 보이는 음식료 같은 방어주에 대한 관심도 고려해볼 수 있습니다. 불확실성이 높은 시기에는 상대적으로 안정적인 종목으로의 자금 이동이 나타날 수 있습니다.</li>
+            </ul>
+        </div>
+
+        <h2><b>마무리: 핵심 내용 요약 📝</b></h2>
+        <p>오늘의 장중 체크포인트를 통해 국내 증시의 하락 요인과 주요 업종별 이슈, 그리고 환율 동향을 살펴보았습니다.</p>
+        <p>시장 전반의 불안정성이 커지는 시기인 만큼, 신중한 투자와 지속적인 정보 확인이 중요합니다. 이 분석이 여러분의 투자 판단에 도움이 되기를 바랍니다. 궁금한 점은 댓글로 물어봐주세요! 😊</p>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 국내 증시 급락:</b> <span class="highlight">미국 기술주 약세 및 국내 특수 요인</span> (조선, 방산, 원전 개별 악재) 복합 작용.
+                    </div>
+                    <div class="section">
+                        <b>📊 원전주 타격:</b> <span class="highlight">한수원-웨스팅하우스 불공정 계약 논란</span>으로 두산 애너빌리티 3일간 20% 이상 급락.
+                    </div>
+                    <div class="section">
+                        <b>📈 환율 불안정:</b> 원/달러 환율 1398원 기록, <span class="highlight">1400원 돌파 임박</span>으로 시장 불안정성 심화.
+                    </div>
+                    <div class="section">
+                        <b>🍜 음식료 강세:</b> 전반적인 약세장 속 <span class="highlight">음식료 관련주만 강세</span> 보임.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    본 요약은 2024년 8월 20일 장중 시황을 기반으로 합니다.
+                </div>
+            </div>
+        </div>
+
+        <h2><b>자주 묻는 질문 ❓</b></h2>
+        <div class="faq-item">
+            <div class="faq-question">Q: 오늘 국내 증시가 크게 하락한 주된 원인은 무엇인가요?</div>
+            <div class="faq-answer">A: 전일 미국 기술주 약세의 영향과 함께, 국내 조선, 방산, 원전 업종의 개별적인 악재들이 복합적으로 작용한 것이 주요 원인으로 분석됩니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 두산 애너빌리티가 급락한 특별한 이유가 있나요?</div>
+            <div class="faq-answer">A: 한국수력원자력(한수원)과 미국 웨스팅하우스 간의 불공정 계약 논란이 확산되면서 원전 관련주인 두산 애너빌리티에 큰 차익 물량이 출회되어 3일간 20% 이상 급락했습니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 현재 원/달러 환율 상황은 어떤가요?</div>
+            <div class="faq-answer">A: 현재 1달러에 1398원을 기록하며 1390원대 초반을 쉽게 돌파했고, 1400원 돌파를 목전에 두고 있어 시장 불안정성을 가중시키고 있습니다.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Q: 약세장 속에서 강세를 보인 테마가 있나요?</div>
+            <div class="faq-answer">A: 네, 전반적인 약세 흐름 속에서 음식료 관련주들이 강세를 보였습니다. 이는 시장 불안정 시 비교적 안전하다고 여겨지는 방어주로의 자금 이동으로 볼 수 있습니다.</div>
+        </div>
+        <div class="disclaimer-box">
+            <h3>⚠️면책조항</h3>
+            <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
