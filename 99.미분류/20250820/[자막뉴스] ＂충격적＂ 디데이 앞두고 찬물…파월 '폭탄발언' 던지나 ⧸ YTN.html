@@ -1,0 +1,303 @@
+
+<p data-ke-size="size8">&nbsp;</p>
+<div style="color: #333; line-height: 1.7; max-width: 800px; margin: 0 auto; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;">
+    <style>
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+    <title>[자막뉴스] ＂충격적＂ 디데이 앞두고 찬물…파월 '폭탄발언' 던지나 ⧸ YTN</title>
+    <h1 style="font-size: 28px; color: #00796b; margin-bottom: 10px; text-align: center;">[자막뉴스] ＂충격적＂ 디데이 앞두고 찬물…파월 '폭탄발언' 던지나 ⧸ YTN</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> DuU8QcAYDjQ</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=DuU8QcAYDjQ" target="_blank">https://www.youtube.com/watch?v=DuU8QcAYDjQ</a></p>
+    </div>
+    <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 영상 자막 내용을 기반으로 작성되었습니다.</p>
+
+    <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+        7월 고용 지표 부진과 소비자 물가 지수(CPI) 상승률 둔화로 커졌던 미국의 금리 인하 기대감이 7월 생산자 물가 지수(PPI)의 예상 밖 상승으로 다시 반전된 상황을 설명합니다. 연준 내부의 엇갈린 시각과 다가오는 잭슨홀 미팅에서의 파월 의장 발언의 중요성을 강조합니다.
+    </div>
+
+    <p style="margin-bottom: 15px;">안녕하세요, 시장을 읽어주는 뉴스입니다! 요즘 금리 인하에 대한 기대감이 커지고 있었는데, 예상치 못한 소식으로 인해 시장에 혼란이 가중되고 있습니다. 과연 연준은 어떤 결정을 내릴지, 그리고 우리는 어떻게 대비해야 할지 함께 살펴보겠습니다. 😊</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 주요 내용 분석: 금리 인하 기대감과 반전 🧐</b></h2>
+
+    <p style="margin-bottom: 15px;">최근 발표된 경제 지표들은 연준의 통화 정책 방향에 대한 시장의 기대를 크게 흔들고 있습니다.</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>[7월 고용 지표 및 CPI 발표와 금리 인하 기대감 상승]</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>고용 지표 부진:</b> 미국의 7월 고용 지표가 기대치에 크게 못 미쳤습니다. 이는 경기 둔화 우려를 키우는 요인이 됩니다. (00:00:00,250)</li>
+        <li style="margin-bottom: 6px;"><b>소비자 물가 안정:</b> 7월 소비자 물가 지수(CPI) 상승률은 전달과 동일한 2.7%를 기록하여, 인플레이션 압력이 크게 증가하지 않았음을 보여주었습니다. (00:00:05,350)</li>
+        <li style="margin-bottom: 6px;"><b>금리 인하 기대:</b> 고용 문제가 인플레이션보다 더 중요하게 다뤄질 것이라는 전망이 나오면서 금리 인하에 대한 기대감이 커졌습니다. 시카고 상품 거래소 패드워치는 다음 달(9월) 금리 인하 가능성을 무려 93%로 내다봤습니다. (00:00:11,130, 00:00:19,250)</li>
+        <li style="margin-bottom: 0;"><b>시장 분위기:</b> 현재 주식 시장은 사상 최고치를 기록 중이며, 재정 부양책과 규제 완화, 그리고 금리 인하가 예정되어 있어 긍정적인 분위기가 형성되어 있었습니다. (00:00:28,130)</li>
+    </ul>
+
+    <div style="background-color: #e0f2f7; border-left: 4px solid #4dd0e1; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+        <b>💡 알아두세요!</b><br>
+        미국의 고용 지표와 물가 지수는 연준의 통화 정책 결정에 가장 중요한 영향을 미치는 핵심 지표입니다. 이 두 가지 지표의 추이에 따라 시장의 기대와 연준의 방향이 크게 달라질 수 있습니다.
+    </div>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>[7월 생산자 물가 지수(PPI) 발표와 분위기 반전]</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>예상 밖의 PPI 상승:</b> 최근 발표된 7월 생산자 물가 지수(PPI)는 이러한 금리 인하 기대 분위기를 단숨에 반전시켰습니다. PPI가 '예상보다 높게' 나오며 시장에 놀라움을 안겨주었죠. (00:00:39,350, 00:00:45,650)</li>
+        <li style="margin-bottom: 6px;"><b>'충격적인' 월간 상승률:</b> 특히 월간 기준으로 0.9% 상승하며 '충격적인' 수준으로 나타났습니다. (00:00:54,350)</li>
+        <li style="margin-bottom: 6px;"><b>관세 비용 전가 분석:</b> 이는 관세 비용을 부담해온 기업들이 본격적으로 가격 조정을 시작한 것으로 분석됩니다. (00:00:59,850)</li>
+        <li style="margin-bottom: 6px;"><b>인플레이션 선행 지표:</b> 생산자 물가는 시차를 두고 소비재 가격에 반영되는 선행 지표입니다. 따라서 이 PPI 상승은 향후 소비재 가격 상승, 즉 인플레이션 재상승 가능성을 시사합니다. (00:01:06,270, 00:01:11,250)</li>
+        <li style="margin-bottom: 0;"><b>금리 인하 회의론 재부상:</b> 이로 인해 연준이 9월에 금리를 내릴지 판단하기에는 너무 이르다는 의견이 다시 고개를 들고 있습니다. (00:01:18,110)</li>
+    </ul>
+
+    <div style="background-color: #fffde7; border-left: 4px solid #fbc02d; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+        <b>⚠️ 주의하세요!</b><br>
+        PPI는 CPI에 앞서 가격 변동을 나타내는 중요한 지표입니다. PPI가 상승하면 일정 시차를 두고 최종 소비자 물가에도 영향을 미칠 수 있으므로, 향후 인플레이션 추이를 주의 깊게 살펴봐야 합니다.
+    </div>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>[연준의 고민과 잭슨홀 미팅의 중요성]</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>연준 내부의 엇갈린 시각:</b> 연준 내부에서도 고용 부진을 해결하기 위해 금리를 인하해야 한다는 의견과, 여전히 인플레이션 우려가 크므로 금리를 동결해야 한다는 시각이 팽팽하게 나뉘고 있습니다. (00:01:24,810)</li>
+        <li style="margin-bottom: 0;"><b>잭슨홀 미팅 주목:</b> 이제 모든 시장의 시선은 8월 22일 잭슨홀 미팅에서 연준 의장이 어떤 발언을 내놓을지에 쏠리고 있습니다. 이 자리에서 향후 통화 정책 방향에 대한 중요한 힌트가 나올 것으로 예상됩니다. (00:01:34,670)</li>
+    </ul>
+
+    <p data-ke-size="size16">&nbsp;</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📈 투자 판단: 현재 시장 흐름과 투자 전략 👩‍💼👨‍💻</b></h2>
+
+    <p style="margin-bottom: 15px;">현재 시장은 복합적인 경제 지표들로 인해 불확실성이 증대되고 있습니다. 이러한 상황에서 투자자들은 신중한 접근이 필요합니다.</p>
+
+    <div style="background-color: #e0f2f7; border-left: 4px solid #4dd0e1; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+        <b>💡 알아두세요!</b><br>
+        불확실성이 높은 시기에는 시장의 큰 흐름을 읽는 것이 중요하며, 섣부른 예측보다는 다양한 시나리오에 대비하는 유연한 전략이 필요합니다.
+    </div>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🎯 투자 전략: 어떻게 접근해야 할까? 📚</b></h2>
+
+    <div style="background-color: #e0f7fa; padding: 18px; border-radius: 8px; margin: 20px 0; border: 1px solid #b2ebf2;">
+        <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>[생각해볼 사항]</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>시장 변동성 확대:</b> 연준의 통화 정책 불확실성 증대로 주식 시장의 단기 변동성이 커질 수 있습니다. 금리 인하 기대감이 약해지면 성장주에 대한 압박이 있을 수 있습니다.</li>
+            <li style="margin-bottom: 6px;"><b>인플레이션 재점화 가능성:</b> PPI 상승이 시차를 두고 CPI에 반영될 경우, 인플레이션 압력이 다시 높아져 연준의 긴축 기조가 예상보다 길어질 수 있습니다. 이는 전반적인 경제 성장과 기업 실적에 영향을 미칠 수 있습니다.</li>
+            <li style="margin-bottom: 6px;"><b>잭슨홀 미팅의 중요성:</b> 파월 의장의 발언은 향후 통화 정책 방향을 예측하는 데 결정적인 단서가 될 것입니다. 투자자들은 미팅 결과에 따라 포트폴리오 전략을 조정할 필요가 있습니다.</li>
+            <li style="margin-bottom: 0;"><b>산업별 영향:</b> PPI 상승이 모든 산업에 균등하게 영향을 미치지는 않을 수 있습니다. 특정 원자재나 부품 의존도가 높은 산업은 비용 압박을 더 크게 받을 수 있습니다.</li>
+        </ul>
+    </div>
+    <p data-ke-size="size16">&nbsp;</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>마무리: 핵심 내용 요약 📝</b></h2>
+
+    <p style="margin-bottom: 15px;">지금까지 최근 경제 지표 발표와 시장의 주요 쟁점을 살펴보았습니다. 정리하자면 다음과 같습니다.</p>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 금리 인하 기대감 상승:</b> 7월 고용 부진 및 CPI 둔화로 9월 금리 인하 가능성이 93%까지 상승했습니다.
+                </div>
+                <div class="section">
+                    <b>📊 PPI 충격과 반전:</b> 7월 생산자 물가지수(PPI)가 0.9% 급등하며 인플레이션 재상승 우려를 키워 금리 인하 기대감이 약화되었습니다.
+                </div>
+                <div class="section">
+                    <b>🧮 연준의 딜레마:</b> 고용 지원을 위한 인하와 인플레이션 억제를 위한 동결 사이에서 연준 내부 의견이 대립하고 있습니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 잭슨홀 미팅 주시:</b> 8월 22일 잭슨홀 미팅에서 연준 의장의 발언이 향후 통화 정책 방향을 가늠할 핵심 지표가 될 것입니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                불확실성이 높은 시기, 신중하고 유연한 투자 전략이 필요합니다.
+            </div>
+        </div>
+    </div>
+
+    <p style="margin-bottom: 15px;">금리 인하에 대한 기대와 인플레이션 우려가 팽팽하게 맞서는 지금, 연준의 다음 행보는 시장에 큰 영향을 미칠 것입니다. 특히 잭슨홀 미팅에서의 파월 의장 발언에 주목하며, 투자에 신중을 기하시길 바랍니다. 궁금한 점은 댓글로 물어봐주세요! 😊</p>
+
+    <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+    <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+    <div style="margin: 30px 0;">
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 7월 PPI 상승이 왜 '충격적'인가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 월간 0.9%의 상승률은 예상치를 크게 뛰어넘는 수치로, 최근 고용 부진과 CPI 안정으로 금리 인하 기대감이 커지던 시장 분위기에 찬물을 끼얹는 결과였기 때문입니다. 이는 인플레이션 압력이 생각보다 강할 수 있다는 신호로 받아들여집니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: PPI가 소비자 물가(CPI)에 어떤 영향을 미치나요?</div>
+            <div style="padding-left: 15px; color: #555;">A: PPI(생산자 물가 지수)는 기업이 제품 생산 단계에서 지불하는 가격을 나타냅니다. 이 비용 상승은 일정 시차를 두고 소비자가 구매하는 상품과 서비스 가격(CPI)에 전가될 가능성이 높으므로, PPI는 CPI의 선행 지표로 간주됩니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 잭슨홀 미팅이 왜 그렇게 중요한가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 잭슨홀 경제 심포지엄은 매년 8월 말에 개최되는 글로벌 중앙은행 총재 및 경제학자들의 회의입니다. 이곳에서 연준 의장이 향후 통화 정책 방향에 대한 중요한 힌트나 메시지를 전달하는 경우가 많아, 전 세계 금융 시장의 큰 주목을 받습니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 연준이 금리를 내리거나 동결할 경우, 시장에 어떤 영향이 예상되나요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 금리 인하는 일반적으로 기업의 자금 조달 비용을 낮추고 소비를 촉진하여 주식 시장에는 긍정적입니다. 반면 금리 동결은 인플레이션 억제에 중점을 두는 것으로, 시장의 과도한 금리 인하 기대를 낮추며 단기적으로는 주식 시장에 부담을 줄 수 있습니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 현재와 같은 불확실성 시기에 투자자들은 어떻게 대응해야 할까요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 단기적인 변동성에 일희일비하기보다는 장기적인 관점에서 기업의 펀더멘탈과 산업 트렌드를 분석하는 것이 중요합니다. 또한, 포트폴리오 다변화를 통해 위험을 분산하고, 잭슨홀 미팅 등 주요 이벤트 전후의 시장 반응을 주시하며 유연하게 대응하는 것이 현명합니다.</div>
+        </div>
+        <div style="background-color: #ffebee; padding: 20px; border-radius: 8px; border: 1px solid #ef9a9a; margin-top: 30px;">
+            <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</div>

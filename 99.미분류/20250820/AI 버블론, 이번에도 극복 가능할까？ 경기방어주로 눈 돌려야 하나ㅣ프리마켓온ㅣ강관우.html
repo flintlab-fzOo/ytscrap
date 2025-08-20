@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 버블론, 이번에도 극복 가능할까？ 경기방어주로 눈 돌려야 하나ㅣ프리마켓온ㅣ강관우</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            color: #00796b;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            color: #212121;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: bold;
+            color: #004d40;
+        }
+        a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /* Single Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        /* FAQ Styles */
+        .faq-section {
+            margin: 30px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-answer {
+            padding-left: 15px;
+            color: #555;
+        }
+
+        /* Disclaimer Style */
+        .disclaimer {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            h1 {
+                font-size: 24px;
+                padding-bottom: 10px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 18px;
+                margin: 20px 0 10px;
+            }
+            p, ul, li {
+                font-size: 15px;
+            }
+            .video-meta {
+                padding: 10px;
+            }
+            .video-meta p {
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .faq-item {
+                padding: 10px;
+            }
+            .faq-question {
+                font-size: 15px;
+            }
+            .faq-answer {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 7px 10px;
+            }
+            h3 {
+                font-size: 16px;
+                margin: 15px 0 8px;
+            }
+            p, ul, li {
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            .faq-item {
+                padding: 8px;
+            }
+            .faq-question {
+                font-size: 14px;
+            }
+            .faq-answer {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI 버블론, 이번에도 극복 가능할까？ 경기방어주로 눈 돌려야 하나ㅣ프리마켓온ㅣ강관우</h1>
+        <div class="video-meta">
+            <p><strong>videoId:</strong> Fdz9QBoMgeo</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=Fdz9QBoMgeo" target="_blank">https://www.youtube.com/watch?v=Fdz9QBoMgeo</a></p>
+            <p><strong>영상 길이:</strong> 00시간12분43초(763초)</p>
+        </div>
+
+        <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+            이번 영상은 AI 기술주의 고평가 논란과 시장의 불확실성 속에서 투자 전략을 모색합니다. 과거 AI 거품론 극복 사례와 현재 시장의 다른 양상을 비교하며, 높은 밸류에이션에 대한 경고와 함께 금리 정책, 물가 지표가 시장에 미치는 영향을 분석합니다. 개별 기술주(팔란티어, 팔로알토, 엔비디아, AMD)의 현황을 진단하고, 불안정한 시장 상황에서 경기 방어주(홈디포, 로우스)로의 시선 전환을 제안합니다.
+        </div>
+        <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 AI 생성 기준으로 작성되었습니다.</p>
+        
+        <h2 ><b>📊 AI 거품론과 주식시장 전망 🤔</b></h2>
+        <p>최근 AI 거품론이 제기될 때마다 결과적으로 보면 늘 극복해냈고 주가도 다시 상승 탄력을 회복했습니다. 과연 이번에는 이전과 다른 양상으로 전개될까요? 혹시 기술주 랠리 대신 경기 방어주가 대안으로 부상하는 흐름이 나타날지 관심이 모이고 있습니다.</p>
+        <p>강관우 대표는 이번 AI 버블론에 대해 닷컴 버블과는 다르며, <strong>성장세는 분명히 존재하지만 현재는 고평가 상태</strong>라고 판단했습니다. 샘 올트만의 견해를 존중하지만 전적으로 동의하지는 않는다고 덧붙였습니다.</p>
+
+        <h2 ><b>이 회사의 매력과 리스크는? (속속들이 펀더멘탈 분석) 📊</b></h2>
+        <p>현재 시장은 여러 불확실성 속에서 고평가 논란에 직면해 있습니다.</p>
+        <h3 ><b>[시장 고평가 논란]</b></h3>
+        <ul >
+            <li ><strong>S&P 500 선행 PER:</strong> 23배 수준으로, 지난 10년 평균인 18.6배 대비 20% 이상 고평가되어 있습니다. 이는 밴드 차트로 봤을 때 2시그마 정도에 해당하며, 상당히 높은 수준으로 고공행진을 해왔습니다.</li>
+            <li ><strong>팔란티어(Palantir)의 선행 PER:</strong> 260배까지 기록하며 S&P 500 대비 약 10배 높은 수준입니다. 2분기 실적은 좋았음에도 불구하고 너무나도 높은 밸류에이션으로 인해 작은 악재에도 크게 얻어맞을 수 있는 위치에 있습니다.</li>
+        </ul>
+
+        <h3 ><b>[금리 관련 불확실성]</b></h3>
+        <ul >
+            <li ><strong>잭슨홀 미팅:</strong> 금요일에 열리는 잭슨홀 미팅에서 어떤 발언이 나올지 사람들이 근심 속에서 주시하고 있습니다. CME 패드와치에서는 9월 0.25%p 금리 인하 확률을 84%로 예상하지만, 아직 8월이므로 연준의 톤이 중요합니다.</li>
+            <li ><strong>파월 의장의 스탠스:</strong> 최근 파월 의장은 트럼프의 압력에도 불구하고 데이터 기반의 보수적인, 매우 매파적인 태도를 유지하고 있습니다. 이는 시장에 금리 관련 불확실성을 가중시키고 있습니다.</li>
+        </ul>
+
+        <h3 ><b>[물가 지표의 영향]</b></h3>
+        <ul >
+            <li ><strong>PPI(생산자 물가지수) 급등:</strong> CPI는 전월 대비 기대 수준으로 나왔으나, PPI가 무려 0.9% 급등하며 문제가 되고 있습니다. PPI는 2~3개월 후 CPI로 이어지기 때문에, 향후 CPI가 크게 오를 수 있다는 우려를 낳고 있습니다.</li>
+            <li ><strong>금리 인하 기대감 약화:</strong> PPI 급등은 9월 금리 25BP 인하 가능성에 대한 의심을 증폭시켰고, 이로 인해 어제와 같은 폭락 장세가 나타났습니다.</li>
+        </ul>
+
+        <div class="warning-box">
+            <b>⚠️ 주의하세요!</b><br>
+            현재 시장은 전반적으로 고평가되어 있으며, 금리 및 물가 지표 관련 불확실성이 상존합니다. 작은 외부 충격에도 민감하게 반응할 수 있으니, 투자의 출입구 근처에 머무르는 신중한 자세가 필요합니다.
+        </div>
+        
+        <h2 ><b>📈 기술적 분석: 현재 주가 흐름은? 🧮</b></h2>
+        <p>투자 심리 지표와 개별 기술주 차트를 통해 현재 주가 흐름을 분석합니다.</p>
+        <div class="info-box">
+            <h3 ><b>[투자 심리 지수 분석]</b></h3>
+            <ul >
+                <li ><strong>VIX(공포 지수):</strong> 어제 종가가 15.57로 크게 올라가지 않아, 투자 심리가 완전히 뭉개진 수준은 아닙니다. 과거 급등 시기처럼 불기둥을 세운 모습은 나타나지 않았습니다.</li>
+                <li ><strong>CNN 공포와 탐욕 지수:</strong> 지난주 65에서 60 정도로 소폭 하락했으나 여전히 '탐욕' 구간에 있습니다. 이는 시장 심리가 완전히 망가진 구간은 아님을 시사합니다.</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3 ><b>[개별 기술주 주가 흐름]</b></h3>
+            <ul >
+                <li ><strong>팔란티어(Palantir):</strong> 200배가 넘는 선행 PER에도 불구하고 꾸준히 상승했지만, 최근 하락세로 전환되었습니다. 주가가 부러지면서 위에 매수한 투자자들의 손절매가 나오는 시점에 도달하고 있으며, RSI 지표도 50을 깨고 내려가 30까지 추가 하락 가능성도 있습니다.</li>
+                <li ><strong>팔로알토 네트웍스(Palo Alto Networks):</strong> 팔란티어보다는 낮지만 여전히 높은 선행 PER(50배)을 유지하고 있습니다. 먼저 주가가 조정받았으나, 최근 긍정적인 실적 발표와 증권사의 주가 상향 조정으로 반등세를 보이고 있습니다.</li>
+                <li ><strong>엔비디아(NVIDIA) vs AMD:</strong> 엔비디아는 선행 PER 35배 수준으로, AMD가 엔비디아보다 20~30% 더 높은 PER로 먼저 조정을 받았습니다. 엔비디아는 AI 칩 시장에서 압도적인 시장 지배력과 기술 선두력으로 끝까지 버티다가 어제 소폭 하락했습니다.</li>
+            </ul>
+        </div>
+        
+        <h2 ><b>🧐 투자 판단: 지금이 매수 기회일까? 👩‍💼👨‍💻</b></h2>
+        <p>펀더멘탈 및 기술적 분석을 종합하여 투자 전략을 제안합니다.</p>
+        <div class="info-box">
+            <h3 ><b>[AI 기술주 투자 전략]</b></h3>
+            <ul >
+                <li ><strong>엔비디아(NVIDIA):</strong> 밸류에이션이 35배로 절대적으로 높지만, 2025~2026년 기간 동안 연간 EPS 성장률이 40% 이상으로 예상되어 충분히 상승 여력이 있는 회사입니다. 또한, 국내 시가총액 1, 2위 기업처럼 펀드매니저들이 포트폴리오에서 급격하게 줄일 수 없는 위치에 있습니다. 현재는 살짝 조정이 온 수준이므로, 이런 변동성 시점에 포트폴리오를 재조정하여 엔비디아 쪽을 조금 더 긍정적으로 보고 비중을 유지하는 것이 좋습니다.</li>
+                <li ><strong>AMD:</strong> 엔비디아보다 먼저 고평가 논란으로 조정을 받았습니다. 현재 시점에서도 차익 실현을 고려하는 것이 바람직합니다.</li>
+            </ul>
+            <p>기술주가 지겹거나 거품론으로 불안감을 느끼는 투자자라면 시선 전환을 고려해야 합니다.</p>
+        </div>
+
+        <h2 ><b>🎯 투자 전략: 어떻게 접근해야 할까? 📚</b></h2>
+        <p>불확실성이 높은 시기에는 경기의 흐름에 상관없이 꾸준히 갈 수 있는 '경기 방어주'가 좋은 대안이 될 수 있습니다.</p>
+        <div class="info-box">
+            <h3 ><b>[경기 방어주 고려]</b></h3>
+            <ul >
+                <li ><strong>홈디포(Home Depot) & 로우스(Lowe's):</strong> 이들 기업은 꾸준히 주가가 상승하는 모습을 보여주었으며, 어제 기술주 하락 장세에서도 오히려 상승했습니다.</li>
+                <li ><strong>밸류에이션:</strong> 두 회사 모두 선행 PER이 20배보다는 조금 높게 형성되어 있어 아주 싸지는 않지만, 기술주 쪽이 안 좋을 때 도피할 수 있는 몇 안 되는 대안이 될 수 있습니다.</li>
+                <li ><strong>주택 건설 경기 기대:</strong> 9월에 0.25%p 금리 인하가 보험성으로 이뤄질 경우 주택 건설 경기가 좋아질 가능성이 있어, 홈디포나 로우스와 같은 건설/리모델링 관련 1, 2위 업체들의 주가가 긍정적인 흐름을 보일 수 있습니다.</li>
+            </ul>
+            <p>시장의 관심이 기술주에서 이러한 방어주로 조금씩 움직이고 있음을 체크해야 합니다.</p>
+        </div>
+        
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 첫 번째 핵심:</b> <span class="highlight">AI 기술주는 고평가 상태이나 성장세는 유효.</span> 닷컴 버블과 같은 완전한 거품은 아님.
+                    </div>
+                    <div class="section">
+                        <b>📊 두 번째 핵심:</b> <span class="highlight">S&P 500 및 주요 AI 종목의 높은 PER, 금리 불확실성, PPI 급등이 시장 조정 압력으로 작용.</span> 투자 심리는 아직 완전히 붕괴되지 않았으나 주의 필요.
+                    </div>
+                    <div class="section">
+                        <b>🧮 세 번째 핵심:</b> <span class="highlight">엔비디아는 기술 선두력과 성장성으로 보유 유지, AMD는 차익 실현 고려.</span> 개별 종목의 밸류에이션과 시장 지배력을 고려한 차별화 전략이 중요.
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 네 번째 핵심:</b> <span class="highlight">기술주 불안정 시 홈디포, 로우스 등 경기 방어주로 포트폴리오 전환 고려.</span> 주택 건설 경기 개선 기대와 맞물려 방어적 투자 대안으로 부상.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    이 분석은 영상 내용에 기반하며, 투자 결정은 개인의 판단과 책임 하에 신중하게 이루어져야 합니다.
+                </div>
+            </div>
+        </div>
+
+        <h2 ><b>자주 묻는 질문 ❓</b></h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">Q: 강관우 대표는 AI 버블론에 대해 어떻게 보고 있나요?</div>
+                <div class="faq-answer">A: 닷컴 버블과는 다르며, 성장세는 분명히 존재하지만 현재 AI 기술주들은 고평가 상태라고 보고 있습니다. 샘 올트만의 견해에 전적으로 동의하지는 않습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 현재 S&P 500 및 팔란티어의 밸류에이션 수준은 어떻습니까?</div>
+                <div class="faq-answer">A: S&P 500 선행 PER은 23배 수준으로 10년 평균 대비 20% 이상 고평가되어 있습니다. 팔란티어는 260배 이상의 선행 PER을 기록하며 S&P의 약 10배 수준으로 매우 고평가되어 있습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 금리 관련 불확실성이 시장에 어떤 영향을 미치고 있나요?</div>
+                <div class="faq-answer">A: 잭슨홀 미팅과 파월 의장의 매파적 스탠스가 금리 인하 기대감을 약화시키고 있습니다. 특히 PPI 급등은 향후 CPI 상승 우려를 높여 9월 금리 인하 가능성에 대한 의심을 증폭시켜 시장 조정으로 이어지고 있습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 엔비디아와 AMD 중 어떤 종목을 더 긍정적으로 보나요?</div>
+                <div class="faq-answer">A: 엔비디아는 AI 칩 시장에서 압도적인 지배력과 연간 40% 이상의 높은 EPS 성장률을 바탕으로 포트폴리오에 유지하는 것을 권고합니다. AMD는 엔비디아보다 더 높은 PER로 먼저 조정을 받았으므로 차익 실현을 고려하는 것이 좋다고 조언했습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 기술주 외에 대안으로 어떤 종목을 고려할 수 있을까요?</div>
+                <div class="faq-answer">A: 기술주에 대한 불안감이 커질 경우, 경기에 덜 민감하고 꾸준히 상승하는 홈디포(Home Depot)와 로우스(Lowe's)와 같은 경기 방어주를 고려할 수 있습니다. 주택 건설 경기 개선 기대감과 맞물려 방어적 투자 대안으로 주목받을 수 있습니다.</div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <h3>⚠️면책조항</h3>
+            <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
