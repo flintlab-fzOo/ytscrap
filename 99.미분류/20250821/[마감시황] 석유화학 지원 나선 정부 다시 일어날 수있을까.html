@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[마감시황] 석유화학 지원 나선 정부 다시 일어날 수있을까</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: #00796b;
+            font-size: 32px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style: disc;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        table th, table td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        table th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        table tbody tr:nth-child(odd) {
+            background-color: #f5f5f5;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+
+        .faq-section {
+            margin: 30px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-answer {
+            padding-left: 15px;
+            color: #555;
+            font-size: 15px;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[마감시황] 석유화학 지원 나선 정부 다시 일어날 수있을까</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> 0VAzTNoPNOs</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=0VAzTNoPNOs" target="_blank">https://www.youtube.com/watch?v=0VAzTNoPNOs</a></p>
+            <p><strong>제목:</strong> [마감시황] 석유화학 지원 나선 정부 다시 일어날 수있을까</p>
+            <p><strong>영상 길이:</strong> 00시간03분04초 (184분)</p>
+        </div>
+
+        <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+            5월 22일 마감 시황에서는 원전주 급등과 석유화학 산업 지원 정책을 분석합니다. 한미 정상회담, 트럼프 발언이 원전주에 미친 영향과 정부의 석유화학 구조조정 지원책이 산업에 미칠 변화를 심층적으로 다룹니다.
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 개요</b></h2>
+        <p>5월 22일 마감 시황에서는 원전주의 전반적인 상승과 석유화학 산업에 대한 정부 지원 소식을 다룹니다. 특히 한미정상회담의 원자력 협력 기대, 트럼프 전 대통령의 발언, 그리고 UBS 증권의 긍정적 평가가 원전주 상승을 이끌었으며, 글로벌 공급 과잉으로 어려움을 겪는 석유화학 산업에 정부가 팔을 걷어붙이고 나선 배경과 지원 방안에 대해 상세히 설명합니다.</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📈 주요 내용 분석</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>원전주 상승 배경 (00:00:04,820)</b></h3>
+        <ul>
+            <li><b>한미정상회담 원자력 협력 강화 기대 (00:00:18,900):</b> 25일 열리는 한미정상회담에서 원자력 관련 협력 강화 논의가 예상됩니다. 현재 한수원과 웨스팅하우스 간 합작회사 설립 논의가 막바지에 이르고 있다는 소식이 있으며, 이는 한미정상회담에서 다시 한번 논의될 가능성이 높습니다.</li>
+            <li><b>미국 시장 진출 가능성 증대 (00:00:43,260):</b> 합작사 설립이 확정되면 그동안 진출이 불가능했던 미국 원전 시장에 한국이 진출할 수 있게 됩니다. 유럽 시장 입찰 제한에 따른 손실을 미국 시장 진출로 일부 보상할 수 있을 것이라는 심리가 반영되었습니다.</li>
+            <li><b>트럼프 전 대통령의 한국 원전 건설 제안 (00:00:58,620):</b> 트럼프 전 대통령이 한국에 미국 원전을 지어달라고 제안했다는 소식이 전해지며 주가 상승을 견인했습니다. 한미 간 지적재산권 분쟁이 해소되고 협력 여건이 조성되었기 때문에 한국의 뛰어난 시공 능력을 활용하려는 의도로 풀이됩니다.</li>
+            <li><b>미국의 원전 확대 목표 (00:01:22,540):</b> 트럼프 대통령은 2050년까지 현재 원전의 4배 수준에 달하는 원전 건설 목표를 발표한 바 있습니다. 웨스팅하우스 또한 미국 내 신규 원전 10기 이상 배치 검토를 공식화했으며, 이러한 미국 시장의 성장 기대감이 한국 기업에 긍정적 영향을 줄 것으로 보입니다.</li>
+            <li><b>UBS 증권의 두산에너빌리티 최선호주 강조 (00:01:48,760):</b> UBS 증권이 원전 관련 포트폴리오를 통해 두산에너빌리티의 목표가를 85,000원으로 제시하며 최선호주임을 강조했습니다.</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>석유화학 산업 정부 지원 (00:02:04,880)</b></h3>
+        <ul>
+            <li><b>현재 산업 현황 (00:02:14,760):</b> 국내 석유화학 산업은 글로벌 공급 과잉과 중국발 공급 쇼크 등 다양한 원인으로 어려움을 겪고 있습니다. 생산 능력 대비 국내 수요가 월등히 많아 산업계가 힘든 시점입니다.</li>
+            <li><b>정부의 지원 방안 (00:02:32,900):</b> 정부 지원에 힘입어 석유화학 업체들은 과잉 설비를 최대 25% 이상 감축하기로 결정했습니다. 정부는 이를 돕기 위해 금융 지원, 세제 혜택 등 패키지 지원을 실시할 방침입니다. 이번 정부의 도움으로 화학 산업이 다시 한번 반등할 수 있을지 귀추가 주목됩니다.</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📝 요약</b></h2>
+        <p>5월 22일 마감 시황은 원전주의 전반적인 상승과 석유화학 산업에 대한 정부 지원 소식을 핵심적으로 다뤘습니다. 원전주는 한미정상회담에서의 원자력 협력 강화 기대, 한수원과 웨스팅하우스 간의 합작 논의, 트럼프 전 대통령의 한국 원전 건설 제안, 미국 내 원전 확대 목표, 그리고 UBS 증권의 긍정적인 분석이 복합적으로 작용하여 강세를 보였습니다. 한편, 글로벌 공급 과잉과 중국발 쇼크로 침체된 석유화학 산업은 정부가 과잉 설비 감축을 지원하기 위해 금융 및 세제 혜택 등의 패키지 지원을 제공할 방침이며, 이를 통해 산업의 재도약을 모색할 예정입니다.</p>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 첫 번째 핵심:</b> <span class="highlight">원전주 전반적인 상승</span> - 한미정상회담 및 트럼프 발언 등 긍정적 이슈가 복합적으로 작용했습니다.
+                    </div>
+                    <div class="section">
+                        <b>📊 두 번째 핵심:</b> <span class="highlight">한미 원자력 협력 강화 기대</span> - 한미정상회담 및 한수원-웨스팅하우스 합작 논의가 원전 시장 진출 기대를 높였습니다.
+                    </div>
+                    <div class="section">
+                        <b>🧮 세 번째 핵심:</b> <span class="highlight">석유화학 산업 정부 지원</span> - 글로벌 공급 과잉 해소 및 산업 구조조정을 위한 정부의 금융/세제 지원이 발표되었습니다.
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 네 번째 핵심:</b> <span class="highlight">과잉 설비 감축 결정</span> - 석유화학 업체들이 정부 지원과 함께 과잉 설비 25% 이상 감축을 결정했습니다.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    본 요약은 5월 22일 마감 시황을 바탕으로 작성되었습니다.
+                </div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🤔 생각해볼 사항</b></h2>
+        <ul>
+            <li>한미정상회담의 구체적인 원자력 협력 합의 내용이 국내 원전 기업들의 해외 수주에 어떤 실질적인 영향을 미칠지 주목해야 합니다.</li>
+            <li>웨스팅하우스와의 합작회사 설립이 한국형 원전(APR1400)의 해외 수출 및 지적재산권 문제 해결에 어떤 전환점이 될 수 있을까요?</li>
+            <li>트럼프 전 대통령의 발언이 실제 미국 내 원전 건설 수주로 이어질 가능성과 그 시기, 그리고 관련 국내 기업들의 수혜 폭은 어느 정도일까요?</li>
+            <li>정부의 석유화학 산업 지원 정책이 과잉 설비 감축을 통한 구조조정에 얼마나 효과적일지, 그리고 장기적인 산업 경쟁력 강화로 이어질 수 있을지 지켜봐야 합니다.</li>
+            <li>과잉 설비 감축이 단기적으로는 기업 실적에 부담이 될 수 있지만, 장기적으로는 산업 체질을 개선하고 글로벌 경쟁력을 회복하는 데 긍정적으로 작용할지 판단해야 합니다.</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">Q: 원전주가 급등한 주요 이유는 무엇인가요?</div>
+                <div class="faq-answer">A: 한미정상회담 원자력 협력 강화 기대, 한수원-웨스팅하우스 합작 논의, 트럼프 전 대통령의 한국 원전 건설 제안, 미국 내 원전 확대 목표, UBS 증권의 두산에너빌리티 최선호주 강조 등이 복합적으로 작용했습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 한수원과 웨스팅하우스의 합작회사 설립 논의가 왜 중요한가요?</div>
+                <div class="faq-answer">A: 이 합작사가 확정되면 한국이 미국 원전 시장에 진출할 수 있는 길이 열려, 유럽 시장 입찰 제한으로 인한 손실을 일부 보상할 수 있을 것으로 기대되기 때문입니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 트럼프 전 대통령의 발언이 원전주에 어떤 영향을 미쳤나요?</div>
+                <div class="faq-answer">A: 트럼프는 한미 간 지재권 분쟁 해소와 협력 여건 조성을 언급하며 시공 능력 강점을 가진 한국이 미국 내 원전을 지어주면 좋겠다는 의사를 밝혔고, 이는 한국 원전 기업의 미국 시장 진출 기대감을 높여 주가 상승에 기여했습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 석유화학 산업이 현재 겪고 있는 어려움은 무엇이며, 정부는 어떻게 지원하나요?</div>
+                <div class="faq-answer">A: 글로벌 공급 과잉과 중국발 공급 쇼크로 인해 생산 능력 대비 국내 수요가 부족하여 어려움을 겪고 있습니다. 정부는 과잉 설비 25% 이상 감축을 결정하고, 이를 돕기 위해 금융 지원, 세제 혜택 등의 패키지 지원을 실시할 방침입니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 이번 정부 지원이 석유화학 산업에 어떤 변화를 가져올 것으로 예상되나요?</div>
+                <div class="faq-answer">A: 과잉 설비 감축과 정부의 패키지 지원을 통해 산업 구조를 효율화하고, 장기적으로는 산업의 체질을 개선하여 다시 한번 반등할 기회를 모색할 것으로 기대됩니다.</div>
+            </div>
+        </div>
+
+        <div class="disclaimer-box">
+            <h3>⚠️면책조항</h3>
+            <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
