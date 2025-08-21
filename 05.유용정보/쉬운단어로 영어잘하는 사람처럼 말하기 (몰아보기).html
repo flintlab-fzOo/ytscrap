@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쉬운단어로 영어잘하는 사람처럼 말하기 (몰아보기)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: #00796b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: bold;
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>쉬운단어로 영어잘하는 사람처럼 말하기 (몰아보기)</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> L4Svoa_mvnA</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=L4Svoa_mvnA" target="_blank">https://www.youtube.com/watch?v=L4Svoa_mvnA</a></p>
+            <p><strong>제목:</strong> 쉬운단어로 영어잘하는 사람처럼 말하기 (몰아보기)</p>
+            <p><strong>영상 길이:</strong> 00시간28분18초(028분)</p>
+        </div>
+
+        <h2>개요</h2>
+        <p>이 영상은 어려운 단어나 새로운 표현을 많이 아는 것보다, 이미 알고 있는 쉬운 단어를 활용하여 다양하고 풍성하게 문장을 만들고 말하는 것이 영어를 잘하는 길이라고 강조합니다. 비, 잃어버리다, 아프다, 죽다, 주말, 치우다, 자다, 원하다/하고 싶다 등 일상생활에서 자주 접하는 쉬운 단어들을 중심으로, 명사/동사/형용사로의 활용과 각 표현이 가진 뉘앙스 차이를 상세히 설명하며 자연스러운 영어 구사 능력을 키울 수 있도록 돕습니다. 실제 예시 문장들을 통해 각 표현의 올바른 사용법을 익히고, 원어민처럼 풍부하게 대화할 수 있는 실용적인 팁을 제공합니다.</p>
+
+        <h2>내용</h2>
+        <h3>[영어 학습의 본질]</h3>
+        <ul>
+            <li><strong>쉬운 단어 활용의 중요성 강조</strong> (00:01.600)
+                <ul>
+                    <li>어려운 단어나 새로운 슬랭을 많이 아는 것보다, 이미 알고 있는 쉬운 단어로 다양하고 풍성하게 문장을 바꿔가며 말할 수 있는 것이 영어를 잘하는 사람이라고 정의합니다.</li>
+                    <li>예시: '비 온다'를 단순히 "It's raining"으로만 말하는 것이 아니라, 쉬운 단어를 활용하여 다양한 문장으로 표현하는 방법을 제시합니다.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[비에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'rain'과 'rainy'의 차이</strong> (01:18.820)
+                <ul>
+                    <li><strong>Rain (동사/명사):</strong> 비가 내리다 (동사), 비 (명사). 실제 비가 주룩주룩 내릴 때 사용합니다.</li>
+                    <li><strong>Rainy (형용사):</strong> 비가 오는 날씨 전체를 지칭하며, 비가 아직 오지 않더라도 비 올 것 같은 날씨에도 사용됩니다. 'a rainy day', 'rainy weather'처럼 명사 앞에 쓰입니다.</li>
+                    <p class="definition">※ <strong>예시:</strong> "It is raining heavily" (비가 많이 내린다)는 가능하지만, "It is very rainy heavily"는 어색합니다.</p>
+                </ul>
+            </li>
+            <li><strong>비의 양 표현</strong> (01:54.660)
+                <ul>
+                    <li><strong>많이 내릴 때:</strong> "It is raining heavily" (무겁게 내린다), "It is raining a lot", "It is raining so much".</li>
+                    <li><strong>조금 내릴 때:</strong> "It is raining lightly" (가볍게 내린다), "It is raining a little".</li>
+                </ul>
+            </li>
+            <li><strong>미래형 표현</strong> (04:21.760)
+                <ul>
+                    <li>"It will rain today": 오늘 비가 올 것 같아 (단순 미래).</li>
+                    <li>"It will be rainy today": 오늘 비가 올 것 같은 날씨일 거야 (날씨 상태).</li>
+                    <li>"It's going to rain today" / "It's going to be rainy today": 비가 오려나 봐 (계획이나 일기예보에 따른 예측).</li>
+                </ul>
+            </li>
+            <li><strong>개인의 느낌 표현</strong> (05:01.420)
+                <ul>
+                    <li>"I feel like it's going to rain today": (내가 느끼기에) 오늘 비 올 것 같아.</li>
+                </ul>
+            </li>
+            <li><strong>비 오는 날에 대한 싫증 표현</strong> (05:17.480)
+                <ul>
+                    <li>"I hate rainy days": (모든) 비 오는 날들이 싫어.</li>
+                    <li>"I hate when it is raining": 비가 오고 있는 중일 때가 싫어.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘잃어버리다’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'lose'와 'lost'의 활용</strong> (06:34.820)
+                <ul>
+                    <li><strong>lose (동사):</strong> 잃어버리다 (현재형).</li>
+                    <li><strong>lost (과거형/과거분사):</strong> lose의 과거 및 과거분사.</li>
+                    <li><strong>lost (형용사):</strong> 잃어버린 (주로 길을 잃은 상태).</li>
+                </ul>
+            </li>
+            <li><strong>'I lost' (과거 시점의 잃어버림)</strong> (07:55.740)
+                <ul>
+                    <li>물건뿐만 아니라 의욕, 정신, 목숨 등 다양한 것을 잃었을 때 사용합니다.</li>
+                    <li>"I lost my wallet last Friday": 지난 금요일에 지갑을 잃어버렸어.</li>
+                    <li>"I lost my will to keep going": 계속할 의욕을 잃어버렸어.</li>
+                    <li>"I lost my mind": 내가 정신이 좀 나갔었나 봐.</li>
+                    <li>"I lost connection": (전화 연결 등이) 끊겼어.</li>
+                    <li>"He lost his life in a car accident": 그는 교통사고로 목숨을 잃었어.</li>
+                </ul>
+            </li>
+            <li><strong>'I have lost' (현재 완료: 과거부터 현재까지 영향이 미치는 잃어버림)</strong> (09:08.180)
+                <ul>
+                    <li>언제 잃어버렸는지 모르고 현재까지 못 찾고 있는 상황, 또는 과거부터 현재까지 반복적으로 잃어버린 경험을 말할 때 사용합니다.</li>
+                    <li>"I have lost my wallet": 지갑을 잃어버린 일 있어 (언제인지 모르고 현재 못 찾고 있음).</li>
+                    <li>"I have lost many earrings": 그동안 귀걸이를 여러 번 많이 잃어버려 왔어 (반복적인 경험).</li>
+                    <li>"I have lost feeling in my legs": 다리의 감각이 점점 없어지고 있어 (계속 진행 중인 상태).</li>
+                </ul>
+            </li>
+            <li><strong>'I am lost' (길을 잃은 상태)</strong> (10:35.220)
+                <ul>
+                    <li>자신이 길을 잃은 상태임을 표현할 때 형용사 'lost'를 비동사(am)와 함께 사용합니다.</li>
+                    <li>"I am lost": 나 길 잃어버렸어.</li>
+                    <li>"I have lost my phone, so I'm lost": 핸드폰을 잃어버려서 길을 잃었어.</li>
+                </ul>
+            </li>
+            <li><strong>'I got lost' (길을 잃게 된 순간)</strong> (11:46.220)
+                <ul>
+                    <li>길을 잘 가다가 갑자기 길을 잃게 된 '상태 변화'의 순간을 표현할 때 사용합니다. 'get + 형용사'는 '안 그러다가 그렇게 되다'라는 뜻입니다.</li>
+                    <li>"I got lost on my way to your house": 너네 집을 가던 길에 갑자기 길을 잃어버렸어.</li>
+                    <li>"I got lost trying to find a restaurant": 음식점을 찾다가 갑자기 길을 잃어버렸어.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘아프다’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'hurt'의 다양한 활용</strong> (13:23.140)
+                <ul>
+                    <li><strong>hurt (형용사):</strong> 다친, 아픈 상태.</li>
+                    <li><strong>hurt (동사):</strong> 아프다, 아프게 하다, 다치게 하다.</li>
+                </ul>
+            </li>
+            <li><strong>형용사 'hurt'의 사용</strong> (13:31.440)
+                <ul>
+                    <li>"Are you hurt?": 다치셨어요? (지금 막 다쳐서 아픈 상태인지 물을 때)</li>
+                    <li>"Did you get hurt?": (어떤 특정 시점에) 다친 거야? (상태 변화의 순간을 물을 때)</li>
+                    <li>"How were you hurt?": 어쩌다 다쳤어? (다친 원인을 물을 때)</li>
+                    <li>"How did you get hurt?": 어쩌다 다쳤어? (상태 변화의 원인을 물을 때)</li>
+                </ul>
+            </li>
+            <li><strong>동사 'hurt'의 사용: '아프다' (특정 부위)</strong> (14:34.480)
+                <ul>
+                    <li>'sick'이 몸 전반적으로 아픈 것을 나타낸다면, 'hurt'는 특정 부위가 아플 때 사용합니다.</li>
+                    <li>"My head hurts": 머리가 아파요.</li>
+                    <li>"My stomach hurts": 배가 아파요.</li>
+                    <li>"My heart hurts": 마음이 아파요. (상처받았을 때)</li>
+                    <li>"It hurts here": (가리키면서) 여기가 아파요.</li>
+                </ul>
+            </li>
+            <li><strong>동사 'hurt'의 사용: '아프게 하다/다치게 하다'</strong> (15:28.880)
+                <ul>
+                    <li>누가 누구를 다치게 했는지 주어/목적어를 명확히 표현합니다.</li>
+                    <li>"Did you hurt your finger?": 너 손가락 다쳤어? (네가 너의 손가락을 다치게 했어?)</li>
+                    <li>"Did you hurt yourself?": 혼자 넘어져서 다쳤어? (스스로를 다치게 했어?)</li>
+                    <li>"You hurt me": 너 때문에 다쳤잖아. / 네가 날 상처 줬어. (마음이 아플 때도 사용)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘죽다’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'die'와 'dead'의 차이</strong> (17:31.300)
+                <ul>
+                    <li><strong>die (동사):</strong> 죽다 (행위, 사건). 과거형은 'died'.</li>
+                    <li><strong>dead (형용사):</strong> 죽은 (상태).</li>
+                </ul>
+            </li>
+            <li><strong>'died'와 'is dead'의 활용</strong> (18:04.820)
+                <ul>
+                    <li>"The main character died": 주인공이 죽었어 (죽었던 과거의 시점).</li>
+                    <li>"The main character is dead": 주인공이 죽은 상태야 (죽은 이후 현재까지의 상태).</li>
+                    <p class="definition">※ <strong>예시:</strong> 영화 '겨울왕국'에서 'she died'는 죽음의 사건을, 'your sister is dead'는 죽은 상태를 표현합니다.</p>
+                </ul>
+            </li>
+            <li><strong>배터리/핸드폰/차 등에 대한 비유적 표현</strong> (20:27.760)
+                <ul>
+                    <li><strong>'died':</strong> 배터리가 0%가 된 순간, 핸드폰이 꺼진 순간, 차가 멈춘 순간.
+                        <ul>
+                            <li>"My phone died. Can I borrow your charger?": 핸드폰이 꺼졌어. 충전기 좀 빌려줄래?</li>
+                            <li>"My car died on the highway": 고속도로에서 차가 서버렸어.</li>
+                        </ul>
+                    </li>
+                    <li><strong>'is dead':</strong> 충전/수리하기 전까지 계속 꺼져있거나 멈춰있는 상태.
+                        <ul>
+                            <li>"My phone is dead. I need to make a call.": 전화해야 하는데 핸드폰이 꺼져 있어.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>사람의 죽음(돌아가시다)에 대한 완곡한 표현</strong> (21:47.780)
+                <ul>
+                    <li><strong>'passed away' (동사):</strong> 돌아가셨다. (사망의 완곡한 표현)
+                        <ul>
+                            <li>"My uncle passed away": 우리 큰아버지가 돌아가셨어. ('pass away'는 '지나쳐 가다', '사람들 눈에 보이지 않는 곳으로 가다'라는 뉘앙스)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘치우다’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'clean', 'clean up', 'clean off'의 차이</strong> (28:20.260)
+                <ul>
+                    <li><strong>clean:</strong> 가장 기본적인 '닦다, 청소하다'.</li>
+                    <li><strong>clean up:</strong> '싹 다 치우다', '대청소하다'처럼 강조하는 뉘앙스. 물건을 들어내고 지저분한 것을 드러내는 느낌.
+                        <ul>
+                            <li>"clean your room" / "clean up your room": 방 깨끗이 치워.</li>
+                            <li>"We cleaned up the house over the weekend": 주말에 우리 집 대청소했어.</li>
+                            <li>"After the party, I would have to stay and clean up": 파티 끝나고 내가 싹 다 치워야 할 거야.</li>
+                        </ul>
+                    </li>
+                    <li><strong>clean off:</strong> 표면에 묻어있는 것을 닦아내는 느낌. 'off'는 붙어있던 것이 떨어지는 뉘앙스.
+                        <ul>
+                            <li>"clean off the table": 테이블 위에 있는 것들을 치워. (부스러기, 묻은 것 등)</li>
+                            <li>"clean off the mirror": 거울 위에 지저분한 것 좀 닦아줘.</li>
+                            <li>"clean off the writing on the window": 창문에 낙서한 것 좀 닦아줘.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>'take away' (가져가다)</strong> (31:03.880)
+                <ul>
+                    <li>식당 등에서 다 먹은 그릇 등을 '가져가 달라'고 요청할 때 사용.</li>
+                    <li>"I'm done with this. Could you take this away, please?": 이거 다 먹은 건데 그릇 좀 치워주시겠어요?</li>
+                </ul>
+            </li>
+            <li><strong>'wipe' (닦다)</strong> (32:01.200)
+                <ul>
+                    <li>테이블 등 표면을 닦을 때 사용.</li>
+                    <li>"Please wipe the table": 테이블 좀 닦아주세요.</li>
+                </ul>
+            </li>
+            <li><strong>'put away' (제자리에 놓다)</strong> (32:15.140)
+                <ul>
+                    <li>물건을 제자리에 정리하고 놓는 것. 'take away'가 시작(가져가는 것)이라면, 'put away'는 끝(정리하는 것)입니다.</li>
+                    <li>"Put your things away": 물건들 제자리에 갖다놔. (정리해)</li>
+                    <li>"Hey kids, put away your clothes": 얘들아, 옷 제자리에 놓자.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘주말’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'on the weekend' (일반적인 주말)</strong> (34:43.280)
+                <ul>
+                    <li>특정한 주말을 가리킬 때 사용. 요일 앞에 'on'을 쓰는 것과 유사합니다.</li>
+                    <li>"I met up with my friend on the weekend": 나 주말에 친구 만났어.</li>
+                </ul>
+            </li>
+            <li><strong>'on weekends' (주말마다, 반복적인 행위)</strong> (35:22.820)
+                <ul>
+                    <li>여러 주말에 걸쳐 반복되는 일을 말할 때 's'를 붙여 사용합니다.</li>
+                    <li>"I go hiking with my friend on weekends": 난 주말마다 친구랑 등산가.</li>
+                </ul>
+            </li>
+            <li><strong>'this weekend' (이번 주말)</strong> (35:55.300)
+                <ul>
+                    <li>문장의 시제에 따라 의미가 달라집니다.
+                        <ul>
+                            <li>과거형 문장: 지나간 주말. ("I met up with my friend this weekend" - 이번에 지나간 주말에 만났어)</li>
+                            <li>미래형 문장: 돌아오는 주말. ("Will you go to the restaurant this weekend?" - 이번 주말에 그 식당 가볼 거야?)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>'last weekend' (지난 주말)</strong> (36:49.700)
+                <ul>
+                    <li>가장 흔하게 '지난 주말'을 표현할 때 사용합니다.</li>
+                    <li>"I met up with my friend last weekend": 나 지난 주말에 친구 만났어.</li>
+                </ul>
+            </li>
+            <li><strong>'this past weekend' (이번에 지나간 주말)</strong> (36:59.780)
+                <ul>
+                    <li>미국 영어에서 '지난 주말'을 표현하는 또 다른 방법입니다.</li>
+                    <li>"I think I saw your mom this past weekend": 나 지난 주말에 너네 엄마 본 거 같아.</li>
+                </ul>
+            </li>
+            <li><strong>'over the weekend' (주말 내내, 주말 동안)</strong> (37:19.880)
+                <ul>
+                    <li>주말 전체에 걸쳐 일어난 일이나 계속된 상황을 표현할 때 사용합니다. 'over'는 포물선처럼 이어지는 뉘앙스를 가집니다.</li>
+                    <li>"I met up with my friend over the weekend": 나 주말 동안 계속 친구 만났어.</li>
+                    <li>"I have to work over the weekend": 나 주말 내내 일해야 해.</li>
+                </ul>
+            </li>
+            <li><strong>'during the weekend' (주말 동안)</strong> (38:15.080)
+                <ul>
+                    <li>'over the weekend'와 유사하게 주말 동안의 일을 표현할 때 사용합니다.</li>
+                    <li>"It snowed so much during the weekend": 주말 동안 눈이 많이 내렸어.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘자다’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>'자다'의 기본 표현</strong> (39:34.860)
+                <ul>
+                    <li><strong>sleep (동사):</strong> 자다.</li>
+                    <li><strong>get some sleep (명사):</strong> 잠을 좀 청하다. ('get'은 '얻다'는 뜻으로, 잠을 얻는 느낌)</li>
+                    <li><strong>take a nap / have a nap:</strong> 낮잠 자다. ('take'는 기회를 잡는 느낌, 'have'는 상황을 갖는 느낌)
+                        <ul>
+                            <li>"Go back to sleep": 다시 가서 자.</li>
+                            <li>"You really should get some sleep over the weekend": 너 주말 동안 잠 좀 자야겠다.</li>
+                            <li>"I never take naps": 난 낮잠은 절대 안 자.</li>
+                            <li>"I won't be able to sleep tonight because I had a nap this afternoon": 오후에 낮잠을 자서 오늘 밤에 못 잘 것 같아.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>'자고 있는' 상태 표현</strong> (41:43.840)
+                <ul>
+                    <li><strong>asleep (형용사):</strong> 잠자는 상태.</li>
+                    <li><strong>sleeping (형용사):</strong> 잠자는 중인 상태.
+                        <ul>
+                            <li>"Are you asleep?": 저기 지금 주무세요?</li>
+                            <li>"Are you sleeping?": 쟤네 자고 있는 중이야?</li>
+                            <li>"Was she asleep when you got home?": 너가 도착했을 때 그녀가 자고 있었어?</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>'자러 가다' 표현</strong> (42:45.460)
+                <ul>
+                    <li><strong>go to sleep:</strong> 정말 자기 위해서 가는 느낌.</li>
+                    <li><strong>go to bed:</strong> 침대를 향해서 가는 느낌 (자기 전에 거실 등에 있다가 침대로 가는 상황).
+                        <ul>
+                            <li>"Go to sleep, it's late": 가서 자, 늦었어.</li>
+                            <li>"What time do you usually go to bed?": 너 보통 몇 시에 자?</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>'잠에 들다' 표현</strong> (43:34.360)
+                <ul>
+                    <li><strong>get to sleep:</strong> 잠자는 상태에 '도착하다'는 느낌으로, 뒤척이다가 잠에 드는 과정.
+                        <ul>
+                            <li>"I was so excited, I couldn't get to sleep on time": 너무 신나서 제때 잠에 들 수 없었어.</li>
+                        </ul>
+                    </li>
+                    <li><strong>fall asleep:</strong> 잠자는 상태로 '떨어져 들어가다'는 느낌.
+                        <ul>
+                            <li>"I always fall asleep on the bus": 난 항상 버스에서 잠들어.</li>
+                        </ul>
+                    </li>
+                    <li><strong>be fast asleep:</strong> 곤이 잠들다, 깊이 잠들다. ('fast'는 '완전히'라는 뜻)
+                        <ul>
+                            <li>"He was fast asleep during the movie": 걔는 영화 보는데 깊이 잠들어 버렸어.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>[‘원하다/하고 싶다’에 대한 다양한 표현]</h3>
+        <ul>
+            <li><strong>I would like to (~하고 싶어요)</strong> (46:10.760)
+                <ul>
+                    <li>'I want to'보다 부드럽고 격식적인 표현. 주로 모르는 사람(카페, 식당, 호텔, 미용실 등)에게 사용합니다.</li>
+                    <li>'to' 다음에 동사를 붙이거나, 'like' 다음에 명사를 바로 붙일 수 있습니다.</li>
+                    <li>"I would like to reserve a table": 식사 자리를 예약하고 싶어요.</li>
+                    <li>"I would like a table": (식당에서) 테이블 하나 원해요.</li>
+                    <li>"I would like a room for tonight": 오늘 밤 묵을 방 하나 원해요.</li>
+                    <li>"I would like a trim": (미용실에서) 머리 조금만 다듬어주세요.</li>
+                    <p class="definition">※ <strong>발음 팁:</strong> 'would' 발음은 입술을 휘파람 크기로 모은 후 살짝 벌리며 발음. 어렵다면 'I'll' (아이ㄹ)처럼 줄여서 발음할 수 있습니다.</p>
+                </ul>
+            </li>
+            <li><strong>I feel like (~하고 싶은 기분이 들다)</strong> (48:49.960)
+                <ul>
+                    <li>지금 잠깐 무언가를 원한다는 뉘앙스가 강하며, 나중에 그 기분이 사라질 수도 있음을 암시합니다.</li>
+                    <li>"I feel like something sweet": 뭔가 달콤한 거 먹고 싶어.</li>
+                    <li>"I feel like Italian food": 이탈리안 음식이 먹고 싶어.</li>
+                    <li>"I feel like camping": 나 캠핑 가고 싶어.</li>
+                </ul>
+            </li>
+            <li><strong>I can't wait to (~빨리 ~하고 싶어, 기다릴 수 없어)</strong> (50:37.880)
+                <ul>
+                    <li>무언가를 최대한 빨리, 지금 당장 하고 싶다는 강한 열망을 강조하는 표현입니다.</li>
+                    <li>"I can't wait to go on vacation": 빨리 휴가 가고 싶어.</li>
+                    <li>"I can't wait to watch the new episode": 빨리 새로운 에피소드 보고 싶어.</li>
+                    <li>"I can't wait to meet you again": 당신을 어서 다시 만나고 싶어요.</li>
+                </ul>
+            </li>
+            <li><strong>I'm dying to (~하고 싶어 죽겠어요)</strong> (51:55.640)
+                <ul>
+                    <li>가장 강하게 무언가를 원한다는 극단적인 표현입니다. 한국어 '죽겠어'와 유사합니다.</li>
+                    <li>"I'm dying to have a cheesecake in the cafe": 저기 카페에서 치즈케이크 먹고 싶어 죽겠어.</li>
+                    <li>"I'm dying to go to that concert": 저 콘서트 가고 싶어 죽겠어.</li>
+                    <li>"I'm dying to relax": 쉬고 싶어 죽겠어.</li>
+                </ul>
+            </li>
+            <li><strong>I'm craving (~가 땡겨요)</strong> (53:21.120)
+                <ul>
+                    <li>'갈망하다', '열망하다'는 뜻으로, 주로 음식에 대한 강한 욕구를 표현할 때 사용합니다.</li>
+                    <li>"I'm craving pasta": 파스타가 땡겨.</li>
+                    <li>"I'm craving something salty like potato chips": 감자칩 같은 짭짤한 게 땡기네.</li>
+                    <li>"I'm craving Thai food": 태국 요리가 땡겨.</li>
+                </ul>
+            </li>
+            <li><strong>I wish to (~하면 참 좋겠어요)</strong> (54:25.380)
+                <ul>
+                    <li>일어나기 힘든 일, 또는 이루어지지 않을 수도 있다는 가정을 담아 무언가를 원할 때 사용합니다.</li>
+                    <li><strong>3가지 표현:</strong>
+                        <ul>
+                            <li>"I wish to become rich": 부자가 되면 참 좋겠어.</li>
+                            <li>"I wish I were rich": (지금) 부자라면 참 좋겠어. (가정법 과거)</li>
+                            <li>"I wish I could become rich": (앞으로) 부자가 될 수 있으면 좋겠어. (가정법 미래)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>I'd kill for (~하고 싶어 못 견디겠어요)</strong> (56:37.960)
+                <ul>
+                    <li>'I'm dying to'보다 더 강렬하고 극단적인 표현입니다. (여기서 'I'd'는 'I would'의 줄임말)</li>
+                    <li>"I'd kill for a beer": 맥주가 너무 마시고 싶어서 못 견디겠어.</li>
+                    <li>"I'd kill for ice cream": 아이스크림이 먹고 싶어서 못 견디겠어.</li>
+                    <li>"I'd kill for a drink": 음료가 마시고 싶어 못 견디겠어.</li>
+                </ul>
+            </li>
+            <li><strong>I desire to (~를 간절히 원해요)</strong> (57:58.760)
+                <ul>
+                    <li>'갈망한다'는 의미로, 주로 소설 등 문어체에서 진지하고 비장한 목표를 표현할 때 사용합니다.</li>
+                    <li>'to' 다음에 동사를 붙이거나, 다음에 명사를 바로 붙일 수 있습니다.</li>
+                    <li>"I desire to help the world": 내가 세상에 도움이 되길 간절히 원해.</li>
+                    <li>"I desire fame": 나는 명성을 원해.</li>
+                    <li>"I desire a stable life": 나는 안정된 삶을 원해.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>요약</h2>
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 쉬운 단어의 힘:</b> 어려운 표현보다 이미 아는 쉬운 단어를 <strong>다양하게 활용</strong>하는 것이 영어 실력 향상에 중요합니다. (예: "It's raining"을 넘어 "It is raining heavily" 등)
+                    </div>
+                    <div class="section">
+                        <b>📊 동사/형용사 활용:</b> 'rain(동사/명사)'과 'rainy(형용사)', 'lose(동사)'와 'lost(형용사)', 'die(동사)'와 'dead(형용사)'처럼 한 단어가 여러 품사로 사용될 때의 <strong>뉘앙스 차이</strong>를 이해하는 것이 중요합니다.
+                    </div>
+                    <div class="section">
+                        <b>🧮 일상 표현 확장:</b> '잃어버리다', '아프다', '죽다', '치우다', '주말', '자다', '원하다' 등 일상생활에서 자주 쓰는 단어들을 활용하여 <strong>다채로운 문장</strong>을 만들 수 있습니다.
+                        <div class="formula">예: I am lost (길을 잃은 상태) vs. I got lost (길을 잃게 된 순간)</div>
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 감정 및 강조 표현:</b> '원하다/하고 싶다'는 감정처럼, 'I would like to', 'I feel like', 'I can't wait to', 'I'm dying to', 'I'm craving', 'I wish to', 'I'd kill for', 'I desire to' 등 <strong>강도에 따른 다양한 표현</strong>을 익혀 보다 풍성한 대화가 가능합니다.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    본 영상은 쉬운 단어를 통해 영어를 자연스럽게 구사하는 실용적인 방법을 제시합니다.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

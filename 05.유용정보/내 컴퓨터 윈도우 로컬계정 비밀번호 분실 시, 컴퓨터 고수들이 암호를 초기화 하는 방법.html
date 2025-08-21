@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 컴퓨터 윈도우 로컬계정 비밀번호 분실 시, 컴퓨터 고수들이 암호를 초기화 하는 방법</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-bottom: 2px solid #b2ebf2;
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile adjustments: below 768px */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* Mobile adjustments: below 480px */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>내 컴퓨터 윈도우 로컬계정 비밀번호 분실 시, 컴퓨터 고수들이 암호를 초기화 하는 방법</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> b1bbFBRe140</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=b1bbFBRe140" target="_blank">https://www.youtube.com/watch?v=b1bbFBRe140</a></p>
+        <p><strong>제목:</strong> 내 컴퓨터 윈도우 로컬계정 비밀번호 분실 시, 컴퓨터 고수들이 암호를 초기화 하는 방법</p>
+        <p><strong>영상 길이:</strong> 00시간08분59초(539분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 윈도우 로컬 계정 비밀번호를 분실하여 로그인이 불가능할 때, PC 없이 안드로이드 스마트폰과 USB, OTG 어댑터를 활용하여 윈도우 PE 복구 USB를 만들고, 이를 통해 NTPW 에디트 프로그램을 사용하여 비밀번호를 안전하게 초기화하는 방법을 단계별로 상세히 안내합니다. 특히 윈도우 11 및 윈도우 10 로컬 계정 비밀번호 분실 문제 해결에 유용하며, 포맷 없이 데이터를 보존하며 시스템 사용을 원활하게 이어갈 수 있도록 돕습니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[서론] 윈도우 비밀번호 분실 문제 및 해결책 소개 (00:00:00)</h3>
+    <ul>
+        <li>윈도우 사용 중 암호 변경 후 로그인이 안 되는 난감한 상황에 대한 언급.</li>
+        <li>마이크로소프트 계정과 달리 로컬 계정 비밀번호 분실 시의 막막함과 기존 해결 방법의 어려움.</li>
+        <li>포맷 없이 스마트폰 하나로 윈도우 PE 복구 USB를 만들어 비밀번호를 간단하게 초기화하는 방법을 소개.</li>
+        <li>안드로이드 폰만 가능하며, OTG 어댑터가 필요하며 다이소 등에서 쉽게 구할 수 있음.</li>
+        <li>기존 컴퓨터를 이용한 루퍼스 방식보다 스마트폰 방식이 훨씬 간편함을 강조.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=로컬 계정" target="_blank">로컬 계정</a>: 인터넷에 연결되지 않고 특정 컴퓨터에만 사용자 정보가 저장되는 계정.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=마이크로소프트 계정" target="_blank">마이크로소프트 계정</a>: 인터넷에 연결되어 마이크로소프트 서비스(OneDrive, Outlook 등)와 연동되는 계정.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=PE" target="_blank">PE</a>: Preinstallation Environment의 약자로, 윈도우 설치 또는 복구 작업을 위해 사용하는 최소화된 윈도우 환경.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=OTG 어댑터" target="_blank">OTG 어댑터</a>: On-The-Go의 약자로, 스마트폰과 같은 모바일 기기에 USB 장치(USB 메모리, 키보드 등)를 직접 연결할 수 있게 해주는 변환 젠더.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=루퍼스" target="_blank">루퍼스</a>: USB 부팅 디스크를 만들 때 사용되는 무료 오픈소스 유틸리티.</p>
+
+    <h3>[준비물] 필요한 도구 및 파일 안내 (00:01:53)</h3>
+    <ul>
+        <li>안드로이드 스마트폰, 8GB 이상의 USB, OTG 어댑터, 윈도우 11 PE ISO 이미지 파일이 필요함.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=ISO 파일" target="_blank">ISO 파일</a>: CD, DVD 또는 블루레이 디스크의 내용을 하나의 파일로 압축해 놓은 디스크 이미지 파일.</p>
+
+    <h3>[PE ISO 파일 다운로드] 윈도우 11 PE ISO 파일 구하기 (00:02:03)</h3>
+    <ul>
+        <li>홍차의 꿈 블로그에서 윈도우 11 PE ISO 이미지 파일을 다운로드하는 방법 안내.</li>
+        <li>영상 설명란의 상세정보 링크를 통해 해당 사이트에 접속하여 첫 번째 링크를 클릭, 구글 드라이브에서 ISO 파일을 다운로드함.</li>
+        <li>ISO 파일 용량은 약 660MB로 크지 않아 빠르게 다운로드 가능.</li>
+        <li>다운로드된 파일은 스마트폰의 다운로드 폴더(내 파일 앱)에서 확인 가능.</li>
+    </ul>
+
+    <h3>[부팅 USB 생성 (Android)] 엣치드로이드 앱을 사용하여 USB 만들기 (00:03:02)</h3>
+    <ul>
+        <li>스마트폰으로 윈도우 11 PE 부팅 USB를 만들기 위해 '엣치드로이드(etchdroid)' 앱 설치 필요.</li>
+        <li>구글 플레이스토어에서 앱을 설치하고 실행.</li>
+        <li>스마트폰에 USB를 연결한 후 앱에서 '이미지 쓰기' 버튼 클릭.</li>
+        <li>다운로드받은 윈도우 11 PE ISO 이미지 파일 선택.</li>
+        <li>'윈도우 ISO인가요?' 알림 팝업 시 '무시하고 계속' 클릭.</li>
+        <li>대상 USB 장치 항목에서 '접근 허용' 버튼을 탭하여 쓰기 권한 부여.</li>
+        <li>권한 허용 후 '이미지 쓰기' 버튼을 눌러 USB에 ISO 파일 기록 시작.</li>
+        <li>작업 완료 시 '이미지가 성공적으로 작성되었어요' 메시지 확인.</li>
+    </ul>
+
+    <h3>[바이오스 부팅 설정] USB로 컴퓨터 부팅 순서 변경 (00:05:03)</h3>
+    <ul>
+        <li>생성된 부팅 USB를 컴퓨터에 연결.</li>
+        <li>컴퓨터 재부팅 시 바이오스 진입 키 (삼성 컴퓨터는 F2, 다른 브랜드는 검색 후 확인)를 연타하여 바이오스 화면 진입.</li>
+        <li>바이오스 화면에서 'Boot' 메뉴의 'Boot Priority' 항목을 찾아 진입.</li>
+        <li>'Boot Option #1' 항목을 USB 장치로 변경하여 최우선 부팅 순서로 설정.</li>
+        <li>설정 저장 후 재부팅하면 윈도우 PE 복구 화면으로 진입.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=바이오스" target="_blank">바이오스</a>: Basic Input/Output System의 약자로, 컴퓨터의 하드웨어를 초기화하고 운영체제를 부팅하는 기본적인 펌웨어.</p>
+
+    <h3>[PE 환경 진입 및 NTPW 에디트 실행] 윈도우 PE 환경 활용 (00:05:56)</h3>
+    <ul>
+        <li>윈도우 PE는 일반 윈도우 환경과 유사하며 비밀번호 초기화 등 복구 작업에 사용되는 전용 환경.</li>
+        <li>PE 바탕화면에서 'NTPW 에디트' 아이콘을 찾아 실행.</li>
+        <li>이 프로그램은 로컬 계정 비밀번호 초기화 및 변경에 효과적인 경량 프로그램임.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=NTPW 에디트" target="_blank">NTPW 에디트</a>: Windows NT 계열 운영체제(Windows XP, Vista, 7, 8, 10, 11 등)의 로컬 사용자 계정 비밀번호를 변경하거나 초기화할 수 있는 유틸리티.</p>
+
+    <h3>[비밀번호 초기화/변경] NTPW 에디트를 통한 비밀번호 재설정 (00:06:32)</h3>
+    <ul>
+        <li>NTPW 에디트 프로그램 실행 후 '열기' 버튼을 클릭하여 사용자 계정 정보를 불러옴.</li>
+        <li>표시된 로컬 사용자 계정 목록 중 비밀번호를 분실한 계정 선택.</li>
+        <li>하단의 '암호 변경' 버튼 클릭.</li>
+        <li>'새 암호'와 '암호 확인' 필드에 새로운 비밀번호를 동일하게 입력하거나 비워 초기화.</li>
+        <li>'확인' 버튼 클릭 후 마지막으로 '변경 사항 저장' 버튼 클릭.</li>
+        <li>'변경 사항 저장' 버튼이 비활성화되면 내용이 정상적으로 저장된 것임.</li>
+        <li>우측 하단의 '끝내기' 버튼을 눌러 프로그램 종료.</li>
+    </ul>
+
+    <h3>[최종 확인 및 마무리] 윈도우 로그인 확인 (00:07:31)</h3>
+    <ul>
+        <li>모든 작업 완료 후 컴퓨터를 다시 시작하고 USB 장치 제거.</li>
+        <li>윈도우 로그인 화면에서 방금 변경한 새로운 비밀번호를 입력하여 로그인 시도.</li>
+        <li>정상적으로 암호가 적용되었다면 로그인 오류 없이 윈도우 바탕 화면으로 진입 가능.</li>
+        <li>비밀번호 분실로 막혔던 시스템 사용을 다시 원활하게 할 수 있음.</li>
+    </ul>
+
+    <h3>[결론] 방법 요약 및 적용 범위 (00:07:56)</h3>
+    <ul>
+        <li>윈도우 11 로컬 계정 비밀번호 분실 시 포맷이나 초기화 대신 PE 복구 USB를 활용하는 간단한 방법으로 안전하게 초기화 및 복구 가능.</li>
+        <li>스마트폰을 이용한 윈도우 11 PE 복구 USB 제작부터 바이오스 설정, NTPW 에디트 사용, 바탕 화면 진입까지의 전 과정을 자세히 설명.</li>
+        <li>윈도우 10 버전도 동일한 방법으로 적용 가능.</li>
+        <li>IT 지식이 많지 않은 사용자도 단계별로 쉽게 따라 할 수 있을 정도로 직관적임.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 비밀번호 분실 해결:</b> 윈도우 로컬 계정 비밀번호를 잊었을 때, 포맷 없이 안전하게 초기화하는 방법을 제시합니다.
+                </div>
+                <div class="section">
+                    <b>📊 준비물:</b> <span class="highlight">안드로이드 스마트폰, 8GB 이상 USB, OTG 어댑터</span>, 그리고 홍차의 꿈 블로그에서 다운로드 가능한 윈도우 11 PE ISO 파일이 필요합니다.
+                </div>
+                <div class="section">
+                    <b>🧮 복구 USB 생성:</b> <span class="highlight">'엣치드로이드' 앱</span>을 사용하여 스마트폰에 연결된 USB에 ISO 파일을 기록하면 간단히 부팅 USB가 만들어집니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 비밀번호 초기화:</b> 만들어진 PE USB로 컴퓨터를 부팅한 후, <span class="highlight">'NTPW 에디트' 프로그램</span>을 실행하여 분실된 로컬 계정의 비밀번호를 쉽게 변경하거나 초기화할 수 있습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                이 방법은 윈도우 10 및 11 버전에 모두 적용 가능하며, IT 지식이 많지 않아도 따라 할 수 있도록 상세히 설명되어 있습니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99%가 모르는 구구단 꿀팁 [ 계산 테크닉 5화 ]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .section-header {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .sub-section-header {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /* Summary Card Styling */
+        .single-summary-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            body { padding: 10px; font-size: 15px; }
+            h1 { font-size: 24px; }
+            .section-header { font-size: 20px; padding: 8px 15px; }
+            .sub-section-header { font-size: 18px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+        }
+
+        @media (max-width: 480px) {
+            body { font-size: 14px; }
+            h1 { font-size: 20px; }
+            .section-header { font-size: 18px; padding: 6px 10px; }
+            .sub-section-header { font-size: 16px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+        }
+    </style>
+</head>
+<body>
+    <h1>99%가 모르는 구구단 꿀팁 [ 계산 테크닉 5화 ]</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> S7mQ87qXZYE</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=L4Svoa_mvnA" target="_blank">https://www.youtube.com/watch?v=L4Svoa_mvnA</a></p>
+    </div>
+
+    <p style="margin-bottom: 5px; font-size: 15px;"><strong>제목:</strong> 99%가 모르는 구구단 꿀팁 [ 계산 테크닉 5화 ]</p>
+    <p style="margin-bottom: 20px; font-size: 15px;"><strong>영상 길이:</strong> 00시간03분30초(003분)</p>
+
+    <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+        이 영상은 6단부터 10단까지의 곱셈을 손가락을 이용해 쉽게 계산하는 트릭을 소개합니다. 단순히 계산법을 알려주는 것을 넘어, 이 트릭이 작동하는 수학적 원리를 증명하고, 아이들의 수학 학습에 재미를 부여하는 교육적 활용 방안을 제시합니다. 또한, 계산 실수를 줄이기 위한 확인 도구로도 활용될 수 있음을 보여줍니다.
+    </div>
+
+    <h2 class="section-header"><b>내용</b></h2>
+
+    <p style="margin-bottom: 15px;">[손가락 곱셈법 소개] 손가락 숫자 부여 방식 (00:00:00)</p>
+    <ul style="margin-top: -10px;">
+        <li>왼손과 오른손 모두 엄지부터 차례로 6, 7, 8, 9, 10의 숫자를 부여합니다.</li>
+    </ul>
+
+    <p style="margin-bottom: 15px;">[손가락 곱셈법 시연] 6 곱하기 8 예시 (00:00:09)</p>
+    <ul style="margin-top: -10px;">
+        <li>왼손의 6번 손가락과 오른손의 8번 손가락까지 접습니다.</li>
+        <li>접은 손가락의 총개수 (왼손 1개 + 오른손 3개 = 4개)는 십의 자리가 되어 40이 됩니다.</li>
+        <li>남은 손가락의 개수 (왼손 4개, 오른손 2개)를 곱한 값 (4 * 2 = 8)은 일의 자리가 됩니다.</li>
+        <li>결과: 40 + 8 = 48.</li>
+    </ul>
+
+    <p style="margin-bottom: 15px;">[손가락 곱셈법 시연] 7 곱하기 9 예시 (00:00:26)</p>
+    <ul style="margin-top: -10px;">
+        <li>왼손의 7번 손가락과 오른손의 9번 손가락까지 접습니다.</li>
+        <li>접은 손가락의 총개수 (왼손 2개 + 오른손 4개 = 6개)는 십의 자리가 되어 60이 됩니다.</li>
+        <li>남은 손가락의 개수 (왼손 3개, 오른손 1개)를 곱한 값 (3 * 1 = 3)은 일의 자리가 됩니다.</li>
+        <li>결과: 60 + 3 = 63.</li>
+    </ul>
+
+    <p style="margin-bottom: 15px;">[손가락 곱셈법 시연] 9 곱하기 8 예시 (00:00:40)</p>
+    <ul style="margin-top: -10px;">
+        <li>왼손의 9번 손가락과 오른손의 8번 손가락까지 접습니다.</li>
+        <li>접은 손가락의 총개수 (왼손 4개 + 오른손 3개 = 7개)는 십의 자리가 되어 70이 됩니다.</li>
+        <li>남은 손가락의 개수 (왼손 1개, 오른손 2개)를 곱한 값 (1 * 2 = 2)은 일의 자리가 됩니다.</li>
+        <li>결과: 70 + 2 = 72.</li>
+    </ul>
+
+    <p style="margin-bottom: 15px;">[교육적 함의] 구구단 학습의 어려움과 재미있는 접근법 (00:00:58)</p>
+    <ul style="margin-top: -10px;">
+        <li>대부분의 학생들이 6단부터 9단까지의 구구단 암기에서 어려움을 겪으며, 이는 수포자 발생의 원인이 되기도 합니다. (00:01:01)</li>
+        <li>수학은 게임처럼 재미있어야 하며, 이러한 손가락 곱셈 트릭을 먼저 가르쳐주면 아이들이 수학에 흥미를 느끼고 자연스럽게 암기할 수 있습니다. (00:01:18)</li>
+    </ul>
+
+    <p style="margin-bottom: 15px;">[수학적 원리] 손가락 곱셈법의 증명 (00:01:45)</p>
+    <ul style="margin-top: -10px;">
+        <li>X 곱하기 Y를 계산할 때:
+            <ul style="list-style-type: circle; margin-top: 5px;">
+                <li><strong>접은 손가락의 개수 (십의 자리):</strong> 왼손 X에서 5를 뺀 값 (X-5)과 오른손 Y에서 5를 뺀 값 (Y-5)을 더한 것이 됩니다. 즉, (X-5) + (Y-5) = X + Y - 10입니다. 이 값에 10을 곱하여 십의 자리를 나타냅니다. (00:01:52)</li>
+                <li><strong>남은 손가락의 개수 (일의 자리):</strong> 왼손에서 남은 손가락의 개수는 10에서 X를 뺀 값 (10-X)이고, 오른손에서 남은 손가락의 개수는 10에서 Y를 뺀 값 (10-Y)입니다. 이 두 값을 곱합니다. (00:02:18)</li>
+            </ul>
+        </li>
+        <li>이 두 값을 더하면: <span class="highlight">`10 * (X + Y - 10) + (10 - X) * (10 - Y)`</span>가 됩니다. (00:02:38)</li>
+        <li>이 식을 전개하고 정리하면: <span class="highlight">`10X + 10Y - 100 + 100 - 10X - 10Y + XY`</span>가 되어, 모든 항이 소거되고 최종적으로 <span class="highlight">`XY`</span>만 남게 됩니다. (00:02:45)</li>
+        <li>이는 손가락 곱셈법이 실제로 X 곱하기 Y 값을 정확히 계산하고 있음을 증명합니다. (00:03:04)</li>
+    </ul>
+
+    <p style="margin-bottom: 15px;">[활용 방안] 계산 확인 도구로 활용 (00:03:13)</p>
+    <ul style="margin-top: -10px;">
+        <li>시험 문제를 풀거나 복잡한 계산을 한 후, 계산 실수가 없는지 확인하는 용도로 이 손가락 곱셈법을 활용할 수 있습니다. (00:03:18)</li>
+    </ul>
+
+    <h2 class="section-header"><b>마무리: 핵심 내용 요약 📝</b></h2>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>구구단 손가락 곱셈법 핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 손가락 숫자 부여:</b> 왼손/오른손 엄지부터 차례로 <span class="highlight">6, 7, 8, 9, 10</span>을 부여합니다.
+                </div>
+                <div class="section">
+                    <b>📊 계산 방법:</b>
+                    <ul>
+                        <li><span class="highlight">접은 손가락 수의 합</span>은 십의 자리가 됩니다. (예: 6x8에서 4개 접으면 40)</li>
+                        <li><span class="highlight">남은 손가락 수의 곱</span>은 일의 자리가 됩니다. (예: 6x8에서 4개와 2개 남으면 4x2=8)</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <b>🧮 수학적 원리:</b>
+                    <div class="formula">10 * (X + Y - 10) + (10 - X) * (10 - Y) = XY</div>
+                    손가락 곱셈법은 <span class="highlight">수학적으로 증명된 정확한 계산법</span>입니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 교육적/실용적 활용:</b>
+                    <ul>
+                        <li>구구단 암기 특히 <span class="highlight">6~9단 학습에 재미</span>를 부여하여 흥미를 유발합니다.</li>
+                        <li>수학에 대한 <span class="highlight">두려움을 줄이고</span> 자연스러운 학습을 유도합니다.</li>
+                        <li>계산 후 <span class="highlight">실수 여부를 확인</span>하는 검산 도구로 활용할 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-footer">
+                이 구구단 꿀팁으로 쉽고 재미있게 곱셈을 익히고 활용해 보세요!
+            </div>
+        </div>
+    </div>
+</body>
+</html>
