@@ -1,0 +1,779 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팔란티어, 팔 사람 다 팔았다？…인텔, 우리도 당했어 ? 한국 증시 ‘트리플 악재’ 우려…최악의 시나리오는？</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+            box-sizing: border-box;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #222;
+            line-height: 1.4;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        h1 { font-size: 30px; border-bottom: 3px solid #00796b; padding-bottom: 10px; }
+        h2 { font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h3 { font-size: 20px; color: #00796b; margin: 25px 0 12px; border-bottom: 1px solid #e0e0e0; padding-bottom: 5px; }
+        p { margin-bottom: 15px; }
+        ul { list-style-type: disc; margin: 0 0 15px 25px; padding: 0; }
+        ul li { margin-bottom: 6px; }
+        strong { font-weight: bold; color: #004d40; }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box, .warning-box {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+        }
+        .info-box strong, .warning-box strong {
+            color: #00796b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+        table thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+            color: #004d40;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        table tbody tr:hover {
+            background-color: #eaf6f8;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+        .faq-section {
+            margin: 30px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-q {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-a {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 20px; padding: 8px 15px; }
+            h3 { font-size: 18px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header h3 { font-size: 22px; }
+            .single-summary-card .card-content { font-size: 16px; }
+            table th, table td { padding: 10px; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 22px; }
+            h2 { font-size: 18px; padding: 6px 10px; }
+            h3 { font-size: 16px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; }
+            .video-meta p, .disclaimer-box p { font-size: 13px; }
+        }
+
+        /* Custom styles for the calculator */
+        .calculator-box {
+            background-color: #e0f7fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b2ebf2;
+        }
+        .calculator-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #004d40;
+        }
+        .calculator-box input[type="number"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .calculator-box button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            transition: background-color 0.3s ease;
+        }
+        .calculator-box button:hover {
+            background-color: #005f56;
+        }
+        #wateringResultBox {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            background-color: #fff;
+            display: none; /* Hidden by default */
+        }
+        #wateringResultBox p {
+            margin: 5px 0;
+        }
+        #wateringResultBox span {
+            font-weight: bold;
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>팔란티어, 팔 사람 다 팔았다？…인텔, 우리도 당했어 ? 한국 증시 ‘트리플 악재’ 우려…최악의 시나리오는？</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> I74kBsW8cbU</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=I74kBsW8cbU" target="_blank">https://www.youtube.com/watch?v=I74kBsW8cbU</a></p>
+        <p><strong>영상 길이:</strong> 06시간04분52초 (364분)</p>
+    </div>
+
+    <h2>📜 개요</h2>
+    <p>본 영상은 8월 21일 월스트리트 모닝 브리핑으로, 미국 및 한국 증시의 주요 이슈와 시장 동향을 심층 분석합니다. 나스닥의 기술주 조정, FOMC 의사록 공개, 트럼프의 연준 및 기업 개입 논란 등 거시 경제 변수를 다루고, 테슬라의 로보택시 및 옵티머스 로봇 개발 현황, 휴머노이드 로봇 시장의 잠재력을 조명합니다. 또한 한국 증시의 '트리플 악재' 우려(정책 불확실성, 환율, 채권 시장)와 부동산 시장의 정책 효과 및 공급 이슈, 그리고 새로운 투자 기회로 부상하는 온라인 교육 시장(스트라이드)에 대해 분석합니다.</p>
+
+    <h2>📝 내용</h2>
+
+    <h3>🎙️ 월스트리트 모닝 브리핑 시작 & 시장 상황 (02:22)</h3>
+    <ul>
+        <li><strong>방송 시작 및 시장 개요</strong> (02:22)
+        <ul>
+            <li>8월 21일 목요일 월스트리트 모닝 브리핑 시작. (02:33)</li>
+            <li>나스닥이 이틀 연속 조정, M7 종목 및 반도체 종목들이 쉬어가는 흐름. (02:52)</li>
+            <li>인텔 주가 급락, 타겟 주가도 꽤 많이 급락. (03:22)</li>
+            <li>7월 FOMC 의사록 공개와 잭슨홀 미팅 예정으로 거시 변수가 시장을 주춤하게 하는 요인. (03:32)</li>
+            <li>금리 인하 가능성이 99.9%에서 80%대로 내려오며 시장의 갈피를 잡지 못하게 함. (03:52)</li>
+            <li>8월 시장의 역사적인 조정 예상과 달리 가격 조정이 아닌 기간 조정으로 나타나 답답함을 표현. (04:05)</li>
+            <li>잭슨홀 미팅의 중요성 강조. (04:37)</li>
+        </ul>
+        </li>
+    </ul>
+
+    <h3>👥 주요 게스트 소개 (04:44)</h3>
+    <ul>
+        <li><strong>박명성</strong> (월가 뉴스레터 글로벌 쇼왕맨) (04:44)</li>
+        <li><strong>송선재 연구위원</strong> (하나증권 기업 분석실: 테슬라, 로봇, 자율주행 관련 내용) (05:02)</li>
+    </ul>
+
+    <h3>📊 미국 시장 혼조세 및 수급 순환 (05:25)</h3>
+    <ul>
+        <li><strong>주요 지수 마감</strong> (07:04)
+        <ul>
+            <li>다우만 상승하고 나스닥과 S&P는 하락하며 혼조세 마감.</li>
+            <li>기술주(팔란티어 등)가 초반 급락 후 낙폭을 줄이며 마감, 이는 매수세가 여전히 남아있음을 시사. (05:48, 07:13)</li>
+        </ul>
+        </li>
+        <li><strong>거시 변수 동향</strong> (08:21)
+        <ul>
+            <li>금리(10년물 국채 수익률)가 4.3% 밑으로 떨어지며 긍정적인 신호.</li>
+            <li>유가 안정세 유지, 미국 정부의 물가 통제 노력 효과.</li>
+            <li>달러 인덱스는 연준의 결정에 따라 방향성을 탐색 중. (09:26)</li>
+            <li>고용 둔화 시그널은 금리 인하의 배경이 될 수 있어 '배드 뉴스 이즈 굿 뉴스'로 받아들여지는 상황. (10:08)</li>
+        </ul>
+        </li>
+    </ul>
+
+    <h3>🏛️ FOMC 의사록 및 연준 내부 이슈 (11:14)</h3>
+    <ul>
+        <li><strong>7월 FOMC 의사록</strong> (11:14)
+        <ul>
+            <li>대부분의 참석자가 금리 동결이 적절하다고 판단.</li>
+            <li>향후 고용 악화 시 어려운 상충 관계가 지속될 수 있다고 언급.</li>
+            <li>고용 쇼크 발표 이전의 내용으로, 9월 FOMC부터는 고용 하락 위험이 더 중요하게 다뤄질 가능성 제기. (12:43)</li>
+        </ul>
+        </li>
+        <li><strong>트럼프의 연준 압박</strong> (13:06)
+        <ul>
+            <li>트럼프 대통령이 연준 쿡 이사 사퇴를 축구하며 연준에 대한 영향력 행사를 시도.</li>
+            <li>모기지 대출 관련 불법적 요소 의혹 제기하며 여론 플레이. (13:22)</li>
+            <li>향후 연준 의장 면접 시작 등으로 정부의 연준에 대한 압력이 지속될 수 있음. (14:22)</li>
+            <li>트럼프의 금리 인하 주장이 시장에 단기적으로 나쁘게 작용하지 않는다는 분석. (15:00)</li>
+        </ul>
+        </li>
+        <li><strong>파월 의장 연설 기대</strong> (16:01)
+        <ul>
+            <li>시장에서는 파월 의장의 잭슨홀 미팅 연설에서 '중립 이상'의 비둘기파적 발언을 기대.</li>
+            <li>고용 지표 둔화로 인해 금리 인하에 대한 목소리가 커지는 상황.</li>
+        </ul>
+        </li>
+    </ul>
+
+    <h3>₿ 가상화폐 시장 동향 (17:39)</h3>
+    <ul>
+        <li><strong>연준 위원의 가상화폐 긍정론</strong> (17:39)
+        <ul>
+            <li>보먼 이사, 암호화폐에 대한 우려를 깨야 한다고 발언. (18:09)</li>
+            <li>이는 트럼프 진영의 친-암호화폐 스탠스와 연관된 정치적 판단으로 해석될 여지.</li>
+        </ul>
+        </li>
+        <li><strong>스테이블 코인 활용 사례</strong> (18:31)
+        <ul>
+            <li>피터 티엘이 지원하는 불리시(Bullish) 거래소, IPO 자금 전액을 스테이블 코인으로 취득. (18:31)</li>
+            <li>엔화 및 위안화 기반 스테이블 코인 등장으로 각 통화별 주도권 경쟁 시작. (19:23)</li>
+            <li>미국, 일본, 중국 등 주요국에서 스테이블 코인 움직임 활발.</li>
+        </ul>
+        </li>
+        <li><strong>긍정적 시장 전망</strong> (20:28)
+        <ul>
+            <li>번스타인, 가상화폐 시장이 2027년까지 긍정적으로 성장할 것으로 기대.</li>
+            <li>이는 트럼프 대통령의 친-가상화폐 정책 및 가족들의 관련 사업 활동과 연관.</li>
+        </ul>
+        </li>
+    </ul>
+
+    <h3>📈 S&P 500 전망 및 투자 전략 (21:28)</h3>
+    <ul>
+        <li><strong>탐 리(Fundstrat)의 S&P 500 전망</strong> (21:28)
+        <ul>
+            <li>S&P 500이 7,000pt까지 갈 수 있다고 전망. (21:37)</li>
+            <li>두 가지 조건: 금리 인하와 제조업 경기 반등 (ISM 제조업 PMI 50 이상). (22:08)</li>
+            <li>8월부터 12월까지 금리 인하 및 제조업 경기 반등 시그널이 나타날 것으로 기대. (22:23)</li>
+            <li>최소 6,600pt까지는 상승 가능성 언급. (23:25)</li>
+        </ul>
+        </li>
+        <li><strong>중소형주 관심</strong> (23:45)
+        <ul>
+            <li>향후 4개월 동안 비둘기파적 연준 전환 시 중소형주에 대한 관심 필요.</li>
+            <li>가상화폐 관련주 (마이크로 스트레티지, 비트메인), 이더리움 기반 ETF 등 언급.</li>
+        </ul>
+        </li>
+    </ul>
+
+    <h3>🏢 주요 기업 및 업종 분석 (24:27)</h3>
+    <ul>
+        <li><strong>인텔 및 반도체 기업</strong> (24:27)
+        <ul>
+            <li>인텔 주가 급락 (7%), 삼성전자 칩스법 보조금 대가로 지분 요구 논란. (24:50)</li>
+            <li>미국 정부가 칩스법 보조금 명목으로 기업 지분을 요구하는 것에 대한 논란. (25:40)</li>
+            <li>이는 기업의 독립성을 침해하고 정부가 돈을 줬으니 반대급부를 받아야 한다는 주장. (26:32)</li>
+            <li>TSMC, 마이크론 테크놀로지 등 다른 반도체 기업들도 당황스러운 상황. (27:06)</li>
+            <li>소프트뱅크(인텔 투자) 주가도 7% 급락. (27:32)</li>
+        </ul>
+        </li>
+        <li><strong>팔란티어</strong> (29:00)
+        <ul>
+            <li>시트론 리서치, 팔란티어 목표가 40달러를 제시하며 공매도 압박. (29:14)</li>
+            <li>비상장 기업인 데이터 브릭스와 비교하며 팔란티어의 고평가 주장. (29:27)</li>
+            <li>팔란티어는 '신앙심 테스트 구간'에 진입, 기업용 AI 독점권에 대한 투자자 믿음이 중요. (30:23)</li>
+            <li>주가 하락 후 아랫꼬리 달며 저가 매수세 유입. (32:18)</li>
+        </ul>
+        </li>
+        <li><strong>타겟과 TJX</strong> (32:28)
+        <ul>
+            <li>타겟 주가 급락, TJX 주가 상승으로 실적 발표 후 엇갈린 흐름. (32:28)</li>
+            <li>미국 소비 심리가 고가와 저가로 양극화되는 현상 반영. (32:53)</li>
+        </ul>
+        </li>
+    </ul>
+
+    <h2>🤖 글로벌 인터뷰: 테슬라 및 로봇 (42:10)</h2>
+    <h3>테슬라 로보택시 현황 (43:00)</h3>
+    <ul>
+        <li>텍사스 오스틴에서 6월 22일 모델 Y 기반 로보택시 서비스 시작 (초기 12대). (43:18)</li>
+        <li>서비스 지역 및 차량 대수 빠르게 확장 중 (3주마다 2배씩 확장). (44:21)</li>
+        <li>초기 4.2달러 정액 요금에서 택시 요금 체계 (기본 요금 + 주행 거리)로 변경, 여전히 경쟁사 대비 저렴 (마일당 1.2~1.3달러 vs 2달러). (45:25)</li>
+        <li>오스틴은 규제가 적고 IT 인프라와 인재가 풍부하여 로보택시 테스트 베드로 선호됨. (47:40)</li>
+    </ul>
+
+    <h3>웨이모 vs 테슬라 자율주행 기술 비교 (50:11)</h3>
+    <ul>
+        <li><strong>웨이모</strong>: 다수의 센서(라이다 4-6개, 레이더 6개, 카메라 10여개) 사용하여 정확도와 안정성 높음. 이미 많은 대수 운영 중이며 우버와 협업. (51:40)</li>
+        <li><strong>테슬라</strong>: 카메라 8대 기반. 악천후 등 기술적 대응 노력 중. 차량 제조부터 자율주행에 최적화된 설계가 장점. (52:12)</li>
+        <li>소비자 입장에서는 '가격'이 가장 중요하며, 테슬라가 자체 차량 제조 및 최적화로 비용 우위를 가짐. (53:55)</li>
+    </ul>
+
+    <h3>중국 자율주행 시장 (57:02)</h3>
+    <ul>
+        <li>중국 정부의 전략적 지원으로 자율주행 기술 발전 및 상용화 속도가 미국보다 빠를 수 있음. (57:02)</li>
+        <li>우한, 베이징, 선전 등에서 상용화 서비스 진행 중 (2,000~3,000대 운영). (57:33)</li>
+        <li>저렴한 전기차 생산 능력 바탕으로 가격 경쟁력 보유. (58:10)</li>
+        <li>해외 진출 시 데이터 확보 문제가 관건이나, 장기적으로 저가화 위협을 초래할 가능성. (01:02:42)</li>
+    </ul>
+
+    <h3>테슬라 옵티머스 로봇 (01:03:34)</h3>
+    <ul>
+        <li>테슬라는 AI 기술 기반의 아이템 확장으로 로봇 사업 추진. (01:03:45)</li>
+        <li>2021년 로봇 개발 발표, 2023년 1세대 출시, 최근 3세대 개발 중. (01:03:53)</li>
+        <li>당초 2025년 수천 대 생산 목표였으나 딜레이. 기술적 문제(관절/손가락 모터 과부하, 내구성) 및 부품 수급(미중 갈등) 문제로 디자인 재조정 중. (01:04:22)</li>
+        <li>2026년 양산 목표. (01:06:21)</li>
+    </ul>
+
+    <h3>휴머노이드 로봇 시장 잠재력 (01:06:31)</h3>
+    <ul>
+        <li>다양한 휴머노이드 로봇 기업 존재 (미국: 테슬라, 보스턴 다이내믹스, 피규어 AI; 중국: 유니트리, 유비테크 등). (01:06:59)</li>
+        <li>로봇은 인간의 일을 대체하므로, 인간 형태 및 사이즈에 가장 적합한 모델이 유용. (01:08:49)</li>
+        <li>시장 규모: 전 세계 노동 인구(35억 명)의 20% 대체 시 7억 대(산업용), 전 세계 20억 가구의 '1가구 1로봇' 시 20억 대(가정용) 잠재 시장. (01:13:49)</li>
+        <li>평균 수명 10년 가정 시 연간 2.7억 대 판매 예상. (01:15:31)</li>
+        <li>로봇 가격 1,000만~2,000만원 가정 시 자동차 시장(3천조 원)을 능가하는 거대 시장 형성 가능 (2,700조~5,400조 원). (01:15:56)</li>
+        <li>테슬라가 이 시장에서 20% 점유율을 가정하면 연간 수백조 원의 매출과 수십조 원의 순이익 기대 가능 (로봇 사업 밸류에이션 800조~1,600조 원 추정). (01:18:41)</li>
+        <li>테슬라의 주가는 전기차 판매량뿐 아니라 미래 산업(로봇, 로보택시)의 가능성에 대한 기대감 반영. (01:11:00)</li>
+    </ul>
+
+    <h2>🇰🇷 한국 시장 심층 분석 (01:27:00)</h2>
+    <h3>시장 전반 및 주요 이슈 (01:27:00)</h3>
+    <ul>
+        <li>미국 시장 하락에도 코스피/코스닥 낙폭 줄이며 마감, AI 거품론에도 저가 매수세 유입. (01:29:00)</li>
+        <li>FOMC 의사록 발표로 금리 인하 기대감 소폭 하락, 주가 약세 요인. (01:30:39)</li>
+        <li>한국 시장은 내부적인 정책 불확실성(자본시장 활성화 의지)으로 분위기 안 좋음. (01:31:07)</li>
+    </ul>
+
+    <h3>원전 및 웨스팅하우스 논란 (01:31:41)</h3>
+    <ul>
+        <li>한수원과 웨스팅하우스의 조인트 벤처 설립 추진 보도. (01:31:41)</li>
+        <li><strong>논란 내용</strong>:
+        <ul>
+            <li>웨스팅하우스 부품 강제 구매 (국산화 완료된 품목도 구매, 가격 불문). (01:33:16)</li>
+            <li>원천 기술 논란: 1950년대 기술 및 특허 만료된 기술에 대한 '기술 자립 미흡' 발언 논란. (01:34:55)</li>
+            <li>조인트 벤처 설립 시 웨스팅하우스 노형 강제 사용 및 한국 업체 협상력 약화 우려. (01:37:00)</li>
+            <li>영업권 불균형: 웨스팅하우스는 비경쟁 시장(미국, 유럽 등), 한국은 경쟁 시장(중동, 남미 등)에 진출. (01:39:19)</li>
+        </ul>
+        </li>
+        <li>이러한 논란은 원전 관련주에 변동성을 야기. (02:21:21)</li>
+    </ul>
+
+    <h3>석유화학 산업 구조조정 (01:41:20)</h3>
+    <ul>
+        <li>정부, NCC(납사분해시설) 생산 감축 및 고부가 제품 전환 계획 제출 요구 (연간 생산량의 1/4 감축). (01:41:20)</li>
+        <li>'선 자구 노력, 후 지원' 방침. 기업들이 계획 제출 시 지원 패키지 제공. (01:41:59)</li>
+        <li>SO1의 샤인 프로젝트(세계 최대 석유화학 공장) 가동 예정으로 생산량은 오히려 증가하는 상황에 대한 비판. (01:44:00)</li>
+        <li>이러한 소식에 LG화학, 롯데케미칼, 대한유화 등 석유화학 관련주 급등. (03:25:10)</li>
+    </ul>
+
+    <h3>칩스법 및 미 정부의 지분 요구 (01:45:30)</h3>
+    <ul>
+        <li>미국 정부가 칩스법 보조금 대가로 삼성전자, TSMC, SK하이닉스의 지분 확보를 추진 중이라는 보도. (01:45:30)</li>
+        <li>한국의 투자금(3,500억 달러)을 활용하여 미국이 보조금을 지급하고 그 대가로 기업 지분을 가져가는 불공정성 지적. (01:46:52)</li>
+        <li>이는 삼성전자 주가에도 영향을 미칠 수 있는 우려 요인.</li>
+    </ul>
+
+    <h3>한국 증시 '트리플 악재' 우려 (02:35:09)</h3>
+    <ul>
+        <li><strong>악재 요인</strong>:
+        <ul>
+            <li><strong>주주환원 정책 후퇴 우려</strong>: 상법(집중투표제) 및 세법(대주주 양도세, 배당소득 분리과세) 관련 정부 정책의 불확실성 및 후퇴 가능성. 특히 배당 소득 분리과세(부자 감세 논란)가 핵심. (02:35:34)</li>
+            <li><strong>금융기관에 대한 정부 압력</strong>: 교육세 인상, 특정 펀드 참여 독려 등 금융 산업에 대한 정부의 '공기업'적 시각에 대한 우려. (02:41:57)</li>
+            <li><strong>미국 시장 조정</strong>: 높은 밸류에이션, 인플레이션, 재정 정책 이슈 등으로 미국 시장이 조정받을 가능성. (02:44:28)</li>
+            <li><strong>거시경제 불안</strong>: 환율 약세, 경기 둔화, 회사채 금리 상승 가능성. (02:46:20)</li>
+        </ul>
+        </li>
+        <li><strong>최악 시나리오</strong>: 한국의 정책 불확실성이 해소되지 않은 채 미국 시장까지 하락할 경우, 한국 시장은 더 큰 하락을 겪을 수 있음. (02:46:00)</li>
+        <li><strong>긍정적 시나리오</strong>: 미국 주식 또는 채권 시장이 강세를 보이면, 위험자산 선호 심리로 한국 시장으로 자금이 유입될 수 있음. (02:50:00)</li>
+        <li>한국 증시가 지난 1년간 가장 많이 올랐으나, 최근 1개월간 아시아 주요국 대비 정체되어 정책 불확실성이 심리적 요인으로 작용. (02:49:00)</li>
+    </ul>
+
+    <h3>외국인 수급 및 시장 변동성 (01:57:00)</h3>
+    <ul>
+        <li>주요 기술주 낙폭 축소 후 반등했으나, 매물 구간에 진입한 것으로 판단. (01:58:37)</li>
+        <li>외국인, 아침마다 선물 매도하며 시장 변동성을 유발, 이는 환율 상승 및 정책 불확실성에 대한 헤지 성격. (02:08:00)</li>
+        <li>개인 투자자들은 심리적 요인(정책 불확실성, 주도주 조정, 악재성 뉴스)으로 매도. (02:11:44)</li>
+        <li>기관(특히 금융투자)만 매수하며 시장을 지지. (02:12:28)</li>
+        <li>시장이 전반적으로 취약하며 변동성이 큼. (02:10:03)</li>
+    </ul>
+
+    <h3>주요 종목 동향 (02:05:00)</h3>
+    <ul>
+        <li>두산 에너빌리티, BHI 등 원전주는 큰 낙폭 후 반등. (02:07:06)</li>
+        <li>HD 현대중공업 등 조선주도 반등. (02:07:51)</li>
+        <li>CJNM, 스튜디오드래곤 등 미디어/콘텐츠주는 강세 지속. (02:13:02)</li>
+        <li>하이닉스는 노조 문제, AI 거품론 등으로 약세 지속. (03:19:00)</li>
+        <li>삼성전자는 HBM4 샘플 합격 소식에 강세. (03:07:03, 03:10:15)</li>
+        <li>방산주(한화 에어로스페이스, 현대로템, LIG 넥스원)는 수주 잔고, 재고 보충 기대감으로 반등. (03:09:56, 03:17:40)</li>
+        <li>메리츠금융지주: 자사주 취득/소각 뉴스에 급등. (03:17:00)</li>
+        <li>석유화학(대한유화, 롯데케미칼, 금호석유화학, LG화학): 정부 구조조정 지원 뉴스에 급등. (03:25:10)</li>
+        <li>엔터테인먼트(JYP, YG 엔터): 중국 콘텐츠 규제 완화 기대감으로 상승. (03:09:40)</li>
+    </ul>
+
+    <h3>STX 엔지니어링 상장 (02:28:33)</h3>
+    <ul>
+        <li>종업원 지주제 성공 사례: 500원에 취득한 주식이 5만원 이상으로 급등. (02:28:33)</li>
+        <li>직원 동기 부여 및 경영 투명성에 긍정적 영향.</li>
+    </ul>
+
+    <h2>🏠 부동산 시장 분석 (04:02:00)</h2>
+    <h3>6.27 대책 이후 시장 동향 (04:10:26)</h3>
+    <ul>
+        <li>정책 발표 후 시장은 즉각적으로 얼어붙었으나, 최근 2주 연속 전국 주택 가격 0.01% 상승, 서울 0.1% 상승. (04:10:50)</li>
+        <li>상승세는 둔화되었지만 마이너스로 돌아서지는 않음. (04:11:48)</li>
+        <li>서울 외곽(노원, 도봉) 상승폭은 적으나, 인기 지역(서초, 마포, 성동)은 상승세 유지. (04:13:31)</li>
+        <li>풍선 효과는 아직 뚜렷하지 않으나, 과천, 분당 등 일부 수도권 인기 지역은 상승. (04:13:00)</li>
+        <li>전세 시장은 매매 시장보다 변동폭이 적고 안정적 흐름 유지. (04:15:21)</li>
+        <li>전세 매물은 한 달간 4% 감소(속도 가속화), 월세 매물은 증가 추세. 이는 전세에서 월세로 전환되는 과도기적 현상. (04:30:57)</li>
+    </ul>
+
+    <h3>주요 공급 정책 및 이슈 (04:18:27)</h3>
+    <ul>
+        <li>국토부 장관, 9월 초 '효능감 있는' 부동산 공급 정책 예고. (04:09:55)</li>
+        <li><strong>3기 신도시</strong>: 전전 정부부터 추진된 3기 신도시(특히 고양 창릉) 공급을 가속화. 서울 접근성이 뛰어나 집값 안정화에 기여할 것으로 기대. (04:20:31)</li>
+        <li><strong>공공주택</strong>: 국유지, 노후 공공시설 활용한 공공주택/임대주택 공급은 주거 복지 실현에 초점. (04:19:25)</li>
+        <li><strong>분양가 상승 압력</strong>: 건설 인건비 및 자재비 상승으로 분양가 지속 상승. 이는 기존 주택 가격을 끌어올리는 요인. (04:22:50)</li>
+        <li><strong>재건축/재개발 문제</strong>: 인플레이션으로 인한 공사비 증액 갈등 심화. 정부는 중재 역할 강화 및 공공의 사업성 확보 방안 모색. (04:26:00)</li>
+    </ul>
+
+    <h3>압구정 재건축 심층 분석 (04:47:45)</h3>
+    <ul>
+        <li><strong>지역 특성</strong>: 한강에 접한 반도형 지형, 6개 구역으로 구성. 20평대 없는 30평대 이상 아파트 단지. (04:50:28)</li>
+        <li><strong>구역별 현황</strong>: 2구역이 사업 속도 가장 빠름. 3구역은 입지/가치가 최고이나 덩치가 커 속도는 가장 더딜 것. (04:52:18)</li>
+        <li><strong>주요 이슈</strong>: 대지 지분 정리 문제. 일부 토지가 서울시, 현대건설 등 조합원 외 소유로 되어 있어 사업 진행에 물리적 시간 소요 불가피 (4년 소요 사례). (04:53:50)</li>
+        <li><strong>전망</strong>: 속도가 가격 결정에 중요한 요인. 장기적으로는 구조적 리스크로 번지지 않을 것으로 예상되나, 단기적인 불안정성은 존재. (04:58:51)</li>
+        <li><strong>투자 관점</strong>: 투기 수요 근절 및 시장 안정화에 기여 예상. 그러나 월세 전환으로 임차인 주거비 부담 증가 우려도 공존. (04:35:10)</li>
+    </ul>
+
+    <h2>🎓 미국 온라인 교육 시장 (05:05:50)</h2>
+    <h3>K-12 온라인 교육 개요 (05:07:47)</h3>
+    <ul>
+        <li>K-12는 미국 유치원부터 고등학교 12학년까지의 의무 교육 과정. (05:07:51)</li>
+        <li>미국 학력으로 인정되는 온라인 스쿨을 통해 미국 유학 없이 국내에서 미국 학력을 취득 가능. (05:08:21)</li>
+        <li>연간 수강료 약 9,000달러 수준. (05:08:45)</li>
+    </ul>
+
+    <h3>온라인 스쿨 성장 배경 (05:11:42)</h3>
+    <ul>
+        <li><strong>학생 입장</strong>: 개인별 맞춤형 학습 속도 조절, AI 기반 커리큘럼 보충, 시간/장소 제약 해소, 총기 사고 등 안전 문제 회피. (05:13:00)</li>
+        <li><strong>정부 입장</strong>: 오프라인 학교 대비 낮은 운영 비용(급식, 건설, 교사 인건비 등 절감), 교육 평등권 실현 명분. (05:25:39)</li>
+        <li><strong>코로나19 영향</strong>: 팬데믹 기간 동안 전면 온라인 교육 전환 경험으로 일반 학생들에게도 온라인 스쿨이 확산. (05:21:16)</li>
+        <li><strong>홈스쿨링 단점 보완</strong>: 홈스쿨링의 학력 미인정 문제를 해결하며 새로운 대안으로 부상. (05:17:37)</li>
+    </ul>
+
+    <h3>시장 규모 및 기업 '스트라이드' (05:35:56)</h3>
+    <ul>
+        <li>북미 K-12 온라인 교육 시장 규모: 2024년 1,260억 달러, 2029년 3,300억 달러 예상 (연평균 약 20% 성장). (05:36:03)</li>
+        <li><strong>스트라이드(Stride, 구 K12)</strong>: 상장사 중 가장 오래되고 규모가 큰 선두 업체. (05:20:06)</li>
+        <li>최근 실적 발표에서 등록 학생 수 20% 증가, 매출액 전년 대비 18% 증가. (05:20:41)</li>
+        <li>높은 영업 이익률(19.4%) 및 영업 레버리지 효과. (05:37:40)</li>
+        <li>현재 저평가된 밸류에이션 (PER 15배, EV/EBITDA 10배). (05:37:00)</li>
+        <li>경영진 가이던스: 2030년까지 연평균 15% 학생 수 증가 예상. (05:40:24)</li>
+        <li><strong>투자 관점</strong>: 정부 펀딩 기반의 안정적 사업 모델, 고성장 산업, 수익성 및 확장성 보유. AI/테크 외의 다변화 포트폴리오로 고려 가능. (05:46:47)</li>
+    </ul>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">📝 요약</h2>
+
+    <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+    8월 21일 월스트리트 모닝 브리핑에서는 나스닥 기술주의 이틀 연속 조정과 함께 인텔, 타겟 등 개별 종목의 하락이 두드러졌지만, 금리 안정화 및 유가 하락 소식은 긍정적으로 작용했습니다. 7월 FOMC 의사록이 공개되며 금리 인하 기대감이 소폭 하락했으나, 트럼프 대통령의 연준 압박 발언은 오히려 시장에 단기적 불안감을 완화하는 요소로 작용했습니다. 가상화폐 시장은 연준 위원의 긍정적 발언과 스테이블 코인의 글로벌 확산으로 성장 기대감이 지속되고 있습니다.
+
+    테슬라 로보택시는 오스틴에서 빠른 속도로 서비스 지역을 확장하며 비용 효율성 측면에서 경쟁 우위를 보이고 있으며, 옵티머스 로봇 개발은 지연되고 있으나 휴머노이드 로봇 시장의 잠재력은 막대합니다. 한국 증시는 미국 정부의 칩스법 보조금 대가 지분 요구 논란, 석유화학 산업 구조조정, 원전 관련 웨스팅하우스와의 굴욕적 계약 논란 등 내부적 정책 불확실성으로 '트리플 악재' 우려가 제기되고 있습니다. 이러한 국내외 불확실성 속에서 시장은 변동성이 크며, 투자자들은 신중한 접근이 필요합니다. 부동산 시장은 6.27 대책 이후 매매가 둔화되고 전세에서 월세로의 전환이 가속화되고 있으나, 공급 부족과 분양가 상승 압력은 여전합니다. 한편, 미국 온라인 교육 시장은 스트라이드(Stride)와 같은 기업을 중심으로 정부 지원과 맞춤형 교육 수요에 힘입어 고성장하며 새로운 투자 대안으로 주목받고 있습니다.
+    </div>
+
+    <p data-ke-size="size8">&nbsp;</p>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 미국 시장 변동성 및 거시경제:</b> 기술주 조정에도 저가 매수세 유입. FOMC 의사록 공개 후 금리 인하 기대감 소폭 하락. 트럼프의 연준 및 기업 개입 논란은 시장에 혼재된 영향을 줌. (02:52, 08:21, 11:14)
+                </div>
+                <div class="section">
+                    <b>📊 가상화폐 시장 성장 동력:</b> 연준 위원의 긍정적 발언, 스테이블 코인(엔화/위안화 포함) 확산으로 성장 기대감 지속. (17:39, 20:28)
+                </div>
+                <div class="section">
+                    <b>🤖 테슬라의 미래 사업:</b> 로보택시 서비스는 빠른 확장과 가격 경쟁력으로 주목. 옵티머스 로봇 개발은 지연되지만, 휴머노이드 로봇 시장의 막대한 잠재력(연 2.7억 대 규모, 2,700조~5,400조 원)이 테슬라의 장기적 성장 동력. (43:00, 01:03:34, 01:13:49)
+                </div>
+                <div class="section">
+                    <b>🇰🇷 한국 증시 '트리플 악재' 우려:</b> 미국 정부의 칩스법 지분 요구, 원전 계약 논란, 석유화학 구조조정 등 국내외 정책 불확실성이 복합적으로 작용하며 증시 하방 압력. 특히 주주환원 정책 후퇴 우려가 외국인 자금 이탈 요인. (01:31:41, 01:45:30, 02:35:09)
+                </div>
+                <div class="section">
+                    <b>🏠 부동산 시장의 복합 양상:</b> 6.27 정책으로 매매가 상승세 둔화 및 시장 관망 심화. 전세 매물 감소 및 월세 전환 가속화 추세. 공급 부족, 분양가 상승, 재건축 공사비 갈등은 여전한 불안 요인. (04:10:26, 04:22:50)
+                </div>
+                <div class="section">
+                    <b>🎓 미국 온라인 교육 시장 부상:</b> 스트라이드(Stride)를 중심으로 K-12 온라인 교육 시장이 고성장(연 20%), 정부 펀딩 기반의 안정적 사업 모델과 높은 수익성, 확장성을 바탕으로 새로운 투자 대안으로 주목. (05:05:50, 05:35:56)
+                </div>
+            </div>
+            <div class="card-footer">
+                본 요약은 제공된 스크립트를 기반으로 작성되었습니다. 투자 결정 시에는 반드시 전문가와 상의하시기 바랍니다.
+            </div>
+        </div>
+    </div>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">💡 생각해볼 사항 (주식 관련일 경우 매매 관련 참고)</h2>
+
+    <p style="margin-bottom: 15px;">본 분석은 영상 내용을 바탕으로 작성되었으며, 투자 결정 시에는 반드시 본인의 판단과 전문가의 조언을 종합적으로 고려해야 합니다.</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[거시경제 및 정책 관련]</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><strong>매크로 지표 및 연준 스탠스 모니터링:</strong> 잭슨홀 미팅 파월 의장의 발언과 향후 FOMC의 금리 결정이 시장의 방향성을 좌우할 핵심 요인입니다. AI 시대의 고용 지표 해석 변화도 주목해야 합니다.</li>
+        <li style="margin-bottom: 6px;"><strong>한국 정부의 정책 일관성 확인:</strong> 주주환원 정책(대주주 양도세, 배당소득 분리과세) 및 금융시장 규제 관련 정부의 명확하고 일관된 메시지가 외국인 투자 심리 회복에 중요합니다. '트리플 악재' 시나리오에 대한 대비도 필요합니다.</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[산업 및 기업 관련]</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><strong>기술 섹터(미국/한국) 평가:</strong> 현재의 '버블' 우려가 건강한 조정인지, 아니면 더 큰 하락의 신호인지 판단해야 합니다. 필요시 기술 섹터 내에서도 분산 투자를 고려할 수 있습니다.</li>
+        <li style="margin-bottom: 6px;"><strong>로봇/AI 투자 관점:</strong> 장기적 잠재력은 높지만, 생산 및 상용화까지는 시간이 소요될 수 있습니다. 장기 투자자라면 인내심을 가지고 기업의 근본적인 사업 구조 변화에 주목해야 합니다.</li>
+        <li style="margin-bottom: 6px;"><strong>전통 산업(방산, 원전, 화학 등):</strong> 정부의 정책 지원(예: 국내 화학 산업 구조조정)과 글로벌 수요 변화를 면밀히 관찰해야 합니다. 원전 관련 논란 등은 단기 변동성을 야기할 수 있습니다.</li>
+        <li style="margin-bottom: 6px;"><strong>온라인 교육(스트라이드):</strong> 정부 펀딩 기반의 안정성, 높은 성장률, 수익성 및 확장성을 고려하여 AI/테크 외 포트폴리오 다변화 관점에서 검토해볼 수 있습니다.</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[투자 전략]</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><strong>단기 변동성 대응:</strong> 시장이 소규모 거래량에도 크게 출렁이는 경향이 있으므로, 섣부른 저가 매수나 추격 매수는 지양해야 합니다. 주요 이벤트(잭슨홀, 엔비디아 실적 등) 전후로 관망하며 시장 방향성이 잡힌 후 대응하는 보수적인 전략이 유효합니다.</li>
+        <li style="margin-bottom: 6px;"><strong>부동산 시장:</strong> 단기 정책 효과는 제한적이며, 공급 부족 및 건설 원가 상승은 장기적인 가격 상방 압력으로 작용할 가능성이 있습니다. 실거주 목적의 매수 시에는 입지와 향후 공급 계획을 면밀히 검토하고, 분양가 상승을 고려한 전략 수립이 중요합니다.</li>
+    </ul>
+
+    <div style="background-color: #fffde7; border-left: 4px solid #fbc02d; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+        <b>⚠️ 주의하세요!</b><br>
+        본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 제시된 모든 내용은 반드시 본인의 판단과 검증을 거쳐야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.
+    </div>
+
+    <p data-ke-size="size16">&nbsp;</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">💰 물타기 계산기: 평단가 조절 전략</h2>
+    <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+    <div class="calculator-box">
+        <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+        <div style="margin-bottom: 10px;">
+            <label for="avgPrice">현재 평단가 (원):</label>
+            <input type="number" id="avgPrice" placeholder="예: 50000">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="currentShares">현재 보유 수량 (주):</label>
+            <input type="number" id="currentShares" placeholder="예: 10">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="addPrice">추가 매수할 가격 (원):</label>
+            <input type="number" id="addPrice" placeholder="예: 40000">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="addShares">추가 매수할 수량 (주):</label>
+            <input type="number" id="addShares" placeholder="예: 5">
+        </div>
+
+        <button onclick="calculateWatering()">물타기 평단가 계산</button>
+
+        <div id="wateringResultBox">
+            <p><b>새로운 평단가:</b> <span id="newAvgPrice"></span> 원</p>
+            <p><b>총 매수 금액:</b> <span id="totalInvestment"></span> 원</p>
+        </div>
+    </div>
+    <p data-ke-size="size16">&nbsp;</p>
+
+    <script>
+        function calculateWatering() {
+            const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+            const currentShares = parseFloat(document.getElementById('currentShares').value);
+            const addPrice = parseFloat(document.getElementById('addPrice').value);
+            const addShares = parseFloat(document.getElementById('addShares').value);
+
+            if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares <= 0 || addShares < 0) {
+                alert('모든 필드를 올바르게 입력해주세요.');
+                return;
+            }
+
+            const totalInvestmentBefore = avgPrice * currentShares;
+            const totalInvestmentAdded = addPrice * addShares;
+            const newTotalInvestment = totalInvestmentBefore + totalInvestmentAdded;
+            const newTotalShares = currentShares + addShares;
+
+            const newAvgPrice = newTotalInvestment / newTotalShares;
+
+            document.getElementById('newAvgPrice').textContent = newAvgPrice.toFixed(2);
+            document.getElementById('totalInvestment').textContent = newTotalInvestment.toLocaleString();
+            document.getElementById('wateringResultBox').style.display = 'block';
+        }
+    </script>
+
+    <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+    <div class="faq-section">
+        <div class="faq-item">
+            <div class="faq-q">Q: 8월 시장 조정은 언제까지 지속될까요?</div>
+            <div class="faq-a">A: 영상에서는 8월 시장 조정이 역사적으로 흔했지만, 이번에는 '가격 조정'이 아닌 '기간 조정'으로 나타나 투자자들에게 답답함을 주고 있다고 언급합니다. 잭슨홀 미팅(04:37) 등 주요 이벤트가 지나야 시장의 방향성이 명확해질 것으로 보입니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: 미국 정부의 칩스법 보조금 조건이 논란이 되고 있는데, 실제 기업에는 어떤 영향을 미칠까요?</div>
+            <div class="faq-a">A: 미국 정부가 칩스법 보조금 대가로 기업(인텔, 삼성전자, TSMC 등)의 지분 확보를 추진하는 것은 기업의 독립성을 침해한다는 논란이 있습니다. 이는 보조금을 통한 지원이 아닌 '통제' 압박으로 해석되며, 기업들에게 부담으로 작용할 수 있습니다. (24:50, 01:45:30)</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: 테슬라의 로보택시나 옵티머스 로봇 사업의 실제적인 잠재력은 어느 정도인가요?</div>
+            <div class="faq-a">A: 테슬라의 로보택시는 오스틴에서 빠른 확장 속도를 보이며 비용 우위를 점하고 있습니다. 옵티머스 로봇은 아직 기술적, 생산적 난관이 있지만, 휴머노이드 로봇 시장은 산업 및 가정용 수요를 바탕으로 수천조 원 규모의 거대 시장이 될 잠재력이 있습니다. (43:00, 01:13:49)</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: 한국 증시의 '트리플 악재' 우려는 무엇이며, 어떻게 대응해야 할까요?</div>
+            <div class="faq-a">A: 한국 증시의 '트리플 악재'는 정책 불확실성(주주환원 후퇴 우려), 환율 약세, 채권 시장 불안 가능성을 의미합니다. 이러한 복합적인 요인으로 시장 변동성이 커질 수 있으므로, 투자자들은 정책 변화를 주시하고 포트폴리오 다변화를 고려하는 신중한 접근이 필요합니다. (02:35:09)</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q: 미국 온라인 K-12 교육 시장이 새로운 투자 기회가 될 수 있나요?</div>
+            <div class="faq-a">A: '스트라이드(Stride)'와 같은 기업이 이끄는 미국 온라인 K-12 교육 시장은 개인 맞춤형 교육 수요 증가, 총기 사고 우려, 정부의 비용 절감 및 교육 평등권 실현 명분 등으로 연평균 20%의 높은 성장을 보입니다. 안정적인 정부 펀딩 기반과 높은 수익성을 갖춰, 전통 IT/테크 외의 포트폴리오 다변화 차원에서 고려해볼 만한 대안 섹터입니다. (05:05:50, 05:35:56)</div>
+        </div>
+        <div class="disclaimer-box">
+            <h3>⚠️면책조항</h3>
+            <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
