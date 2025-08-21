@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로징벨 라이브 - 장중 3080선 찍고 낙폭 줄여내는 코스피 추세는 살아있다</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #00796b;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0f7fa;
+        }
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box, .warning-box, .section-box {
+            background-color: #e0f7fa;
+            border-left: 4px solid #00796b;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left-color: #fbc02d;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /* Summary Card Styling */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+        .faq-section {
+            margin: 30px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-q {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-a {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: none;
+            background: none;
+            padding: 0;
+            box-shadow: none;
+            text-shadow: none;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>클로징벨 라이브 - 장중 3080선 찍고 낙폭 줄여내는 코스피 추세는 살아있다</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> placeholderVideoId</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=placeholderVideoId" target="_blank">https://www.youtube.com/watch?v=placeholderVideoId</a></p>
+        </div>
+
+        <p><strong>제목:</strong> 클로징벨 라이브 - 장중 3080선 찍고 낙폭 줄여내는 코스피 추세는 살아있다</p>
+        <p><strong>영상 길이:</strong> 01시간12분37초(72분)</p>
+        <p>&nbsp;</p>
+
+        <div class="info-box">
+            2023년 8월 20일 클로징벨 라이브 방송에서는 장 초반 큰 하락을 보였던 코스피 시장이 낙폭을 줄이며 양전 가능성까지 보인 것에 대한 전문가들의 분석과 전망이 다뤄졌다. 경제부총리의 PBR 발언 논란, 샘 알트만의 AI 버블론, 삼성전자 지분 요구 가능성 등 시장에 영향을 미친 주요 이슈들을 논의하며 향후 투자 전략에 대한 방향성을 제시한다.
+        </div>
+        <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 2023년 8월 20일 기준으로 작성되었습니다.</p>
+        <p style="margin-bottom: 15px;">안녕하세요, 클로징벨 라이브입니다! 8월 20일 방송에서는 장 초반 심상치 않았던 코스피 시장의 흐름과 주요 이슈들을 심층 분석하는 시간을 가졌습니다. 과연 우리 시장은 위기를 넘기고 반등의 기회를 잡을 수 있을까요? 전문가들과 함께 자세히 살펴보겠습니다. 😊</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📰 주요 시장 이슈 및 전문가 코멘트</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**시장 시황 및 분위기**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">8월 20일 클로징벨 라이브 시작 (00:02:14)</li>
+            <li style="margin-bottom: 6px;">코스피가 1% 넘게 하락하며 3100선 붕괴 우려가 있었으나, 장 후반 낙폭을 줄여 0.6% 하락으로 마감 (00:02:56)</li>
+            <li style="margin-bottom: 6px;">오프닝벨 당시 분위기가 가장 안 좋았으며, 1시간 내내 전략 세우며 전전긍긍함 (00:03:04)</li>
+            <li style="margin-bottom: 0;">60선 지지 확인, 추세가 꺾이지는 않은 것으로 판단 (00:03:17)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**이재규 본부장 시장 코멘트**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">경제부총리의 PBR 10배 발언은 실수였을 가능성 언급, 개인 투자자에게 불편한 내용 (00:03:49)</li>
+            <li style="margin-bottom: 6px;">미증시 하락 및 버블 논란 속에서 국내 시장은 기관 매수가 지지, 외국인 매도 금액이 크지 않음 (00:04:14)</li>
+            <li style="margin-bottom: 6px;">외국인 매도세 감소 시 하반경직 가능성 제시 (00:04:30)</li>
+            <li style="margin-bottom: 6px;">코스피가 8거래일 연속 음봉에서 양봉 전환 (00:04:50)</li>
+            <li style="margin-bottom: 6px;">오늘 하락이 단기적인 바닥을 잡아주는 계기가 될 수 있다고 전망 (00:05:09)</li>
+            <li style="margin-bottom: 6px;">한일/한미 정상회담, FOMC 의사록 공개 등 불확실성 제거 과정에서 시장 하반경직 기대 (00:05:16)</li>
+            <li style="margin-bottom: 6px;">SK하이닉스, 두산에너빌리티 등 주요 종목 낙폭 확대 후 수급 개선 주목 (00:05:36)</li>
+            <li style="margin-bottom: 0;">외국인 순매수 지속 시 단기 저점 형성 기대 (00:05:49)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**김장현 본부장 시장 코멘트**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">예상보다 시장이 좋았으며, AI 버블론과 금리 인하 경계감에도 낙폭이 크지 않아 다행 (00:06:04)</li>
+            <li style="margin-bottom: 6px;">2% 하락은 과하다는 의견 제시 (00:06:31)</li>
+            <li style="margin-bottom: 6px;">다만, 상승 시 윗단 돌파 여부는 여전히 불확실 (00:06:49)</li>
+            <li style="margin-bottom: 6px;">외국인 매도 지속 우려, 특히 환율 상승(1399원)은 찝찝한 신호 (00:07:07)</li>
+            <li style="margin-bottom: 6px;">외국인 투자자들이 한국 정책 방향에 불만이 많아 투자 지속 여부에 의문을 가질 수 있음 (00:16:00)</li>
+            <li style="margin-bottom: 6px;">한미 정상회담에서 투자 연계 '썸띵 투 오퍼'가 있다면 3200선까지 가능하지만, 환율을 낮출 만큼의 신뢰는 불확실 (00:17:08)</li>
+            <li style="margin-bottom: 0;">잭슨홀 미팅 등 주요 이벤트에 대한 기대감 낮음 (00:17:00)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**외국인 수급 및 시장 체감온도**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">패널 간 외국인 매도 포지션에 대한 의견 차이 발생 (00:07:11)</li>
+            <li style="margin-bottom: 6px;">이재규 본부장은 외국인 매도 물량이 많지 않고, 선물 매도 계약수도 적어 시장 견조하다고 판단 (00:07:55)</li>
+            <li style="margin-bottom: 6px;">장 초반 공포심이 컸지만, 비차익 순매수 유입으로 반등 (00:08:26)</li>
+            <li style="margin-bottom: 6px;">ADR 지표를 볼 때, 시장 상승 탄력도 둔화 한 달째, 단기 기술적 반등 위치 (00:08:46)</li>
+            <li style="margin-bottom: 6px;">개인 투자자 신용잔고 최대치(1년 9개월만) 우려, 리스크 관리 필요성 강조 (00:18:46)</li>
+            <li style="margin-bottom: 6px;">직전 고점 돌파는 어려울 수 있으나, 시장 완전 붕괴는 아니므로 기간 조정 예상 (00:19:11)</li>
+            <li style="margin-bottom: 6px;">업종 및 종목 선별의 중요성 강조, 강한 베팅 자제 권고 (00:19:21)</li>
+            <li style="margin-bottom: 6px;">7월 좋았던 시장을 감안할 때, 현재는 정상적인 조정으로 판단 (00:19:40)</li>
+            <li style="margin-bottom: 0;">다음 주 PC 발표, 세제 개편안 등으로 불확실성 제거 및 시장 방향성 뚜렷해질 것 (00:19:58)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**경제부총리 PBR 발언 논란**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">경제부총리가 코스피 PBR을 10으로 잘못 언급한 사건에 대한 비판 (00:24:14)</li>
+            <li style="margin-bottom: 6px;">발언 자체가 비현실적이며, 정부의 실제 정책 노력과 상반되어 더욱 아쉽게 부각됨 (00:25:01)</li>
+            <li style="margin-bottom: 6px;">이재규 본부장: 정부의 주주 가치 재고 정책 기대감이 시장 상승에 기여했으나, 이후 대비되는 행보로 답답함 (00:26:05)</li>
+            <li style="margin-bottom: 6px;">글로벌 IB들의 한국 방문은 정책 방향 확인 목적일 가능성 (00:26:45)</li>
+            <li style="margin-bottom: 6px;">시장 눈치 보기보다 일관된 정책 추진의 중요성 강조 (00:28:19)</li>
+            <li style="margin-bottom: 0;">김장현 본부장: 부총리 발언은 무지에서 비롯된 것으로 보이며, 기재부의 시장 인식에 문제 제기 (00:29:28)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**AI 버블론 및 시장 영향**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">샘 알트만의 "AI 관련 주식 버블일 수도 있다" 발언으로 엔비디아 등 AI/반도체주 하락 (00:30:35)</li>
+            <li style="margin-bottom: 6px;">알트만 본인이 AI 붐의 주역임을 지적하며, 경쟁자 견제 목적의 발언일 가능성 제기 (00:31:25)</li>
+            <li style="margin-bottom: 6px;">미국 주식 시장이 버블 초입에 진입했을 가능성은 이전부터 언급됨 (00:32:03)</li>
+            <li style="margin-bottom: 6px;">AI 업체들의 잉여 현금 소진 우려, 금리 인하 지연 시 위험 요인 (00:34:36)</li>
+            <li style="margin-bottom: 6px;">나스닥 시총 비중이 S&P 500보다 높게 올라온 것은 주가 과열의 징후 (00:35:22)</li>
+            <li style="margin-bottom: 6px;">현재 AI 관련 기업들은 닷컴버블 때와 달리 탄탄한 재무와 기술력을 보유, 투자는 계속될 것 (00:35:47)</li>
+            <li style="margin-bottom: 0;">다만, 주가가 많이 올라 경고 신호가 나올 수 있음 (00:36:12)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**삼성전자 지분 요구 논란 (미국 반도체법 지원금 대가)**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">트럼프 행정부가 삼성 및 TSMC에 반도체법 지원금 대가로 지분 요구 가능성 제기 (00:37:35)</li>
+            <li style="margin-bottom: 6px;">이재규 본부장: 삼성전자 입장에서 단기적으로는 나쁘지 않을 수 있음, 미국과의 협력으로 안정적 매출처 확보 가능성 (00:39:09)</li>
+            <li style="margin-bottom: 6px;">트럼프의 액션이 적정선을 지켜야 함을 강조 (00:39:18)</li>
+            <li style="margin-bottom: 6px;">김장현 본부장: 미국이 '인질'을 잡고 싶은 것이며, 삼성전자는 현재로서는 따를 수밖에 없는 상황 (00:41:27)</li>
+            <li style="margin-bottom: 0;">장기적으로 중국 공장 업그레이드 등에서 미국의 견제 가능성 시사 (00:45:00)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">**주요 산업/섹터 분석 및 투자 전략**</h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">**이재규 본부장 추천 섹터:**
+                <ul>
+                    <li>**엔터/컨텐츠:** 중국 광전총국의 해외 드라마 방송 추진 소식에 상승, 한한령 완화 기대 (00:50:11)</li>
+                    <li>**관세 무풍지대:** 미국 관세 부과 흐름 속에서 상대적으로 안전한 투자처 (00:51:04)</li>
+                    <li>**조선:** 저가 수주 실적 반영 후 향후 실적 개선 기대 (00:57:31)</li>
+                    <li>**원전:** 수급 애매하나, 미국 웨스팅하우스와의 협력 구조 및 기술적 반등 가능성 (00:57:51)</li>
+                    <li>**제약바이오:** 금리 인하 모멘텀 기대, 안정적인 투자처 (00:58:43)</li>
+                    <li>**전력기기:** AI 데이터센터, 재생에너지 인프라 구축 수요로 매력적이나, 고부가가치 산업 분류는 어렵고 사이클이 길어 주의 필요 (01:01:03)</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 6px;">**김장현 본부장 추천 섹터:** (01:04:16)
+                <ul>
+                    <li>**자동차 (현대차):** 북미 경쟁사 대비 강점, 수급 양호 (00:54:40)</li>
+                    <li>**EPC (삼성E&A, 삼성물산):** 삼성전자 및 바이오로직스 투자 수혜 (00:54:58)</li>
+                    <li>**변압기:** PER 낮아 매력적, 관세 부과 시에도 저점 분할 매수 유효 (00:55:11)</li>
+                    <li>**엔터 (JYP, 하이브):** 중국 한한령 완화 및 신규 아티스트 라인업 강화로 하반기 공격적 성장 기대 (01:06:00)</li>
+                    <li>**반도체 (소부장):** 삼성전자/하이닉스보다 소부장(이수페타시스, 한솔케미컬 등)이 낙폭 과대 시 매수 기회 (00:56:14)</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 0;">**ETF 출시와 시장 고점의 상관관계:** 특정 섹터 ETF 출시 후 해당 섹터 주가가 꺾이는 경향 언급 (00:59:40). 시장 관심이 너무 뜨거울 때 한 발 물러서서 볼 필요성 강조 (01:00:19).</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📝 요약 및 핵심 내용</b></h2>
+
+        <p style="margin-bottom: 15px;">8월 20일 클로징벨 라이브에서는 장 초반 급락했던 코스피가 양봉 전환하며 낙폭을 줄인 현상을 분석했다. 전문가들은 미증시 버블론, 경제부총리의 PBR 발언 논란, 삼성전자 지분 요구 등 여러 악재에도 불구하고 국내 시장의 단기 저점 가능성을 제시했다. 특히 기관 매수와 외국인 매도세 둔화를 긍정적 신호로 봤으나, 시장의 직전 고점 돌파는 어려울 수 있어 기간 조정을 예상했다. 향후 한미 정상회담, FOMC 의사록 공개 등 불확실성 해소 여부가 중요하다고 보았다. 투자 전략으로는 관세 무풍지대인 엔터/컨텐츠, 조선, 원전, 제약바이오, 그리고 낙폭 과대 변압기/전력기기, 반도체 소부장 등을 관심 섹터로 언급하며 신중한 접근과 종목 선별의 중요성을 강조했다.</p>
+        <p data-ke-size="size8">&nbsp;</p>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 코스피 반등:</b> 장 초반 급락 후 기관 매수 및 외국인 매도세 둔화로 <span class="highlight">낙폭 줄이며 양봉 전환, 단기 바닥 형성 기대.</span>
+                    </div>
+                    <div class="section">
+                        <b>📊 대내외 불확실성:</b> 경제부총리 PBR 발언 논란, AI 버블론, 미국 삼성전자 지분 요구 등 <span class="highlight">악재 지속, 시장의 직전 고점 돌파는 어려울 수 있음.</span>
+                    </div>
+                    <div class="section">
+                        <b>🧮 선별적 투자:</b> 관세 영향이 적은 <span class="highlight">엔터/컨텐츠, 조선, 제약바이오, 낙폭 과대 변압기/전력기기, 반도체 소부장 등 선별적 관심 필요.</span> ETF 출시 후 해당 섹터 주가 하락 가능성 유의.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    본 요약은 방송 내용을 바탕으로 작성되었으며, 투자 판단의 최종 책임은 투자자 본인에게 있습니다.
+                </div>
+            </div>
+        </div>
+        <p data-ke-size="size16">&nbsp;</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🤔 생각해볼 사항 (매매관련 참고)</b></h2>
+
+        <p style="margin-bottom: 15px;">시장의 불확실성이 상존하는 가운데, 투자자들은 다음 사항들을 고려하여 신중한 매매 전략을 수립해야 합니다:</p>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>리스크 관리:</b> 개인 투자자 신용잔고가 높은 상황이므로, 무조건적인 강한 베팅보다는 현금 비중을 확보하고 리스크 관리에 집중하는 것이 중요합니다. 급락장에서 낙폭을 줄이는 모습을 보였으나, 여전히 시장은 불안정한 요소를 안고 있습니다.</li>
+            <li style="margin-bottom: 6px;"><b>정책 영향 주시:</b> 정부의 주주환원 정책에 대한 신뢰 회복 여부와 미중 갈등 속에서 한국 기업(예: 삼성전자)에 대한 미국의 요구 사항 변화에 주목해야 합니다. 이러한 정책적 불확실성이 외국인 투자 심리에 미치는 영향을 지속적으로 모니터링해야 합니다.</li>
+            <li style="margin-bottom: 6px;"><b>섹터 순환매 대비:</b> 반도체, 2차전지 등 기존 강세 업종의 추가 상승 여부와 자동차, 엔터/컨텐츠 등 소외되었던 섹터로의 자금 이동 가능성을 살피며 종목 선별에 집중하는 전략이 유효합니다. 특히 관세 영향이 적거나 해외 시장에서 경쟁력을 확보한 업종에 주목할 필요가 있습니다.</li>
+            <li style="margin-bottom: 6px;"><b>금리 인하 기조 활용:</b> 금리 인하 가능성이 높아지는 상황은 성장주에 긍정적으로 작용할 수 있습니다. 제약바이오와 같이 금리 환경 변화에 민감한 섹터에 대한 관심을 유지하고, 낙폭 과대 시 매수 기회를 탐색할 수 있습니다.</li>
+            <li style="margin-bottom: 0;"><b>ETF 출시 신호 해석:</b> 특정 섹터의 ETF가 대거 출시되는 시점은 해당 섹터의 단기 고점을 시사하는 경우가 많다는 전문가 의견을 참고하여, 과열된 섹터에 대한 신규 진입은 신중하게 고려해야 합니다.</li>
+        </ul>
+
+        <p data-ke-size="size16">&nbsp;</p>
+
+        <div style="background-color: #ffebee; padding: 20px; border-radius: 8px; border: 1px solid #ef9a9a; margin-top: 30px;">
+            <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
