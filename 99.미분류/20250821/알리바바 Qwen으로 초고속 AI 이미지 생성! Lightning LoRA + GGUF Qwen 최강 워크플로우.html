@@ -1,0 +1,455 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알리바바 Qwen으로 초고속 AI 이미지 생성! Lightning LoRA + GGUF Qwen 최강 워크플로우</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #004d40;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00796b;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+            color: #444;
+        }
+        .video-meta strong {
+            color: #004d40;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 2em;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 40px 0 20px;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #00796b;
+            margin: 30px 0 15px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 8px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 15px 0 15px 25px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+        strong {
+            color: #004d40;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        .timestamp {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: normal;
+        }
+        .note {
+            background-color: #e0f7fa;
+            border-left: 5px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .note strong {
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #333;
+        }
+        hr {
+            border: 0;
+            border-top: 1px dashed #ccc;
+            margin: 40px 0;
+        }
+
+        /* Summary Card Styling */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.7em;
+                padding: 10px 15px;
+            }
+            h3 {
+                font-size: 1.3em;
+            }
+            .video-meta p {
+                font-size: 14px;
+            }
+            p {
+                font-size: 1em;
+            }
+            .note {
+                padding: 12px;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>알리바바 Qwen으로 초고속 AI 이미지 생성! Lightning LoRA + GGUF Qwen 최강 워크플로우</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> N5hmTlsiZRg</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=N5hmTlsiZRg" target="_blank">https://www.youtube.com/watch?v=N5hmTlsiZRg</a></p>
+        <p><strong>제목:</strong> 알리바바 Qwen으로 초고속 AI 이미지 생성! Lightning LoRA + GGUF Qwen 최강 워크플로우</p>
+        <p><strong>영상 길이:</strong> 00시간35분34초(035분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 알리바바의 AI 이미지 생성 모델인 Qwen을 활용하여 초고속으로 이미지를 생성하는 방법을 설명합니다. ComfyUI 최신 버전 업데이트 후 발생할 수 있는 오류 해결 방법부터 Qwen 모델과 Lightning LoRA, GGUF 모델을 사용하여 텍스트-투-이미지(Text-to-Image)를 생성하고, 생성된 이미지의 디테일을 향상시키는 다양한 후처리 워크플로우(Qwen, Flux Crea, Wan 2.2)를 비교 분석합니다. 특히 Qwen이 영어 및 중국어 프롬프트 처리에 뛰어난 장점을 가지고 있음을 강조하며, 빠르고 고품질의 이미지 생성 전략을 제시합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[서론] Qwen 모델 소개 <span class="timestamp">(00:00:00,640)</span></h3>
+    <ul>
+        <li>Qwen은 알리바바의 다른 AI 팀에서 개발한 이미지 생성 모델로, Wan(영상 생성 모델)과 유사하게 Flux 계열의 모델들을 개발하고 있음. <span class="timestamp">(00:00:03,580)</span></li>
+        <li>향후 이미지 편집 기능(Flux Context와 유사)이 출시될 예정이며, 본 영상에서는 Text-to-Image 생성 및 자연스러운 이미지 후처리 방법을 다룸. <span class="timestamp">(00:00:33,560)</span></li>
+    </ul>
+
+    <h3>[오류 해결] ComfyUI 업데이트 후 발생하는 에러 해결 방법 <span class="timestamp">(00:00:52,420)</span></h3>
+    <ul>
+        <li>ComfyUI 업데이트 시 PyTorch 버전이 2.8로 변경되면서 Triton, Sage Attention 등에서 에러가 발생할 수 있음. <span class="timestamp">(00:01:11,080)</span></li>
+        <li><strong>해결책:</strong>
+            <ul>
+                <li><strong>CMD 실행 경로:</strong> ComfyUI 매트릭스 사용자는 <code>packages/ComfyUI/VEMV/Scripts</code> 폴더에서, 포터블 사용자는 <code>python_embedded</code> 폴더에서 CMD 창을 열어야 함. <span class="timestamp">(00:02:00,600)</span></li>
+                <li><strong>Sage Attention 재설치:</strong> 기존 Sage Attention을 삭제(<code>pip uninstall sage-attention</code>) 후, PyTorch 버전(2.8) 및 CUDA 버전(12.8), Python 버전(3.10)에 맞는 최신 버전을 수동으로 설치. <span class="timestamp">(00:02:53,380)</span></li>
+                <li><strong>Triton 재설치:</strong> 기존 Triton을 삭제(<code>pip uninstall triton-windows</code>) 후, PyTorch 버전(2.8)에 맞는 최신 Triton 윈도우즈 버전을 수동으로 설치. <span class="timestamp">(00:03:19,860)</span></li>
+                <li><strong>Nunchaku 업데이트:</strong> <code>ComfyUI/custom_nodes</code> 폴더에서 기존 Nunchaku 폴더를 삭제하고, GitHub에서 최신 버전으로 <code>git clone</code>하여 재설치 후, <code>install_web.json</code> 파일 실행을 통해 허깅 페이스 버전 0.3.2를 설치. <span class="timestamp">(00:08:51,740)</span></li>
+                <li><strong>기타 패키지 버전:</strong> Xformers 0.0.32 post2, Diffusers 0.4.0, Transformers 4.5.2 최신 버전 사용 권장. <span class="timestamp">(00:11:00,420)</span></li>
+                <li><strong>ComfyUI 실행 시 로그 확인:</strong> 설치된 Python, VRAM, PyTorch, CUDA, Xformers, 그래픽카드 정보 등을 로그에서 확인하여 설치 여부 검증. <span class="timestamp">(00:08:05,380)</span></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="note">
+        <strong>*참고*:</strong><br>
+        <ul>
+            <li><strong>PyTorch</strong>: 페이스북이 개발한 오픈소스 머신러닝 라이브러리. 딥러닝 모델 개발에 널리 사용됩니다.</li>
+            <li><strong>CUDA</strong>: NVIDIA가 개발한 병렬 컴퓨팅 플랫폼. GPU를 사용하여 복잡한 계산을 빠르게 처리할 수 있게 합니다.</li>
+            <li><strong>Triton</strong>: 오픈AI가 개발한 고성능 머신러닝 컴파일러. GPU에서 딥러닝 모델의 연산을 효율적으로 실행하도록 돕습니다.</li>
+            <li><strong>Sage Attention</strong>: 특정 어텐션 메커니즘을 지칭하는 것으로 보이나, 일반적인 용어는 아님. 영상 내에서 ComfyUI 노드 이름으로 언급됨.</li>
+            <li><strong>Nunchaku</strong>: ComfyUI의 커스텀 노드 중 하나로, 이미지 생성 워크플로우에 다양한 기능을 추가합니다.</li>
+            <li><strong>PIP</strong>: Python Package Installer의 약자로, 파이썬 패키지를 설치하고 관리하는 도구입니다.</li>
+        </ul>
+    </div>
+
+    <h3>[모델 및 LoRA 다운로드/설치] <span class="timestamp">(00:12:30,100)</span></h3>
+    <ul>
+        <li><strong>Qwen 이미지 모델:</strong> Qwen 이미지 Distil GGUF 모델(<code>Qwen-Image-Distill-Q4KS</code>)을 다운로드. VRAM이 충분하면 Q8, 부족하면 Q4 버전을 사용. <span class="timestamp">(00:15:05,200)</span>
+            <ul>
+                <li><strong>설치 경로:</strong> ComfyUI <code>Models</code> 폴더 내 <code>GGUF</code> 또는 <code>DiffusionModels</code> 폴더에 <code>Queen</code>이라는 서브 폴더를 만들어 저장. <span class="timestamp">(00:15:34,420)</span></li>
+            </ul>
+        </li>
+        <li><strong>Lightning LoRA:</strong> Qwen 이미지 Lightning LoRA (4-step V1.0, 8-step V1.1)를 다운로드. 특히 4-step LoRA는 빠른 생성을 위해 중요. <span class="timestamp">(00:14:01,380)</span>
+            <ul>
+                <li><strong>설치 경로:</strong> ComfyUI <code>Models</code> 폴더 내 <code>LoRas</code> 폴더에 <code>Queen</code> 서브 폴더를 만들어 저장. <span class="timestamp">(00:14:39,760)</span></li>
+            </ul>
+        </li>
+        <li><strong>텍스트 인코더 및 VAE:</strong> Qwen용 텍스트 인코더(7B FP8 Scaled)와 VAE(Queen Image VAE)를 다운로드하여 각각 <code>Models/text_encoder</code> 및 <code>Models/VAE</code> 폴더에 저장. <span class="timestamp">(00:13:00,160)</span></li>
+        <li><strong>ComfyUI 모델 목록 새로고침:</strong> 모델을 추가한 후 키보드 <code>R</code> 키를 눌러 ComfyUI 모델 목록을 업데이트해야 함. <span class="timestamp">(00:16:05,820)</span></li>
+    </ul>
+    <div class="note">
+        <strong>*참고*:</strong><br>
+        <ul>
+            <li><strong>LoRA (Low-Rank Adaptation)</strong>: 대규모 인공지능 모델의 성능 저하 없이 효율적으로 미세 조정할 수 있는 기술입니다. 적은 양의 데이터를 사용해 모델을 특정 작업에 맞게 최적화할 수 있습니다.</li>
+            <li><strong>GGUF</strong>: LLM (Large Language Model) 파일을 위한 새로운 형식으로, 다양한 하드웨어에서 모델을 더 쉽게 실행할 수 있도록 최적화되어 있습니다.</li>
+            <li><strong>VAE (Variational AutoEncoder)</strong>: 잠재 공간에서 이미지를 인코딩하고 디코딩하는 데 사용되는 신경망. 생성된 이미지의 디테일과 선명도를 향상시킵니다.</li>
+            <li><strong>Text Encoder</strong>: 텍스트 프롬프트를 AI 모델이 이해할 수 있는 숫자의 벡터(임베딩)로 변환하는 부분입니다.</li>
+            <li><strong>VRAM (Video Random Access Memory)</strong>: 그래픽 카드에 탑재된 메모리로, AI 모델을 실행하고 이미지를 생성하는 데 필수적입니다. 높을수록 더 크고 복잡한 작업을 처리할 수 있습니다.</li>
+        </ul>
+    </div>
+
+    <h3>[Qwen 워크플로우 구성 및 이미지 생성] <span class="timestamp">(00:16:24,620)</span></h3>
+    <ul>
+        <li><strong>기본 워크플로우:</strong> <code>Browse Templates > Image > SWEN Image Text2Image</code>를 기반으로 사용. <span class="timestamp">(00:16:24,620)</span></li>
+        <li><strong>노드 연결:</strong> <code>Empty Latent Image</code>, <code>Anything Everywhere</code> (텍스트 프롬프트 관리), <code>UNEN Loader GGF</code> (Qwen 모델 로드), <code>FLIP Text Encoder</code>, <code>Model Sampling Aura Flow</code> (Shift 값 3.10), <code>Lora Loader</code> (Lightning LoRA 4-step V1.0), <code>VAE Decode</code> 등을 연결. <span class="timestamp">(00:16:29,520)</span></li>
+        <li><strong>프롬프트 처리:</strong> Google 자동 번역 노드를 사용하여 한글 프롬프트를 영어로 자동 번역하여 사용. <span class="timestamp">(00:18:31,500)</span></li>
+        <li><strong>K-Sampler 설정:</strong>
+            <ul>
+                <li><strong>CFG (Classifier Free Guidance):</strong> 1 (Lightning 버전에 최적화)</li>
+                <li><strong>B Noise (Beta Noise):</strong> 1</li>
+                <li><strong>Steps:</strong> 4 Step (초고속 생성)</li>
+                <li><strong>Sampler:</strong> Euler (기본 스케줄러)</li>
+                <li><strong>D Noise (Denoising Strength):</strong> 0.3 (후처리 시 사용)</li>
+            </ul>
+        </li>
+        <li><strong>VRAM 관리:</strong> <code>Clear VRAM</code>, <code>Clear Cache</code> 노드를 사용하여 이미지 생성 시마다 메모리 초기화. <span class="timestamp">(00:19:28,840)</span></li>
+        <li><strong>4 Step 이미지 생성 결과:</strong> 약 35초 소요. 이미지가 빠르지만 약간의 격자무늬(grid pattern)가 보일 수 있음. <span class="timestamp">(00:20:06,820)</span></li>
+        <li><strong>6 Step 이미지 생성 결과:</strong> 약 51초 소요. 격자무늬가 덜하지만 완전히 사라지지는 않음. <span class="timestamp">(00:21:08,400)</span></li>
+    </ul>
+    <div class="note">
+        <strong>*참고*:</strong><br>
+        <ul>
+            <li><strong>CFG (Classifier Free Guidance)</strong>: 프롬프트가 이미지 생성에 미치는 영향의 강도를 조절하는 값입니다. 값이 높을수록 프롬프트를 엄격하게 따르지만, 너무 높으면 이미지가 부자연스러워질 수 있습니다.</li>
+            <li><strong>Sampler (샘플러)</strong>: 노이즈에서 이미지를 점진적으로 생성하는 방식을 정의하는 알고리즘입니다. Euler, DPM++ SDE, DDIM 등 다양한 종류가 있습니다.</li>
+            <li><strong>Scheduler (스케줄러)</strong>: 샘플러의 진행 방식을 조절하여 이미지 생성 과정에 영향을 미칩니다.</li>
+            <li><strong>Latent Image</strong>: 고차원의 픽셀 이미지 데이터를 압축하여 저차원 공간에 표현한 것입니다. 이미지 생성 과정에서 모델은 이 잠재 공간에서 작업합니다.</li>
+            <li><strong>DNoise (Denoising Strength)</strong>: 이미지를 얼마나 많이 변화시킬지 결정하는 값입니다. 값이 높을수록 원본 이미지에서 크게 변형될 수 있습니다.</li>
+        </ul>
+    </div>
+
+    <h3>[생성된 이미지 디테일 향상 (후처리)] <span class="timestamp">(00:21:49,120)</span></h3>
+    <ul>
+        <li><strong>세 가지 후처리 방식 비교:</strong>
+            <ol>
+                <li><strong>Qwen으로 재처리:</strong> 생성된 이미지를 Qwen 모델로 D Noise 0.3, 4 Step으로 다시 생성. 약 35초 소요. 격자무늬가 사라지고 선명해짐. <span class="timestamp">(00:23:53,940)</span></li>
+                <li><strong>Flux Crea로 재처리 (Nunchaku 사용):</strong> Flux Crea 모델을 사용하여 D Noise 0.3, 8 Step으로 재처리. 약 15초 소요. 격자무늬가 완전히 사라지고 피부 표현 등 실사 같은 느낌이 강화됨. <span class="timestamp">(00:24:36,400)</span>
+                    <ul>
+                        <li><strong>Cache/Hold 노드:</strong> Nunchaku의 Cache/Hold 노드(블루베어 개발)를 0.1~0.5 범위로 설정하여 스텝을 건너뛰어 속도 향상 가능. <span class="timestamp">(00:25:23,760)</span></li>
+                    </ul>
+                </li>
+                <li><strong>Wan 2.2로 재처리 (Lightning 버전, NAG 사용):</strong> Wan 2.2 Lightning 버전을 사용하여 D Noise 0.3, 4 Step으로 재처리. 약 33초 소요. 이미지 선명도 및 디테일이 향상되지만 피부 표현은 Flux Crea가 더 자연스러움. NAG(Negative Attention Guidance) 노드를 활용하여 강력한 네거티브 프롬프트 적용 가능. <span class="timestamp">(00:26:17,120)</span></li>
+            </ol>
+        </li>
+    </ul>
+    <div class="note">
+        <strong>*참고*:</strong><br>
+        <ul>
+            <li><strong>NAG (Negative Attention Guidance)</strong>: 부정적인 프롬프트(예: "bad anatomy")에 모델이 더 강력하게 반응하도록 하여 원치 않는 요소를 효과적으로 제거하는 기법입니다.</li>
+            <li><strong>IP Adapter (Image Prompt Adapter)</strong>: 이미지 프롬프트를 사용하여 모델의 생성 방향을 제어하는 어댑터입니다.</li>
+        </ul>
+    </div>
+
+    <h3>[Qwen의 프롬프트 처리 능력 테스트] <span class="timestamp">(00:27:41,880)</span></h3>
+    <ul>
+        <li><strong>언어 지원:</strong> Qwen은 영어와 중국어 프롬프트 처리에 뛰어나며, 글자 생성 능력이 매우 우수함. 한글은 아직 정확하게 지원하지 않음. <span class="timestamp">(00:27:49,920)</span></li>
+        <li><strong>글자 생성 테스트:</strong> "Confui Sanai Labs" 한글 프롬프트 입력 시, 구글 번역을 통해 영어로 변환되어 대형 전광판에 정확하게 표시됨. <span class="timestamp">(00:30:42,400)</span></li>
+        <li><strong>복합 프롬프트 테스트:</strong> 12개의 동물 봉제인형을 특정 순서와 배열(4개씩 3줄)로 생성하는 복합 프롬프트 입력 시, Qwen이 순서와 위치, 수량까지 정확하게 따르는 것을 확인. <span class="timestamp">(00:28:45,120)</span></li>
+        <li><strong>복잡한 풍경 및 글자 테스트:</strong> "한국 얼짱 얼굴", "긴 생머리", "사람 많은 거리", "한국 길거리 음식", "귀여운 동물/캣몬스터 인형", "포켓몬 간판", "분식 간판" 등 복합적인 프롬프트 입력 시, 세부적인 요소들을 잘 반영하여 이미지 생성. 간판의 한글(분식)은 영어(SNACK)로 변환되어 출력됨. <span class="timestamp">(00:32:06,460)</span></li>
+    </ul>
+
+    <h3>[결론 및 향후 계획] <span class="timestamp">(00:33:59,080)</span></h3>
+    <ul>
+        <li><strong>추천 워크플로우:</strong> Qwen으로 4 Step 고속 이미지 생성 → Flux Crea로 디테일 작업(15초 소요)을 통해 빠르고 고품질의 이미지 획득. <span class="timestamp">(00:27:29,380)</span></li>
+        <li><strong>Qwen Image-to-Image:</strong> 현재 Qwen 모델은 Text-to-Image 기반이며, Image-to-Image에 최적화된 Qwen 모델(Flux Context와 유사한 편집 기능)이 출시될 예정이므로 그때 다시 자세히 소개할 예정. <span class="timestamp">(00:34:09,480)</span></li>
+        <li><strong>워크플로우 공유:</strong> 본 영상의 워크플로우는 멤버십 구글 드라이브 폴더에 업로드 예정. <span class="timestamp">(00:35:14,780)</span></li>
+    </ul>
+
+    <hr>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ ComfyUI 업데이트 오류 해결:</b> 최신 PyTorch 버전에 맞춰 Triton, Sage Attention, Nunchaku 등 필수 패키지 재설치 및 버전 관리 방법을 상세히 설명. <span class="highlight">안정적인 ComfyUI 환경 구축이 핵심!</span>
+                </div>
+                <div class="section">
+                    <b>📊 Qwen 모델 활용 전략:</b> Qwen의 Lightning LoRA와 GGUF 모델을 활용하여 4스텝만으로 초고속 Text-to-Image 생성 가능. 생성 속도와 <span class="highlight">이미지 디테일 간의 균형점</span>을 제시.
+                </div>
+                <div class="section">
+                    <b>🧮 최적의 이미지 후처리:</b> Qwen으로 1차 생성 후, Flux Crea 모델을 이용한 후처리(Denoising 0.3, 8스텝)를 통해 <span class="highlight">격자무늬 제거 및 실사 같은 디테일 향상</span> 가능. 약 15초의 빠른 속도로 고품질 이미지 완성.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 Qwen의 언어 강점:</b> Qwen은 영어와 중국어 프롬프트 처리 및 <span class="highlight">텍스트 정확도에 매우 뛰어남.</span> 복합 프롬프트도 잘 따르지만, 한글은 아직 지원이 미흡함.
+                </div>
+            </div>
+            <div class="card-footer">
+                Qwen은 빠른 기본 이미지 생성과 텍스트 제어에 강점이 있으며, Flux Crea와의 조합으로 최상의 결과를 얻을 수 있습니다.
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #ffebee; padding: 20px; border-radius: 8px; border: 1px solid #ef9a9a; margin-top: 30px;">
+        <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+    </div>
+</body>
+</html>
