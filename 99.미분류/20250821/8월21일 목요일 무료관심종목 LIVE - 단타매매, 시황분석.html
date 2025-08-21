@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8월21일 목요일 무료관심종목 LIVE - 단타매매, 시황분석</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { margin: 0; padding: 0; background-color: #f0f2f5; }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div style="color: #333; line-height: 1.7; max-width: 800px; margin: 0 auto; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;">
+    <h1 style="font-size: 28px; color: #00796b; margin-bottom: 20px; text-align: center;">8월21일 목요일 무료관심종목 LIVE - 단타매매, 시황분석</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> Z2TtAodsW1w</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=Z2TtAodsW1w" target="_blank">https://www.youtube.com/watch?v=Z2TtAodsW1w</a></p>
+    </div>
+
+    <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 2025년 8월 21일 기준으로 작성되었습니다.</p>
+
+    <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+        본 영상은 2025년 8월 21일 목요일 아침 장 시작 전부터 장 초반까지 진행된 라이브 방송으로, 전일 미 증시와 국내 증시 시황을 분석하고, 당일 단타 매매 관심 종목을 추천하며 투자 전략에 대한 개인적인 견해를 공유합니다. 특히 시장 하락에 대한 대비와 실질적인 투자 조언, 그리고 개인적인 일상 이야기가 담겨 있습니다.
+    </div>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 영상 내용 상세</b></h2>
+
+    <p style="margin-bottom: 15px;">이 영상은 2025년 8월 21일 목요일 아침 장 시작 전부터 장 초반까지 진행된 라이브 방송의 주요 내용을 담고 있습니다. 시황 분석, 종목 추천, 그리고 투자 철학에 대한 깊이 있는 이야기가 어우러져 있습니다.</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>1. 오프닝 및 시장 개장 전 대기</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">방송 시작 알림 및 시청자 인사 (00:01:12)</li>
+        <li style="margin-bottom: 6px;">장 개장 30분 전 상황에서 시장의 하락에 대한 개인적인 바람 언급 (730선까지 시원하게 빠지는 것이 매매하기 더 편하다는 의견). (00:03:29)</li>
+        <li style="margin-bottom: 0;">어설픈 반등보다는 확실한 하락 후 저점 형성을 선호한다고 재차 강조. (00:05:37)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>2. 개인적인 유튜버 및 VIP 서비스 관련 언급</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">유튜버의 수익 구조에 대한 댓글에 응답하며 직접 유튜버를 해보라고 권유. (00:04:42)</li>
+        <li style="margin-bottom: 6px;">VIP 서비스의 성과에 대한 질문에 "원칙대로 매매하고 있다"고 답변하며 현재 시장 상황에서 무분별한 종목 추천은 어렵다고 설명. (00:05:18)</li>
+        <li style="margin-bottom: 0;">VIP 서비스의 연회비 (120만원) 언급. (00:06:06)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>3. 금호타이어에 대한 기대감 표명</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">금호타이어에 대한 지속적인 관심 표명, 5천원 돌파에 대한 기대. (00:06:20)</li>
+        <li style="margin-bottom: 0;">'미련'과 '기대감'의 차이 설명: 물린 종목에 대한 미련과 상승 가능성에 대한 기대감은 다르다고 강조. (00:07:17)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>4. 정부 고위 관계자 비판 및 '실학' 강조</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">경제부총리가 PBR(주가순자산비율)을 모르는 것에 대한 비판. (00:10:15)</li>
+        <li style="margin-bottom: 0;">실생활에 유용한 학문인 '실학'의 중요성을 강조하며, 현장 경험이 있는 인물을 정부 고위직에 임명해야 한다고 주장. (00:11:30)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>5. 전일 미국 증시 분석</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">다우 0.04% 상승, 나스닥 -0.67% 하락, S&P 500 0.24% 상승 마감. (00:14:13)</li>
+        <li style="margin-bottom: 6px;">미 증시는 당분간 하락에 대한 염려를 가지고 매매해야 하며, 9월 FOMC 회의 전까지는 하락 압력이 강할 것으로 예측. (00:14:43)</li>
+        <li style="margin-bottom: 6px;">시장의 주요 이슈는 9월 FOMC 금리 인하 여부와 우크라이나-미국-러시아 3자 회담 결론. (00:15:05)</li>
+        <li style="margin-bottom: 0;">AI 거품론 확산 분위기를 언급했지만, AI 산업의 발전 가능성을 긍정적으로 보며 실질적인 매출과 영업이익 등 숫자로 증명되는 것에 집중해야 한다고 강조. (00:15:31)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>6. 국내 증시 분석 및 투자 전략</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">코스닥 지수가 어제 반등(꼬리)을 만들었으나, 완벽한 하락이 아닌 어설픈 반등은 오히려 투자자들에게 혼란을 줄 수 있다고 경고. (00:16:25)</li>
+        <li style="margin-bottom: 6px;">개인적으로는 730-740선까지 다이렉트 하락을 선호한다고 재차 강조. (00:16:51)</li>
+        <li style="margin-bottom: 6px;">현재 구간에서는 지수가 반등하더라도 큰 돈을 투자할 타이밍은 아니며, 박스권 장세가 예상되므로 과감한 매매는 피해야 한다고 조언. (00:17:52)</li>
+        <li style="margin-bottom: 0;">'큰 돈'이 들어가는 매매(총 자금의 20~30% 투자, 중장기 종목 매매)에 대한 주의를 당부하며, 매일 하는 단타는 지수와 상관없이 좋은 종목이 보이면 매매할 수 있다고 설명. (00:18:25)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>7. 당일 관심 종목 및 매매 전략 공개</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>금호타이어 (첫 번째 관심 종목)</b> (00:31:56)
+            <ul style="margin-top: 5px; padding-left: 15px;">
+                <li style="margin-bottom: 3px;">매수가 4970원 부근, 목표가 5000원 돌파 기대.</li>
+                <li style="margin-bottom: 3px;">어제도 언급했던 종목으로, 지수 하락에도 불구하고 '알파 종목' (자리를 지키고 자기 갈 길 가는 종목)의 특성을 보여 매력적이라고 설명. (00:38:48)</li>
+                <li style="margin-bottom: 0;">단타 매매 시 중요하게 봐야 할 5가지 요소 (지지, 저항, 지수, 거래량, 갭상승) 언급. (00:39:45)</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 6px;"><b>블루엠테크 (어제 언급 종목 수익 인증)</b> (00:32:16)
+            <ul style="margin-top: 5px; padding-left: 15px;">
+                <li style="margin-bottom: 3px;">어제 언급하여 수익 낸 종목으로, 시청자들에게 수익 축하 메시지 전달.</li>
+                <li style="margin-bottom: 0;">'알파 종목' 및 '조정의 깊이(얇게 빠짐)' 개념을 설명하며 블루엠테크가 좋은 흐름을 보인 이유를 분석. (00:40:32)</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 6px;"><b>SJG 세종 (두 번째 관심 종목)</b> (00:36:13)
+            <ul style="margin-top: 5px; padding-left: 15px;">
+                <li style="margin-bottom: 3px;">매수가 5500원 부근. (00:36:18)</li>
+                <li style="margin-bottom: 3px;">원래 고점에서 들어가는 매매를 잘 하지 않지만, 이 종목은 '첫 갭' 발생 (2차 상승의 첫 구간), 견고한 재무제표 (매출액 대비 낮은 시가총액 - 1500억), 월봉 차트상 바닥권에서 올라오는 모습 때문에 진입했다고 설명. (00:42:01)</li>
+                <li style="margin-bottom: 0;"><b>SJG 세종 수익 완료</b> (00:52:53) - 급등하여 수익 실현 완료.</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 0;"><b>파워넷</b>: 아직 수익 실현은 안 했지만 양봉을 만들어주고 있어 굳이 버릴 필요 없이 끌고 가는 전략 유효하다고 판단. (00:44:01)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>8. 투자 조언 및 윤리적 관점</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">매매는 소액(100만원 미만)으로 연습 삼아 하라고 거듭 강조. 큰 돈 투자 시 손실 위험 경고. (00:56:07)</li>
+        <li style="margin-bottom: 6px;">'듣고 싶은 말만 듣지 말고' 객관적인 시각을 가지라고 조언. (00:25:02)</li>
+        <li style="margin-bottom: 6px;">자신은 '시험 범위를 줄여주는 선생님' 역할이며, 종목 분석 및 매매 계획 수립은 투자자 본인의 몫이라고 강조. (00:50:38)</li>
+        <li style="margin-bottom: 6px;">특히 어르신 투자자들에게 "다음 주 급등주, 대박주"와 같은 사기성 문구에 절대 현혹되지 말라고 강하게 경고. (00:26:21)</li>
+        <li style="margin-bottom: 0;">중장기 종목은 무조건 분할 매수가 답이라고 조언. (00:50:09)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>9. 개인적인 이야기 및 마무리</b></h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">점심 메뉴 고민. (00:58:10)</li>
+        <li style="margin-bottom: 6px;">반려견 '백두'(10살), '덕도'(4살) 소개 및 이름 유래 (독도 이슈) 설명. (00:59:09)</li>
+        <li style="margin-bottom: 6px;">여자친구 조건 1순위: 백두와 덕도를 잘 돌보는 것. (01:00:54)</li>
+        <li style="margin-bottom: 6px;">개인 차량: 캐스퍼 터보와 포터2 (포토르기니) 소개. 실용성을 강조하며, 특히 포터2의 강남 주차 용이성 (공사장 옆)을 유머러스하게 설명. (01:04:46)</li>
+        <li style="margin-bottom: 6px;">캐스퍼는 사회 초년생에게 추천할 만한 차라고 언급 (뒷좌석 평탄화 기능으로 반려견 태우기 용이). (01:08:13)</li>
+        <li style="margin-bottom: 6px;">금호타이어는 계속 들고 갈 예정이며, 내일도 그림이 좋으면 추가 진입할 것이라고 언급. (01:08:46)</li>
+        <li style="margin-bottom: 0;">시청자들에게 수고 많았다는 인사와 함께 다음 방송 예정 알림 및 농담을 하며 방송 마무리. (01:14:10)</li>
+    </ul>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📝 요약</b></h2>
+
+    <p style="margin-bottom: 15px;">본 영상은 김용재 전문가의 주식 라이브 방송으로, 전일 미증시와 국내 코스피/코스닥 시황을 분석하며 9월 FOMC 회의 전까지 시장의 혼조세와 하락 압력을 예상했습니다. 특히 시장이 어설프게 반등하기보다는 확실히 저점(730선)까지 하락하여 매수 기회를 주는 것이 ��낫다는 개인적인 견해를 피력했습니다. 투자 종목으로는 시장 상황에 흔들리지 않는 '알파 종목'을 강조하며, 금호타이어를 재차 추천하고 SJG 세종을 새로이 추천하여 당일 수익을 실현했습니다. 동시에 블루엠테크의 전일 수익도 확인했습니다. 투자자들에게는 소액으로 단타 매매를 연습하고, 중장기 투자는 철저한 분할 매수 계획을 세울 것을 강조하며, 특히 고수익을 미끼로 한 사기성 리딩에 대한 경고를 잊지 않았습니다. 말미에는 반려견, 차량, 개인적인 삶의 철학 등을 유머러스하게 공유하며 소통의 시간을 가졌습니다.</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💡 핵심 요약</b></h2>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 시장 전망:</b> <span class="highlight">9월 FOMC 전까지 혼조세 및 하락 압력 예상.</span> 어설픈 반등보다는 명확한 저점(코스닥 730선) 형성 선호. (00:14:56, 00:16:51)
+                </div>
+                <div class="section">
+                    <b>📊 투자 전략:</b> <span class="highlight">시장 지수와 무관하게 상승하는 '알파 종목'에 주목.</span> 과감한 중장기 투자는 지수가 확실해질 때까지 자제하고, 단타 매매는 소액으로 경험을 쌓는 데 활용. (00:18:25, 00:39:14, 00:56:07)
+                </div>
+                <div class="section">
+                    <b>📈 당일 추천 종목:</b> <span class="highlight">금호타이어 (재진입), SJG 세종 (신규 진입).</span> 두 종목 모두 당일 양호한 흐름을 보였고, SJG 세종은 수익 실현. 블루엠테크도 전일 추천 후 수익 달성. (00:31:56, 00:36:13, 00:32:16)
+                </div>
+                <div class="section">
+                    <b>💡 투자 철학:</b> <span class="highlight">'미련'과 '기대감' 구분, '실학' 정신을 바탕으로 실질적인 현장 지식 강조.</span> 투자자 스스로 분석하고 계획하는 능력 함양의 중요성 역설. (00:07:17, 00:11:30, 00:51:35)
+                </div>
+                <div class="section">
+                    <b>⚠️ 주의 사항:</b> <span class="highlight">고수익을 미끼로 하는 사기성 리딩에 절대 현혹되지 말 것.</span> 중장기 투자는 반드시 분할 매수로 접근. (00:26:21, 00:50:09)
+                </div>
+            </div>
+            <div class="card-footer">
+                본 요약은 라이브 방송 내용을 기반으로 작성되었으며, 투자의 최종 결정은 본인에게 있습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🧐 생각해볼 사항 (주식관련 매매 참고)</b></h2>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>시장 하락에 대한 대비:</b> 단순히 지수가 떨어지는 것을 부정적으로만 보지 않고, 오히려 저가 매수 기회로 활용하려는 역발상적 관점을 가질 필요가 있습니다. 다만, '어설픈 반등'에 속지 않고 확실한 저점을 기다리는 인내심이 중요합니다.</li>
+        <li style="margin-bottom: 6px;"><b>'알파 종목' 발굴:</b> 시장 전반의 흐름과 무관하게 독자적인 강세를 보이는 종목(알파 종목)을 찾아내는 능력이 단기 매매에서 중요합니다. 지지선, 저항선, 거래량, 갭상승, 지수와의 상관관계 등 기본적 차트 분석 요소를 활용하여 발굴 노력을 기울여야 합니다.</li>
+        <li style="margin-bottom: 6px;"><b>투자 규모와 목적 명확화:</b> 단타는 소액으로 매매 경험을 쌓는 데 집중하고, 중장기 투자는 철저한 기업 분석(재무제표, 사업 모델 등)과 함께 분할 매수 전략을 반드시 적용해야 합니다. 자신의 투자 목적과 위험 감수 수준에 맞는 자금 운용이 필수적입니다.</li>
+        <li style="margin-bottom: 0;"><b>자기 주도적 학습:</b> 전문가의 '밥 떠먹여주기' 식 리딩에 의존하기보다는, 제공된 정보를 바탕으로 스스로 공부하고 매매 계획을 수립하는 자기 주도적 학습 능력을 키워야 장기적으로 성공적인 투자를 할 수 있습니다. 잘못된 판단은 인정하고 전략을 수정하는 유연성도 필요합니다.</li>
+    </ul>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+    <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+    <div style="background-color: #e0f7fa; padding: 18px; border-radius: 8px; margin: 20px 0; border: 1px solid #b2ebf2;">
+        <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+        <div style="margin-bottom: 10px;">
+            <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+            <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+            <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+            <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+            <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+        </div>
+
+        <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+        <div id="wateringResultBox" style="margin-top: 20px; padding: 15px; border: 1px solid #b0bec5; border-radius: 4px; background-color: #fff; display: none;">
+            <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+            <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+        </div>
+    </div>
+
+    <script>
+        function calculateWatering() {
+            const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+            const currentShares = parseFloat(document.getElementById('currentShares').value);
+            const addPrice = parseFloat(document.getElementById('addPrice').value);
+            const addShares = parseFloat(document.getElementById('addShares').value);
+
+            if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares < 0 || addShares < 0) {
+                alert('유효한 숫자를 입력해주세요.');
+                return;
+            }
+
+            const totalCurrentValue = avgPrice * currentShares;
+            const totalAddValue = addPrice * addShares;
+            const newTotalShares = currentShares + addShares;
+            const newAvgPrice = (totalCurrentValue + totalAddValue) / newTotalShares;
+            const totalInvestment = totalCurrentValue + totalAddValue;
+
+            document.getElementById('newAvgPrice').textContent = newAvgPrice.toLocaleString('ko-KR', { maximumFractionDigits: 2 });
+            document.getElementById('totalInvestment').textContent = totalInvestment.toLocaleString('ko-KR');
+            document.getElementById('wateringResultBox').style.display = 'block';
+        }
+    </script>
+
+    <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+    <div style="margin: 30px 0;">
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 지수가 반등하더라도 큰 돈을 투자해서는 안 된다고 하는 이유는 무엇인가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 영상에서는 어설픈 반등이 투자자들에게 착시 효과를 주어 더 큰 하락에 물릴 수 있다고 경고합니다. 확실한 저점 형성이나 추세 전환이 확인되기 전까지는 신중한 접근이 필요하며, 큰 자금보다는 소액으로 단타 매매 경험을 쌓는 것을 권장합니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: '알파 종목'이란 무엇이며, 어떻게 찾아야 하나요?</div>
+            <div style="padding-left: 15px; color: #555;">A: '알파 종목'은 시장 전체의 흐름(지수)과 무관하게 독자적인 강세를 보이는 종목을 의미합니다. 영상에서는 지지선, 저항선, 거래량, 갭상승 등 차트의 기본적인 기술적 분석 요소와 함께, 기업의 펀더멘털(실적, 재무제표)을 종합적으로 고려하여 발굴할 수 있다고 설명합니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 중장기 투자를 할 때 반드시 분할 매수를 해야 한다고 강조하는 이유는 무엇인가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 중장기 투자는 단기 변동성에 대응하기 어렵기 때문에, 한 번에 모든 자금을 투입하기보다는 여러 번에 걸쳐 나누어 매수하는 분할 매수를 통해 평균 단가를 조절하고 위험을 분산시키는 것이 중요합니다. 이는 불확실한 시장 상황에서 안정적인 포트폴리오 관리를 가능하게 합니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 왜 고수익을 미끼로 하는 사기성 리딩에 현혹되지 말아야 한다고 경고하나요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 주식 시장에는 '확실한 대박주'나 '단기간 급등주'와 같은 것은 존재하지 않는다는 것이 영상의 주장입니다. 그러한 감언이설에 속아 투자하면 큰 손실을 볼 수 있으며, 결국 모든 투자의 책임은 본인에게 있으므로 비현실적인 약속에 현혹되지 않도록 경고합니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 본인이 '밥 떠먹여주는 사람'이 아니라고 강조하는 이유는 무엇인가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 전문가는 투자 방향이나 유망 종목의 '범위'를 제시할 수 있지만, 실제 종목 선정, 매수/매도 타이밍, 비중 조절 등 구체적인 매매 계획은 투자자 스스로 세우고 실행해야 함을 강조합니다. 이는 투자자가 장기적으로 독립적인 판단 능력을 기를 수 있도록 돕기 위함입니다.</div>
+        </div>
+
+        <div style="background-color: #ffebee; padding: 20px; border-radius: 8px; border: 1px solid #ef9a9a; margin-top: 30px;">
+            <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
