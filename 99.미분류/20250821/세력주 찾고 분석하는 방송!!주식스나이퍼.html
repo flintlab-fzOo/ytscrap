@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세력주 찾고 분석하는 방송!!주식스나이퍼</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            font-size: 32px;
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .summary-section {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .summary-section h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: -25px -25px 20px -25px; /* Adjust to extend to the edges of the section */
+            padding: 15px 25px;
+            border-radius: 8px 8px 0 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .summary-section h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        .summary-section p {
+            margin-bottom: 15px;
+        }
+        .summary-section ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        .summary-section li {
+            margin-bottom: 6px;
+        }
+        .timestamp {
+            color: #757575;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-right: 5px;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        table thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+            color: #004d40;
+        }
+        table tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            font-size: 20px;
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>세력주 찾고 분석하는 방송!!주식스나이퍼</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> -1tzquOtWkk</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=-1tzquOtWkk" target="_blank">https://www.youtube.com/watch?v=-1tzquOtWkk</a></p>
+        <p><strong>제목:</strong> 세력주 찾고 분석하는 방송!!주식스나이퍼</p>
+        <p><strong>영상 길이:</strong> 04시간10분59초(250분)</p>
+    </div>
+
+    <div class="summary-section">
+        <h2>개요</h2>
+        <p>이 방송은 주식 및 암호화폐 시장에 대한 심층 분석과 실시간 질의응답을 제공합니다. 제롬 파월 의장의 발언과 경제 지표가 시장에 미치는 영향을 진단하고, 개인 투자자들이 주목해야 할 차트 분석 기법(이동평균선, 매집, 공구리 패턴 등)을 다양한 종목 사례를 통해 설명합니다. 특히 다가오는 알트코인 시즌과 매집의 중요성을 강조하며, 투자 심리와 전략 수립에 대한 실질적인 조언을 나눕니다.</p>
+    </div>
+
+    <div class="summary-section">
+        <h2>내용</h2>
+        <h3>시청자 인사 및 주식 단타 수익 언급</h3>
+        <ul>
+            <li>매집사랑님, 눈깔왕자님, 김재훈님, 프렌스님, 원조사랑님, 조로님, 천천님, 송심도님, 아울님, 크레드님, 포카로님, 영완개민님, 단태사단 종경님, 킵고잉님, 빈살마님, 쩌니님, 황금손님, 스페로님, 원더제님, 구가홀님, 봉봉님, 창조는 모방회사님, 제이진님, SG마유님, 쇠창살님, 마린님, 최종민님 등 시청자들에게 인사 (<span class="timestamp">00:00:50</span>)</li>
+            <li>8C 종목의 짧은 기간 수익(약 28%) 언급 및 축하 (<span class="timestamp">00:02:44</span>)</li>
+            <li>개인 사업 경험 언급 (<span class="timestamp">00:09:01</span>)</li>
+            <li>블루엠택 (공개방 단타) 수익 언급 (<span class="timestamp">00:15:13</span>)</li>
+            <li>코아시안 (어제 단타) 수익 (3% 이상) 언급 (<span class="timestamp">00:20:17</span>)</li>
+            <li>미스터 블루 (이전 단타) 수익 언급 (<span class="timestamp">00:25:13</span>)</li>
+            <li>삼화에너지 (어제 단타) 수익 (2% 가깝게) 언급 (<span class="timestamp">00:25:41</span>)</li>
+            <li>FR텍 (공개방 단타) 수익 (3% 이상) 언급 (<span class="timestamp">03:11:26</span>)</li>
+            <li>6F (VIP 종목) 수익 축하 (<span class="timestamp">01:50:09, 02:06:00, 02:12:39, 02:19:43</span>)</li>
+            <li>25년 3월 단기 스윙 종목 130% 이상 수익 언급 및 축하 (<span class="timestamp">02:18:42, 02:24:05</span>)</li>
+        </ul>
+
+        <h3>시장 동향 및 경제 지표 분석</h3>
+        <ul>
+            <li>**대북주 언급**: 남북 대화 기사(북핵 폐기까지)를 통해 대북주 움직임 가능성 시사 (<span class="timestamp">00:04:20</span>)</li>
+            <li>**미국 및 한국 증시 분석**:
+                <ul>
+                    <li>S&P500, 나스닥의 망치형 캔들: 하방 압력에도 지지하는 모습 (<span class="timestamp">00:06:45</span>)</li>
+                    <li>제롬 파월 의장의 잭슨홀 연설(내일 밤 11시)을 앞두고 눈치보기 장세 예상 (<span class="timestamp">00:07:16</span>)</li>
+                    <li>한국 증시도 파월 연설 앞두고 하락세 둔화 및 망치형/도지형 캔들 형성 (<span class="timestamp">00:07:44</span>)</li>
+                    <li>코스피와 코스닥의 움직임 차이: 코스닥은 아직 힘이 없으나, 금리 인하 시 개인 투자자 유입으로 활성화 가능성 (<span class="timestamp">00:37:32</span>)</li>
+                    <li>삼성, 현대 등 대기업 주가가 힘을 내야 중소기업 주가도 동반 상승 가능성 강조 (<span class="timestamp">00:40:20</span>)</li>
+                </ul>
+            </li>
+            <li>**코인 시장 분석**:
+                <ul>
+                    <li>비트코인 급락 후 반등: 파월 연설 불안감에 대한 선반영으로 해석 (<span class="timestamp">00:41:22</span>)</li>
+                    <li>PPI(생산자 물가지수) 발표의 영향: 예상치 상회로 금리 인하 불확실성 증대 (<span class="timestamp">00:42:18</span>)</li>
+                    <li>비트코인 현물 ETF 자금 유출 언급 (<span class="timestamp">00:44:46</span>)</li>
+                    <li>알트코인 시즌 가능성 시사: 비트코인 하락에도 알트코인들이 방어를 잘하고 비트보다 강한 반응을 보이며 알트장 시작 준비 중임을 시사 (<span class="timestamp">00:47:31</span>)</li>
+                    <li>글로벌 통화량과 비트코인 가격의 후행 관계 (약 3-4개월) 설명 (<span class="timestamp">03:48:00</span>)</li>
+                    <li>역사적 4년 주기(2013, 2017, 2021년) 분석: 8월 상승, 9월 하락, 10월 상승 패턴 반복. 9월 조정이 마지막 저점 매수 기회가 될 수 있음을 시사 (<span class="timestamp">03:51:17</span>)</li>
+                </ul>
+            </li>
+            <li>**한국 경제 상황**:
+                <ul>
+                    <li>'꼭 필요한 소비 아니면 줄이자'는 분위기 확산: 술집, 외식업, 노래방 등 매출 감소 (<span class="timestamp">00:51:57</span>)</li>
+                    <li>개인 사업자 대출 1년 만에 16조 원 증가, 폐업 사업체 49만 2천 곳 (<span class="timestamp">00:53:21</span>)</li>
+                    <li>미국에서도 음주율 최저치 등 소비 심리 위축 (<span class="timestamp">00:53:53</span>)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>개별 종목 분석 및 투자 조언</h3>
+        <ul>
+            <li>**아진산업 (단타 종목)**:
+                <ul>
+                    <li>1차 단타 타점 제시: 3760원 이하 30%, 3580원 70% 매수 / 손절 3530원 (<span class="timestamp">00:33:57</span>)</li>
+                    <li>타점 수정: 3855원 30%, 3685원 70% 매수 / 손절 3635원 (<span class="timestamp">01:59:09, 02:00:03</span>)</li>
+                </ul>
+            </li>
+            <li>**FR텍 (단타 종목)**:
+                <ul>
+                    <li>단타 타점 제시: 2070원 30%, 1985원 70% 매수 / 손절 1960원 (<span class="timestamp">01:04:10</span>)</li>
+                    <li>시가총액이 너무 작아 세력에 의해 쉽게 조작될 수 있으므로 소액 투자를 권유 (<span class="timestamp">01:05:58</span>)</li>
+                    <li>호가창에 대량 매도 물량(장땡)이 막혀있던 것을 언급하며 세력의 의도적 움직임 지적. 이후 물량 치우고 수익권 도달 (<span class="timestamp">01:24:00</span>)</li>
+                </ul>
+            </li>
+            <li>**디알텍**: 추세 전환 준비 중이나, 중장기적 관점 필요. 220선, 440선 등 단계적 소화 필요 (<span class="timestamp">01:07:42</span>)</li>
+            <li>**JMB**: 반도체 장비 관련주. 매집에 시간이 더 필요한 차트. 시가총액이 매우 작아 투자 주의 (<span class="timestamp">01:09:34</span>)</li>
+            <li>**현대차**: 하락 추세 돌파 후 지지 구간 형성. 상승 잠재력 보유. 이동평균선 지지 활용하여 손절가 설정 가능 (<span class="timestamp">01:13:17</span>)</li>
+            <li>**GFC생명과학**: 저점과 고점이 높아지면 상승 추세 전환 가능성. 현재는 관찰 필요 (<span class="timestamp">01:17:00</span>)</li>
+            <li>**파워넷**: 2차전지 테마. 저점 대량 거래와 이동평균선 정배열 전환 조짐으로 상승 잠재력 높음. 448일선 지지 중요 (<span class="timestamp">01:17:39</span>)</li>
+            <li>**미스터블루**: 웹툰/모바일 게임 테마. 가상화폐 관련주로도 묶일 수 있음. 448일선 소화 중이며 매집 완료 시 상승 가능성 높음 (<span class="timestamp">01:20:07</span>)</li>
+            <li>**린드만아시아**: 아직 하락 추세 중. 꼬리 돌파는 추세 전환으로 보지 않으며, 몸통으로 명확히 돌파 후 눌림목에서 접근 권유 (<span class="timestamp">01:25:00</span>)</li>
+            <li>**APL스퀘어**: 추세 전환은 맞으나, '환' 종목(투자주의) 및 동전주이므로 소액 투자 권유. 핵심 지지 라인 이탈 시 손절 (<span class="timestamp">01:31:56</span>)</li>
+            <li>**비트나인**: 주가가 고점에 있고 쌍봉 형성 가능성. 투자에 부적합하며, 조정 후 중요한 지지 라인에서 접근 고려 (<span class="timestamp">01:35:10</span>)</li>
+            <li>**탑코미디어**: 이동평균선 이격이 커서 단기 상승 후 다시 조정될 가능성 높음. 추격 매수 비추천 (<span class="timestamp">02:03:01</span>)</li>
+            <li>**대우건설**: 하락 추세 돌파 후 조정. 재상승 잠재력 있음. 핵심 지지 라인(쌍바닥 저점) 활용하여 손익비 좋게 접근 가능 (<span class="timestamp">02:04:03</span>)</li>
+            <li>**강원에너지**: 장기 하락 추세 이탈. 저점 대량 거래로 매집 확인. 장기 이동평균선 이격 좁히는 중. 핵심 지지 라인(대량 거래 캔들 하단) 이탈하지 않으면 상승 잠재력 보유 (<span class="timestamp">02:09:31</span>)</li>
+            <li>**누보**: 저점 대량 거래로 매집 확인되나, 아직 시간이 필요한 종목. 거래량 터진 후 주가 하락 경향 있으므로 조정 시 접근 권유. 투자 매력도 낮음 (<span class="timestamp">02:21:49</span>)</li>
+            <li>**PNH테크**: 저점 대량 거래는 있으나, 이동평균선이 하방을 가리키고 이격이 벌어져 있어 큰 시세는 어려움. 단기 매매(224일선 터치 시 매도)만 유효하며, 핵심 지지 이탈 시 손절 (<span class="timestamp">02:25:00</span>)</li>
+            <li>**PIE**: 핵심 지지 라인(양봉 시가)이탈하지 않으면 일시적 반등 가능. 투자 매력도는 낮음 (<span class="timestamp">02:27:31</span>)</li>
+            <li>**애니플러스**: 시세가 나온 후 고점 대량 거래와 쌍봉 형태가 나타나 세력 이탈 신호로 해석. 핵심 지지 이탈 시 무조건 손절 권유 (<span class="timestamp">02:28:34</span>)</li>
+            <li>**다원시스**: 모든 이동평균선 지표가 하방을 가리키고 이격이 벌어져 있어 투자 부적합. "역매공파" 조건도 충족 못함. 최저점 이탈 시 손절 권유 (<span class="timestamp">02:30:51</span>)</li>
+            <li>**더바이오메드**: '환' 종목 및 낮은 시가총액으로 투자 매우 부적합. 이동평균선 지표 모두 불리. 최저점 이탈 시 손절 권유 (<span class="timestamp">02:36:27</span>)</li>
+            <li>**롯데관광개발**: 이미 시세가 나온 종목으로, 현재는 박스권 매도 영역. 핵심 지지 라인 이탈 시 손절. 다른 좋은 종목 찾는 것을 추천 (<span class="timestamp">02:41:25</span>)</li>
+            <li>**IMBDX**: 모든 이동평균선 지표가 불리하며, 삼각수렴도 방향성이 없음. "역매공파" 조건도 충족 못함. 투자할 이유가 없으며, 핵심 지지 이탈 시 손절 권유 (<span class="timestamp">02:45:11</span>)</li>
+            <li>**한전KPX**: 2조 원대 시가총액의 초장기 종목(3-5년). 매집 확인되나 투자 기간이 너무 길어 추천하지 않음. 단기적으로는 448일선 지지 중요 (<span class="timestamp">02:47:54</span>)</li>
+            <li>**SK**: 저점 대량 거래로 매집 확인. 이동평균선이 우상향으로 돌아서고 수렴 후 발산 준비 중. 강력한 상승 잠재력 보유. 다중바닥 지지 라인 활용 (<span class="timestamp">02:50:10</span>)</li>
+            <li>**금호타이어**: 갭하락 후 대량 거래 발생했으나 갭을 메꾸는 흐름이 없어 장기 하락 가능성. 투자 매력도 매우 낮아 패스 권유 (<span class="timestamp">02:53:15</span>)</li>
+            <li>**데브시스터즈**: 밥그릇 패턴의 3번 자리 가능성. 이동평균선 지지 라인 활용하여 접근 가능 (<span class="timestamp">02:58:51</span>)</li>
+            <li>**보성파워텍**: 상한가 종목 관리법: 호가창의 매수 잔량(매수벽)이 특정 수준(예: 15만 주) 이하로 줄어들면 이탈 가능성 있으므로 매도 고려 (<span class="timestamp">03:00:09</span>)</li>
+            <li>**NU**: "역매공파" 타점 아님. 거래량 터진 후 주가 하락 경향 있으므로 조정 시 손익비 좋은 구간에서 접근 권유 (<span class="timestamp">03:01:10</span>)</li>
+            <li>**나무가**: 밥그릇 패턴 3번 자리. 이동평균선 정배열 전환 및 응축 후 발산 조짐. 매집 기간 1년 경과. 강력한 상승 잠재력 보유 (<span class="timestamp">03:06:20</span>)</li>
+            <li>**명신산업**: "역매공파" 접근 가능 종목. 역배열, 매집봉, 공구리(지지대) 확인. 분할 매수로 손절폭 관리하며 접근 가능 (<span class="timestamp">03:08:41</span>)</li>
+            <li>**KTIS**: 매집 확인되나 매물대가 많아 시간이 오래 걸릴 종목. 핵심 캔들의 시가 또는 저점 활용하여 손절가 설정 (<span class="timestamp">03:12:19</span>)</li>
+            <li>**강원랜드**: 저점 대량 거래로 매집 확인. 1년 이상 매집 기간 경과. 이동평균선 우상향 전환 및 응축. 상승 잠재력 높음. 손절폭 짧게 접근 가능 (<span class="timestamp">03:14:52</span>)</li>
+            <li>**유라테크**: 이미 시세가 100% 이상 나온 종목. 고점에서 긴 꼬리, 대량 거래, 장대 음봉은 세력 이탈 신호. 2~3년 후에나 재진입 고려할 만함. 현재는 투자 부적합 (<span class="timestamp">03:19:30</span>)</li>
+            <li>**삼화콘덴서**: 역배열 차트로 "역매공파"도 부적합. 매력도 낮음. 의미 있는 지지 라인 이탈 시 손절 권유 (<span class="timestamp">03:21:29</span>)</li>
+            <li>**LVMCHoldings**: 역배열 차트. 저점 매집봉은 있으나 매집에 6개월~1년 더 필요. 이동평균선 지표 모두 불리. 투자 매력도 낮음 (<span class="timestamp">03:24:12</span>)</li>
+            <li>**위메이드**: 파동이 크고 초장기 종목. 모든 이동평균선이 머리 위에 있고 하방을 가리키며 발산 중. 현재 투자할 이유 없음. 과거 "역매공파" 타점에서는 상승 가능했으나 지금은 해당 안됨 (<span class="timestamp">03:41:18</span>)</li>
+        </ul>
+
+        <h3>주식 교육 및 개념 설명</h3>
+        <ul>
+            <li>**매집의 중요성**: 매집된 종목은 흔들림에도 버틸 수 있는 심리적 안정감을 주며 큰 수익을 가져다줌 (<span class="timestamp">02:21:00</span>)</li>
+            <li>**이동평균선(MA)의 3가지 기능**:
+                <ol>
+                    <li>**방향**: 이동평균선 방향은 종목 추세의 방향을 나타냄 (우상향이 좋음).</li>
+                    <li>**지지/저항**: 캔들 아래에 있으면 지지, 위에 있으면 저항.</li>
+                    <li>**수렴/발산**: 이동평균선이 모이면 힘이 응축, 벌어지면 힘이 분산. (모이는 것이 좋음) (<span class="timestamp">02:55:58, 03:25:58, 03:39:59, 04:09:59</span>)</li>
+                </ol>
+            </li>
+            <li>**갭 하락 후 대량 거래의 위험성**: 갭으로 빠지고 대량 거래가 터진 후 갭을 메꾸는 흐름이 없으면 장기간 하락 지속 가능성이 높으므로 피하는 것이 좋음 (<span class="timestamp">02:54:00</span>)</li>
+            <li>**공구리 (콘크리트) 개념**:
+                <ul>
+                    <li>**정의**: 주가가 지지받는 강한 구간 (<span class="timestamp">03:59:15</span>)</li>
+                    <li>**횡보형 공구리**: 주가가 횡보하다가 강한 양봉으로 저항선을 뚫고 나온 후, 그 구간이 강한 지지대가 되는 형태 (<span class="timestamp">04:00:20</span>)</li>
+                    <li>**언덕형 공구리**: 주가가 하락한 후 특정 언덕(저항)을 돌파하고 눌림목에서 그 언덕이 강력한 지지대가 되는 형태. 추세 전환의 가능성이 높아 횡보형보다 더 긍정적으로 평가 (<span class="timestamp">04:01:19</span>)</li>
+                    <li>**활용**: 밥그릇 패턴의 3번 자리와 함께 활용하면 성공률 높음 (<span class="timestamp">04:06:15</span>)</li>
+                </ul>
+            </li>
+            <li>**주식 공부의 단계**: 매집 → 타점 → 파동 → 세력 평단가 → 세력 목표가 순으로 체계적인 학습 강조 (<span class="timestamp">03:36:09</span>)</li>
+            <li>**VIP 매집 수업 홍보**: 유료 강의(132만원)인 매집 수업이 다음 주 VIP 대상으로 무료 제공됨 (<span class="timestamp">03:29:29</span>)</li>
+        </ul>
+
+        <h3>기타</h3>
+        <ul>
+            <li>개인 건강 문제 언급 (목, 안구 건조증, 전립선) (<span class="timestamp">01:37:26</span>)</li>
+            <li>반익절 등 수익 인증 언급 (<span class="timestamp">00:03:45</span>)</li>
+            <li>초등학교 친구(만승이) 이야기 (<span class="timestamp">02:08:00</span>)</li>
+        </ul>
+    </div>
+
+    <div class="summary-section">
+        <h2>요약</h2>
+        <p>본 영상은 현재 주식 및 암호화폐 시장 상황에 대한 상세한 분석을 제공한다. 미 증시와 한국 증시는 제롬 파월 의장의 잭슨홀 연설을 앞두고 눈치 보기 장세를 보이며, 망치형 캔들이 하방 압력에 대한 지지를 나타내고 있다. 특히, 코스닥은 기준금리 인하 시 개인 투자자 유입으로 상승 잠재력이 있음을 강조한다. 암호화폐 시장에서는 비트코인의 급락에도 불구하고 알트코인들이 상대적으로 강한 회복력을 보이며 알트 시즌의 가능성을 시사한다. 이는 글로벌 통화량의 후행 지표 특성과 역사적 4년 주기 패턴을 통해 설명된다.</p>
+        <p>개별 종목 분석에서는 블루엠택, 코아시안, 삼화에너지, FR텍 등 단타 성공 사례를 공유하며, 아진산업, 파워넷, 미스터블루, SK, 나무가, 명신산업 등 매집이 잘 되어 있거나 추세 전환이 기대되는 종목들을 긍정적으로 평가한다. 반면, 애니플러스, 다원시스, 더바이오메드, 롯데관광개발, IMBDX, 금호타이어, 유라테크 등은 고점 신호, 역배열, 낮은 시가총액, 불확실한 매집 상태 등을 이유로 투자에 주의를 당부하거나 피할 것을 권유한다.</p>
+        <p>또한, 매집의 중요성과 이동평균선(MA), 공구리(컨설리데이션) 패턴 등 핵심 차트 분석 기법을 교육하며, 투자자들이 심리적 안정감을 가지고 장기적으로 큰 수익을 낼 수 있는 방법을 제시한다. 특히 매집 수업이 VIP 회원에게 무료로 제공될 예정임을 강조한다. 전반적으로 시장의 불확실성 속에서도 명확한 분석 기준과 교육을 통해 현명한 투자를 이어갈 것을 독려한다.</p>
+    </div>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3>핵심 요약</h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 번째 핵심:</b> <span class="highlight">시장 관망 및 파월 연설 중요성.</span> 미/한 증시와 암호화폐 시장은 제롬 파월 의장의 잭슨홀 연설(한국시간 금요일 밤 11시)을 앞두고 관망세를 보이며, 그의 발언이 향후 금리 인하 및 시장 방향성에 결정적인 영향을 미칠 것으로 예상된다.
+                </div>
+                <div class="section">
+                    <b>📊 두 번째 핵심:</b> <span class="highlight">알트코인 시즌 임박 가능성.</span> 비트코인 급락에도 알트코인들이 상대적으로 견조한 흐름을 보이며, 역사적 주기와 글로벌 유동성 지표를 통해 9월 조정 이후 10~12월 강한 알트코인 시즌 도래 가능성을 시사한다.
+                </div>
+                <div class="section">
+                    <b>🧮 세 번째 핵심:</b> <span class="highlight">매집과 차트 분석의 중요성.</span> 매집이 잘 된 종목(상승 잠재력 보유)과 이동평균선, 공구리(지지대) 패턴 등 체계적인 차트 분석 기법을 통해 투자 심리 안정과 장기적 고수익 달성이 가능함을 강조한다. 위험 종목은 과감히 손절하거나 피할 것을 조언한다.
+                </div>
+            </div>
+            <div class="card-footer">
+                시장 분석은 AI가 생성한 참고용 초안으로, 투자의 최종 결정은 본인에게 있습니다.
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-section">
+        <h2>🎯 투자 판단: 생각해볼사항 👩‍💼👨‍💻</h2>
+        <ul>
+            <li><strong>파월 연설 및 FOMC 영향 주시:</strong> 다가오는 파월 의장의 잭슨홀 연설과 9월 FOMC 결과를 면밀히 주시하여, 금리 인하 여부 및 시장의 방향성 변화에 따라 투자 전략을 유동적으로 가져갈 필요가 있다. 특히 9월 초의 시장 조정 가능성은 마지막 저가 매수 기회가 될 수 있다.</li>
+            <li><strong>매집이 확인된 종목 투자:</strong> 시장의 불확실성 속에서도 '매집'이 잘 되어 있는 종목은 심리적 안정감을 제공하며 장기적인 수익 가능성을 높인다. 섣부른 추격 매수보다는 눌림목이나 지지 라인을 활용한 분할 매수 전략이 유효하다.</li>
+            <li><strong>위험 종목은 과감히 정리:</strong> 시세가 이미 나왔거나, 역배열 차트, 낮은 시가총액, '환'(투자주의) 종목, 혹은 매집 주체의 이탈 신호가 보이는 종목은 과감히 손절하거나 애초에 진입하지 않는 것이 중요하다. 장기적인 하락세나 세력 이탈 신호는 투자 매력도가 현저히 낮음을 의미한다.</li>
+            <li><strong>체계적인 학습과 경험의 중요성:</strong> 매집, 이동평균선, 공구리 패턴, 파동, 세력 평단가/목표가 등 다양한 분석 기법을 체계적으로 학습하고 실제 차트에 대입하며 경험을 쌓는 것이 중요하다. 이는 투자 판단의 정밀도를 높이고 심리적 흔들림을 줄이는 데 기여한다.</li>
+        </ul>
+    </div>
+
+    <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+    <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+    <div style="margin: 30px 0;">
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 공구리(지지대)는 무엇이며, 어떻게 활용하나요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 공구리는 주가가 강력하게 지지받을 수 있는 구간을 의미합니다. 횡보형 공구리는 주가가 횡보하다 저항을 뚫고 나온 후 그 구간이 지지대가 되는 것이고, 언덕형 공구리는 주가가 하락 후 특정 저항을 돌파하고 그 돌파 지점이 지지대가 되는 것입니다. 특히 언덕형 공구리는 추세 전환의 의미를 가질 수 있어 더 중요하게 봅니다. 밥그릇 패턴의 3번 자리와 함께 활용하면 매매에 유리합니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 이동평균선(MA)을 볼 때 가장 중요한 세 가지는 무엇인가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 이동평균선을 볼 때 중요한 세 가지는 1) 방향성 (우상향이 긍정적), 2) 지지/저항 기능 (캔들 아래에 있으면 지지, 위에 있으면 저항), 3) 수렴과 발산 (이동평균선이 모이면 힘이 응축되고, 발산되면 힘이 분산됨)입니다. 이 세 가지를 종합적으로 고려하여 종목의 흐름을 파악해야 합니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 비트코인 시장의 4년 주기 패턴은 무엇이며, 현재 시장에 어떤 영향을 미 미칠 것으로 예상되나요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 비트코인은 약 4년 주기로 상승 사이클을 반복해왔습니다 (예: 2013, 2017, 2021년). 과거 패턴을 보면 8월은 상승, 9월은 하락, 10월은 다시 상승하는 경향이 있었습니다. 현재 시장도 이러한 패턴을 따를 가능성이 높으며, 9월 초의 조정이 다가오는 알트코인 시즌을 앞둔 마지막 저점 매수 기회가 될 수 있습니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 주식 투자 시 '매집'을 파악하는 것이 왜 중요한가요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 매집은 세력이 주가를 올리기 위해 물량을 모으는 과정입니다. 매집이 잘 된 종목은 상승할 확률이 높으므로, 이를 파악하면 투자에 대한 확신을 가질 수 있고, 주가가 일시적으로 하락해도 저가 매수의 기회로 판단하여 심리적 안정감을 유지하며 큰 수익을 노릴 수 있습니다.</div>
+        </div>
+
+        <div style="margin-bottom: 20px; padding: 12px; background-color: #f9f9f9; border-radius: 6px; border: 1px solid #eeeeee;">
+            <div style="font-weight: bold; margin-bottom: 5px; color: #00796b;">Q: 특정 종목이 갭 하락 후 대량 거래가 발생했는데, 투자해도 될까요?</div>
+            <div style="padding-left: 15px; color: #555;">A: 갭 하락 후 대량 거래가 발생하고 그 갭을 메꾸는 흐름 없이 주가가 계속해서 하락하는 경우, 이는 장기간 투자 매력도가 떨어지는 위험한 신호일 수 있습니다. 과거 사례를 보면 이러한 종목들은 오랫동안 투자자들을 힘들게 할 수 있으므로, 해당 갭을 메꾸는 확실한 흐름이 나타나기 전에는 투자하지 않는 것이 좋습니다.</div>
+        </div>
+        <div class="disclaimer-box">
+            <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>

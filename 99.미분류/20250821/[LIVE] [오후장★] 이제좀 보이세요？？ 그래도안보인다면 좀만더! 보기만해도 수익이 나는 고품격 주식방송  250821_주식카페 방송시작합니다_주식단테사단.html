@@ -1,0 +1,381 @@
+
+<style>
+    .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+    .single-summary-card-container {
+        font-family: 'Noto Sans KR', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px;
+        background-color: #e0f7fa; /* Light Teal for container background */
+        margin: 20px 0;
+    }
+    .single-summary-card {
+        width: 100%;
+        max-width: 700px;
+        /* aspect-ratio: 16 / 9; */ /* 모바일 반응형을 위해 제거 */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        border: 1px solid #b2ebf2; /* Teal border for card */
+        box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+        height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+        min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+    }
+    .single-summary-card .card-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+    }
+    .single-summary-card .card-header-icon {
+        font-size: 34px;
+        color: #00796b; /* Dark Teal icon */
+        margin-right: 14px;
+    }
+    .single-summary-card .card-header h3 {
+        font-size: 26px;
+        color: #00796b; /* Dark Teal header text */
+        margin: 0;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+    .single-summary-card .card-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 17px;
+        line-height: 1.65;
+        color: #333; /* Main text color */
+    }
+    .single-summary-card .card-content .section {
+        margin-bottom: 10px;
+    }
+    .single-summary-card .card-content strong {
+        color: #004d40; /* Darker Teal for strong text */
+        font-weight: 600;
+    }
+    .single-summary-card .card-content .highlight {
+        background-color: #fff9c4; /* Yellow highlight as per original theme */
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+    .single-summary-card .card-content .formula {
+        background-color: #e0f7fa; /* Light Teal formula background */
+        padding: 6px 10px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        text-align: center;
+        margin-top: 5px;
+        color: #004d40; /* Darkest Teal for formula text */
+    }
+    .single-summary-card .card-footer {
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+        padding-top: 12px;
+        border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+        margin-top: auto;
+    }
+
+    /* 모바일 맞춤 조정: 768px 이하 */
+    @media (max-width: 768px) {
+        .single-summary-card {
+            padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+            height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+            margin-right: 10px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+        }
+        .single-summary-card .card-content {
+            font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+            line-height: 1.5;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+        }
+        .single-summary-card .card-content .formula {
+            padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+        }
+        .single-summary-card .card-footer {
+            font-size: 13px; padding-top: 10px;
+        }
+    }
+
+    /* 모바일 맞춤 조정: 480px 이하 */
+    @media (max-width: 480px) {
+        .single-summary-card {
+            padding: 15px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 26px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 18px;
+        }
+        .single-summary-card .card-content {
+            font-size: 14px; line-height: 1.4;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 6px;
+        }
+        .single-summary-card .card-content .formula {
+            padding: 4px 6px; font-size: 0.8em;
+        }
+        .single-summary-card .card-footer {
+            font-size: 12px; padding-top: 8px;
+        }
+    }
+</style>
+
+<div style="color: #333; line-height: 1.7; max-width: 800px; margin: 0 auto; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;">
+    <h1 style="font-size: 28px; color: #00796b; border-bottom: 2px solid #00796b; padding-bottom: 10px; margin-bottom: 20px;">[LIVE] [오후장★] 이제좀 보이세요？？ 그래도안보인다면 좀만더! 보기만해도 수익이 나는 고품격 주식방송 ? 250821_주식카페 방송시작합니다_주식단테사단</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> ESzpUC_LlKA</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=ESzpUC_LlKA" target="_blank">https://www.youtube.com/watch?v=ESzpUC_LlKA</a></p>
+        <p><strong>제목:</strong> [LIVE] [오후장★] 이제좀 보이세요？？ 그래도안보인다면 좀만더! 보기만해도 수익이 나는 고품격 주식방송 ? 250821_주식카페 방송시작합니다_주식단테사단</p>
+        <p><strong>영상 길이:</strong> 01시간41분57초(101분)</p>
+    </div>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">개요</h2>
+    <p style="margin-bottom: 15px;">이 영상은 주식 전문가가 진행하는 오후 실시간 라이브 방송으로, '필살단스' 검색기 및 '화살표' 지표를 활용한 실시간 종목 분석과 매매 전략을 제시합니다. 시청자들과의 소통을 통해 성공적인 매매 사례를 공유하고, 상한가 종목과 눌림목 매매에 대한 깊이 있는 설명을 제공합니다. 또한, 시장 동향을 파악하고 주식 매매 외에 일상적인 이야기, 공포 영화, 돈 버는 습관 등 다양한 주제를 다루며 시청자들에게 유익하고 흥미로운 시간을 제공합니다.</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">내용</h2>
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 20px;">
+            <h3 style="font-size: 20px; color: #00796b; margin-top: 0; margin-bottom: 10px;">**오후 방송 시작 및 환영** (10:56)</h3>
+            <ul style="margin: 0 0 10px 20px; padding: 0;">
+                <li style="margin-bottom: 5px;">오후 방송을 시작하며 시청자들에게 환영 인사를 건넨다.</li>
+                <li style="margin-bottom: 5px;">오전 장의 성공적인 매매 (보성파워텍 상한가, 에너토크 상한가 두 번)를 언급하며 시청자들을 축하한다.</li>
+                <li>화성코퍼레이션이 '필살단스'에 뜨며 상승 중임을 알린다.</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <h3 style="font-size: 20px; color: #00796b; margin-top: 0; margin-bottom: 10px;">**주요 종목 분석 및 전략**</h3>
+            <ul style="margin: 0 0 10px 20px; padding: 0;">
+                <li style="margin-bottom: 5px;">**화성코퍼레이션** (11:02)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>'필살단스'와 '화살표' 지표에 뜨면서 올라오고 있음을 언급.</li>
+                        <li>시장 관심은 아직 낮지만, 점차 움직이고 있음을 설명.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**키다리 스튜디오** (11:54)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>다시 하락하고 있지만, 목표가(448선, 7~8% 정도)를 재확인.</li>
+                        <li>현재 구간에서 계속 매수 가능하다고 판단하며, 눌림 시 지속적인 대응을 조언.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**아이비전 웍스** (15:33)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>오후장 개별 종목으로 언급하며, 아직 '필살단스'에는 뜨지 않았음을 알림.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**KB 오토시스** (16:04)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>괜찮은 종목으로 언급하며, 보성파워텍처럼 크게 상승할 가능성이 있다고 설명.</li>
+                        <li>관심 종목에 넣어두고 지켜볼 것을 추천.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**YJ 링크** (19:34)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>구름대 상단까지 상승할 것을 예측했고, 실제로 상단에 도달했음을 확인.</li>
+                        <li>무상증자 이슈로 상승했으며, '필살단스'에 떴을 때부터 관찰해야 함을 강조.</li>
+                        <li>매매 타점 분석: 구름대 상단/112선까지 노리는 바닥 매수 또는 안착 후 공구리 형성 시점.</li>
+                        <li>조건에 맞지 않으면 보내줄 줄 알아야 한다고 강조하며, '화살표' 지표의 중요성을 역설.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**파워넷** (31:51)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>보성파워텍처럼 될 수 있으나, 상승 폭은 약 5% 정도로 낮을 수 있다고 언급.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**두산 애너빌리티** (35:03)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>퍼센트지가 아닌 '돈'으로 움직이는 종목임을 강조.</li>
+                        <li>이전에 VIP 방에서 여러 차례 매매했던 종목이라고 언급.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**아이패밀리 SC** (35:42)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>검색기에 떴지만, 이미 많이 올라 패턴이 마음에 들지 않아 매수하지 않겠다고 판단.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**우리 기술 투자** (36:23)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>눌림목 매매를 노리는 종목으로, 10,000원 손절가를 잡고 112선 부근에서의 급락 시 매수를 노린다고 설명.</li>
+                        <li>실제로 눌림 후 반등에 성공하며 매매가 유효했음을 증명.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**단밀** (37:51)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>이전에 2% 이상 수익을 냈던 종목으로, 평선이 명확하지 않아 재진입을 보류.</li>
+                        <li>이후 '필살단스'에 다시 뜨고 '화살표'가 나타나며 눌림목 매수 기회가 있음을 재차 강조. (48 전략)</li>
+                        <li>VIP 회원들은 정확한 타점을 인지하고 수익을 냈음을 설명하며, 하방 추세에서는 조심해야 함을 언급.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**토탈소프트** (38:38)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>현재 상승 중이며, 448선을 뚫으면 VIP 스윙 종목으로 제공할 계획이라고 밝힘.</li>
+                        <li>구름대 돌파 여부가 중요하다고 강조.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**셀리드** (47:22)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>감염병 대응 임상시험 지원사업 선정 관련 뉴스로 인해 수급을 받고 있음을 설명.</li>
+                        <li>코로나19 변이 백신 연구 관련.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**BH** (49:09)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>수급을 받고 있는 종목으로, 시청자(투리님)가 성공적으로 매매했음을 축하.</li>
+                        <li>'데코리 검색기'를 통해 찾을 수 있었음을 언급하며 여러 검색기 활용의 중요성을 강조.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**JPI 헬스케어** (49:37)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>신규 상장주로, VIP 회원들이 눌림 후 반등 수익을 성공적으로 냈음을 언급.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**강원 에너지** (50:27)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>시청자가 성공적으로 매매했음을 축하하며, 448, 488 등 명확한 타점의 중요성을 강조.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**넥스트 바이오 메디칼** (55:28)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>분봉상 추세 상방에 있음을 언급.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**세명 전기** (55:50)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>갑작스러운 수급 유입에 대한 타점을 언급.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**하나 엔진** (56:02)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>현재 시장에서 관심을 보이는 종목.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**바이오 솔루션** (57:16)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>'필살단스'에 떴던 종목은 사라져도 계속 봐야 함을 강조하며, 현재 112선 위에 있음을 언급.</li>
+                        <li>VIP 회원들에게는 본전가 매도 후 다른 종목으로 이동할 것을 지시.</li>
+                    </ul>
+                </li>
+                <li style="margin-bottom: 5px;">**헬릭스미스, 삼성생명** (01:22:50)
+                    <ul style="list-style-type: circle; margin: 5px 0 5px 20px; padding: 0;">
+                        <li>'필살단스'에 현재 뜨고 있는 종목으로 언급.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <h3 style="font-size: 20px; color: #00796b; margin-top: 0; margin-bottom: 10px;">**투자 철학 및 교육 강조**</h3>
+            <ul style="margin: 0 0 10px 20px; padding: 0;">
+                <li style="margin-bottom: 5px;">상한가가 풀리는 것은 두려워할 것이 아니라 역으로 기회가 될 수 있음을 설명 (15:21).</li>
+                <li style="margin-bottom: 5px;">매매 조건에 맞지 않으면 미련 없이 보내줄 줄 아는 냉정한 판단의 중요성 강조 (32:20).</li>
+                <li style="margin-bottom: 5px;">'화살표'와 같은 보조지표가 분석의 신뢰도를 높여주는 중요한 도구임을 역설 (32:50).</li>
+                <li style="margin-bottom: 5px;">"영차 영차"는 당연한 파동의 움직임이며, 상단 꼬리가 달린 캔들도 파동의 일종으로 이해해야 함을 설명 (46:30).</li>
+                <li style="margin-bottom: 5px;">주식 시장에서 '나 혼자 하는 법'을 배우는 것의 중요성을 강조하며, '필살단스' 검색기 및 '화살표' 지표를 통해 스스로 타점을 찾을 수 있다고 설명 (01:26:43).</li>
+                <li>VIP 교육(특강)의 중요성을 강조하며, 매주 금요일 진행되는 심화 과정에서 핵심 내용을 빠르게 복습하고 심화 지식을 추가할 것이라고 설명 (01:27:31).</li>
+                <li>8월 말까지 VIP 가입 시 검색기 및 화살표 지표를 제공하는 이벤트를 진행 중임을 안내 (01:27:56).</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <h3 style="font-size: 20px; color: #00796b; margin-top: 0; margin-bottom: 10px;">**일상 소통 및 잡담**</h3>
+            <ul style="margin: 0 0 10px 20px; padding: 0;">
+                <li style="margin-bottom: 5px;">에너지 드링크를 마시기 위해 얼음을 구하러 가는 소소한 일상 이야기 (15:01, 17:48, 41:21).</li>
+                <li style="margin-bottom: 5px;">점심 식사(짜장면)에 대한 이야기와 개인적인 맛집 기준 (18:03).</li>
+                <li style="margin-bottom: 5px;">둘째 아이 어린이집 선생님께 샌드위치를 사다 줄 고민 (01:04:00).</li>
+                <li style="margin-bottom: 5px;">아내와의 김태희 외모 비교 에피소드 (01:06:27).</li>
+                <li style="margin-bottom: 5px;">최신 공포 영화 트렌드 (파묘, 어글리 시스터, 8번 출구, 컨저링, 굿 보이 등)에 대한 관심 (01:07:19).</li>
+                <li style="margin-bottom: 5px;">알려지지 않은 사실들 공유: OS 마시면 음주 단속, 진격의 거인 리바이/부리부리대마왕 성우 동일, 포카리 스웨트 자몽맛, 쥐의 구애 노래 (01:09:25).</li>
+                <li style="margin-bottom: 5px;">1억을 모으는 5가지 습관 (10분 일찍 일어나기, 10분 걷기 등)에 대한 개인적인 공감과 주식 투자 연계 (01:14:24).</li>
+                <li style="margin-bottom: 5px;">'일복이 많을 때 누군가 놀고 있다고 생각하라'는 명언 공유 (01:18:30).</li>
+                <li style="margin-bottom: 5px;">옛날 영화(두사부일체, 투캅스, 엽기적인 그녀)의 감성을 그리워하며 요즘 영화의 웹툰 원작 의존성 비판 (01:34:04).</li>
+                <li style="margin-bottom: 5px;">타짜 시리즈의 작품성 비교 (01:39:58).</li>
+                <li>테라스에 있는 큰 까마귀 이야기 (01:39:15).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">요약</h2>
+    <p style="margin-bottom: 15px;">이 영상은 주식 전문가가 진행하는 오후 실시간 방송으로, '필살단스'와 '화살표' 등 자체 개발한 검색기를 활용하여 종목 분석 및 매매 전략을 공유합니다. 보성파워텍, YJ링크, 우리기술투자, 단밀 등 특정 종목의 움직임을 실시간으로 분석하며, 눌림목 매매와 추세 확인의 중요성을 강조합니다. 특히 VIP 회원들이 검색기와 교육을 통해 독자적으로 매매를 할 수 있는 능력을 기를 수 있음을 역설하며, 상한가 매매와 미체결 종목에 대한 대응 전략도 설명합니다. 이외에도 공포 영화 트렌드, 돈 모으는 습관, 개인적인 경험 등 다양한 주제로 시청자들과 소통하며 흥미를 더하고, 8월 말까지 진행되는 VIP 가입 이벤트를 안내하며 마무리됩니다.</p>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">핵심요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 실시간 종목 분석 및 전략 제시:</b> <span class="highlight">'필살단스' 및 '화살표' 검색기를 활용하여 화성코퍼레이션, YJ링크, 우리기술투자, 단밀 등 다양한 종목의 실시간 움직임 분석 및 매매 전략을 공유.</span>
+                </div>
+                <div class="section">
+                    <b>📊 성공적인 매매 사례 공유 및 축하:</b> <span class="highlight">보성파워텍, 에너토크 등 상한가 종목과 JPI 헬스케어, 강원 에너지 등의 성공적인 거래 사례를 시청자들과 공유하고 축하.</span>
+                </div>
+                <div class="section">
+                    <b>🧮 명확한 투자 원칙 강조:</b>
+                    <div class="formula">눌림목 매매, 추세 확인, 조건 미달 시 미련 없이 보내는 손절 원칙 등 중요한 투자 철학을 강조하며, '화살표' 지표의 높은 신뢰도를 역설.</div>
+                </div>
+                <div class="section">
+                    <b>👩‍💻 VIP 교육의 중요성 및 혜택:</b> <span class="highlight">VIP 회원이 자체 검색기와 교육(특강)을 통해 주식 시장에서 '혼자 할 수 있는 법'을 배우는 능력을 기를 수 있음을 강조하고, 8월 말까지 진행되는 검색기 증정 이벤트를 안내.</span>
+                </div>
+                <div class="section">
+                    <b>💬 다양한 소통과 일상 공유:</b> 주식 외 일상 이야기(식사, 얼음), 문화 콘텐츠(영화), 재테크 습관, 개인적인 경험 등을 공유하며 시청자들과 소통하고 유대감을 형성.
+                </div>
+            </div>
+            <div class="card-footer">
+                이 방송은 실시간 종목 분석과 함께 투자 원칙, 교육의 중요성을 강조하며, 시청자들과의 다채로운 소통으로 구성됩니다.
+            </div>
+        </div>
+    </div>
+
+    <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">생각해볼사항(주식관련일경우 매매관련 참고)</h2>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><b>검색기 및 지표 활용 능력:</b> '필살단스' 및 '화살표'와 같은 자체 개발 검색기와 지표는 매수/매도 타점을 식별하는 데 매우 유용하다. 이러한 도구들을 효과적으로 활용하기 위해서는 체계적인 교육과 반복적인 학습이 필수적이다.</li>
+        <li style="margin-bottom: 6px;"><b>눌림목 매매의 이해:</b> 특정 가격대나 이동평균선(예: 112선)에서의 눌림목 매수를 통해 반등을 노리는 전략은 유효하지만, 정확한 타점 분석과 손절 라인 설정이 중요하다.</li>
+        <li style="margin-bottom: 6px;"><b>손절 원칙 준수:</b> 예상과 다른 움직임을 보이거나 매매 조건에 부합하지 않을 경우, 과감히 종목을 포기하고 손절할 수 있는 원칙을 세우고 지키는 것이 리스크 관리의 핵심이다. 추격 매수는 지양해야 한다.</li>
+        <li style="margin-bottom: 6px;"><b>자율 매매 능력 배양:</b> 단순히 종목 추천을 받는 것을 넘어, 스스로 시장을 분석하고 매매 결정을 내릴 수 있는 능력을 기르는 것이 장기적인 주식 투자의 성공을 위한 가장 중요한 요소이다. 이는 지속적인 학습과 경험을 통해 가능하다.</li>
+        <li style="margin-bottom: 6px;"><b>종목의 특성 이해:</b> 대형주는 자금 흐름에 의해 크게 좌우되며, 상한가가 풀린 종목도 역으로 새로운 기회가 될 수 있다는 관점을 이해해야 한다. 시장 전반의 움직임(코스피, 코스닥의 기술적 반등 등)도 함께 고려하는 것이 좋다.</li>
+        <li><b>재무적 습관의 중요성:</b> 주식 투자와 더불어 일상생활에서의 건강한 재무 습관(저축, 절약, 규칙적인 생활)을 병행하는 것은 전체적인 자산 증식에 긍정적인 영향을 미칠 수 있다.</li>
+    </ul>
+
+    <div style="background-color: #ffebee; padding: 20px; border-radius: 8px; border: 1px solid #ef9a9a; margin-top: 30px;">
+        <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+    </div>
+</div>
