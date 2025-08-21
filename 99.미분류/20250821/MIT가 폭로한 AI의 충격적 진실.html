@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT가 폭로한 AI의 충격적 진실</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 32px;
+            color: #004d40;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #e0f7fa;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        thead th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-answer {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer-box {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer-box h3 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .disclaimer-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .calculator-section {
+            background-color: #e0f7fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b2ebf2;
+        }
+        .calculator-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .calculator-section input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            box-sizing: border-box; /* padding을 너비에 포함 */
+        }
+        .calculator-section button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            width: 100%; /* 버튼 너비 100% */
+            margin-top: 15px;
+        }
+        #wateringResultBox {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        #wateringResultBox p {
+            margin-bottom: 8px;
+        }
+        #wateringResultBox span {
+            font-weight: bold;
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MIT가 폭로한 AI의 충격적 진실</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> R3Lw_0pJHHA</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=R3Lw_0pJHHA" target="_blank">https://www.youtube.com/watch?v=R3Lw_0pJHHA</a></p>
+            <p><strong>제목:</strong> MIT가 폭로한 AI의 충격적 진실</p>
+            <p><strong>영상 길이:</strong> 00시간11분42초(012분)</p>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>개요</b></h2>
+        <p>이 영상은 최근 나스닥 및 AI 관련 주식 하락의 배경을 분석하며, 특히 MIT에서 발표된 '생성형 AI 파일럿 프로젝트의 95% 실패' 보고서의 내용을 상세히 다룹니다. 또한, AI 기술의 현 한계와 기업 도입의 어려움을 인정하면서도, 기술적 문제는 결국 해결될 것이며 투자자들의 인내심이 더 중요한 변수임을 강조합니다. 과거 사례와 엔비디아의 실적 발표를 통해 AI 시장의 장기적인 긍정적 전망을 제시합니다.</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>내용</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>📊 시장 현황 및 AI 관련 주식 하락 (00:00:00 - 00:00:39)</b></h3>
+        <ul>
+            <li style="margin-bottom: 6px;">나스닥이 0.8% 하락했으며, 장 초반에는 2% 가까이 하락했다가 회복세를 보였습니다. (00:00:00 - 00:00:18)</li>
+            <li style="margin-bottom: 6px;">팔란티어도 장 초반 10% 이상 하락했다가 많이 회복했습니다. (00:00:18 - 00:00:27)</li>
+            <li style="margin-bottom: 0;">엔비디아, 브로드컴 등 미국의 반도체 및 AI 관련 테크 기업들이 전반적으로 하락했습니다. (00:00:27 - 00:00:39)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>📉 하락 원인 분석 (00:00:39 - 00:01:21)</b></h3>
+        <ul>
+            <li style="margin-bottom: 6px;"><b>샘 올트먼의 'AI 버블' 발언:</b> 오픈 AI의 CEO 샘 올트먼이 CNBC 인터뷰에서 AI 버블 가능성을 언급하여 투자 심리에 악영향을 주었습니다. (00:00:46 - 00:01:21)
+                <ul>
+                    <li style="margin-bottom: 0;">실제 내용은 그렇게 극단적이지 않았지만, 헤드라인만으로 부정적으로 받아들여졌습니다.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>📜 MIT 보고서 내용 및 영향 (00:01:21 - 00:06:09)</b></h3>
+        <ul>
+            <li style="margin-bottom: 6px;"><b>MIT의 'Gen AI Divide' 보고서 발표:</b> MIT에서 발표한 'State of AI in Business 2025' 보고서가 AI 투자 심리를 더욱 꺾었습니다. (00:01:21 - 00:01:46)</li>
+            <li style="margin-bottom: 6px;"><b>보고서의 충격적인 결론:</b> 기업에서 진행 중인 생성형 AI 파일럿 프로젝트의 <span class="highlight">95%가 실패</span>하고 있다는 헤드라인이 확산되었습니다. (00:01:51 - 00:02:07)</li>
+            <li style="margin-bottom: 6px;"><b>보고서 작성 방식:</b> 150명의 경영진, 350명의 직원 설문조사, 300건의 공개 배포 자료를 기반으로 작성되었습니다. (00:02:38 - 00:02:49)</li>
+            <li style="margin-bottom: 6px;"><b>주요 findings:</b>
+                <ul>
+                    <li style="margin-bottom: 6px;">많은 기업들이 30~40빌리언 달러에 달하는 막대한 금액을 들여 생성형 AI를 도입했으나, 95%의 조직에서 돈을 벌지 못했습니다. (00:03:03 - 00:03:27)</li>
+                    <li style="margin-bottom: 6px;">단 5%의 조직만이 AI 도입으로 가치를 창출했다고 합니다. (00:03:27 - 00:03:34)</li>
+                    <li style="margin-bottom: 0;">AI 도입은 활발하나, 실제 'AI로의 전환'은 미비하다는 점을 꼬집습니다. (00:03:34 - 00:03:42)</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 6px;"><b>파일럿 프로젝트 실패의 주된 이유: '학습의 격차' (00:04:03 - 00:04:30)</b>
+                <ul>
+                    <li style="margin-bottom: 6px;">대부분의 생성형 AI 도구는 기억을 하지 못하고, 적응도 하지 못하며, 피드백으로 개선되지 않습니다. (00:04:13 - 00:04:30)</li>
+                    <li style="margin-bottom: 6px;"><b>"첫 키스만 50번째" 비유:</b> 채 GPT는 채팅방을 새로 열 때마다 이전 대화 내용을 전부 잊어버려, 매번 맥락을 새로 설명해야 하는 비효율성이 발생합니다. (00:04:30 - 00:05:58)</li>
+                    <li style="margin-bottom: 6px;">AI 시스템이 배운 것을 기억하거나 맥락을 유지하지 못하는 것이 핵심 문제입니다. (00:06:09 - 00:06:17)</li>
+                    <li style="margin-bottom: 0;">회사 정책, 고객 특성, 내부 프로세스 등을 매번 AI에 설명해야 하므로, 단순 업무 외 핵심 업무에는 도입하기 어렵습니다. (00:06:17 - 00:06:42)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>🚀 개인적인 생각 및 전망 (00:06:42 - 00:11:17)</b></h3>
+        <ul>
+            <li style="margin-bottom: 6px;"><b>기술은 뒤로 가지 않는다:</b> 현재 AI의 기술적 한계(기억/맥락 유지 문제)는 오픈AI, 엔트로픽 등 주요 AI 개발사들이 인지하고 있으며, 수많은 연구원들이 해결하기 위해 노력하고 있습니다. (00:06:57 - 00:09:19)
+                <ul>
+                    <li style="margin-bottom: 0;">기술적 장벽은 문제만 명확히 알면 해결될 가능성이 높다고 판단합니다.</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 6px;"><b>조직의 도입 준비 부족:</b> 데이터 정리 미비, 직원들의 새로운 도구 사용에 대한 저항 등 조직 내부의 AI 도입 준비 부족도 문제입니다. (00:07:16 - 00:07:42)</li>
+            <li style="margin-bottom: 6px;"><b>AI 트랜스포메이션은 장기적인 과제:</b> 디지털 트랜스포메이션이 오랜 시간이 걸렸듯이, AI 트랜스포메이션 또한 단기적으로 모든 직원이 AI를 활용하는 것은 어렵고, 시간이 오래 걸릴 것입니다. (00:07:42 - 00:08:43)</li>
+            <li style="margin-bottom: 6px;"><b>진정한 걱정은 투자자들의 행동:</b> 기술적 문제보다 투자자들이 그 전에 지쳐서 패닉 셀링하거나 극단적인 행동을 보이는 것이 더 큰 위험 요인이라고 봅니다. (00:09:19 - 00:09:48)</li>
+            <li style="margin-bottom: 6px;"><b>과거 사례와 비교 (세카이어 캐피털):</b> 작년 중순 세카이어 캐피털의 'AI가 돈을 못 벌고 있다'는 보고서로 시장이 하락했으나, 결국 실적 발표와 함께 잊혀졌던 사례를 언급합니다. (00:09:55 - 00:10:46)</li>
+            <li style="margin-bottom: 0;"><b>MIT 보고서의 운명과 엔비디아 실적:</b> MIT 보고서 역시 결국 기업들의 '엄청난 실적'(특히 엔비디아)이 나오면서 잊혀질 것이라고 전망합니다. (00:10:46 - 00:11:04)
+                <ul>
+                    <li style="margin-bottom: 0;">다음 주 엔비디아의 실적 발표가 파괴적으로 나올 가능성이 높다고 예상하는데, 이는 빅테크 기업들이 AI 관련 CAPEX(자본적 지출)를 계속 높이겠다고 했기 때문입니다. (00:11:04 - 00:11:17)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>요약</b></h2>
+        <p>최근 나스닥과 AI 관련 주식이 샘 올트먼의 'AI 버블' 발언과 MIT의 '생성형 AI 프로젝트 95% 실패' 보고서로 인해 하락했습니다. MIT 보고서는 AI가 이전 대화를 기억하지 못해 기업 내 핵심 업무 도입이 어렵다고 지적합니다. 그러나 필자는 기술적 문제는 결국 해결될 것이며, 과거 AI 회의론 보고서가 실적으로 인해 잊혀졌듯, 엔비디아와 같은 기업의 강력한 실적 발표로 현재의 우려도 해소될 것이라고 전망합니다. 투자자들의 조급함이 가장 큰 위험 요소라고 봅니다.</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>핵심요약</b></h2>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ AI 시장 하락 요인:</b> <span class="highlight">샘 올트먼의 AI 버블 발언, MIT의 생성형 AI 프로젝트 실패 보고서.</span>
+                    </div>
+                    <div class="section">
+                        <b>📊 MIT 보고서 핵심:</b> 기업의 생성형 AI 도입 시도 95% 실패, AI의 '기억 및 맥락 유지' 능력 부족이 주원인. 개인 생산성 향상은 있었으나 기업 성과로 이어지지 못함.
+                    </div>
+                    <div class="section">
+                        <b>🧮 기술적 한계와 극복 전망:</b> AI는 '첫 키스만 50번째'처럼 맥락을 잊는 문제가 있지만, 기술 발전으로 해결될 것.
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 실제 위험 요소:</b> <span class="highlight">기술적 문제보다 투자자들의 인내심 부족과 패닉 셀링.</span>
+                    </div>
+                    <div class="section">
+                        <b>🚀 긍정적 전망:</b> 과거 AI 회의론 보고서가 실적으로 잊혀졌듯, 엔비디아 등 빅테크 기업의 강력한 AI 관련 실적(CAPEX 증가)이 현재 우려를 불식시킬 것으로 기대.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    본 요약은 영상 내용을 기반으로 작성되었으며, 투자 판단의 참고 자료로만 활용하시기 바랍니다.
+                </div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>생각해볼사항(주식관련일경우 매매관련 참고)</b></h2>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>단기 시장 반응과 장기 관점:</b> 현재 AI 관련주 하락은 샘 올트먼의 발언과 MIT 보고서의 영향으로 투자 심리 위축에 기인한 것입니다. 이는 단기적인 시장의 반응일 수 있으므로, 장기적인 AI 트렌드와 기술 발전을 신뢰한다면 단기 하락을 매수 기회로 활용할지 고려해볼 수 있습니다.</li>
+            <li style="margin-bottom: 6px;"><b>기술적 한계의 극복 가능성:</b> AI의 '기억 및 맥락 유지' 문제와 같은 기술적 한계는 개발사들이 적극적으로 해결하려는 부분입니다. 기술은 항상 발전하며, 이러한 문제점은 시간이 지남에 따라 개선될 가능성이 높다는 점을 염두에 두어야 합니다.</li>
+            <li style="margin-bottom: 6px;"><b>기업 실적의 중요성:</b> MIT 보고서가 지적하는 기업 내 AI 도입의 어려움에도 불구하고, 빅테크 기업들의 AI 관련 자본 지출(CAPEX)은 지속적으로 증가하고 있습니다. 특히 엔비디아와 같은 AI 인프라 핵심 기업의 다음 분기 실적 발표가 현재의 AI 버블 우려를 잠재울 중요한 변곡점이 될 수 있으므로, 실적 발표를 주의 깊게 지켜보는 것이 중요합니다.</li>
+            <li style="margin-bottom: 0;"><b>투자자의 인내심:</b> 기술적 문제 해결보다 더 중요한 변수는 투자자들의 인내심입니다. 단기적인 실망감에 따른 패닉 셀링이 발생할 경우 시장에 큰 하락이 올 수도 있습니다. 그러나 기술 발전의 방향성을 믿고 장기적인 관점에서 접근하는 것이 중요합니다.</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+        <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+        <div class="calculator-section">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+            <div style="margin-bottom: 10px;">
+                <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+                <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+                <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+                <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+                <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+            </div>
+
+            <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+            <div id="wateringResultBox" style="margin-top: 20px; padding: 15px; border: 1px solid #b0bec5; border-radius: 4px; background-color: #fff; display: none;">
+                <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+            </div>
+        </div>
+        <p data-ke-size="size16">&nbsp;</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>마무리: 핵심 내용 요약 📝</b></h2>
+        <p>이 기사는 최근 AI 관련 시장의 하락 원인을 분석하고, MIT 보고서의 충격적인 내용을 다루면서도 AI 기술의 장기적인 발전 가능성과 투자자들의 인내심의 중요성을 강조했습니다.</p>
+        <p>궁금한 점은 댓글로 물어봐주세요~ 😊</p>
+
+        <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+        <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+        <div style="margin: 30px 0;">
+            <div class="faq-item">
+                <div class="faq-question">Q: 최근 AI 관련 주식들이 하락한 주된 이유는 무엇인가요?</div>
+                <div class="faq-answer">A: 샘 올트먼의 'AI 버블' 발언과 MIT의 '생성형 AI 프로젝트 95% 실패' 보고서 발표가 주요 원인으로 지목되고 있습니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: MIT 보고서에서 지적하는 생성형 AI의 가장 큰 문제점은 무엇인가요?</div>
+                <div class="faq-answer">A: AI가 이전 대화나 맥락을 기억하지 못하고 매번 새로 시작해야 한다는 '학습 격차' 문제입니다. 이로 인해 기업 내 핵심 업무 도입이 어렵다고 지적됩니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 영상에서는 현재 AI 시장의 하락을 어떻게 전망하고 있나요?</div>
+                <div class="faq-answer">A: 기술적 한계는 결국 해결될 것이며, 과거 AI 회의론이 실적으로 인해 잊혀졌듯, 엔비디아 등 빅테크 기업의 강력한 실적 발표로 현재의 우려도 해소될 것이라고 긍정적으로 전망합니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: AI 관련 투자에서 가장 주의해야 할 점은 무엇이라고 언급되었나요?</div>
+                <div class="faq-answer">A: 기술적 문제보다는 투자자들이 단기적인 실망감에 지쳐 패닉 셀링하는 '투자자들의 인내심 부족'이 가장 큰 위험 요소라고 합니다.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: 엔비디아의 실적 발표가 AI 시장에 어떤 영향을 미칠 것으로 예상되나요?</div>
+                <div class="faq-answer">A: 엔비디아의 실적이 파괴적으로 나올 경우, AI는 계속 성장할 것이라는 시장의 확신을 강화하여 현재의 부정적인 투자 심리를 해소할 중요한 변곡점이 될 수 있다고 예상됩니다.</div>
+            </div>
+        </div>
+
+        <div class="disclaimer-box">
+            <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+
+    <!-- 물타기 계산기 JavaScript (HTML 출력에 포함되지 않으므로 주석 처리)
+    <script>
+        function calculateWatering() {
+            const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+            const currentShares = parseFloat(document.getElementById('currentShares').value);
+            const addPrice = parseFloat(document.getElementById('addPrice').value);
+            const addShares = parseFloat(document.getElementById('addShares').value);
+
+            if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares <= 0 || addShares <= 0) {
+                alert('모든 필드를 올바르게 입력해주세요.');
+                return;
+            }
+
+            const totalCurrentInvestment = avgPrice * currentShares;
+            const totalAddInvestment = addPrice * addShares;
+            const newTotalShares = currentShares + addShares;
+            const newTotalInvestment = totalCurrentInvestment + totalAddInvestment;
+            const newAvgPrice = newTotalInvestment / newTotalShares;
+
+            document.getElementById('newAvgPrice').textContent = newAvgPrice.toFixed(2);
+            document.getElementById('totalInvestment').textContent = newTotalInvestment.toLocaleString();
+            document.getElementById('wateringResultBox').style.display = 'block';
+        }
+    </script>
+    -->
+</body>
+</html>
