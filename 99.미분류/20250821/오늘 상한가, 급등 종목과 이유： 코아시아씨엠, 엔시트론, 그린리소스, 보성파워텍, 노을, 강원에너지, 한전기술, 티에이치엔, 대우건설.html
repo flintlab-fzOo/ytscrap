@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 상한가, 급등 종목과 이유： 코아시아씨엠, 엔시트론, 그린리소스, 보성파워텍, 노을, 강원에너지, 한전기술, 티에이치엔, 대우건설</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #00796b;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0f2f7;
+            color: #004d40;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .section-header-box {
+            background-color: #e0f7fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b2ebf2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+            color: #004d40;
+        }
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .water-calc-box {
+            background-color: #e0f7fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b2ebf2;
+        }
+        .water-calc-box label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .water-calc-box input[type="number"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .water-calc-box button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .water-calc-box button:hover {
+            background-color: #004d40;
+        }
+        #wateringResultBox {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            background-color: #fff;
+            display: none;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-item div:first-child {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-item div:last-child {
+            padding-left: 15px;
+            color: #555;
+        }
+        .disclaimer {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer h3 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-bottom: none;
+        }
+        .disclaimer p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Single Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            p, li {
+                font-size: 15px;
+            }
+            .video-meta p {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 6px 10px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            p, li {
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>오늘 상한가, 급등 종목과 이유： 코아시아씨엠, 엔시트론, 그린리소스, 보성파워텍, 노을, 강원에너지, 한전기술, 티에이치엔, 대우건설</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> GG7oPjzr9qY</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=GG7oPjzr9qY" target="_blank">https://www.youtube.com/watch?v=GG7oPjzr9qY</a></p>
+            <p><strong>영상 길이:</strong> 00시간12분04초 (12분)</p>
+        </div>
+
+        <p data-ke-size="size8">&nbsp;</p>
+        <div style="color: #333; line-height: 1.7; max-width: 800px; margin: 0 auto; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;">
+            <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+                8월 21일 목요일, 국내 증시의 주요 급등 종목들과 그 배경을 심층 분석합니다. 원전 및 전기차 부품 테마주의 반등 요인과 다양한 개별 이슈 종목들의 상승 이유를 상세히 다루며, 시장 동향 및 거래량/거래대금 상위 종목들을 함께 제시합니다.
+            </div>
+            <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 2023년 8월 21일 기준으로 작성되었습니다.</p>
+            
+            <p style="margin-bottom: 15px;">안녕하세요, 주식탐구생활입니다! 8월 21일 목요일, 오늘의 증시는 어떤 종목들이 빛을 발했는지 궁금하지 않으신가요? 코스피와 코스닥 시장 전반의 흐름을 짚어보고, 10% 이상 급등한 종목들은 물론 상한가와 하한가 종목까지 그 이유를 속 시원하게 파헤쳐 보겠습니다. 오늘 시장의 주인공들은 어떤 스토리를 가지고 있는지 함께 살펴보시죠! 😊</p>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 시장 동향 및 주요 종목 현황 🤔</b></h2>
+
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>종합 주가 지수 및 투자자 동향</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><strong>코스피</strong> (00:00:06): 0.37% 상승한 3,141.74포인트로 마감. 외국인 매도, 기관 매수, 개인 매도. 거래 대금 10조 원.</li>
+                <li style="margin-bottom: 6px;"><strong>코스닥</strong> (00:00:22): 0.05% 하락한 777.24포인트로 마감. 외국인 매도, 기관 매도, 개인 매수. 거래 대금 4조 원.</li>
+            </ul>
+
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>오늘의 급등/하한가 종목 현황</b></h3>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;">총 18종목 (코스피 5종목, 코스닥 13종목)이 10% 이상 급등했습니다 (00:00:38).</li>
+                <li style="margin-bottom: 6px;">상한가 종목은 코아시아CM, 엔시트론 2종목입니다 (00:00:45).</li>
+                <li style="margin-bottom: 6px;">하한가 종목은 아센디오 1종목이 있었습니다 (00:00:49).</li>
+                <li style="margin-bottom: 0;">급등 종목들은 크게 원전 테마, 자동차 부품 테마, 그리고 개별 이슈로 나눌 수 있습니다 (00:00:53).</li>
+            </ul>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>이 회사의 매력과 리스크는? (속속들이 펀더멘탈 분석) 📊</b></h2>
+
+            <h3><b>[테마별 급등 종목]</b></h3>
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>1. 원전 테마 (00:01:04)</b></h3>
+            <div class="info-box">
+                <b>💡 알아두세요!</b><br>
+                이틀 연속 하락세를 이어오던 원전 관련주들이 반등 마감했습니다. 윤석열 정부가 체코와의 원전 계약 성사를 위해 미국 웨스팅하우스와 불평등 계약을 맺었다는 단독 기사가 전해지면서 최근 하락세를 보였지만, 한수원 사장의 입장 표명과 미국 방문 소식으로 분위기가 전환되었습니다.
+            </div>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><strong>계약 논란</strong> (00:01:09): 한수원이 원전 1기당 1조원 규모 자금을 웨스팅하우스에 지급하고, 북미/유럽/영국/우크라이나 시장 진출이 불가하다는 내용이 알려지며 불리하고 불공정한 계약이라는 지적이 있었습니다.</li>
+                <li style="margin-bottom: 6px;"><strong>한수원 입장 및 미국 방문</strong> (00:01:54): 한수원 황주호 사장은 '불리한' 표현에 동의하지 않으며, 이익을 남길 만하다고 밝혔습니다. 또한, 웨스팅하우스와의 합작법인 설립 논의를 위해 8월 23일 미국을 방문할 것이라고 전했습니다.</li>
+                <li style="margin-bottom: 0;"><strong>미국 원전 시장 진출 기대감</strong> (00:02:26): 8월 25일 한미 정상회담을 계기로 한수원의 미국 원전 시장 진출 방안이 논의될 것으로 전망되며 원전 기업들이 반등했습니다.</li>
+            </ul>
+            <p style="margin-bottom: 15px;">관련 종목으로는 강원에너지 (00:02:33), 대우건설, 보성파워텍, 한전기술 등이 있습니다. 특히 강원에너지는 차세대 소형 모듈 원전 시장의 핵심 설비 분야 진입을 모색 중이며, 리튬 및 2차 전지 관련주로도 묶입니다.</p>
+
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>2. 자동차 부품 테마 (00:02:47)</b></h3>
+            <div class="info-box">
+                <b>💡 알아두세요!</b><br>
+                내년부터 전기차 구매 보조금이 400만원으로 오를 수 있다는 소식이 전해지면서 자동차 부품 및 전기차, 2차 전지 기업들이 상승했습니다.
+            </div>
+            <ul style="margin: 0 0 15px 20px; padding: 0;">
+                <li style="margin-bottom: 6px;"><strong>보조금 인상 소식</strong> (00:02:50): 환경부 장관은 내년 전기차 구매 보조금과 내연차 전환 지원금을 합산하여 대략 400만원으로 늘어날 수 있도록 부처 간 협의 중이라고 밝혔습니다.</li>
+                <li style="margin-bottom: 0;"><strong>정책 배경</strong> (00:03:08): 전기차 보조금은 2021년 700만원에서 매년 줄어 작년에는 300만원으로 축소되었으나, 예상보다 전기차 수요가 정체되면서 지원금 확대 방안이 고려되고 있습니다.</li>
+            </ul>
+            <p style="margin-bottom: 15px;">관련 종목으로는 구글제지, 티에이치엔, 일지테크 등이 있으며, 이들 종목은 모두 수소차 관련주로도 묶이니 참고해주세요 (00:03:38).</p>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📈 기술적 분석: 현재 주가 흐름은? 🧮</b></h2>
+
+            <h3><b>[개별 이슈 급등 종목]</b></h3>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>코아시아CM (00:03:45)</b></h3>
+                <p style="margin-bottom: 0;">급등 이유는 파악되지 않았으나, 지난주 실적 발표에서 전년 동기 대비 매출액 20% 증가 (707억), 영업이익 흑자 전환 (18억)을 기록했습니다 (00:03:53).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>엔시트론 (00:04:01)</b></h3>
+                <p style="margin-bottom: 0;">시급료 사업 확대를 위해 '고동경향'을 인수했다는 단독 기사로 상한가를 기록했습니다 (00:04:04). 고동경향은 경향식 전문 브랜드로, 엔시트론은 고동컴퍼니 지분 73%를 취득하여 계열사로 편입했습니다. 고동경향의 한박스테이크는 삼성 임직원식으로 납품되기도 했으며, 프랜차이즈 사업 호조로 인수를 결정했습니다 (00:04:08).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>그린리소스 및 일부 반도체 관련주 (00:04:44)</b></h3>
+                <p style="margin-bottom: 0;">삼성전자가 엔비디아의 HBM 초기 품질 검증 시험을 통과하면서 올해 안으로 양산을 본격화할 전망이라는 소식에 상승했습니다 (00:04:49). 8월 1일부터 20일까지 반도체 수출액이 29% 급증하며 수출 성장세를 이끌었다는 점도 긍정적으로 작용했습니다 (00:05:17). 특히 그린리소스는 국내 파운드리 고객 사양 납품 물량이 증가 중이라는 소식이 전해지며 강세를 보였습니다 (00:05:30). 그린리소스는 지난주 실적 발표에서 매출액 492% 증가 (257억), 영업이익 44% 증가 (8억)를 기록했습니다 (00:05:40).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>노을 (00:05:37)</b></h3>
+                <p style="margin-bottom: 0;">언론을 통해 게이츠 재단과 라이트 재단이 공동 주최한 글로벌 보건 간담회에 초청되어 협력 방향을 논의했다고 밝히면서 강세를 보였습니다 (00:05:50). 이번 논의를 계기로 글로벌 보건 난제 해결을 위한 협력을 강화해 나갈 계획이라고 밝혔습니다 (00:06:05).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>유로 (00:06:11)</b></h3>
+                <p style="margin-bottom: 0;">운영 자금 확보를 위해 정남ENC를 대상으로 10억 원 규모의 삼자배정 유상증자를 결정했다고 공시하면서 강세를 보였습니다 (00:06:16). 이와 함께 전환청구권 행사 공시도 있었는데, 81만 주가 9월 5일에 상장될 예정이며 이는 발행주식 총수 대비 1%에 해당합니다. 전환 가격은 610원이며, 오늘 정규장 종가는 916원입니다 (00:06:30).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>탑코미디어 (00:06:42)</b></h3>
+                <p style="margin-bottom: 0;">자체 스튜디오가 제작한 웹툰 '하이스펙 왕자님께 사랑을 받는다면'이 일본 라인만가에서 랭킹 1위를 기록했다고 밝히면서 강세를 보였습니다 (00:06:47). 여성향 로맨스 웹툰에서도 성과를 확인한 만큼, 앞으로도 다양한 장르를 통해 일본 웹툰 시장에서의 입지를 확대하겠다고 밝혔습니다 (00:06:56).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>씨어스 테크놀로지 (00:07:08)</b></h3>
+                <p style="margin-bottom: 0;">급등 이유는 파악되지 않았으나, 지난주 실적 발표에서 전년 동기 대비 매출액 799% 증가 (79억), 영업이익 흑자 전환 (14억)을 기록했습니다 (00:07:16). 다만, 주식 매수 선택권 행사로 인한 추가 상장을 앞두고 있으며, 75,000주가 8월 25일에 추가 상장될 예정입니다. 행사 가격은 1,750원부터 1만원 사이이며, 오늘 종가는 3만 8천원입니다 (00:07:24).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>넥스트바이오메디컬 (00:07:41)</b></h3>
+                <p style="margin-bottom: 0;">넥스피어가 유럽 임상 무대에서 처음으로 성과를 발표했다는 소식이 부각되며 강세를 보였습니다 (00:07:49). 넥스피어는 젤라틴 기반의 분해성 색전 미립구로, 입자 크기와 체내 분해 시간을 조절할 수 있어 간암과 자궁근종 등 다양한 적응증에 활용이 가능합니다 (00:07:55). 유럽 임상 결과가 학회와 국제저널에 소개되면서 16조 원 규모의 자궁근종 치료기기 시장 진입에 청신호가 켜졌다는 평가가 나오고 있습니다 (00:08:03).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>YJ링크 (00:08:13)</b></h3>
+                <p style="margin-bottom: 0;">1대1 무상증자를 결정했다고 공시하면서 강세를 보였습니다 (00:08:18). 기준일은 9월 5일이며 상장 예정일은 9월 19일입니다. 그 밖에도 멕시코의 새로운 생산공장을 준공했으며 테슬라의 구매 담당자가 해당 공장을 방문했다고 전해지면서 전일 6% 상승 마감한 바 있습니다 (00:08:22).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>대한조선 및 조선/조선기자재 기업 (00:08:34)</b></h3>
+                <p style="margin-bottom: 0;">대통령이 토요일부터 5박 6일 일정으로 일본과 미국을 잇따라 방문하는 가운데, 미국 필라델피아에 위치한 하나의 필리조선소를 방문한다고 전해졌기 때문입니다 (00:08:39). 25일에는 트럼프 대통령과의 정상회담이 예정되어 있으며, 26일에 필리조선소를 방문할 예정입니다. 이번 방문을 통해 마스가 프로젝트를 통한 한미 간의 조선 협력을 강화한다는 메시지를 내놓을 전망이라고 전해지면서 조선 기업들이 상승세를 보였습니다 (00:09:02).</p>
+            </div>
+            <div class="section-header-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>펌스빌 (00:09:07)</b></h3>
+                <p style="margin-bottom: 0;">급등 이유는 파악되지 않았으나, 지난주 실적 발표에서 전년 동기 대비 매출액 18% 감소 (33억), 영업이익 흑자 전환 (8,854만원)을 기록했습니다 (00:09:14).</p>
+            </div>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🧐 투자 판단: [종목명], 지금이 매수 기회일까? 👩‍💼👨‍💻</b></h2>
+
+            <h3><b>[하한가 종목]</b></h3>
+            <div class="warning-box">
+                <b>⚠️ 주의하세요!</b><br>
+                아센디오는 김건희 특검의 '삼부토건 주가 조작 의혹' 관련 압수수색 장소에 포함되면서 하한가로 마감했습니다 (00:09:23).
+            </div>
+            <p style="margin-bottom: 15px;">아센디오는 웰바이오텍이 TDM 투자조합 2호를 통해 최대주주로 있는 기업입니다 (00:09:43). 특검은 주가 조작 세력들이 웰바이오텍에서 아센디오로 옮겨가며 주가 조작을 한 것으로 판단하고 있다고 전해졌습니다 (00:09:47).</p>
+            
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🎯 투자 전략: 어떻게 접근해야 할까? 📚</b></h2>
+            
+            <h3><b>[시장별 거래량/거래대금 상위 종목] (00:09:51)</b></h3>
+            <p style="font-size: 14px; color: #757575;">대체거래소 도입으로 인해 3시 30분 까지의 데이터와 다소 차이가 있을 수 있습니다.</p>
+
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>코스피 시장</b></h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <thead>
+                    <tr>
+                        <th style="padding: 14px; text-align: left; border: 1px solid #e0e0e0; background-color: #e0f7fa; font-weight: bold;">구분</th>
+                        <th style="padding: 14px; text-align: left; border: 1px solid #e0e0e0; background-color: #e0f7fa; font-weight: bold;">종목명</th>
+                        <th style="padding: 14px; text-align: left; border: 1px solid #e0e0e0; background-color: #e0f7fa; font-weight: bold;">특이사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;" rowspan="10">거래량 상위 (00:10:05)</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">두산에너빌리티</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">삼성전자</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">대우건설</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">원전 시공 이력 다수 보유 (10% 이상 상승) (00:10:21)</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">카카오</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">동영철관</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">하이닉스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">한국전력</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">삼성중공업</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">한온시스템</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">TP</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;" rowspan="10">거래대금 상위 (00:11:17)</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">두산에너빌리티</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">하이닉스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">삼성전자</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">카카오</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">대한조선</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">8월 초 신규 상장 조선기업 (10% 이상 상승) (00:11:38)</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">한전기술</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">원전 관련주 (10% 이상 상승) (00:11:41)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">한국전력</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">하나오션</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">LG이노텍</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">현대차</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>코스닥 시장</b></h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                <thead>
+                    <tr>
+                        <th style="padding: 14px; text-align: left; border: 1px solid #e0e0e0; background-color: #e0f7fa; font-weight: bold;">구분</th>
+                        <th style="padding: 14px; text-align: left; border: 1px solid #e0e0e0; background-color: #e0f7fa; font-weight: bold;">종목명</th>
+                        <th style="padding: 14px; text-align: left; border: 1px solid #e0e0e0; background-color: #e0f7fa; font-weight: bold;">특이사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;" rowspan="10">거래량 상위 (00:10:30)</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">아이비전옥스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">보성파워텍</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">원전 관련주 (10% 이상 상승) (00:10:45)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">이스트아시아홀딩스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">엔시트론</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">경향식 전문 브랜드 고동경향 인수 (10% 이상 상승) (00:10:45)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">구글제지</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">자동차 부품 관련주, 수소차용 탄소종이 개발 중 (10% 이상 상승) (00:10:55)</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">유로</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">10억 원 규모 유상증자 소식 (10% 이상 상승) (00:11:04)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">탑코미디어</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">웹툰 신작 일본 라인만가 랭킹 1위 기록 (10% 이상 상승) (00:11:07)</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">노을</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">게이츠 재단과 협력 방안 논의 (10% 이상 상승) (00:11:13)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">나노엔텍</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">사마네트웍스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;" rowspan="10">거래대금 상위 (00:11:44)</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">JPI헬스케어</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">보성파워텍</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">원전 관련주 (10% 이상 상승) (00:11:59)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">알테오젠</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">콜마비앤에이치</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">BHI</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">애니플러스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">아이비전웍스</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">블루엠텍</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">ABL바이오</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5;">
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">펩트론</td>
+                        <td style="padding: 14px; text-align: left; border: 1px solid #e0e0e0;">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p data-ke-size="size16">&nbsp;</p>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+            <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+            <div class="water-calc-box">
+                <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+                <div style="margin-bottom: 10px;">
+                    <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+                    <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+                    <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+                    <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+                    <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+                </div>
+
+                <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+                <div id="wateringResultBox" style="margin-top: 20px; padding: 15px; border: 1px solid #b0bec5; border-radius: 4px; background-color: #fff; display: none;">
+                    <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                    <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                </div>
+            </div>
+            <script>
+                function calculateWatering() {
+                    const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+                    const currentShares = parseFloat(document.getElementById('currentShares').value);
+                    const addPrice = parseFloat(document.getElementById('addPrice').value);
+                    const addShares = parseFloat(document.getElementById('addShares').value);
+
+                    if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares)) {
+                        alert("모든 값을 입력해주세요.");
+                        return;
+                    }
+
+                    const totalCurrentInvestment = avgPrice * currentShares;
+                    const totalAddInvestment = addPrice * addShares;
+                    const newTotalShares = currentShares + addShares;
+                    const newAvgPrice = (totalCurrentInvestment + totalAddInvestment) / newTotalShares;
+                    const totalInvestment = totalCurrentInvestment + totalAddInvestment;
+
+                    document.getElementById('newAvgPrice').textContent = newAvgPrice.toLocaleString('ko-KR', { maximumFractionDigits: 2 });
+                    document.getElementById('totalInvestment').textContent = totalInvestment.toLocaleString('ko-KR');
+                    document.getElementById('wateringResultBox').style.display = 'block';
+                }
+            </script>
+            <p data-ke-size="size16">&nbsp;</p>
+
+            <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>마무리: 핵심 내용 요약 📝</b></h2>
+
+            <p style="margin-bottom: 15px;">오늘 살펴본 8월 21일 목요일 증시에서는 원전 및 전기차 보조금 이슈로 인한 테마주들의 반등, 그리고 여러 개별 모멘텀을 가진 종목들의 강세가 두드러졌습니다. 특히 엔시트론의 신사업 확장, 삼성전자의 HBM 품질 검증 소식에 따른 반도체주 강세, 노을의 글로벌 협력 등이 눈에 띄었습니다.</p>
+
+            <p style="margin-bottom: 15px;">이처럼 시장은 다양한 이슈에 따라 역동적으로 움직입니다. 투자 결정을 내리실 때는 항상 재료의 지속성, 기업의 펀더멘털, 그리고 기술적 분석을 종합적으로 고려하시는 것이 중요합니다. 오늘 분석이 여러분의 투자에 작은 도움이 되기를 바랍니다. 궁금한 점은 댓글로 물어봐주세요! 😊</p>
+
+            <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+            <div class="single-summary-card-container">
+                <div class="single-summary-card">
+                    <div class="card-header">
+                        <span class="card-header-icon">💡</span>
+                        <h3><b>오늘의 핵심 요약</b></h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="section">
+                            <b>✨ 원전 테마 반등:</b> <span class="highlight">한수원의 미국 원전 시장 진출 기대감</span> 및 웨스팅하우스와의 합작법인 논의 소식으로 원전 관련주들이 반등했습니다.
+                        </div>
+                        <div class="section">
+                            <b>📊 전기차 부품 강세:</b> <span class="highlight">전기차 구매 보조금 400만원 증액 가능성</span> 검토 소식에 자동차 부품 및 전기차 관련주들이 상승세를 보였습니다.
+                        </div>
+                        <div class="section">
+                            <b>🧮 반도체주 상승:</b> 삼성전자 HBM 엔비디아 품질 검증 통과 및 반도체 수출 급증 소식이 긍정적으로 작용했습니다.
+                        </div>
+                        <div class="section">
+                            <b>👩‍💻 개별 종목 이슈:</b> 엔시트론 (외식 사업 확장), 노을 (빌 게이츠 재단 협력), 유로 (유상증자), 탑코미디어 (웹툰 일본 랭킹 1위), 넥스트바이오메디컬 (의료기기 임상 성과), YJ링크 (무상증자, 테슬라 방문) 등 다양한 호재가 있었습니다.
+                        </div>
+                        <div class="section">
+                            <b>🚨 아센디오 하한가:</b> <span class="highlight">주가 조작 의혹 관련 특검 압수수색</span>으로 하한가를 기록하며 투자 주의가 필요합니다.
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        본 요약은 2023년 8월 21일 시장 데이터를 기반으로 합니다.
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="font-size: 24px; color: #00796b; margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2;"><b>자주 묻는 질문 ❓</b></h2>
+
+            <div style="margin: 30px 0;">
+                <div class="faq-item">
+                    <div>Q: 오늘 원전 관련주가 반등한 주된 이유는 무엇인가요?</div>
+                    <div>A: 이틀간의 하락세를 뒤집고 반등한 주된 이유는 한수원 사장의 웨스팅하우스 계약 관련 긍정적인 입장 표명과 함께, 8월 25일 예정된 한미 정상회담을 계기로 한수원의 미국 원전 시장 진출 방안이 논의될 것이라는 기대감 때문입니다.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div>Q: 전기차 보조금 증액 소식이 자동차 부품주에 어떤 영향을 미쳤나요?</div>
+                    <div>A: 내년부터 전기차 구매 보조금이 400만원으로 오를 수 있다는 환경부 장관의 발언이 전해지면서, 예상보다 정체된 전기차 수요를 진작시킬 수 있을 것이라는 기대감에 자동차 부품 및 전기차, 2차 전지 관련주들이 동반 상승했습니다.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div>Q: 엔시트론의 상한가 이유는 무엇인가요?</div>
+                    <div>A: 엔시트론은 외식 사업 확대를 위해 경향식 전문 브랜드 '고동경향'을 인수했다는 단독 기사가 전해지면서 상한가를 기록했습니다. 고동경향은 삼성 임직원식으로 납품되기도 했으며, 프랜차이즈 사업 호조가 인수 결정의 배경이 되었습니다.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div>Q: 아센디오가 하한가를 기록한 이유는 무엇인가요?</div>
+                    <div>A: 김건희 여사의 '삼부토건 주가 조작 의혹'과 관련하여 특검의 압수수색이 웰바이오텍과 아센디오 본사에 착수했다는 소식 때문입니다. 특검은 주가 조작 세력이 웰바이오텍에서 아센디오로 옮겨가며 범행을 한 것으로 보고 있습니다.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div>Q: 삼성전자의 HBM 품질 검증 통과가 반도체주에 미치는 영향은 무엇인가요?</div>
+                    <div>A: 삼성전자가 엔비디아의 HBM 초기 품질 검증 시험을 통과하면서 올해 안에 양산이 본격화될 것이라는 전망이 나왔습니다. 이는 국내 반도체 기업들의 실적 개선 기대감으로 이어져 그린리소스를 포함한 일부 반도체 관련주들의 상승세를 이끌었습니다.</div>
+                </div>
+                <div class="disclaimer">
+                    <h3>⚠️면책조항</h3>
+                    <p>본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
