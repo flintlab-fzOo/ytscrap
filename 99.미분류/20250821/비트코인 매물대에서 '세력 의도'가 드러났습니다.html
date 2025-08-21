@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비트코인 매물대에서 '세력 의도'가 드러났습니다...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f6f8;
+            box-sizing: border-box;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #004d40;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 32px; border-bottom: 3px solid #00796b; padding-bottom: 10px; }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px solid #e0f2f7;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        ul li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .info-box, .warning-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+        }
+
+        /* Summary Card */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .single-summary-card { padding: 18px; height: auto; min-height: unset; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #eeeeee;
+        }
+        .faq-item .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00796b;
+        }
+        .faq-item .answer {
+            padding-left: 15px;
+            color: #555;
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background-color: #ffebee;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ef9a9a;
+            margin-top: 30px;
+        }
+        .disclaimer h3 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .disclaimer p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .calculator-container {
+            background-color: #e0f7fa;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #b2ebf2;
+        }
+        .calculator-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .calculator-container input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .calculator-container button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+        .calculator-result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #b0bec5;
+            border-radius: 4px;
+            background-color: #fff;
+            display: none; /* Hidden by default, will be shown by JS */
+        }
+        .calculator-result-box p {
+            margin-bottom: 8px;
+        }
+        .calculator-result-box span {
+            font-weight: bold;
+            color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <p data-ke-size="size8">&nbsp;</p>
+    <div style="color: #333; line-height: 1.7; max-width: 800px; margin: 0 auto; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box;">
+        <div style="background-color: #e0f7fa; padding: 15px; border-radius: 8px; font-style: italic; margin-bottom: 25px; font-size: 15px; border: 1px solid #b2ebf2;">
+            본 영상은 비트코인 시장의 큰 추세를 분석하기 위해 1일봉 및 1주봉 차트를 활용하여 과거 2023년부터의 움직임을 살펴보고, 반복되는 패턴과 최근의 변화를 진단합니다. 특히 저항선이 지지선으로 변하는 매물대 이론의 적용과 최근 매수세 약화 조짐을 분석하며, 향후 시장의 헤드 앤 숄더 패턴 형성 가능성과 그에 따른 투자 전략을 제시합니다.
+        </div>
+        <p style="font-size: 14px; color: #757575; text-align: right; margin-bottom: 20px;">본 분석은 최신 영상 내용을 기준으로 작성되었습니다.</p>
+        
+        <h1>비트코인 매물대에서 '세력 의도'가 드러났습니다...</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> NL10qMifKkI</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=NL10qMifKkI" target="_blank">https://www.youtube.com/watch?v=NL10qMifKkI</a></p>
+        </div>
+        <p><strong>제목:</strong> 비트코인 매물대에서 '세력 의도'가 드러났습니다...</p>
+        <p><strong>영상 길이:</strong> 00시간12분27초(12분)</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📊 영상 개요</b></h2>
+        <p style="margin-bottom: 15px;">본 영상은 비트코인 시장의 큰 추세를 분석하기 위해 1일봉 및 1주봉 차트를 활용하여 과거 2023년부터의 움직임을 살펴보고, 반복되는 패턴과 최근의 변화를 진단합니다. 특히 저항선이 지지선으로 변하는 매물대 이론의 적용과 최근 매수세 약화 조짐을 분석하며, 향후 시장의 헤드 앤 숄더 패턴 형성 가능성과 그에 따른 투자 전략을 제시합니다.</p>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📈 영상 내용 상세</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>차트 분석의 기본 원칙</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">큰 추세 확인을 위해 1일봉 또는 1주봉 차트 사용 (00:00:00 - 00:00:06).</li>
+            <li style="margin-bottom: 6px;">과거 움직임(패턴) 분석을 통해 현재 및 미래 움직임 유추의 중요성 강조 (00:00:17 - 00:00:23).</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>2023년 이후 비트코인 상승 추세 분석</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">2023년부터 비트코인의 강한 상승이 시작됨 (00:00:30 - 00:00:32).</li>
+            <li style="margin-bottom: 6px;">강한 상승 후 조정, 그리고 고점 돌파의 패턴 반복 (00:00:53 - 00:00:59).</li>
+            <li style="margin-bottom: 6px;">특징적인 패턴: 돌파했던 직전 고점을 지지선으로 활용하며 상승을 지속함 (00:00:59 - 00:01:07, 00:01:32 - 00:01:38).</li>
+            <li style="margin-bottom: 6px;">오랫동안 '기빨 패턴(횡보)' 후 강하게 상승 돌파하며, 이후 돌파한 고점은 다시 지지선이 됨 (00:01:21 - 00:01:38).</li>
+            <li style="margin-bottom: 0;">이러한 규칙적인 패턴은 세력들이 '상승 돌파했던 저항선은 지지선이 된다'는 매물대 이론을 매우 잘 지켜왔음을 보여줌 (00:02:02 - 00:02:17, 00:02:28 - 00:02:38, 00:03:26 - 00:03:57).</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>차트 분석의 실제적 이점</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">차트 분석을 통해 돌파한 고점은 언젠가 다시 지지를 확인해야 하는 중요한 지점임을 인지할 수 있음 (00:04:40 - 00:04:49).</li>
+            <li style="margin-bottom: 6px;">이는 급격한 상승 시 찾아오는 FOMO(Fear Of Missing Out)를 제어하고, 조정 시점에서 합리적으로 매수할 수 있는 근거를 제공함 (00:04:53 - 00:05:26).</li>
+            <li style="margin-bottom: 0;">예시: 고점에서 섣불리 매수했다면 32%의 조정과 4개월의 대기 시간을 감수해야 했을 것 (00:05:29 - 00:05:44).</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>최근 움직임의 변화 감지</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">최근 비트코인 움직임에서 과거와 다른 패턴이 나타남: 돌파 후 지지 흐름이 아닌 하락 돌파 (00:06:15 - 00:06:24).</li>
+            <li style="margin-bottom: 6px;">이후 다시 상승 돌파했으나, 이전과 비교해 매수 힘이 약해지고 있다고 판단 (00:06:29 - 00:06:38).</li>
+            <li style="margin-bottom: 0;">향후 기존 매물대 하락 돌파 가능성이 시사됨 (00:07:03 - 00:07:09).</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>현재 시장 전망 및 헤드 앤 숄더 패턴 가능성</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">현재 두 번의 저항을 받고 내려오는 시점은 과거 큰 하락 전의 움직임과 유사함 (00:07:18 - 00:07:31).</li>
+            <li style="margin-bottom: 6px;">반등이 나오더라도 12만 300달러(주요 매물대 저항선)를 넘기기 어려울 것으로 예상됨 (00:08:08 - 00:08:21).</li>
+            <li style="margin-bottom: 6px;">'헤드 앤 숄더' 패턴 형성 가능성이 제시됨 (00:08:33 - 00:08:37).</li>
+            <li style="margin-bottom: 6px;">헤드 앤 숄더의 완성 조건: 오른 어깨의 고점이 왼 어깨 고점을 넘지 않아야 하며, 넥 라인(주요 지지선) 하락 돌파 시 패턴이 발동됨 (00:08:43 - 00:09:10).</li>
+            <li style="margin-bottom: 0;">직전 고점 영역이 중요한 지지선이므로, 하락 돌파하더라도 다시 강하게 말아 올릴 가능성도 남아 있음 (00:09:16 - 00:09:26).</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;"><b>향후 투자 전략 및 장기 전망</b></h3>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;">현재 움직임은 약세로 보이며, 반등 시에도 저항 구간(12만 300불)을 넘기기 힘들 것 (00:10:31 - 00:10:39).</li>
+            <li style="margin-bottom: 6px;"><strong>매수 기회 시나리오:</strong>
+                <ul style="margin: 0 0 0 15px; padding: 0; list-style-type: circle;">
+                    <li style="margin-bottom: 3px;">갑작스러운 급락 후 강한 상승 흐름이 나올 경우 (00:10:42 - 00:10:45).</li>
+                    <li style="margin-bottom: 0;">넥 라인 하락 돌파가 느리고 옆으로 기우는 움직임(횡보)이 나올 경우 (00:10:49 - 00:11:00).</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 6px;">장기적으로 2023년부터 이례적으로 긴 계단식 상승이 지속되어 왔으므로, 일시적인 패턴 이탈(조정)이 더 큰 장기 상승을 위한 마지막 기회가 될 수도 있음 (00:11:35 - 00:12:15).</li>
+            <li style="margin-bottom: 0;">모든 가능성을 열어두고 시장을 예측하며 투자할 것을 조언함 (00:12:18 - 00:12:25).</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>📝 영상 요약</b></h2>
+        <p style="margin-bottom: 15px;">본 영상은 2023년부터 비트코인이 돌파된 직전 고점을 지지선으로 삼으며 꾸준히 상승하는 규칙적인 패턴을 보여왔음을 분석합니다. 이러한 매물대 이론의 규칙적인 준수는 '세력의 의도'를 엿볼 수 있게 하며, 차트 분석을 통해 급격한 상승 구간에서의 섣부른 매수를 피하고 조정 시 지지선에서 매수하는 합리적인 투자 전략을 세울 수 있었다고 설명합니다.</p>
+        <p style="margin-bottom: 15px;">그러나 최근 비트코인 움직임에서 과거와 달리 돌파 후 지지받지 못하고 하락 돌파하는 등 매수 힘이 약화되는 조짐이 보인다고 진단합니다. 현재 두 번의 저항을 받은 상태로, 과거 패턴과 유사하게 12만 300달러 선을 넘기기 어려워 보이며, '헤드 앤 숄더' 패턴 형성으로 인한 추가 하락 가능성도 존재한다고 예측합니다.</p>
+        <p style="margin-bottom: 15px;">그럼에도 불구하고, 중요한 지지선에서는 반등이 나올 수 있으며, 급락 후 강한 반등이나 느린 하락(횡보) 시에는 다시 매수 기회가 될 수 있다고 제시합니다. 또한, 이례적으로 긴 상승장이 이어져 온 만큼, 일시적인 패턴 이탈이 더 큰 상승을 위한 마지막 조정 기회가 될 수도 있다는 점을 언급하며, 모든 가능성을 열어두고 신중하게 시장에 접근할 것을 조언합니다.</p>
+        
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 규칙적인 상승 패턴:</b> 2023년부터 비트코인은 <span class="highlight">돌파된 저항선이 지지선으로 바뀌는 매물대 이론을 규칙적으로 따르며 상승</span>해왔다. (00:00:59)
+                    </div>
+                    <div class="section">
+                        <b>📊 차트 분석의 가치:</b> 이 패턴 분석을 통해 투자자는 <span class="highlight">섣부른 고점 매수를 피하고 조정 시 합리적인 매수 시점 예측</span>이 가능했다. (00:04:40)
+                    </div>
+                    <div class="section">
+                        <b>⚠️ 최근 패턴 변화 감지:</b> 과거와 달리 돌파 후 지지받지 못하고 <span class="highlight">하락 돌파하는 등 매수 힘 약화 조짐</span>이 나타났다. (00:05:49)
+                    </div>
+                    <div class="section">
+                        <b>📉 헤드 앤 숄더 가능성:</b> 현재 12만 300달러 저항선 돌파가 어려울 것으로 보이며, <span class="highlight">헤드 앤 숄더 패턴 형성으로 인한 하락 가능성</span>이 제기된다. (00:08:12)
+                    </div>
+                    <div class="section">
+                        <b>📈 향후 매수 기회 모색:</b> <span class="highlight">급락 후 강한 반등 또는 넥 라인 하락 후 느린 횡보 움직임</span> 시 새로운 매수 기회를 모색할 수 있다. (00:10:42)
+                    </div>
+                </div>
+                <div class="card-footer">
+                    비트코인 시장의 과거 패턴을 이해하고, 최근의 변화에 주의하며 현명한 투자 전략을 세우세요.
+                </div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>🧐 생각해볼 사항 (매매 관련 참고)</b></h2>
+        <ul style="margin: 0 0 15px 20px; padding: 0;">
+            <li style="margin-bottom: 6px;"><b>패턴 변화 주시:</b> 과거의 규칙적인 패턴(돌파 저항선 -> 지지선)이 최근 깨지고 있다는 점을 인지하고, 과거의 패턴에만 맹목적으로 의존하기보다는 변화하는 시장 움직임을 면밀히 분석해야 합니다. (00:05:49)</li>
+            <li style="margin-bottom: 6px;"><b>하락 시나리오 대비:</b> 헤드 앤 숄더 패턴 완성 시 하락 가능성을 염두에 두고, 주요 지지선(직전 고점 영역)에서의 반등 여부를 신중히 확인하는 전략이 필요합니다. (00:08:37)</li>
+            <li style="margin-bottom: 6px;"><b>매수 기회 포착:</b> 약세 흐름 속에서도 급락 후 강한 반등 또는 넥 라인 하락 후 느린 횡보 움직임 등 매수세가 다시 유입될 수 있는 특정 패턴을 기다리는 인내심이 중요합니다. (00:10:42)</li>
+            <li style="margin-bottom: 6px;"><b>장기적 관점 유지:</b> 이례적으로 긴 상승장이 이어져 온 만큼, 일시적인 조정이 더 큰 장기 상승을 위한 기회가 될 수도 있다는 점을 고려하여 너무 비관적인 시각에만 매몰되지 않도록 유의해야 합니다. (00:11:39)</li>
+            <li style="margin-bottom: 0;"><b>리스크 관리:</b> 차트 분석은 예측일 뿐, 100% 확신할 수 없으므로 투자 결정 시에는 반드시 본인의 판단과 위험 관리 원칙에 따라 신중하게 접근해야 합니다.</li>
+        </ul>
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>💰 물타기 계산기: 평단가 조절 전략</b></h2>
+        <p style="margin-bottom: 15px;">주가가 예상과 다르게 흘러간다면 '물타기'를 고려해볼 수 있습니다. 하지만 무턱대고 물타기를 하는 것은 위험하죠. 내 평단가를 얼마나 낮출 수 있을지, 추가 매수 시 내 총 자산은 얼마나 필요한지 미리 계산해보는 것이 중요합니다. 아래 계산기를 통해 스마트한 물타기 전략을 세워보세요! (실제 투자는 전문가와 상의 후 신중하게 진행하시기 바랍니다.)</p>
+
+        <div class="calculator-container">
+            <h3 style="font-size: 20px; color: #333; margin: 0 0 12px;"><b>평단가 물타기 계산기</b></h3>
+            <div style="margin-bottom: 10px;">
+                <label for="avgPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 평단가 (원):</label>
+                <input type="number" id="avgPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 50000">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="currentShares" style="display: block; margin-bottom: 5px; font-weight: bold;">현재 보유 수량 (주):</label>
+                <input type="number" id="currentShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 10">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="addPrice" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 가격 (원):</label>
+                <input type="number" id="addPrice" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 40000">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="addShares" style="display: block; margin-bottom: 5px; font-weight: bold;">추가 매수할 수량 (주):</label>
+                <input type="number" id="addShares" style="width: 100%; padding: 8px; border: 1px solid #b0bec5; border-radius: 4px;" placeholder="예: 5">
+            </div>
+
+            <button onclick="calculateWatering()" style="background-color: #00796b; color: white; border: none; padding: 10px 18px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 15px;">물타기 평단가 계산</button>
+
+            <div id="wateringResultBox" class="calculator-result-box">
+                <p style="margin-bottom: 8px;"><b>새로운 평단가:</b> <span id="newAvgPrice" style="font-weight: bold; color: #004d40;"></span> 원</p>
+                <p style="margin-bottom: 0;"><b>총 매수 금액:</b> <span id="totalInvestment" style="font-weight: bold; color: #004d40;"></span> 원</p>
+            </div>
+        </div>
+
+        <script>
+            function calculateWatering() {
+                const avgPrice = parseFloat(document.getElementById('avgPrice').value);
+                const currentShares = parseFloat(document.getElementById('currentShares').value);
+                const addPrice = parseFloat(document.getElementById('addPrice').value);
+                const addShares = parseFloat(document.getElementById('addShares').value);
+
+                if (isNaN(avgPrice) || isNaN(currentShares) || isNaN(addPrice) || isNaN(addShares) || currentShares < 0 || addShares < 0) {
+                    alert('모든 값을 올바르게 입력해주세요.');
+                    return;
+                }
+
+                const totalCurrentValue = avgPrice * currentShares;
+                const totalAdditionalValue = addPrice * addShares;
+                const totalShares = currentShares + addShares;
+                const totalInvestment = totalCurrentValue + totalAdditionalValue;
+                let newAvgPrice = 0;
+
+                if (totalShares > 0) {
+                    newAvgPrice = totalInvestment / totalShares;
+                } else {
+                    newAvgPrice = 0; // Prevent division by zero if no shares are involved
+                }
+
+                document.getElementById('newAvgPrice').innerText = newAvgPrice.toLocaleString('ko-KR', { maximumFractionDigits: 2 });
+                document.getElementById('totalInvestment').innerText = totalInvestment.toLocaleString('ko-KR');
+                document.getElementById('wateringResultBox').style.display = 'block';
+            }
+        </script>
+
+
+        <h2 style="font-size: 24px; color: white; background: linear-gradient(to right, #00796b, #004d40); margin: 35px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #b2ebf2; border-radius: 10px; padding: 10px 25px; text-shadow: 1px 1px 2px rgba(0,0,0,0.2); font-weight: 700; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"><b>자주 묻는 질문 ❓</b></h2>
+        <div style="margin: 30px 0;">
+            <div class="faq-item">
+                <div class="question">Q: 비트코인 차트 분석 시 어떤 봉을 주로 봐야 하나요?</div>
+                <div class="answer">A: 큰 추세를 보기 위해서는 1일봉이나 1주봉을 보는 것이 좋습니다. 이를 통해 전반적인 시장 흐름을 파악할 수 있습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: '저항선이 지지선이 된다'는 의미는 무엇인가요?</div>
+                <div class="answer">A: 가격이 특정 저항선을 뚫고 상승한 후, 이전에 저항선이었던 가격대가 이제는 가격 하락 시 지지선으로 작용하게 되는 현상을 의미합니다. 이는 시장 참여자들이 해당 가격대를 중요한 기준으로 인식하고 있기 때문입니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: 최근 비트코인 차트에서 과거와 다른 움직임이 감지되었다고 하는데, 구체적으로 어떤 점이 다른가요?</div>
+                <div class="answer">A: 과거에는 고점을 돌파한 후 해당 고점을 지지선으로 삼고 재차 상승하는 규칙적인 패턴을 보였으나, 최근에는 돌파 후 지지받지 못하고 다시 하락 돌파하는 경향이 나타나 매수세가 약화된 것으로 분석됩니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: '헤드 앤 숄더' 패턴이 무엇이며, 현재 비트코인에 어떻게 적용될 수 있나요?</div>
+                <div class="answer">A: 헤드 앤 숄더는 주가 차트에서 나타나는 대표적인 하락 반전형 패턴으로, 왼쪽 어깨, 머리(가장 높은 고점), 오른쪽 어깨로 구성됩니다. 현재 비트코인 차트에서 두 번의 고점 형성 후 하락하는 움직임이 이 패턴과 유사하며, 만약 오른쪽 어깨가 왼쪽 어깨의 고점을 넘지 않고 넥 라인(지지선)을 하락 돌파하면 하락 추세로 전환될 가능성이 있습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Q: 비트코인에 대한 장기적인 전망은 어떻게 보시나요?</div>
+                <div class="answer">A: 2023년부터 이례적으로 긴 계단식 상승이 지속되어왔지만, 일시적인 조정이 발생하더라도 이는 더 큰 장기 상승을 위한 마지막 조정 기회가 될 수도 있습니다. 모든 가능성을 열어두고 시장의 변화에 유연하게 대응하는 것이 중요합니다.</div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <h3 style="font-size: 20px; color: #c62828; margin-top: 0; margin-bottom: 10px; font-weight: bold;">⚠️면책조항</h3>
+            <p style="font-size: 14px; line-height: 1.6; color: #555;">본 분석은 AI가 생성한 참고용 초안으로, 사실과 다른 정보가 포함될 수 있습니다. 동일한 차트를 여러 증권전문가가 분석해도 각자 다른 관점과 결론을 제시하는 것처럼, AI 분석 역시 매번 해석 방식이나 강조점이 달라질 수 있습니다. 따라서, 제시된 모든 내용은 반드시 본인의 차트에서 직접 검증해야 하며, 투자의 최종 결정과 책임은 사용자 본인에게 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
