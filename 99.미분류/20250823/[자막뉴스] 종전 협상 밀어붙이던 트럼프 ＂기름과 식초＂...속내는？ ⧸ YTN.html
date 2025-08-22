@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[자막뉴스] 종전 협상 밀어붙이던 트럼프 ＂기름과 식초＂...속내는？ ⧸ YTN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #004d40;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>[자막뉴스] 종전 협상 밀어붙이던 트럼프 ＂기름과 식초＂...속내는？ ⧸ YTN</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> VEkeMyR-VEg</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=VEkeMyR-VEg" target="_blank">https://www.youtube.com/watch?v=VEkeMyR-VEg</a></p>
+        <p><strong>제목:</strong> [자막뉴스] 종전 협상 밀어붙이던 트럼프 ＂기름과 식초＂...속내는？ ⧸ YTN</p>
+        <p><strong>영상 길이:</strong> 00시간01분59초(119초)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>
+        우크라이나와 러시아 간의 전쟁 상황과 종전 협상 국면을 다루는 뉴스입니다. 양측의 공방 강화, NATO의 우크라이나 지원, 그리고 종전 협상에 대한 양측의 입장 차이 및 도널드 트럼프 전 미국 대통령의 개입 의지 변화에 대해 설명합니다.
+    </p>
+
+    <h2>내용</h2>
+    <ul>
+        <li>[전쟁 상황] 우크라이나의 러시아 드루즈바 송유관 시설 공격 (00:00:00,000)
+            <p class="definition">※ <a href="https://oo.ai/search?q=드루즈바+송유관" target="_blank">드루즈바 송유관</a>: 러시아에서 유럽으로 석유를 운송하는 세계에서 가장 긴 송유관 시스템 중 하나로, 주로 동유럽 국가들에 에너지를 공급하는 핵심 인프라입니다.</p>
+        </li>
+        <li>[전쟁 상황] 러시아 대규모 드론 미사일 공습에 대한 우크라이나의 보복 공격 (00:00:06,040)</li>
+        <li>[국제 지원] 마르크 뤼터 나토 사무총장, 우크라이나 방문 및 강력한 안전 보장 약속 (00:00:14,220)
+            <p class="definition">※ <a href="https://oo.ai/search?q=나토" target="_blank">나토</a>: 북대서양조약기구(NATO, North Atlantic Treaty Organization)의 약자로, 1949년에 창설된 북미와 유럽 국가들 간의 군사 동맹입니다. 회원국 상호 간의 집단 방위를 목표로 합니다.</p>
+        </li>
+        <li>[국제 지원] 우크라이나 독립기념일 맞아 40억 유로(약 6조 6천억 원) 추가 지원 (00:00:39,340)</li>
+        <li>[우크라이나 입장] 젤렌스키 대통령, 자국의 안전 보장이 나토의 집단 방위와 유사한 형태여야 한다며 러시아 비판 (00:00:47,040)
+            <p class="definition">※ <a href="https://oo.ai/search?q=집단+방위" target="_blank">집단 방위</a>: 여러 국가가 군사 동맹을 맺고, 그중 한 국가가 공격을 받을 경우 다른 모든 국가가 이를 자신에 대한 공격으로 간주하고 공동으로 방어에 나서는 체제를 말합니다.</p>
+        </li>
+        <li>[러시아 입장] 러시아, 아직 회담 의제도 준비되지 않았다며 젤렌스키 대통령에게 책임 전가 (00:01:04,180)</li>
+        <li>[러시아 입장] 종전 협상을 위해 미국이 제시한 원칙(우크라이나의 나토 가입 불가, 영토 문제 논의)에 젤렌스키 대통령이 반대했다고 주장 (00:01:10,380)</li>
+        <li>[트럼프의 역할] 러시아와 우크라이나 회담뿐 아니라 트럼프 대통령까지 참여하는 3자 정상회담 전망 불투명 (00:01:18,520)</li>
+        <li>[트럼프의 역할] 종전 협상 개입을 밀어붙이던 트럼프 대통령, 자신이 직접 개입하지 않는 편이 나을 수도 있다고 언급하며 입장 변화 (00:01:26,280)</li>
+        <li>[트럼프의 의도] 트럼프의 입장 변화는 연일 공세를 강화하는 러시아와 우크라이나 양측을 압박하기 위한 것으로 해석 (00:01:44,080)</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 공방 강화:</b> <span class="highlight">우크라이나가 러시아 송유관 시설을 드론으로 공격</span>하며, 러시아의 대규모 공습에 보복했습니다.
+                </div>
+                <div class="section">
+                    <b>📊 국제 지원:</b> <span class="highlight">나토는 우크라이나에 40억 유로 추가 지원</span>과 강력한 안전 보장을 약속하며 연대를 표했습니다.
+                </div>
+                <div class="section">
+                    <b>🤝 협상 입장:</b> 젤렌스키 대통령은 나토식 집단 방위 유사 안전 보장을 요구하며 러시아를 비판했고, 러시아는 젤렌스키가 미국의 협상 원칙을 거부해 회담이 지연된다고 주장했습니다.
+                </div>
+                <div class="section">
+                    <b>📉 트럼프 태도 변화:</b> 종전 협상 개입을 밀어붙이던 트럼프 전 대통령은 <span class="highlight">직접 개입하지 않을 수 있다는 입장</span>을 밝혔는데, 이는 양측에 대한 압박 전략으로 풀이됩니다. 현재 양자 및 3자 회담 전망은 불투명합니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                이 뉴스는 우크라이나-러시아 전쟁의 최신 상황과 국제 사회의 반응, 그리고 종전 협상 관련 주요 인사들의 입장 변화를 다룹니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
