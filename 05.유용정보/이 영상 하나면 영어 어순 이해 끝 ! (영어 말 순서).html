@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이 영상 하나면 영어 어순 이해 끝 ! (영어 말 순서)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 28px;
+            color: #00796b;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px; /* Adjusted margin-top for better spacing */
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .video-meta p {
+                font-size: 14px;
+            }
+            .definition {
+                font-size: 0.85em;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 6px 15px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .video-meta p {
+                font-size: 13px;
+            }
+            .definition {
+                font-size: 0.8em;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>이 영상 하나면 영어 어순 이해 끝 ! (영어 말 순서)</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> L4Svoa_mvnA</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=L4Svoa_mvnA" target="_blank">https://www.youtube.com/watch?v=L4Svoa_mvnA</a></p>
+            <p><strong>제목:</strong> 이 영상 하나면 영어 어순 이해 끝 ! (영어 말 순서)</p>
+            <p><strong>영상 길이:</strong> 00시간14분53초(14분)</p>
+        </div>
+
+        <p>많은 한국인이 영어 단어는 알지만 문장 구성에 어려움을 겪는 주된 이유인 '영어 어순'에 대해 설명합니다. 주어-동사-목적어의 기본 어순부터, 부가 정보(장소, 시간)의 배열 순서, 그리고 부정문과 의문문을 만드는 방법까지 체계적으로 다루어 영어 문장 만들기의 자신감을 심어줍니다. 한국어와 달리 영어는 고정된 어순을 가지므로, 이 규칙만 알면 길고 복잡한 문장도 쉽게 만들 수 있음을 강조합니다.</p>
+
+        <h2><b>📋 내용</b></h2>
+
+        <h3>[소개] 영어 어순의 중요성 (00:00:17)</h3>
+        <ul>
+            <li>많은 사람들이 영어 단어는 알지만, 단어를 배열하여 문장을 만드는 방법을 몰라 어려움을 겪음.</li>
+            <li>어떤 단어가 먼저 오고 다음에 무엇이 와야 하는지 몰라 자신감이 떨어지는 경우가 많음.</li>
+            <li>오늘 배우는 어순으로 긴 영어 문장도 만들 수 있는 능력이 생길 것임을 강조.</li>
+        </ul>
+
+        <h3>[한국어와 영어 어순의 차이] (00:00:55)</h3>
+        <ul>
+            <li>한국어는 다양한 어순으로 말해도 소통에 문제가 없음 (예: "나는 매일 7시에 영어 공부를 한다" vs "나는 영어 공부를 매일 7시에 한다"). (00:01:22)</li>
+            <li>영어는 한 가지 어순만 확실히 알아도 소통 가능하며, 이 점이 영어를 배우기 쉽게 만듦. (00:01:03)</li>
+        </ul>
+
+        <h2><b>🔑 영어의 기본 어순: 주어 + 동사 + 목적어 (+α)</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">핵심 어순 (00:01:53)</h3>
+        <p>주어(Subject), 동사(Verb), 목적어(Object) 순서가 가장 중요합니다.</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=주어" target="_blank">주어</a>: 문장에서 동작이나 상태의 주체가 되는 말. 주로 '누가', '무엇이'에 해당합니다.</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=동사" target="_blank">동사</a>: 주어의 동작이나 상태를 나타내는 말. 우리말로는 '-다'로 끝나는 경우가 많습니다 (예: 먹다, 자다, 공부하다).</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=목적어" target="_blank">목적어</a>: 동사의 동작 대상이 되는 말. 주로 '누구를', '무엇을'에 해당합니다.</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">주어와 동사의 특징</h3>
+        <ul>
+            <li><strong>주어의 해석:</strong> 우리말로 '은/는/이/가'로 해석됩니다. (00:02:09)</li>
+            <li><strong>동사의 특징:</strong> 우리말로 '~다'로 끝나면 동사입니다 (예: study - 공부하다). (00:02:18)</li>
+            <li><strong>주어 필수:</strong> 영어는 기본적으로 문장에 반드시 주어가 있어야 합니다 (한국어는 주어 생략 가능). (00:02:39)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">긴 문장 만들기 원칙</h3>
+        <ul>
+            <li>'주어 + 동사'를 먼저 잡고 필요한 단어를 뒤로 붙여 나가는 방식입니다. (00:03:32)</li>
+            <li>예: "나는 열심히 일한다" &rarr; <strong>"I work hard"</strong> (X: I hard work). (00:03:37)</li>
+            <li>예: "나는 영어를 공부한다" &rarr; <strong>"I study English"</strong> (X: I English study). (00:03:57)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">SVO의 중요성</h3>
+        <p>주어-동사-목적어까지의 순서가 매우 중요하며, 그 뒤의 단어들은 순서가 조금 틀려도 소통에 큰 지장은 없습니다. (00:04:22, 00:04:43)</p>
+
+        <h2><b>📌 부가 정보(플러스 플러스) 어순: 장소 &rarr; 시간</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">기본 규칙 (00:05:46)</h3>
+        <ul>
+            <li>목적어 뒤에는 '장소'가 먼저 오고 그 다음에 '시간'이 옵니다. (00:06:14)</li>
+            <li>예: "나는 여기서 3일 전에 그를 만났다" &rarr; <strong>"I met him here three days ago."</strong> (00:06:49)</li>
+            <li>예: "James는 어제 이곳에 그의 가방을 두고 갔다" &rarr; <strong>"He left his bag here yesterday."</strong> (00:07:26)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">같은 요소가 여러 개일 때 (시간 또는 장소)</h3>
+        <p>작은 단위부터 큰 단위 순서로 배열합니다. (00:07:56)</p>
+        <ul>
+            <li>예: "나는 매일 일곱 시에 영어 공부를 한다" &rarr; <strong>"I study English at seven every day."</strong> (00:08:00)</li>
+            <li>예: "나는 작년에 매일 열 시간 동안 일을 했다" &rarr; <strong>"I worked for ten hours every day last year."</strong> (00:08:48)</li>
+            <li>예 (장소): "나는 그녀를 다운타운에 있는 카페에서 만났다" &rarr; <strong>"I met her at her cafe in downtown."</strong> (00:09:05)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">플러스 부분의 유연성</h3>
+        <p>목적어 뒤에 오는 단어들은 순서가 바뀌어도 의미 전달에 큰 문제가 없는 경우도 많으므로, 너무 집착하지 말고 SVO에 집중하여 연습하는 것이 좋습니다. (00:09:30)</p>
+
+        <h2><b>➖ 부정문 어순</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">기본 규칙 (00:10:12)</h3>
+        <p>평서문 어순(주어 + 동사 + 목적어 + α)과 동일하며, <strong>동사 앞에 'do not' (또는 'did not', 'will not', 'cannot')을 위치시킵니다.</strong> (00:10:49)</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=부정문" target="_blank">부정문</a>: 어떤 사실이나 행동을 부정하는 문장. '~하지 않는다'는 의미입니다.</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">'do not + 동사'를 하나의 동사처럼 인식 (00:11:38)</h3>
+        <p>쉽게 문장을 만들고 이해하는 데 도움이 됩니다.</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">시제별 부정문 (00:12:00)</h3>
+        <p>'do not' (현재), 'did not' (과거), 'will not' (미래), 'cannot' (능력)을 활용하여 시제별로 부정문을 만듭니다.</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=시제" target="_blank">시제</a>: 동사의 형태를 통해 동작이나 상태가 일어난 시간(과거, 현재, 미래)을 나타내는 문법적인 요소입니다.</p>
+        <ul>
+            <li>예: "I do not work everyday" (매일 일하지 않는다). (00:12:12)</li>
+            <li>예: "I did not work everyday" (매일 일하지 않았다). (00:12:16)</li>
+            <li>예: "I will not work everyday" (매일 일하지 않을 것이다). (00:12:21)</li>
+            <li>예: "I cannot work everyday" (매일 일할 수 없다). (00:12:26)</li>
+        </ul>
+
+        <h2><b>❓ 의문문 어순</b></h2>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">기본 규칙 (00:12:37)</h3>
+        <p>평서문 어순(주어 + 동사 + 목적어 + α) 앞에 <strong>'do'를 추가</strong>합니다. (00:12:43)</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=의문문" target="_blank">의문문</a>: 질문을 하는 문장입니다.</p>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">시제/조동사 활용 (00:12:59)</h3>
+        <p>'do' 대신 'did' (과거), 'will' (미래), 'can' (능력)을 사용하여 다양한 질문을 할 수 있습니다.</p>
+        <ul>
+            <li>예: "Do you work every day?" (매일 일하시나요?). (00:12:53)</li>
+            <li>예: "Did you work every day?" (매일 일하셨나요?). (00:13:09)</li>
+            <li>예: "Will you work every day?" (매일 일하실 것인가요?). (00:13:12)</li>
+            <li>예: "Can you work every day?" (매일 일할 수 있나요?). (00:13:16)</li>
+        </ul>
+
+        <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">6하 원칙 활용 (00:13:26)</h3>
+        <p>더 자세한 의문문을 만들 때, 'do/did/will/can' 앞에 6하 원칙 단어(Why, Where, When 등)를 추가합니다.</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=6하 원칙" target="_blank">6하 원칙</a>: 정보를 얻기 위해 질문을 만들 때 사용되는 여섯 가지 기본 요소 (Who, What, When, Where, Why, How)를 의미합니다.</p>
+        <ul>
+            <li>예: "Why do you work every day?" (왜 매일 일하시나요?). (00:13:31)</li>
+            <li>예: "Where do you work?" (어디서 일하세요?). (00:13:47)</li>
+            <li>예: "When do you work?" (언제 일하세요?). (00:13:50)</li>
+        </ul>
+        <p>이 6하 원칙은 'Do' 뿐만 아니라 'Did', 'Will', 'Can' 문장에도 응용되어 더욱 다양한 의문문을 만들 수 있습니다. (00:14:07)</p>
+
+        <h2><b>📝 요약</b></h2>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 첫 번째 핵심:</b> <span class="highlight">영어는 주어-동사-목적어(SVO)의 고정된 어순이 가장 중요합니다.</span> 한국어와 달리 유연하지 않으므로 SVO부터 확실히 잡는 것이 핵심입니다.
+                    </div>
+                    <div class="section">
+                        <b>📊 두 번째 핵심:</b> <span class="highlight">부가 정보(장소, 시간)는 목적어 뒤에 오며, 일반적으로 '장소' 먼저 '시간' 나중에 배열합니다.</span> 같은 종류의 요소가 여러 개일 경우, 작은 단위부터 큰 단위 순으로 나열합니다.
+                    </div>
+                    <div class="section">
+                        <b>🧮 세 번째 핵심:</b> <span class="highlight">부정문은 동사 앞에 'do not', 'did not', 'will not', 'cannot'을 붙여 만들며, 의문문은 문장 앞에 'Do', 'Did', 'Will', 'Can'을 추가합니다.</span>
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 네 번째 핵심:</b> <span class="highlight">더 자세한 질문을 위해 6하 원칙(Why, Where, When 등)을 'Do/Did/Will/Can' 앞에 붙여 활용할 수 있습니다.</span> SVO와 더불어 이 규칙들을 알면 길고 복잡한 영어 문장도 능숙하게 만들 수 있습니다.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    영어 어순을 이해하고 꾸준히 연습하면 다양한 문장을 자유롭게 구사할 수 있습니다.
+                </div>
+            </div>
+        </div>
+
+        <p><strong>매매관련 고려해야 할 사항:</strong> N/A</p>
+
+    </div>
+</body>
+</html>
