@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>딱 3가지만 알고 '천만 원'을 버는 매매법</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .summary-header {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .sub-header {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: bold;
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+
+        /* Single Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 24px; }
+            .summary-header { font-size: 20px; padding: 10px 15px; }
+            .sub-header { font-size: 18px; }
+            p, li { font-size: 15px; }
+            .video-meta p { font-size: 14px; }
+
+            .single-summary-card { padding: 18px; height: auto; min-height: unset; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 15px; }
+            h1 { font-size: 22px; }
+            .summary-header { font-size: 18px; padding: 8px 12px; }
+            .sub-header { font-size: 16px; }
+            p, li { font-size: 14px; }
+            .video-meta p { font-size: 13px; }
+
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>딱 3가지만 알고 '천만 원'을 버는 매매법</h1>
+        <div class="video-meta">
+            <p><strong>videoId:</strong> xNzETMMjFz8</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=xNzETMMjFz8" target="_blank">https://www.youtube.com/watch?v=xNzETMMjFz8</a></p>
+            <p><strong>영상 길이:</strong> 00시간07분47초 (7분)</p>
+        </div>
+
+        <h2 class="summary-header">📊 개요</h2>
+        <p>이 영상은 트레이딩에서 강력한 가격 지표인 '공정 가치 갭(Fair Value Gap)'을 올바르게 활용하는 방법을 제시합니다. 많은 트레이더들이 갭을 잘못 사용하여 손실을 보는 문제점을 지적하며, 성공 확률이 높은 공정 가치 갭을 식별하는 다섯 가지 핵심 기준과 이를 활용하여 꾸준히 수익을 낼 수 있는 세 가지 실전 매매 전략을 상세히 설명합니다. 갭의 정의부터 시작하여 지표 활용법, 필터링 기준, 그리고 구체적인 진입, 손절, 익절 전략까지 다루어 공정 가치 갭 매매의 이해를 돕습니다.</p>
+
+        <h2 class="summary-header">📈 내용</h2>
+        <ol>
+            <li>
+                <h3 class="sub-header">[공정 가치 갭 소개] 공정 가치 갭이란 무엇인가? (00:00:32)</h3>
+                <p>가격이 너무 빠르게 움직여 매수/매도 체결이 고르게 이루어지지 않은 불균형 구간을 의미합니다. 시장의 급등락 시 주로 발생하며, 마치 자석처럼 가격을 다시 끌어당기는 성질이 있습니다. 이 성질을 활용하여 갭 부근에서 가격 반등을 노릴 수 있습니다.</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=공정+가치+갭" target="_blank">공정 가치 갭 (Fair Value Gap, FVG)</a>: 가격이 급격하게 변동하여 매수와 매도 주문 간의 불균형이 발생한 차트상의 빈 공간 또는 가격 구간을 의미합니다. 시장이 빠르게 움직일 때 형성되며, 이후 가격이 이 갭을 채우려는 경향이 있습니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[공정 가치 갭 식별] 캔들 패턴과 지표 활용 (00:01:00)</h3>
+                <p><strong>3개 캔들 패턴</strong>: 첫 번째와 세 번째 캔들의 고가/저가가 겹치지 않고, 그 사이 두 번째 캔들이 큰 몸통을 가진 경우. 첫 번째 캔들의 고가와 세 번째 캔들의 저가 사이가 갭 구간입니다 (상승 갭 기준, 하락 갭도 동일).</p>
+                <p><strong>트레이딩뷰 지표</strong>: 'fvg' 검색 시 자동 표시 지표 활용 가능. (럭살고 지표 추천)</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=캔들" target="_blank">캔들 (Candle)</a>: 주식이나 암호화폐 차트에서 일정 기간 동안의 시가, 고가, 저가, 종가를 막대와 몸통으로 시각화한 그래픽 요소입니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[성공 확률 높이는 갭 식별 팁] 첫 번째: 리테스트 여부 확인 (00:01:54)</h3>
+                <p>가격이 갭을 아직 '리테스트'하지 않았는지 확인해야 합니다. 가격이 처음 갭을 터치한 이후부터는 그 효율성이 감소하기 때문입니다. 가격이 갭 아래로 깊게 되돌아가서 갭을 닫아버리면 해당 FVG는 무효가 됩니다.</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=리테스트" target="_blank">리테스트 (Retest)</a>: 이전에 돌파했거나 지지/저항 역할을 했던 가격 수준이나 영역으로 가격이 다시 돌아와 해당 수준이 여전히 유효한지 확인하는 움직임을 의미합니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[성공 확률 높이는 갭 식별 팁] 두 번째: 갭의 크기 우선시 (00:02:19)</h3>
+                <p>여러 개의 갭을 발견했다면, <strong>크기가 큰 갭을 우선시</strong>합니다. 더 큰 갭은 매수자와 매도자 간의 불균형이 더 크다는 것을 의미하며, 더 강력한 지지 또는 저항 구역으로 작용할 가능성이 높습니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[성공 확률 높이는 갭 식별 팁] 세 번째: Gann Box를 이용한 위치 필터링 (00:02:35)</h3>
+                <p>크기가 비슷한 여러 개의 갭이 있다면, 그 위치를 기준으로 필터링합니다.</p>
+                <ul>
+                    <li><strong>상승 추세</strong>: Gann Box 툴을 스윙 저점에서 고점까지 드래그하여 중간선(0.5 레벨)을 표시합니다. 하단(0.5 아래)에 있는 갭만 집중하고 상단은 무시합니다.</li>
+                    <li><strong>하락 추세</strong>: 스윙 고점에서 저점으로 드래그하고 상단(0.5 위) 갭에 집중합니다.</li>
+                </ul>
+                <p class="definition">※ <a href="https://oo.ai/search?q=Gann+Box" target="_blank">Gann Box (간박스)</a>: W.D. 간(Gann)의 이론을 기반으로 하는 기술적 분석 도구로, 시간과 가격의 관계를 이용하여 지지 및 저항 수준을 예측하는 데 사용됩니다. 특정 스윙 고점과 저점을 기준으로 박스를 그려 주요 가격 레벨을 식별합니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[성공 확률 높이는 갭 식별 팁] 네 번째: 주요 키 레벨 근처 FVG 주의 (00:03:16)</h3>
+                <p>주요 '키 레벨'(강한 지지/저항선) 근처에서 형성된 갭은 피합니다. 키 레벨은 가격을 반전시킬 수 있으며, 이러한 구간의 갭은 효력을 발휘하지 못할 수 있습니다.</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=키+레벨" target="_blank">키 레벨 (Key Level)</a>: 차트에서 가격이 과거에 강하게 지지되거나 저항을 받았던 중요한 가격 수준을 의미합니다. 이 레벨은 미래에도 가격 움직임에 영향을 미칠 가능성이 높습니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[성공 확률 높이는 갭 식별 팁] 다섯 번째: 저항선 돌파 후 형성된 FVG (00:03:34)</h3>
+                <p><strong>저항선 돌파 후에 형성된 갭은 매우 좋은 기회</strong>이며 승률이 높습니다. 상승세에서 이전 고점을 돌파하고 직후 근처에 갭이 나타나면, 가격이 해당 갭으로 되돌아와 반등할 가능성이 큽니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[기본 진입/손절/익절 설정] (모든 전략 공통) (00:04:01)</h3>
+                <ul>
+                    <li><strong>진입 구간</strong>: 갭 구간의 중간 부근. Gann Box 툴을 갭의 저점에서 고점까지 드래그하여 중간선(0.5)을 진입 지점으로 활용합니다.</li>
+                    <li><strong>매수/매도</strong>: 가격이 중간선까지 되돌아오면 포지션 진입.</li>
+                    <li><strong>손절가</strong>: 갭 하단(매수 시) 또는 상단(매도 시)보다 조금 아래/위에 설정.</li>
+                    <li><strong>익절가</strong>: 손절 거리의 2배 구간에 설정.</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="sub-header">[매매 전략 1] 깨진 갭을 반대 방향 지지/저항으로 활용 (00:04:27)</h3>
+                <p>한 번 깨진 공정 가치 갭(가격이 통과한 갭)을 찾습니다. 가격이 그 깨진 갭 쪽으로 돌아오는 것을 기다립니다. 깨진 갭은 이제 반대 방향의 저항(상승 갭의 경우) 또는 지지(하락 갭의 경우) 구간으로 작용합니다.</p>
+                <ul>
+                    <li><strong>진입</strong>: 가격이 되돌아오면 원래 FVG 방향과 반대되는 포지션을 잡습니다 (예: 상승 FVG -> 숏 포지션).</li>
+                    <li><strong>손절</strong>: 갭 바로 위(숏) 또는 아래(롱) 설정.</li>
+                    <li><strong>익절</strong>: 손절가의 2배.</li>
+                </ul>
+                <div class="warning-box">
+                    <b>⚠️ 주의하세요!</b><br>
+                    이 전략은 일반적으로 한 번만 유효하며, 가격이 공정 가치 갭을 여러 번 통과하면 이 전략은 의미가 없습니다.
+                </div>
+            </li>
+            <li>
+                <h3 class="sub-header">[매매 전략 2] FVG와 피보나치 되돌림 결합 (00:05:18)</h3>
+                <p>세팅 내 모든 FVG를 식별합니다. 피보나치 되돌림 도구를 사용하여 여러 FVG가 포함된 구간의 스윙 저점-고점(또는 고점-저점)에 적용합니다.</p>
+                <ul>
+                    <li><strong>집중</strong>: 피보나치 0.618 구간(골든존)에 가장 가까운 FVG에 집중합니다.</li>
+                    <li><strong>진입</strong>: 가격이 해당 갭으로 되돌아와 캔들이 그 안이나 위(매수)에서 마감하는 것을 확인 후 포지션 진입.</li>
+                    <li><strong>손절</strong>: FVG 아래(매수) 또는 위(매도).</li>
+                    <li><strong>익절</strong>: 손절가의 2배.</li>
+                </ul>
+                <p class="definition">※ <a href="https://oo.ai/search?q=피보나치+되돌림" target="_blank">피보나치 되돌림 (Fibonacci Retracement)</a>: 피보나치 수열을 기반으로 하는 기술적 분석 도구입니다. 중요한 가격 움직임(상승 또는 하락) 이후에 가격이 되돌아갈 수 있는 잠재적인 지지 및 저항 수준을 예측하는 데 사용됩니다. 일반적으로 0.236, 0.382, 0.5, 0.618, 0.786 등의 비율이 사용됩니다.</p>
+            </li>
+            <li>
+                <h3 class="sub-header">[매매 전략 3] FVG와 EMA, MACD 지표 결합 (00:06:13)</h3>
+                <ul>
+                    <li><strong>추세 식별</strong>: 200 EMA (이동평균선)를 사용하여 장기 추세를 식별합니다. 가격이 200EMA 위에 있으면 상승 갭, 아래에 있으면 하락 갭만 찾습니다.</li>
+                    <li><strong>FVG 확인</strong>: 추세 방향에 맞는 FVG를 찾고, 아직 터치하지 않은 유효한 갭인지 확인합니다.</li>
+                    <li><strong>모멘텀 확인</strong>: 가격이 갭 구간에 도달했을 때, MACD 지표가 '상승 크로스' (매수 시) 또는 '하락 크로스' (매도 시)를 할 때까지 기다린 후 포지션 진입.</li>
+                    <li><strong>손절</strong>: 갭 하단(매수) 또는 상단(매도) 지점.</li>
+                    <li><strong>익절</strong>: 손절 거리의 2배.</li>
+                </ul>
+                <p class="definition">※ <a href="https://oo.ai/search?q=EMA" target="_blank">EMA (Exponential Moving Average)</a>: 지수 이동평균선. 단순 이동평균선(SMA)과 달리 최근 가격 변동에 더 큰 가중치를 부여하여 계산되므로, 가격 변화에 더 빠르게 반응하는 특징이 있습니다. 200EMA는 장기 추세를 파악하는 데 주로 사용됩니다.</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=MACD" target="_blank">MACD (Moving Average Convergence Divergence)</a>: 이동평균 수렴확산 지수. 추세의 강도, 방향, 그리고 모멘텀의 변화를 나타내는 대표적인 추세 추종 및 모멘텀 지표입니다. 주로 MACD 선과 시그널 선의 교차(크로스)를 통해 매매 신호를 포착합니다.</p>
+            </li>
+        </ol>
+
+        <h2 class="summary-header">📝 요약</h2>
+        <p>공정 가치 갭(FVG)은 시장의 불균형을 나타내는 강력한 트레이딩 도구입니다. 성공적인 매매를 위해서는 가격 리테스트 여부, 갭의 크기, Gann Box를 활용한 위치 필터링, 주요 키 레벨 회피, 그리고 저항선 돌파 후 형성된 갭을 우선하는 다섯 가지 기준을 통해 고확률 갭을 식별해야 합니다. 매매 전략으로는 깨진 갭을 반대 방향 지지/저항으로 활용하는 법, 피보나치 0.618 구간과 결합하는 법, 그리고 EMA와 MACD 지표를 활용하여 추세와 모멘텀을 확인하며 진입하는 법 등 세 가지를 제시합니다. 모든 전략에서 갭의 중간 지점을 진입점으로, 갭의 끝단을 손절 기준으로 삼고, 익절은 손절가의 2배로 설정하는 것이 핵심입니다. 이러한 조건 필터링과 철저한 리스크 관리가 공정 가치 갭 매매의 성공을 좌우합니다.</p>
+
+        <h2 class="summary-header">🎯 매매관련 고려해야 할 사항</h2>
+        <ul>
+            <li><strong>정확한 갭 식별</strong>: 모든 갭이 유효한 것이 아니므로, 제시된 5가지 팁을 활용하여 성공 확률이 높은 갭을 정확히 식별하는 것이 중요합니다.</li>
+            <li><strong>리스크 관리</strong>: 진입, 손절, 익절 기준을 명확히 설정하고, 특히 손절가를 갭 영역 바로 바깥에 두어 손실을 최소화해야 합니다. 익절은 손절의 2배로 설정하여 손익비를 확보합니다.</li>
+            <li><strong>추세 확인</strong>: EMA와 같은 지표를 활용하여 현재 시장의 장기 추세를 파악하고, 추세 방향에 맞는 갭 매매 전략을 적용하는 것이 중요합니다.</li>
+            <li><strong>모멘텀 확인</strong>: MACD와 같은 모멘텀 지표를 활용하여 가격이 갭 영역에 도달했을 때 실제로 반전될 에너지가 있는지 확인하는 것이 매매 성공률을 높일 수 있습니다.</li>
+            <li><strong>과거 데이터 백테스팅</strong>: 제시된 전략들을 실제 거래에 적용하기 전에, 충분한 백테스팅을 통해 자신의 거래 스타일에 맞는지, 그리고 현재 시장 상황에 유효한지 검증하는 과정이 필요합니다.</li>
+            <li><strong>중복 활용 주의</strong>: 깨진 갭을 활용하는 전략의 경우, 한 번 사용한 갭은 다시 효력을 잃을 수 있으므로 무분별한 재사용은 피해야 합니다.</li>
+        </ul>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약: 공정 가치 갭(FVG) 매매법</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 갭 식별 기준:</b> <span class="highlight">미리 리테스트되지 않은 큰 갭, Gann Box 중간선 기준 하단(상승)/상단(하락) 갭</span>을 우선하며, 주요 키 레벨과 겹치지 않고 저항선 돌파 후 형성된 갭이 고확률입니다.
+                    </div>
+                    <div class="section">
+                        <b>📊 기본 매매 설정:</b> 갭 중간선 <span class="highlight">진입</span>, 갭 하단/상단 아래/위 <span class="highlight">손절</span>, 손절거리의 <span class="highlight">2배 익절</span>.
+                    </div>
+                    <div class="section">
+                        <b>📈 전략 1 (깨진 갭):</b> 가격이 통과한 FVG가 <span class="highlight">반대 방향의 지지/저항</span>으로 작용할 때 이용 (단, 1회만 유효).
+                    </div>
+                    <div class="section">
+                        <b>📉 전략 2 (피보나치):</b> FVG와 <span class="highlight">피보나치 0.618(골든존)</span>이 겹치는 구간에서 진입.
+                    </div>
+                    <div class="section">
+                        <b>🧭 전략 3 (EMA/MACD):</b> 200 EMA로 <span class="highlight">추세 확인</span>, FVG 구간 도달 시 MACD <span class="highlight">크로스 확인</span> 후 진입.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    성공적인 FVG 매매는 정확한 갭 필터링과 철저한 리스크 관리에 달려 있습니다.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
