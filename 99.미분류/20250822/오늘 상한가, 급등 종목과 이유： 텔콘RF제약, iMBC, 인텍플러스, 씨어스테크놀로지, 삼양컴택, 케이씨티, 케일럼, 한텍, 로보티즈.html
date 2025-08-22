@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 상한가, 급등 종목과 이유： 텔콘RF제약, iMBC, 인텍플러스, 씨어스테크놀로지, 삼양컴택, 케이씨티, 케일럼, 한텍, 로보티즈</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-left: 5px solid #4dd0e1;
+            padding-left: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0f7fa;
+            font-weight: bold;
+            color: #004d40;
+        }
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+        .single-summary-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>오늘 상한가, 급등 종목과 이유： 텔콘RF제약, iMBC, 인텍플러스, 씨어스테크놀로지, 삼양컴택, 케이씨티, 케일럼, 한텍, 로보티즈</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> obnwjdNL1VQ</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=obnwjdNL1VQ" target="_blank">https://www.youtube.com/watch?v=obnwjdNL1VQ</a></p>
+        <p><strong>영상 길이:</strong> 00시간11분45초 (12분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>2023년 8월 22일 금요일 국내 주식 시장(코스피, 코스닥)의 전반적인 동향을 분석하고, 당일 10% 이상 급등한 18개 종목들의 주요 상승 원인을 상세히 설명합니다. 한미 정상회담 관련 테마주(조선, LNG, 반도체, 원전)와 개별 기업 이슈(무상증자 권리락, 호실적, 중국 협력, 국방 예산, 공공 AI 전환 등)로 나뉘어 살펴봅니다. 특히 주목할 만한 기업들의 리포트 내용 및 계약 공시 등 구체적인 정보도 함께 제공하며, 당일 거래량 및 거래대금 상위 종목들도 시장별로 정리합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[시장 동향] 국내 증시 마감 현황 (00:00:06)</h3>
+    <ul>
+        <li><strong>코스피 지수</strong>: 0.86% 상승한 3,168.73포인트로 마감 (00:00:06). 외국인과 기관은 매수, 개인은 매도로 대응했으며, 거래 대금은 8조원 기록 (00:00:14).</li>
+        <li><strong>코스닥 지수</strong>: 0.68% 상승한 782.51포인트로 마감 (00:00:21). 외국인은 매수, 기관과 개인은 매도로 대응했으며, 거래 대금은 4조원 기록 (00:00:26).</li>
+    </ul>
+
+    <h3>[급등 종목 현황] 10% 이상 상승 종목 분석 (00:00:38)</h3>
+    <ul>
+        <li>총 18종목이 10% 이상 급등, 코스피 2종목, 코스닥 16종목 (00:00:38).</li>
+        <li><strong>상한가 종목</strong>: 텔콘RF제약, KD 2종목 (00:00:45).</li>
+        <li><strong>하한가 종목</strong>: 없었음 (00:00:49).</li>
+        <li>급등 종목들을 테마별로 분류한 결과, 한 개 테마 외에는 개별 이슈로 상승 (00:00:52).</li>
+    </ul>
+
+    <h3>[테마 분석] 조선 액화 천연가스 (LNG) 테마 (00:01:01)</h3>
+    <ul>
+        <li><strong>한미 정상회담 경제사절단 동행</strong>: 8월 25일 한미 정상회담에 삼성, SK, LG, 현대차 등 16개 대표 기업 총수가 경제사절단으로 동행 (00:01:05).</li>
+        <li><strong>주요 논의 분야</strong>: 조선, 반도체, 원전 분야 한미 협력 강화 예상 (00:01:33).
+            <ul>
+                <li><strong>한화 필리조선소 방문</strong>: 대통령의 필라델피아 한화 필리조선소 방문 예정 (00:01:43).</li>
+                <li><strong>삼성전자 테일러 공장 증설</strong>: 이재용 회장의 텍사스주 테일러 공장 증설 계획 발표 기대 (00:01:47).</li>
+                <li><strong>원전 합작법인 논의</strong>: 한국전력, 한수원과 미국 웨스팅하우스 간 합작법인 설립 논의 마무리 전망 (00:01:56).</li>
+                <li><strong>에너지 분야 협력</strong>: 원전, 태양광, LNG 관련 논의 전망 (00:02:06).</li>
+            </ul>
+        </li>
+        <li><strong>LNG 관련 상승 요인</strong>:
+            <ul>
+                <li><strong>알래스카 프로젝트 논의</strong>: 정상회담에서 알래스카 프로젝트 논의 가능성 (00:02:28).</li>
+                <li><strong>정부 목표</strong>: 피지컬 AI 1등 국가 과제와 연계, 전 세계 LNG 운반선의 70%를 한국이 생산 목표 제시 (00:02:30).</li>
+            </ul>
+        </li>
+        <li><strong>관련 종목</strong>: 한택 (원전 및 LNG 관련주), 일승 (조선기자재 및 LNG 관련주), BHI (원전 및 LNG 관련주) 등 상승 (00:02:41).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 한택 (Hantech) (00:02:41)</h3>
+    <ul>
+        <li>원전 관련주이자 LNG 관련주로, LNG 관련 기사와 호실적 발표로 강세 (00:02:47).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 인텍플러스 (IntekPlus) (00:02:57)</h3>
+    <ul>
+        <li>L.S. 증권 리포트 발표 후 강세 (00:02:57).</li>
+        <li><strong>리포트 내용</strong>: 기판 업황 회복, 9월 대만 현지 검사 장비 퀄테스트 시작 확정 등 상승 모멘텀 다수 (00:03:01).</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=퀄테스트" target="_blank">퀄테스트</a>: Quality Test의 줄임말로, 제품이나 서비스의 품질이 특정 기준이나 요구사항을 충족하는지 검증하는 시험 과정.</p>
+        <li><strong>투자 의견</strong>: 부담 없는 시가총액으로 소부장 업종 최선호주 제시 (00:03:13).</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=소부장" target="_blank">소부장</a>: 소재·부품·장비의 줄임말로, 산업 생산에 필수적인 핵심 요소들을 의미함.</p>
+        <li><strong>목표 주가</strong>: 14,000원 유지 (00:03:22). 현재 주가 11,490원 (00:03:24).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] BHI (00:03:28)</h3>
+    <ul>
+        <li>두산애너빌리티와 47.6억 원 규모의 LNG 복합 화력 발전 설비 공급 계약 체결 공시 (00:03:31).</li>
+        <li>계약 규모는 최근 매출액 대비 11%에 해당 (00:03:40). 계약 기간: 2028년 6월 30일까지 (00:03:42).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 텔콘RF제약 (Telcon RF Pharmaceutical) (00:03:52)</h3>
+    <ul>
+        <li>무상증자 권리락 공시 후 권리락 효과로 상한가 (00:03:55).</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=무상증자 권리락" target="_blank">무상증자 권리락</a>: 무상증자를 받을 권리가 사라지는 것을 의미하며, 통상적으로 권리락 발생 시 주식 가격이 인위적으로 낮아지면서 상대적으로 저렴해 보이는 효과로 인해 주가가 상승하는 경향이 있음.</p>
+        <li>기준 가격: 1,917원 (00:04:01).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] KD, BK홀딩스, 코아스, 대구백화점, UTI (00:04:04)</h3>
+    <ul>
+        <li>급등 이유는 파악되지 않았으나, 2분기 실적은 좋지 않았음 (00:04:10).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] IMBC (00:04:14)</h3>
+    <ul>
+        <li><strong>중국 진출 협력</strong>: MBC 인기 프로그램 '아이돌라디오'의 중국 진출을 위해 중국 샤오망과 협력 추진 (00:04:17).</li>
+        <li><strong>중국 광전총국 공문</strong>: 해외 드라마 수입 제한 철폐 공문 소식에 수혜 기대감 (00:04:48).</li>
+        <li><strong>방송 3법 개정</strong>: EBS법 개정안 국회 본회의 통과로 공영방송 지배구조 개편 완료 소식도 상승세에 영향 (00:04:57).
+            <ul>
+                <li>KBS, MBC, EBS는 이사회에 사장후보 국민추천위원회 설치 (00:05:10).</li>
+                <li>YTN, 연합뉴스 등 보도 채널도 국민추천위원회 구성 (00:05:18).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 씨어스테크놀로지 (Ceers Technology) (00:05:32)</h3>
+    <ul>
+        <li>전일 강세에 이어 오늘도 강세 지속 (00:05:32).</li>
+        <li><strong>2분기 호실적</strong>: 전년 동기 대비 매출액 799% 증가 (79억 원), 영업이익 흑자전환 (14억 원) (00:05:41).</li>
+        <li><strong>한국투자증권 전망</strong>: 2분기 흑자전환이 중장기 고성장의 출발점이며, 연간 흑자전환 전망 (00:05:52).</li>
+        <li><strong>추가 상장 예정</strong>: 주식매수선택권 행사로 75,000주가 8월 25일 추가 상장 예정 (행사 가격 1,750원~10,000원) (00:06:06). 현재 주가 44,100원 (00:06:19).</li>
+    </ul>
+
+    <h3>[테마 분석] 방산 기업 상승 (00:06:23)</h3>
+    <ul>
+        <li><strong>러시아-우크라이나 전쟁 중재</strong>: 트럼프 대통령의 중재 노력에도 러시아가 소극적인 태도를 보이자, 우크라이나 반격에 힘 실어줄 경고 메시지 해석 (00:06:28).</li>
+        <li><strong>대만 국방 예산 증액</strong>: 중국 군사 위협과 미국 방위비 증액 요구 속에서 대만이 내년 국방 예산을 22% 증액 (9,495억 대만달러) (00:06:54).</li>
+        <li><strong>관련 종목</strong>: 사명컴택 (신규 상장주) 등 방산 기업들 반등 (00:07:14).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] KCT (00:07:20)</h3>
+    <ul>
+        <li>신한은행과 21억 원 규모의 영업점 카드 발급기 물품 단가 계약 체결 공시 (00:07:25).</li>
+        <li>계약 규모는 최근 매출액 대비 18%에 해당 (00:07:30). 계약 기간: 9월 1일부터 12월 31일까지 (00:07:33).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 대한광통신 (Daehan Kwangtongshin) (00:07:37)</h3>
+    <ul>
+        <li>급등 이유는 파악되지 않았으나, 지난주 2분기 실적 발표 (00:07:40).</li>
+        <li>매출액 3% 증가 (416억 원), 영업이익 적자폭 축소 (마이너스 27억 원) (00:07:44). 증권사 추정치보다 매출액 19% 높았음 (00:07:53).</li>
+    </ul>
+
+    <h3>[테마 분석] 로봇 관련주 상승 (00:08:02)</h3>
+    <ul>
+        <li><strong>정부의 AI 대전환 추진</strong>: 공공 및 기업 전반에 걸쳐 인공지능 대전환 본격 추진 계획 발표 (00:08:02).
+            <ul>
+                <li><strong>목표</strong>: 피지컬 AI 1등 국가 목표, 5년 내 휴머노이드 3대 강국 도약, 범용 휴머노이드 로봇 개발 (00:08:09).</li>
+                <li><strong>자율주행</strong>: 2027년까지 완전 자율주행차 상용화, 2030년까지 자율 운항 선박 기술 개발 완료 (00:08:21).</li>
+                <li><strong>AI 팩토리 확산</strong>: 자동차, 기계 등 주력 제조업에 AI 팩토리 확산, 2030년까지 AI 도입률 40% 이상 목표 (00:08:35).</li>
+            </ul>
+        </li>
+        <li><strong>관련 종목</strong>: 로보티즈 등 로봇 및 AI 기업 상승 (00:08:45).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 로보티즈 (Robotis) (00:08:49)</h3>
+    <ul>
+        <li>현대차증권 리포트 발표 후 강세 (00:08:49).</li>
+        <li><strong>리포트 내용</strong>: 휴머노이드에 특화된 액추에이터 기술과 커스터마이징 능력 보유 (00:08:54).</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=휴머노이드" target="_blank">휴머노이드</a>: 인간의 신체 구조를 모방하여 만들어진 로봇. 사람과 유사한 형태로 움직이며, 인간형 작업을 수행할 수 있도록 설계됨.</p>
+        <p class="definition">※ <a href="https://oo.ai/search?q=액추에이터" target="_blank">액추에이터</a>: 구동기 또는 작동기라고도 불리며, 에너지(전기, 유압, 공압 등)를 기계적인 움직임으로 변환하여 시스템을 제어하는 장치. 로봇의 관절 등을 움직이는 데 사용됨.</p>
+        <li><strong>목표 주가</strong>: 10만 원 제시 (00:09:00). 현재 주가 84,400원 (00:09:03).</li>
+    </ul>
+
+    <h3>[개별 종목 이슈] 뷰노 (Vuno) (00:09:07)</h3>
+    <ul>
+        <li>급등 이유는 파악되지 않았으나, 지난주 2분기 실적 발표 (00:09:10).</li>
+        <li>매출액 44% 증가 (92억 원), 영업이익 적자폭 회복 (마이너스 1억 원) (00:09:14).</li>
+        <li>시장 추정치 대비 매출액 1% 높고, 영업이익 148% 낮은 수치였지만, 조만간 흑자 전환 기대 기사들이 붙어주고 있음 (00:09:23).</li>
+    </ul>
+
+    <h3>[거래량/거래대금 상위 종목] (00:09:33)</h3>
+    <ul>
+        <li><strong>코스피 거래량 상위</strong>: 삼성중공업, 대우건설, 삼성전자, TP, 두산애너빌리티, 신원, 아센디오, 남선알미늄, 하이닉스, 함전산업 (00:09:45). 10% 이상 상승 종목 없음.</li>
+        <li><strong>코스닥 거래량 상위</strong>: 엔시트론, IMBC, 우리기술, IA, 이스타시아 홀딩슨, 일승, 대한광통신, 코아시아CM, 다날, 사명컴택 (00:10:06). 10% 이상 상승 종목: IMBC, 일승, 대한광통신, 사명컴택.</li>
+        <li><strong>코스피 거래대금 상위</strong>: 하이닉스, 삼성전자, 두산앤러빌리티, 삼성중공업, 하나에어로스페이스, 하나오션, 현대로템, 카카오, HD현대열렉트릭, 네이버 (00:10:43). 10% 이상 상승 종목 없음.</li>
+        <li><strong>코스닥 거래대금 상위</strong>: 사명컴택, 알테오젠, 에드포러스, 다날, 일승, IMBC, BHI, 로보티즈, 우리기솔, SNC (00:11:03). 10% 이상 상승 종목: 사명컴택, 일승, IMBC, BHI, 로보티즈.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>오늘의 시장 및 급등 종목 핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 시장 동향:</b> 코스피 0.86%, 코스닥 0.68% 상승 마감. 18개 종목 10% 이상 급등, 텔콘RF제약, KD 상한가.
+                </div>
+                <div class="section">
+                    <b>📊 한미 정상회담 테마:</b> 조선, LNG, 반도체, 원전 관련주 동반 상승. 특히 <span class="highlight">LNG 운반선 생산 목표</span>와 알래스카 프로젝트 기대감 고조. 한택, 인텍플러스, BHI 등 주목.
+                </div>
+                <div class="section">
+                    <b>🎬 미디어/콘텐츠:</b> IMBC는 <span class="highlight">중국 샤오망과의 협력</span> 및 국내 방송법 개정 소식으로 강세.
+                </div>
+                <div class="section">
+                    <b>📈 개별 호재:</b> 텔콘RF제약은 <span class="highlight">무상증자 권리락 효과</span>로 상한가. 씨어스테크놀로지는 2분기 <span class="highlight">호실적과 긍정적 증권사 전망</span>에 강세 지속.
+                </div>
+                <div class="section">
+                    <b>🛡️ 방산/로봇/AI:</b> 방산주는 러시아-우크라이나 정세 및 대만 국방 예산 증액에 상승. 로봇/AI주는 <span class="highlight">정부의 '피지컬 AI 1등 국가' 목표</span>와 로보티즈의 증권사 리포트로 상승.
+                </div>
+            </div>
+            <div class="card-footer">
+                본 요약은 2023년 8월 22일 주식 시장 정보를 기반으로 작성되었습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>인텍플러스</strong>: LS증권에서 기판 업황 회복 및 퀄테스트 시작 등 긍정적 모멘텀을 근거로 <span class="highlight">소부장 업종 최선호주로 제시하며 목표 주가 14,000원을 유지</span>했습니다. 현재 시가총액이 부담스럽지 않다고 언급되어 투자 시 긍정적으로 고려해볼 수 있습니다.</li>
+        <li><strong>씨어스테크놀로지</strong>: 2분기 흑자전환 등 호실적과 한국투자증권의 긍정적 전망이 있으나, <span class="highlight">8월 25일에 주식매수선택권 행사로 인한 75,000주 추가 상장 예정</span>이라는 점을 고려해야 합니다. 이는 단기적인 물량 부담으로 작용할 수 있습니다.</li>
+        <li><strong>KD, BK홀딩스, 코아스, 대구백화점, UTI</strong>: 급등 이유가 명확히 파악되지 않았으며, <span class="highlight">2분기 실적이 좋지 않았다고 언급</span>되었습니다. 이러한 종목은 투자 시 더욱 신중한 접근과 추가 정보 확인이 필요합니다.</li>
+        <li><strong>뷰노</strong>: 2분기 실적은 시장 추정치보다 영업이익이 낮았지만, <span class="highlight">조만간 흑자 전환이 기대된다는 기사들이 나오는 점</span>은 향후 성장 가능성에 대한 기대감을 가질 수 있습니다. 다만, 실제 흑자 전환 여부와 시기를 지켜보는 것이 중요합니다.</li>
+        <li><strong>테마주 투자</strong>: 한미 정상회담, 정부의 AI 정책 등 특정 이벤트나 정책 발표로 인한 테마주는 단기적인 상승세를 보일 수 있으나, <span class="highlight">이슈 소멸 시 급락할 위험</span>이 있습니다. 뉴스의 지속성, 실제 기업 실적 연관성 등을 종합적으로 판단해야 합니다.</li>
+    </ul>
+</body>
+</html>
