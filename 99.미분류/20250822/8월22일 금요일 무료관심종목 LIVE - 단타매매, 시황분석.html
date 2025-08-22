@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8월22일 금요일 무료관심종목 LIVE - 단타매매, 시황분석</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f4f7f6;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00796b;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .overview {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            margin-bottom: 25px;
+            font-size: 15px;
+            border: 1px solid #b2ebf2;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+        ul li {
+            margin-bottom: 6px;
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li::before {
+            content: '•';
+            color: #00796b;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>8월22일 금요일 무료관심종목 LIVE - 단타매매, 시황분석</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> 7gAiEfycXyk</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=7gAiEfycXyk" target="_blank">https://www.youtube.com/watch?v=7gAiEfycXyk</a></p>
+    </div>
+
+    <div class="overview">
+        늦잠으로 인해 모자를 쓰고 진행한 금요일 라이브 방송. 시황 분석과 함께 금호타이어 및 TP 종목 추천과 매매 원리를 설명합니다. 개인적인 군대 이야기, 결혼에 대한 생각, 그리고 중국의 제조업 기술 발전에 대한 단상 등 다양한 주제로 시청자들과 소통하며 유쾌한 방송을 이어갔습니다. 특히 초보 투자자를 위한 조언과 시장의 조정 가능성에 대한 경고를 잊지 않았습니다.
+    </div>
+
+    <h2>내용</h2>
+
+    <h3>[개회 및 근황]</h3>
+    <ul>
+        <li>시작 인사 및 시청자 감사 (00:01:21)</li>
+        <li>늦잠으로 인한 모자 착용 및 방송 준비 상황 설명 (00:02:15)</li>
+        <li>VIP 회원 관리에 대한 언급 (00:01:51)</li>
+        <li>방송 시작 시간 공지 (00:02:54)</li>
+    </ul>
+
+    <h3>[주요 종목 언급]</h3>
+    <ul>
+        <li>한국전력 주가 흐름 분석 및 개인적 판단 미스 언급 (00:05:06)
+            <p class="definition">※ <a href="https://oo.ai/search?q=알파도+시전" target="_blank">알파도 시전</a>: 영상에서 사용된 비유적 표현으로, 주가가 갑작스럽고 강하게 상승하는 것을 의미.</p>
+        </li>
+        <li>금호타이어 추가 매수 고려 및 5,000원 라인 돌파 여부 주시 (00:06:46)</li>
+    </ul>
+
+    <h3>[시황 분석]</h3>
+    <ul>
+        <li>미국 증시 동향 및 9월 금리 인하 여부 논의 (00:14:13)</li>
+        <li>파월 의장과 트럼프 대통령 간의 기싸움 언급 (00:14:32)</li>
+        <li>개인적인 금리 인하 예상: 9월은 어렵고 11월 가능성 높음 (00:15:08)
+            <p class="definition">※ <a href="https://oo.ai/search?q=BP" target="_blank">BP</a>: Basis Point의 약자로, 금융 시장에서 이자율이나 수익률의 변화를 나타내는 단위. 1BP는 0.01%를 의미합니다.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=트리거" target="_blank">트리거</a>: 특정 사건이나 변화를 유발하는 계기 또는 요인.</p>
+        </li>
+        <li>코스닥 지수 분석: 770선 지지 여부와 추가 하락 가능성 (00:16:04)
+            <p class="definition">※ <a href="https://oo.ai/search?q=심리적+지지선" target="_blank">심리적 지지선</a>: 투자자들의 특정 가격대에 대한 기대감으로 형성되는 지지선. 실제 기업 가치나 수급과 상관없이 투자 심리에 의해 결정되는 경우가 많다.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=실망매물" target="_blank">실망매물</a>: 기대했던 주가 상승이 이루어지지 않거나 하락할 경우, 투자자들이 실망하여 보유 주식을 대량으로 매도하는 현상.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=고점+대비" target="_blank">고점 대비</a>: 주식이나 지수가 특정 기간 동안 기록한 최고가와 비교한 수치.</p>
+        </li>
+        <li>예상 조정폭: 고점 대비 11~13% 하락 가능성 언급 (00:16:51)</li>
+        <li>매수 관점 제시: 코스닥 730~740선 (00:16:54)</li>
+    </ul>
+
+    <h3>[투자 전략 및 조언]</h3>
+    <ul>
+        <li>8월, 9월은 조정 구간이므로 큰 돈 투자 지양 (00:17:31)</li>
+        <li>매수 타이밍 기다릴 것을 강조 (00:17:42)</li>
+        <li>8월 매매 성적 및 승률 80% 이상 기록 (00:18:04)</li>
+        <li>신규 시청자를 위한 조언: 소액(100만원 미만)으로 공부하며 투자 (00:29:40)
+            <p class="definition">※ <a href="https://oo.ai/search?q=단타" target="_blank">단타</a>: 단기적인 시세 변동을 이용하여 짧은 시간 안에 매수와 매도를 반복하여 수익을 내는 투자 기법.</p>
+        </li>
+    </ul>
+
+    <h3>[개인적인 이야기 및 농담]</h3>
+    <ul>
+        <li>육군 53사단 예비군 조교 출신임을 밝히며 조교 말투 사용 (00:11:12, 00:19:48, 00:40:24)</li>
+        <li>군 시절 추억: 부산 폭설, 편했던 부대 생활 (00:22:28, 00:52:37)
+            <p class="definition">※ <a href="https://oo.ai/search?q=당나라+부대" target="_blank">당나라 부대</a>: 군대에서 기강이 해이하거나 훈련이 느슨한 부대를 비유적으로 이르는 말.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=푸세식" target="_blank">푸세식</a>: 수세식이 아닌 재래식 화장실로, 용변을 본 후 물로 내리지 않고 분뇨를 모으는 방식.</p>
+        </li>
+        <li>점심 메뉴 고민 (00:19:03) 및 주말 계획: 명륜진사갈비, 쿠우쿠우 언급 (00:27:09)</li>
+        <li>결혼에 대한 생각: 혼자 사는 즐거움과 결혼의 두려움 (01:04:30)</li>
+        <li>만화 및 애니메이션 취향: 귀멸의 칼날 언급 및 관람 계획 (01:06:17)</li>
+        <li>취미 생활: 중국산 로봇 모델 조립 계획 및 중국 제조업 기술 발전 감탄 (01:08:55)</li>
+    </ul>
+
+    <h3>[주요 종목 추천 및 매매 원리]</h3>
+    <ul>
+        <li>금호타이어 (073-240) 재진입 추천 (00:32:57)</li>
+        <li>TP (영문) 추천 (00:33:54)</li>
+        <li>TP 매매 원리 설명: SJG(SJ테크놀로지) 사례와 동일, 첫 갭 발생 시 저가 매수하여 슈팅 노림 (00:35:35)
+            <p class="definition">※ <a href="https://oo.ai/search?q=갭" target="_blank">갭(Gap)</a>: 주식 차트에서 전 거래일 종가와 다음 거래일 시가 사이에 가격이 벌어져 빈 공간이 생기는 현상.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=슈팅" target="_blank">슈팅</a>: 주가가 단기간에 급등하는 현상.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=대량+양봉" target="_blank">대량 양봉</a>: 거래량이 크게 증가하면서 주가가 큰 폭으로 상승한 양봉 캔들.</p>
+        </li>
+        <li>거래량 동반한 대량 양봉 후 조정 깊이가 얕으면 추가 상승 가능성 높음 강조 (00:37:07)</li>
+        <li>TP 수익 실현 후 욕심 부리지 말 것을 경고 (00:38:45)
+            <p class="definition">※ <a href="https://oo.ai/search?q=물렸다" target="_blank">물렸다</a>: 주가가 매수가격보다 하락하여 손실을 보고 있는 상태. (속어)</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=손쉘" target="_blank">손쉘</a>: '손실'의 비표준어 또는 오타. 투자 원금보다 자산 가치가 하락한 상태.</p>
+        </li>
+        <li>금호타이어도 동일한 추세 추종 원리 적용 (00:39:09)</li>
+    </ul>
+
+    <h3>[정보 제공 및 교육]</h3>
+    <ul>
+        <li>단타 조건 검색식은 AP투자연구소 홈페이지 및 앱에서 제공 (00:44:04)
+            <p class="definition">※ <a href="https://oo.ai/search?q=검색식" target="_blank">검색식</a>: 주식 시장에서 특정 조건(가격, 거래량, 기술적 지표 등)에 맞는 종목들을 자동으로 찾아주는 기능.</p>
+        </li>
+        <li>검색식의 역할: 종목 수를 줄여주는 보조 도구 (00:58:09)</li>
+        <li>빠른 종목 판단의 중요성: 26-27년 경험에서 나오는 직관 강조 (00:59:57)</li>
+    </ul>
+
+    <h3>[사회 비판 및 미래 전망]</h3>
+    <ul>
+        <li>KBS 다큐멘터리 '의대에 미친 한국, 공대에 미친 중국' 추천 (01:10:49)</li>
+        <li>한국의 의대 쏠림 현상과 중국의 공대 집중 현상 비교 (01:11:21)
+            <p class="definition">※ <a href="https://oo.ai/search?q=이공계" target="_blank">이공계</a>: 이학(자연과학)과 공학 분야를 통틀어 이르는 말.</p>
+        </li>
+        <li>한국의 인재 육성 방향에 대한 우려 표명 (01:12:35)</li>
+    </ul>
+
+    <h3>[유머와 마무리]</h3>
+    <ul>
+        <li>양재동 동장 출마 선언 등 유머성 발언 (01:13:07)</li>
+        <li>금호타이어 주가 동향 재확인 및 다음 주 예상 (01:15:40)</li>
+        <li>방송 종료 인사 및 주말 덕담 (01:17:00)</li>
+    </ul>
+
+    <h2>요약</h2>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 시장 전망:</b> 8월과 9월은 <span class="highlight">시장 조정 구간</span>이므로, 무리한 투자를 피하고 코스닥 730~740선 매수 기회를 노려야 합니다.
+                </div>
+                <div class="section">
+                    <b>📊 매매 원리:</b> <span class="highlight">첫 갭 발생 시 저가 매수</span>를 통해 단기 슈팅을 노리는 것이 중요하며, 거래량과 조정 깊이를 함께 판단해야 합니다.
+                </div>
+                <div class="section">
+                    <b>⚠️ 투자 조언:</b> 단타는 2.5% 이상 수익 시 <span class="highlight">자율 매도</span>를 원칙으로 하고, 고점 종목은 욕심 부리지 말고 빠르게 수익을 챙겨야 합니다.
+                </div>
+                <div class="section">
+                    <b>🌐 사회적 시각:</b> 한국의 <span class="highlight">의대 쏠림 현상</span>과 중국의 공대 집중 현상을 비교하며, 미래 인재 육성 방향에 대한 우려를 표했습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                이번 방송은 시황 분석, 종목 추천 및 매매 노하우와 함께 유쾌하고 솔직한 개인사를 공유하는 시간이었습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <div class="info-box">
+        <b>💡 알아두세요!</b><br>
+        <p>본 방송은 주식 매매에 대한 정보를 제공하며, 투자 결정은 개인의 판단과 책임하에 이루어져야 합니다. 아래 내용은 방송에서 언급된 주요 고려사항을 요약한 것입니다.</p>
+    </div>
+    <ul>
+        <li><strong>시장 조정 예상:</strong> 8월과 9월은 시장 조정 구간으로 예측되므로, 무리한 대규모 투자를 피하고 현금 비중을 유지하는 것이 중요합니다.</li>
+        <li><strong>코스닥 지지선 관망:</strong> 코스닥 770선이 심리적 지지선이지만, 이탈 시 추가 하락 가능성이 있으므로 730~740선까지 하락할 때를 주요 매수 기회로 삼는 것이 좋습니다. 760선부터 분할 매수를 고려해 볼 수 있습니다.</li>
+        <li><strong>단타 매매 원칙 준수:</strong> 단타는 2.5% 이상의 수익이 발생하면 자율적으로 매도하여 수익을 확정하는 원칙을 지켜야 합니다. 고점 종목은 특히 욕심을 부리지 않고 빠르게 수익을 챙기는 것이 중요합니다.</li>
+        <li><strong>'첫 갭 발생' 매매 기법 활용:</strong> 상승 추세 중 갭(gap)이 발생하지 않다가 처음으로 갭이 발생하는 경우, 저가 매수를 통해 단기 슈팅을 노려볼 수 있습니다. 이는 과거의 거래량과 조정 깊이 등을 함께 고려하여 판단해야 합니다.</li>
+        <li><strong>경험과 공부의 중요성:</strong> 주식 시장에서의 빠른 판단과 성공적인 매매는 오랜 경험과 꾸준한 공부를 통해 얻어집니다. 처음에는 소액으로 실전 매매를 통해 감각을 익히는 것이 권장됩니다.</li>
+        <li><strong>장기 투자 관점의 종목:</strong> 금호타이어와 같이 중장기적인 관점에서도 긍정적으로 평가되는 종목은 단타 외에 꾸준히 관심을 가질 필요가 있습니다.</li>
+    </ul>
+
+</body>
+</html>
