@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 카카오 엇갈리는 주가, 하반기 핵심 포인트 점검</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-left: 4px solid #4dd0e1;
+            padding-left: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        em {
+            font-style: normal;
+            background-color: #fff9c4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        /* Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .video-meta {
+                padding: 10px;
+            }
+            .video-meta p {
+                font-size: 14px;
+            }
+            .definition {
+                font-size: 0.85em;
+                padding: 6px 10px;
+            }
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 6px 10px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>네이버 카카오 엇갈리는 주가, 하반기 핵심 포인트 점검</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> QfiPnAeN9M0</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=QfiPnAeN9M0" target="_blank">https://www.youtube.com/watch?v=QfiPnAeN9M0</a></p>
+        <p><strong>영상 길이:</strong> 00시간03분44초(224분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 최근 카카오와 네이버의 엇갈린 주가 흐름을 분석하고, 각 기업의 2분기 실적과 하반기 주요 사업 전략 및 전망을 다룹니다. 특히 기관과 외국인, 개인 투자자의 수급 동향과 각 기업의 인공지능(AI) 관련 사업 계획에 초점을 맞춰 설명합니다.</p>
+
+    <h2>내용</h2>
+    <h3>[주가 흐름] 카카오와 네이버 주가 현황 (00:00:00,000)</h3>
+    <ul>
+        <li>8월 14일 기준 카카오는 전일 대비 1.42% 상승한 64,400원에 마감하며, 이달 들어 11.03% 상승했습니다.</li>
+        <li>네이버는 0.22% 하락한 224,500원에 마감하며, 이달 들어 4.47% 하락했습니다.</li>
+        <li>두 종목의 엇갈린 주가 흐름은 수급 상황에 큰 영향을 받은 것으로 분석됩니다.</li>
+    </ul>
+
+    <h3>[투자자 수급] 기관, 외국인, 개인 투자자 매매 동향 (00:00:24,580)</h3>
+    <ul>
+        <li><strong>기관:</strong> 카카오를 3,696억 원 <em>순매수</em>하며 가장 많이 사들였습니다. 반면 네이버는 2,523억 원 <em>순매도</em>했습니다.</li>
+        <li><strong>외국인:</strong> 카카오를 3,285억 원 <em>순매수</em>했으며, 네이버는 5,865억 원 <em>순매도</em>하며 가장 많이 팔았습니다.</li>
+        <li><strong>개인:</strong> 네이버를 8,254억 원 <em>순매수</em>하며 가장 많이 사들였고, 카카오는 6,882억 원 <em>순매도</em>했습니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=순매수" target="_blank">순매수</a>: 일정 기간 동안 특정 투자 주체가 매수한 주식 총액이 매도한 총액보다 많은 상태를 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=순매도" target="_blank">순매도</a>: 일정 기간 동안 특정 투자 주체가 매도한 주식 총액이 매수한 총액보다 많은 상태를 의미합니다.</p>
+
+    <h3>[카카오] 2분기 실적 및 하반기 전망 (00:01:15,120)</h3>
+    <ul>
+        <li>기관과 외국인의 카카오 매수세는 양호한 실적 때문으로 풀이됩니다.</li>
+        <li>카카오는 올해 2분기 매출 2조 283억 원(전년 동기 대비 1% 증가), 영업이익 1,859억 원(전년 동기 대비 39% 증가)을 기록하며 역대 최대 실적을 달성했습니다.</li>
+        <li>KB증권 이선화 연구원은 카카오페이, 피코마, SM 등 주요 자회사 실적 개선과 전사적 비용 효율화가 역대 최대 영업이익의 원인이라고 분석했습니다.</li>
+        <li>하반기에는 카카오톡 개편과 인공지능(AI) 서비스를 핵심 사업으로 정의하고 신규 서비스를 순차적으로 공개할 예정이며, 4분기부터 톡비즈 성장세 가속화와 수익성 개선을 전망했습니다.</li>
+    </ul>
+
+    <h3>[네이버] 2분기 실적 및 AI 관련 강점 (00:02:17,680)</h3>
+    <ul>
+        <li>네이버는 이달 초 독자 인공지능 <em>파운데이션 모델</em> 프로젝트에 선정되었음에도 불구하고, 기관과 외국인의 매물 출회로 주가가 약세를 보였습니다.</li>
+        <li>2분기 매출은 2조 9200억 원(전년 동기 대비 11.7% 증가), 영업이익은 5216억 원(전년 동기 대비 10.3% 증가)을 기록했지만, 시장 기대치에는 부합했으나 다소 아쉬움이 남는다는 평가입니다.</li>
+        <li>NH투자증권 안재민 연구원은 판매 수수료 도입으로 커머스 매출이 성장했음에도 마케팅 비용 증가로 영업이익이 아쉬웠다고 밝혔습니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=파운데이션%20모델" target="_blank">파운데이션 모델</a>: 방대한 데이터로 사전 학습되어 다양한 하위 작업에 적용될 수 있는 대규모 인공지능 모델을 의미합니다.</p>
+
+    <h3>[네이버] AI 경쟁력 우위 및 소버린 AI 시장 강점 (00:03:01,300)</h3>
+    <ul>
+        <li>안재민 연구원은 글로벌 빅테크의 AI 공세에 대한 네이버 검색 및 포털의 경쟁력 약화 우려는 과도하다고 판단했습니다.</li>
+        <li>오히려 네이버만의 독보적인 검색, 커머스, 지역 정보, 커뮤니티 데이터베이스가 글로벌 빅테크들과의 경쟁에서 우위를 점할 수 있을 것이라고 설명했습니다.</li>
+        <li>또한, <em>소버린 AI</em> 시장에서도 네이버의 강점이 부각될 것으로 전망했습니다. 정부 주도의 한국형 파운데이션 모델 사업자로 선정되어 기술력을 검증받았고, <em>그래픽 처리 장치</em> 임차 사업 공급사로 선정되어 비용 절감과 GPU 활용이 기대된다고 덧붙였습니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=소버린%20AI" target="_blank">소버린 AI</a>: 특정 국가나 기관이 자체적으로 개발하고 통제하는 인공지능 기술 및 인프라를 의미합니다. 데이터 주권과 보안 강화에 중점을 둡니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=그래픽%20처리%20장치" target="_blank">그래픽 처리 장치(GPU)</a>: 컴퓨터 그래픽 처리나 복잡한 병렬 연산을 효율적으로 수행하는 데 특화된 프로세서로, 인공지능 학습에 필수적으로 사용됩니다.</p>
+
+    <h2>마무리: 핵심 내용 요약 📝</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 카카오 주가 상승 요인:</b> 2분기 <em>역대 최대 실적</em>(매출 1%↑, 영업이익 39%↑) 기록 및 기관/외국인 <em>순매수 집중</em>.
+                </div>
+                <div class="section">
+                    <b>📊 카카오 하반기 전략:</b> 카카오톡 개편, AI 서비스 확대, 4분기부터 <em>톡비즈 성장 가속화</em> 및 수익성 개선 기대.
+                </div>
+                <div class="section">
+                    <b>📉 네이버 주가 약세 요인:</b> 2분기 실적은 기대 부합했으나 <em>마케팅 비용 증가</em>로 아쉬운 영업이익, 기관/외국인 <em>순매도</em>.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 네이버 AI 경쟁력:</b> 독보적인 검색/커머스/지역 데이터베이스 기반, <em>한국형 파운데이션 모델</em> 사업자 선정, <em>소버린 AI</em> 시장 강점 부각.
+                </div>
+            </div>
+            <div class="card-footer">
+                양사 모두 AI를 핵심 성장 동력으로 삼고 있지만, 단기적인 시장 평가는 실적과 수급에 따라 명확히 갈렸습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>카카오:</strong> 긍정적인 2분기 실적과 하반기 카카오톡 개편 및 AI 서비스 도입 기대감이 주가에 반영될 가능성이 높습니다. 주요 자회사의 실적 개선과 비용 효율화가 지속될 경우 추가 상승 여력이 있을 수 있습니다.</li>
+        <li><strong>네이버:</strong> 2분기 실적이 기대에 미치지 못했으나, 판매 수수료 도입으로 커머스 매출은 성장 추세입니다. 장기적으로는 네이버만의 방대한 데이터베이스를 활용한 독보적인 AI 기술력과 소버린 AI 시장에서의 역할이 중요하게 작용할 것입니다. 단기적인 마케팅 비용 증가가 부담이 될 수 있으나, AI 기술 검증과 GPU 활용 효율화는 긍정적인 요소로 작용할 수 있습니다.</li>
+        <li><strong>수급 동향:</strong> 기관과 외국인의 매매 동향이 주가에 큰 영향을 미치고 있습니다. 특히 외국인 투자자들의 움직임은 두 종목의 주가 향방을 결정하는 중요한 요소이므로 지속적인 모니터링이 필요합니다. 개인 투자자들은 네이버를 선호하는 경향을 보였으나, 시장 전체의 흐름을 이해하고 매매에 임해야 합니다.</li>
+        <li><strong>거시경제 및 산업 동향:</strong> 전체적인 IT/플랫폼 산업의 성장성과 거시경제 환경(금리, 인플레이션 등)도 주가에 영향을 미칠 수 있으므로 함께 고려해야 합니다. AI 기술 발전과 경쟁 심화도 중요한 변수입니다.</li>
+    </ul>
+</body>
+</html>

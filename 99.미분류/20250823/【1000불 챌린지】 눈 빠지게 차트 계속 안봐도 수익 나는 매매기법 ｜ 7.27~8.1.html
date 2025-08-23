@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【1000불 챌린지】 눈 빠지게 차트 계속 안봐도 수익 나는 매매기법 ｜ 7.27~8.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #4dd0e1;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 24px; padding-bottom: 10px; margin-bottom: 20px; }
+            h2 { font-size: 20px; padding: 8px 15px; margin: 30px 0 12px; }
+            h3 { font-size: 18px; margin: 20px 0 10px; }
+            .video-meta { padding: 10px; }
+            .video-meta p { font-size: 14px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 18px; padding: 6px 10px; }
+            h3 { font-size: 16px; margin: 15px 0 8px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>【1000불 챌린지】 눈 빠지게 차트 계속 안봐도 수익 나는 매매기법 ｜ 7.27~8.1</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> S7mQ87qXZYE</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=S7mQ87qXZYE" target="_blank">https://www.youtube.com/watch?v=S7mQ87qXZYE</a></p>
+        <p><strong>제목:</strong> 【1000불 챌린지】 눈 빠지게 차트 계속 안봐도 수익 나는 매매기법 ｜ 7.27~8.1</p>
+        <p><strong>영상 길이:</strong> 00시간10분13초(010분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 강한 상승 추세 속에서 발생한 여러 비트코인 매매 사례를 통해 저항선에서의 진입, 본절 청산, 그리고 급락 시 분할 매수를 통한 V자 반등 포착 등 다양한 매매 기법과 심리적 접근 방식을 설명합니다. 특히, 추세를 거스르지 않는 매매의 중요성과 시장의 급격한 변동성을 활용하는 전략을 강조하며, 자는 동안에도 수익을 낼 수 있는 주문 전략을 보여줍니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[첫 번째 매매: 저항선 돌파 예상 롱 진입] (00:00:03)</h3>
+    <ul>
+        <li>강한 상승 후 횡보하는 구간에서 저항선 부근에 롱 포지션 진입.</li>
+        <li>최근 저점과 고점이 모두 상승하는 추세를 파악하고, 매물 소화 후 강한 상승을 예측.</li>
+        <li>예측과 달리 잠시 하락 후 상승했지만, 방향성은 맞았기에 수익으로 청산.</li>
+        <li>개미의 예측대로 움직이지 않지만, 세력의 방향은 결국 따른다는 점 강조.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=매물" target="_blank">매물</a>: 주식이나 가상화폐 시장에서 특정 가격대에 대량으로 형성된 매도 대기 물량을 의미하며, 이 물량이 소화되어야 가격이 상승할 수 있습니다.</p>
+
+    <h3>[두 번째 매매: 박스권 하단 분할 매수 시도와 본절 청산] (00:03:00)</h3>
+    <ul>
+        <li>급등 후 저점과 고점을 올리는 애매한 박스권에서 하단 진입 시도.</li>
+        <li>첫 진입 시 비중을 낮게 설정하여 추가 매수를 염두에 둠.</li>
+        <li>상승 돌파 실패를 예상하고, 손절이 아깝지만 하락 가능성을 염두에 두어 본절(손익분기점)에 주문 설정 후 청산.</li>
+        <li>본절 청산 후 급등 없이 급락이 시작됨을 확인, 냉정하게 시장을 볼 필요성 강조.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=본절" target="_blank">본절</a>: 손실도 이익도 없이 매수 가격 그대로 포지션을 청산하는 것을 의미합니다.</p>
+
+    <h3>[세 번째 매매: 급락 활용 야간 분할 매수 및 V자 반등 수익] (00:05:02)</h3>
+    <ul>
+        <li>급락을 매수 기회로 판단, 미리 주문을 걸어두고 수면 매매 실행.</li>
+        <li>하락세 속에서 총 세 번의 분할 매수 진행 (새벽 시간대).</li>
+        <li>아침에 일어나 확인하니 V자 반등으로 큰 수익 발생.</li>
+        <li>V자 반등은 빠르고 예측하기 어려워 지지선 파악 후 분할 매수를 걸어두는 전략이 유효함을 설명.</li>
+        <li>가장 최근의 지지선을 기준으로 삼아 주문을 설정.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=분할%20매수" target="_blank">분할 매수</a>: 한 번에 모든 자금을 투입하는 대신, 여러 번에 나누어 매수함으로써 평균 매수 단가를 낮추고 리스크를 분산하는 투자 전략입니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=V자%20반등" target="_blank">V자 반등</a>: 주가나 가격이 급락한 후 빠른 시간 내에 다시 급등하여 차트 모양이 'V'자 형태를 이루는 것을 의미합니다.</p>
+
+    <h3>[네 번째 매매: 비트코인 시장 특징 활용 및 보수적 진입] (00:08:06)</h3>
+    <ul>
+        <li>최근 비트코인 시장이 지나친 하락 후 지나친 상승, 또는 그 반대로 움직이는 특징을 파악.</li>
+        <li>하락이 급해지는 시기, 매물이 없는 구간에서 급락이 나올 때를 주시하여 진입 기회 포착.</li>
+        <li>기존 주문 취소 후 더 보수적으로 다음 지지선에 주문을 걸어 체결.</li>
+        <li>지난 V자 반등의 큰 수익에 대한 기대를 버리고, 저점을 한 번 더 낮춘 후 반등하는 움직임에서 적절히 청산하여 2300불 수익 달성.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <p>이 영상은 비트코인 단타 매매에서 성공적인 수익을 위한 실전 전략을 제시합니다. 첫째, 상승 추세에서는 저항선 진입도 가능하며, 매물 소화 후 급등을 기대하는 전략이 유효합니다. 둘째, 시장의 움직임이 예측과 다를 때를 대비해 비중 조절과 추가 매수 계획을 세우고, 감정적 손절을 피하며 본절 청산을 활용하는 유연한 대응이 중요합니다. 셋째, 급락을 공포가 아닌 매수 기회로 보고, 확실한 지지선에 분할 매수를 걸어두면 V자 반등을 효과적으로 포착할 수 있습니다. 마지막으로, 비트코인 시장의 극단적인 움직임 특성을 이해하고 보수적인 진입 및 적절한 익절을 통해 안정적인 수익을 추구하는 것이 중요하다고 강조합니다.</p>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>추세를 거스르지 않는 매매:</strong> 추세의 방향성을 믿고 매매해야 손실을 줄이고 수익을 극대화할 수 있습니다. (00:01:52)</li>
+        <li><strong>매매 심리 관리:</strong> 예측과 다른 움직임이 나와도 감정에 휩쓸려 충동적으로 손절하거나 다음 매매에 부정적인 영향을 주지 않도록 주의해야 합니다. (00:02:19, 00:02:48)</li>
+        <li><strong>추가 매수 전략:</strong> 초기 진입 시 비중을 낮춰서 추가 매수 여력을 확보하고, 예상과 다르게 흘러갈 경우 분할 매수를 통해 평균 단가를 조절할 계획을 세워야 합니다. (00:03:22, 00:04:28)</li>
+        <li><strong>시장 냉정하게 바라보기:</strong> 급락 상황을 공포가 아닌 매수 기회로 인식하고, 시장을 냉정하게 분석하여 진입 준비를 해야 합니다. (00:05:08, 00:05:15)</li>
+        <li><strong>분할 매수 및 자동 주문 활용:</strong> V자 반등처럼 빠른 움직임을 포착하기 어렵기 때문에, 지지선 부근에 미리 분할 매수 주문을 걸어두는 전략이 효과적입니다. (00:07:05, 00:07:11)</li>
+        <li><strong>비트코인 시장 특징 이해:</strong> 최근 비트코인 시장은 지나친 하락 후 지나친 상승, 또는 그 반대의 움직임을 보이는 경향이 있으므로 이를 매매에 활용해야 합니다. (00:08:22, 00:08:35)</li>
+        <li><strong>매물대 소화 및 급락 주시:</strong> 매물대가 없는 구간에서의 급락은 오히려 빠른 반등으로 이어질 수 있으므로 이러한 구간을 주시해야 합니다. (00:09:15, 00:09:21)</li>
+        <li><strong>과도한 기대 금지:</strong> 지난 매매에서 큰 수익을 얻었더라도 다음 매매에서 같은 결과를 기대하기보다 시장의 흐름에 맞춰 적절한 시점에 청산하는 것이 중요합니다. (00:09:53, 00:10:00)</li>
+    </ul>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 추세에 순응:</b> <span class="highlight">추세를 거스르지 않는 매매</span>가 중요하며, 개미의 예측과 세력의 방향이 다를 수 있음을 인지해야 합니다.
+                </div>
+                <div class="section">
+                    <b>📊 심리 관리:</b> 시장을 <span class="highlight">냉정하게 보고 감정적인 손절을 피하며</span>, 본절 청산과 같은 유연한 대응이 필요합니다.
+                </div>
+                <div class="section">
+                    <b>🧮 분할 매수 활용:</b> 급락을 기회로 보고 <span class="highlight">지지선에서 분할 매수</span>하여 V자 반등을 포착하고, 야간에도 자동 주문으로 수익을 창출할 수 있습니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 시장 특징 이해:</b> 비트코인 시장의 <span class="highlight">극단적인 움직임 특성</span>(지나친 하락 후 지나친 상승)을 이해하고, 매물 없는 급락 구간을 주시하여 보수적으로 진입하고 적절히 익절합니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                이 매매 기법은 꾸준한 시장 분석과 철저한 리스크 관리를 기반으로 합니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

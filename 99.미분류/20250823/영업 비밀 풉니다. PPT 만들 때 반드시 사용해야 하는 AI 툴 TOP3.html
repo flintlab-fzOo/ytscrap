@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영업 비밀 풉니다. PPT 만들 때 반드시 사용해야 하는 AI 툴 TOP3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px solid #e0f2f7;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: bold;
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        /* Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>영업 비밀 풉니다. PPT 만들 때 반드시 사용해야 하는 AI 툴 TOP3</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> VBMXMX80sOc</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=VBMXMX80sOc" target="_blank">https://www.youtube.com/watch?v=VBMXMX80sOc</a></p>
+        <p><strong>제목:</strong> 영업 비밀 풉니다. PPT 만들 때 반드시 사용해야 하는 AI 툴 TOP3</p>
+        <p><strong>영상 길이:</strong> 00시간04분54초(294분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 PPT 제작 시 효율성과 퀄리티를 높여줄 수 있는 세 가지 필수 AI 도구를 소개합니다. 배경 제거, 목업 이미지 제작, 그리고 내용 정리 및 자료 조사에 특화된 AI 툴들을 자세히 설명하며, 이 도구들이 어떻게 PPT 작업 시간을 단축하고 전문가 수준의 결과물을 만들 수 있는지 알려줍니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[서론] AI 툴의 중요성 (00:00:00)</h3>
+    <ul>
+        <li>AI 기술이 PPT 제작 과정을 혁신하여, 과거에는 전문가의 영역이었던 작업들을 누구나 쉽게 할 수 있게 되었다고 강조합니다. (00:00:00 ~ 00:00:08)</li>
+        <li>소개할 AI 툴들이 없으면 고퀄리티 PPT 제작이 어려울 정도로 필수적이며, 현명하고 효율적인 PPT 제작을 위해 영상 시청을 독려합니다. (00:00:08 ~ 00:00:18)</li>
+    </ul>
+
+    <h3>[AI 툴 1: 배경 제거 - Adobe Express] (00:00:18)</h3>
+    <h4>개요 (00:00:18)</h4>
+    <ul>
+        <li>포토샵 없이도 AI가 3초 만에 배경을 제거해주는 시대가 왔음을 알립니다. (00:00:22 ~ 00:00:25)</li>
+        <li>PPT 자체의 배경 제거 기능보다 AI 툴을 사용하는 것이 훨씬 현명하다고 설명합니다. (00:00:37 ~ 00:00:46)</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=눕기%20따다" target="_blank">눕기 따다</a>: 이미지에서 특정 객체만 남기고 배경을 제거하는 작업. 흔히 "누끼 따기"로 불리며, 제품이나 인물 사진의 배경을 깔끔하게 없애는 데 사용됩니다.</p>
+    <h4>사용법 (00:00:46)</h4>
+    <ul>
+        <li>포털 사이트에서 <code>adobe express</code>를 검색하여 접속합니다. (00:00:46 ~ 00:00:53)</li>
+        <li>배경 제거를 원하는 이미지를 업로드하면 AI가 빠르고 정확하게 배경을 제거해줍니다. (00:00:53 ~ 00:00:59)</li>
+        <li>배경 제거 후 다른 이미지로 배경을 채우는 기능도 지원합니다. (00:01:02 ~ 00:01:08)</li>
+    </ul>
+    <h4>장단점 및 대안 (00:01:08)</h4>
+    <ul>
+        <li>무료 서비스이지만 Adobe 로그인이 필요합니다. (00:01:10 ~ 00:01:14)</li>
+        <li>Adobe 계정 생성이 부담스럽다면 <code>remove.bg</code> 사이트도 대안이 될 수 있습니다. (00:01:25 ~ 00:01:29)</li>
+        <li><code>remove.bg</code>는 로그인 없이 이용 가능하지만, 무료 버전은 낮은 화질로 제공됩니다. (00:01:30 ~ 00:01:35)</li>
+        <li>화질 향상 AI와 연계하여 사용할 수 있지만, Adobe 계정을 만드는 것이 더 나은 선택일 수 있다고 추천합니다. (00:01:35 ~ 00:01:42)</li>
+    </ul>
+
+    <h3>[AI 툴 2: 목업 이미지 제작 - shop.so] (00:01:42)</h3>
+    <h4>개요 (00:01:42)</h4>
+    <ul>
+        <li>PPT 제작 시 노트북이나 휴대폰 화면을 활용한 <a href="https://oo.ai/search?q=목업" target="_blank">목업</a> 이미지가 필요한 경우가 많다고 언급합니다. (00:01:45 ~ 00:01:49)</li>
+        <li>목업 이미지를 사용하면 슬라이드의 퀄리티 자체가 크게 달라진다고 강조합니다. (00:01:51 ~ 00:01:56)</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=목업" target="_blank">목업 (Mockup)</a>: 제품이나 디자인의 실제 모습을 미리 보여주기 위해 만드는 시각적 모델. 주로 앱/웹 디자인을 실제 디바이스(폰, 노트북 등)에 적용한 것처럼 보이게 하는 데 사용되어 현실감을 더합니다.</p>
+    <h4>사용법 (00:02:04)</h4>
+    <ul>
+        <li><code>shop.so</code> 사이트에 접속하여 고퀄리티 목업 이미지를 만들 수 있습니다. (00:02:04 ~ 00:02:09)</li>
+        <li>만들고 싶은 디바이스(폰, 태블릿, 랩탑, 데스크탑 등) 카테고리를 선택합니다. (00:02:21 ~ 00:02:30)</li>
+        <li>선택한 디바이스 내에서도 아이폰 16과 같은 다양한 스마트폰 모델을 지원합니다. (00:02:30 ~ 00:02:34)</li>
+        <li>휴대폰 색상, 그림자 설정이 가능하며, 이미지 해상도(예: 16:9)를 조절할 수 있습니다. (00:02:37 ~ 00:02:47)</li>
+        <li>배경을 투명하게 하거나(트랜스파런트), 세련된 그라데이션, 블러 처리된 그라데이션, 다양한 패턴 등 고퀄리티 배경 소스를 활용할 수 있습니다. (00:02:49 ~ 00:03:07)</li>
+        <li>목업 이미지의 다양한 각도 조절이 가능하며, 'Export' 버튼 하나로 쉽게 내보낼 수 있습니다. (00:03:13 ~ 00:03:20)</li>
+    </ul>
+    <h4>팁 (00:03:10)</h4>
+    <ul>
+        <li>대부분의 경우 투명 배경(트랜스파런트)을 가장 많이 사용하게 될 것이라고 언급합니다. (00:03:10 ~ 00:03:12)</li>
+    </ul>
+
+    <h3>[AI 툴 3: 내용 정리 및 자료 조사 - 스카이워크] (00:03:20)</h3>
+    <h4>개요 (00:03:20)</h4>
+    <ul>
+        <li>PPT 제작 시 내용 정리와 자료 조사에 많은 시간이 소요될 수 있음을 언급합니다. (00:03:22 ~ 00:03:28)</li>
+        <li><code>스카이워크</code> AI를 활용하면 내용 정리 시간을 크게 절약할 수 있다고 소개합니다. (00:03:28 ~ 00:03:32)</li>
+        <li>이전 영상에서 자세한 사용법을 소개했으므로 참고를 권장합니다. (00:03:45 ~ 00:03:53)</li>
+    </ul>
+    <h4>사용법 및 특징 (00:03:53)</h4>
+    <ul>
+        <li>채팅 GPT보다 더 좋은 품질의 자료를 받아볼 수 있어 계속 이용하게 된다고 합니다. (00:03:53 ~ 00:03:59)</li>
+        <li>원하는 <a href="https://oo.ai/search?q=프롬프트" target="_blank">프롬프트</a>를 작성하면 됩니다. (예: "2025년 대한민국 환경 정책 조사") (00:03:59 ~ 00:04:10)</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=프롬프트" target="_blank">프롬프트 (Prompt)</a>: AI 모델에 특정 작업을 지시하기 위해 입력하는 텍스트 명령 또는 질문. AI가 사용자의 의도를 정확히 파악하여 원하는 결과물을 생성하도록 유도하는 역할을 합니다.</p>
+    <ul>
+        <li>간단한 프롬프트에도 보충 정보를 물어봐서, 사용자가 스크립트를 더 잘 쓸 고민을 덜어줍니다. (00:04:10 ~ 00:04:17)</li>
+        <li>보충 질문에 답변하고 잠시 기다리면, 자료 조사를 토대로 차트, 표, 이미지 등 시각적 요소가 포함된 보고서 형태로 내용을 작성해줍니다. (00:04:17 ~ 00:04:30)</li>
+        <li>출처도 명확하게 제공하여 신뢰도를 높입니다. (00:04:30 ~ 00:04:33)</li>
+    </ul>
+    <h4>단점 (00:04:34)</h4>
+    <ul>
+        <li>유료 서비스라는 점이 유일한 단점이지만, 매력을 느꼈다면 한 달 정도 체험해보는 것을 추천합니다. (00:04:34 ~ 00:04:43)</li>
+    </ul>
+
+    <h3>[마무리] (00:04:43)</h3>
+    <ul>
+        <li>PPT 제작 시 유용한 AI 툴 3가지 소개를 마무리하며, 시청자들에게 도움이 되었기를 바랍니다. (00:04:43 ~ 00:04:54)</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 번째 핵심: 이미지 배경 제거</b><br>
+                    <span class="highlight">Adobe Express</span>는 포토샵 없이 3초 만에 이미지 배경을 정확히 제거하며, 배경 대체 기능도 제공합니다. (Adobe 로그인 필요, 고화질) 또는 <span class="highlight">remove.bg</span> (로그인 불필요, 무료는 저화질)를 활용할 수 있습니다.
+                </div>
+                <div class="section">
+                    <b>📊 두 번째 핵심: 목업 이미지 제작</b><br>
+                    <span class="highlight">shop.so</span>는 노트북, 휴대폰 등 다양한 디바이스의 고퀄리티 목업 이미지를 쉽게 생성합니다. 디바이스 색상, 그림자, 해상도, 배경(투명, 그라데이션) 설정이 자유로워 슬라이드 퀄리티를 높입니다.
+                </div>
+                <div class="section">
+                    <b>✍️ 세 번째 핵심: 내용 정리 및 자료 조사</b><br>
+                    <span class="highlight">스카이워크</span>는 PPT 내용 정리와 자료 조사 시간을 획기적으로 단축시켜줍니다. 간단한 프롬프트 입력 시 보충 질문으로 내용을 정교화하고, 차트, 표, 이미지, 명확한 출처가 포함된 보고서 형태의 자료를 생성합니다. (유료 서비스)
+                </div>
+            </div>
+            <div class="card-footer">
+                이 세 가지 AI 툴을 활용하면 누구나 전문가 수준의 PPT를 현명하고 효율적으로 제작할 수 있습니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
