@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌 게이츠, 한국에 차세대 원전 만들기로 했다!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 32px;
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 22px;
+                padding: 8px 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .video-meta p, p, li {
+                font-size: 14px;
+            }
+            .definition {
+                font-size: 0.85em;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 6px 15px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .video-meta p, p, li {
+                font-size: 13px;
+            }
+            .definition {
+                font-size: 0.8em;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>빌 게이츠, 한국에 차세대 원전 만들기로 했다!</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> fjUxuggBa70</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=fjUxuggBa70" target="_blank">https://www.youtube.com/watch?v=fjUxuggBa70</a></p>
+            <p><strong>제목:</strong> 빌 게이츠, 한국에 차세대 원전 만들기로 했다!</p>
+            <p><strong>영상 길이:</strong> 00시간01분20초(001분)</p>
+        </div>
+
+        <h2>개요</h2>
+        <p>산업통상자원부와 빌 게이츠 테라파워 회장이 소형 모듈형 원자력 발전(SMR) 분야에서 한미 에너지 협력 방안을 논의했습니다. 한국의 제조 경쟁력과 미국의 지식재산권을 결합한 협력 모델 구축을 목표로 하며, SK그룹과 두산 에너빌리티 등 국내 기업의 참여가 확대될 예정입니다. 이는 한국 원전 산업의 재도약과 글로벌 에너지 전환의 전략적 파트너로서의 역할을 강화하는 중요한 계기가 될 것으로 평가됩니다.</p>
+
+        <h2>내용</h2>
+        <ul>
+            <li>
+                <p>[한미 에너지 협력 논의] 산업통상자원부 김정관 장관이 22일 서울 콘레드 호텔에서 테라파워 회장 빌 게이츠를 만나 소형 모듈형 원자력 발전(SMR) 분야에서의 한미 에너지 협력 방안을 논의했습니다. (00:00:00,000)</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=SMR" target="_blank">SMR</a>: Small Modular Reactor의 약자로, 대형 원자로에 비해 크기가 작고 모듈식으로 제작되어 공장에서 사전 제작 후 현장에서 조립하는 방식의 원자로. 안전성, 경제성, 배치 유연성이 장점으로 꼽힙니다.</p>
+            </li>
+            <li>
+                <p>[테라파워 소개] 테라파워는 빌 게이츠가 창립한 미국의 3대 SMR 기업 중 하나로, <span class="highlight">소디움 냉각 고속로 방식 기술을 개발</span>하고 있습니다. (00:00:13,040)</p>
+                <p class="definition">※ <a href="https://oo.ai/search?q=소디움 냉각 고속로" target="_blank">소디움 냉각 고속로</a>: 액체 금속(주로 소디움)을 냉각재로 사용하는 고속 중성자로. 열효율이 높고 핵연료 재활용에 유리하며, 핵폐기물 양을 줄일 수 있는 차세대 원자로 기술입니다.</p>
+            </li>
+            <li>
+                <p>[협력 모델 구축] 이번 면담에서는 한국의 제조 경쟁력과 미국의 지식재산권을 결합한 협력 모델 구축이 주요 의제로 다뤄졌습니다. (00:00:21,280)</p>
+            </li>
+            <li>
+                <p>[국내 기업 참여 확대] SK그룹이 테라파워에 약 3천억 원을 투자했으며, 두산 에너빌리티는 주요 장비 공급사로 참여하는 등 국내 기업의 역할이 확대되고 있습니다. (00:00:28,800)</p>
+            </li>
+            <li>
+                <p>[한국의 전략적 파트너십 강조] 김 장관은 한국이 SMR 기술 역량 강화를 통해 글로벌 에너지 전환 과정에서 전략적 파트너로 자리매김할 수 있음을 강조했습니다. (00:00:38,940)</p>
+            </li>
+            <li>
+                <p>[글로벌 추세 부합] 이러한 협력 구도는 기후 위기 대응과 에너지 안보 확보 필요성이 커지는 현재 글로벌 추세와도 부합합니다. (00:00:48,060)</p>
+            </li>
+            <li>
+                <p>[향후 협력 전망] 테라파워는 와이유 밍주에서 SMR 기반 차세대 원전 착공을 본격화했으며, 한국과의 협력은 기술 교류뿐 아니라 산업계 및 정책 차원의 상호 보완적 관계로 확장될 전망입니다. (00:00:55,580)</p>
+            </li>
+            <li>
+                <p>[이번 만남의 중요성] 이번 만남은 한국의 원전 산업 재도약은 물론 고부가가치 원전 생태계 조성을 위한 기반을 마련하는 중요한 첫걸음으로 평가되며, 향후 협력의 실질적 전환 여부에 시장과 정부 모두가 주목하고 있습니다. (00:01:08,240)</p>
+            </li>
+        </ul>
+
+        <h2>요약</h2>
+        <p>산업통상자원부와 빌 게이츠의 테라파워가 소형 모듈형 원자력 발전(SMR) 분야에서 협력을 논의했습니다. 한국의 우수한 제조 능력과 미국의 지식재산권을 결합하여 새로운 협력 모델을 만들고, SK그룹과 두산 에너빌리티 등 국내 기업의 참여를 확대하는 것이 핵심입니다. 김정관 장관은 한국이 SMR 기술로 글로벌 에너지 전환의 중요한 파트너가 될 수 있음을 강조했으며, 이는 기후 위기 대응과 에너지 안보라는 세계적 흐름에도 부합합니다. 테라파워는 이미 차세대 원전 착공을 시작했으며, 이번 만남은 한국 원전 산업의 재도약과 고부가가치 생태계 구축의 중요한 발판이 될 것으로 기대됩니다.</p>
+        
+        <div style="border-top: 1px dashed #e0e0e0; margin: 30px 0;"></div>
+
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 내용 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ SMR 협력 논의:</b> 한국 산업통상자원부와 <span class="highlight">빌 게이츠의 테라파워가 소형 모듈형 원전(SMR) 분야 협력</span>을 논의했습니다.
+                    </div>
+                    <div class="section">
+                        <b>📊 협력 모델:</b> 한국의 제조 경쟁력과 미국의 지식재산권을 결합하는 모델 구축이 주요 의제였습니다.
+                    </div>
+                    <div class="section">
+                        <b>💰 국내 기업 참여:</b> <span class="highlight">SK그룹이 테라파워에 3천억 원을 투자</span>하고 두산 에너빌리티가 주요 장비 공급사로 참여합니다.
+                    </div>
+                    <div class="section">
+                        <b>👩‍💻 한국의 위상:</b> 한국이 SMR 기술 강화를 통해 <span class="highlight">글로벌 에너지 전환의 전략적 파트너</span>로 자리매김할 것을 강조했습니다.
+                    </div>
+                    <div class="section">
+                        <b>🚀 향후 전망:</b> 이번 만남은 한국 원전 산업 재도약 및 고부가가치 생태계 조성을 위한 <span class="highlight">중요한 첫걸음</span>으로 평가됩니다.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    기후 위기 대응과 에너지 안보 확보라는 글로벌 추세에 부합하는 협력 구도입니다.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
