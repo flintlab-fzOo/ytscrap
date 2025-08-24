@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사들 밥줄 끊길 각오로 말합니다” 뇌출혈 터지기 싫다면, 지금 당장 바꾸세요! 기름 낀 혈관, 시원하게 싹 씻어내세요 (서울대병원 이승훈 교수)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        ul li {
+            margin-bottom: 6px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            .single-summary-card { padding: 18px; height: auto; min-height: unset; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>의사들 밥줄 끊길 각오로 말합니다” 뇌출혈 터지기 싫다면, 지금 당장 바꾸세요! 기름 낀 혈관, 시원하게 싹 씻어내세요 (서울대병원 이승훈 교수)</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> HYuN5r9EQ7U</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=HYuN5r9EQ7U" target="_blank">https://www.youtube.com/watch?v=HYuN5r9EQ7U</a></p>
+        <p><strong>제목:</strong> 의사들 밥줄 끊길 각오로 말합니다” 뇌출혈 터지기 싫다면, 지금 당장 바꾸세요! 기름 낀 혈관, 시원하게 싹 씻어내세요 (서울대병원 이승훈 교수)</p>
+        <p><strong>영상 길이:</strong> 00시간14분31초(014분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 서울대학교병원 신경과 이승훈 교수가 뇌졸중과 심근경색, 특히 뇌출혈과 뇌경색의 위험성과 예방 방법을 설명합니다. 뇌출혈이 뇌경색보다 치명적인 이유와 뇌의 특성, 그리고 동맥류로 인한 지주막하 출혈의 위험성 및 MRA 검사를 통한 조기 진단 및 치료의 중요성을 강조합니다. 또한, 동맥경화의 발생 과정과 주요 위험 요인(고혈압, 당뇨, 담배, 콜레스테롤)을 설명하며, 건강한 생활 습관을 통해 뇌혈관 질환을 예방할 수 있음을 역설합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[서론: 뇌혈관 질환 예방의 중요성] (00:00:00 - 00:00:09)</h3>
+    <p>뇌졸중이나 심근경색은 멸종이 가능한 질병으로, 예방할 수 있는 명백한 방법이 존재합니다. 평생 뇌졸중이 생기지 않게 만드는 것이 의료 전문가들이 바라는 가장 바람직한 방법입니다.</p>
+
+    <h3>[연사 소개] (00:00:21 - 00:00:30)</h3>
+    <p>신간 '뇌가 멈추기 전에'를 저술한 서울대학교 병원 신경과 이승훈 교수가 연사로 나섭니다.</p>
+
+    <h3>[뇌출혈의 높은 위험성] (00:00:34 - 00:00:42)</h3>
+    <p>뇌출혈은 뇌경색보다 훨씬 위험합니다. 뇌경색의 사망률은 약 5%인 반면, 뇌출혈은 40%에 달합니다.</p>
+
+    <h3>[뇌출혈이 치명적인 이유 1: 뇌의 물리적 특성] (00:00:42 - 00:01:02)</h3>
+    <p>다른 중요한 장기들은 압력이 세 혈관벽을 지지하지만, 뇌는 비중이 물과 같아 혈관벽에 가해지는 압력을 지지하지 못하고 쉽게 파열됩니다. 작은 혈관이 터져도 뇌의 압력 평형이 이루어질 때까지 터져 큰 혈종이 될 수 있습니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌졸중" target="_blank">뇌졸중</a>: 뇌에 혈액 공급이 중단되거나 뇌혈관이 터져서 뇌 기능에 문제가 생기는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=심근경색" target="_blank">심근경색</a>: 심장 근육에 혈액을 공급하는 관상동맥이 막혀 심장 근육이 손상되는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌경색" target="_blank">뇌경색</a>: 뇌혈관이 막혀 뇌 조직으로 가는 혈액 공급이 중단되어 뇌 조직이 죽는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌출혈" target="_blank">뇌출혈</a>: 뇌혈관이 터져 뇌 조직 안이나 주변에 피가 고이는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=혈종" target="_blank">혈종</a>: 혈액이 조직이나 장기 내에 고여 형성된 덩어리.</p>
+
+    <h3>[뇌출혈이 치명적인 이유 2: 뇌세포의 취약성 및 혈액의 독성] (00:01:03 - 00:02:26)</h3>
+    <p>뇌세포는 우리 몸에서 가장 약한 세포로, 보호하기 위해 두개골, 세 개의 뇌막, 뇌척수액 등 다양한 보호 장치가 있지만, 출혈이 생기면 취약합니다. 혈관 밖으로 나온 혈액은 조직에서 낯선 물질로 인식되며, 특히 적혈구 내의 해머글로빈은 신경 독성을 가져 신경세포를 죽입니다. 또한, 혈액 응고 과정에서 생성되는 스롬빈 단백질도 독성을 유발합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=해머글로빈" target="_blank">해머글로빈</a>: 적혈구 내에 있는 단백질로, 산소를 운반하는 역할을 함.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=스롬빈" target="_blank">스롬빈</a>: 혈액 응고 과정에서 중요한 역할을 하는 효소.</p>
+
+    <h3>[뇌출혈이 치명적인 이유 3: 몸의 과잉 염증 반응] (00:02:26 - 00:03:01)</h3>
+    <p>몸은 외부의 적이 침입했다고 판단하여 백혈구가 혈액을 잡아먹는 염증 반응을 일으킵니다. 이 과정에서 뇌세포가 파괴되며, 혈액의 물리적 압력, 화학적 손상, 과잉 염증 반응이 복합적으로 뇌 손상을 심화시킵니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=염증" target="_blank">염증</a>: 외부 물질이나 손상에 대한 몸의 방어 반응으로, 붓고 붉어지며 열이 나고 통증이 생기는 현상.</p>
+
+    <h3>[뇌출혈 치료의 어려움] (00:03:01 - 00:03:58)</h3>
+    <p>급성 충수염 수술 시 복강을 씻어내듯이, 뇌출혈도 혈액을 없애는 것이 중요하지만 뇌는 그렇게 할 수 없습니다. 뇌가 물과 비슷한 비중이라 혈액을 닦아내는 순간 뇌가 손상되기 때문에 시도해서는 안 됩니다. 뇌는 자정 작용에 의존하거나 강력한 항염증제를 사용하는 방법 외에는 물리적 시술이 어렵습니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=급성%20충수염" target="_blank">급성 충수염</a>: 맹장 끝에 달린 충수돌기에 염증이 생기는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=복강" target="_blank">복강</a>: 복벽으로 둘러싸여 위, 장, 간 등 소화기관이 들어있는 공간.</p>
+
+    <h3>[지주막하 출혈과 동맥류의 위험성] (00:04:52 - 00:05:24)</h3>
+    <p>뇌출혈 중 뇌 조직 외부의 큰 혈관이 터지는 지주막하 출혈은 사망률이 40~50%에 달하며, 특히 40~50대 젊은 나이에 급사를 유발할 수 있습니다. 85%가 뇌동맥류 파열로 발생하며, 동맥류는 혈관벽이 풍선처럼 부풀어 오르는 것입니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=동맥류" target="_blank">동맥류</a>: 혈관벽이 약해져 풍선처럼 부풀어 오르는 상태.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=지주막하%20출혈" target="_blank">지주막하 출혈</a>: 뇌를 싸고 있는 막 중 지주막 아래 공간에 출혈이 발생하는 질환. 주로 뇌동맥류 파열로 발생.</p>
+
+    <h3>[동맥류의 조기 진단과 예방] (00:05:24 - 00:06:23)</h3>
+    <p>혈관은 증상을 느끼지 못하며, 몇 센티미터 크기의 동맥류도 환자는 자각하지 못합니다. 40세가 넘는다면 MRA 검사를 통해 동맥류를 조기에 발견할 수 있습니다. 발견 시 혈관 조영술을 통해 코일을 넣어 막으면 파열 가능성을 평생 예방할 수 있습니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=MRA" target="_blank">MRA</a>: Magnetic Resonance Angiography의 약자로, 자기장을 이용하여 혈관의 상태를 촬영하는 검사.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=코일%20색전술" target="_blank">코일 색전술</a>: 혈관 내에 코일을 삽입하여 동맥류나 기형 혈관을 막는 시술.</p>
+
+    <h3>[MRA 검사 비용 절감 팁] (00:06:23 - 00:07:37)</h3>
+    <p>대학병원과 같은 3차 병원의 MRA 검사비는 비급여 진료비가 가장 높습니다. 비급여 진료를 본인이 부담하는 경우, 주변의 건강검진센터나 MRI 센터에서 가격을 문의하고 장비의 테슬라(Tesla)를 확인하는 것이 좋습니다. 3 테슬라(최고 수준) 또는 1.5 테슬라 이상의 고해상도 MRI 장비를 저렴하게 이용할 수 있는 곳을 찾아 검사하는 것을 추천합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=MRI" target="_blank">MRI</a>: Magnetic Resonance Imaging의 약자로, 자기장을 이용하여 인체 내부를 촬영하는 검사.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=테슬라" target="_blank">테슬라</a>: 자기장의 세기를 나타내는 단위로, MRI 장비의 성능을 나타내는 지표로 사용됨. 숫자가 높을수록 해상도가 높음.</p>
+
+    <h3>[뇌졸중 예방의 단계별 접근] (00:07:40 - 00:08:05)</h3>
+    <p>뇌졸중은 평생 안 생기게 만들 수 있는 병입니다. 50대 이후라면 본인의 건강 단계를 정확히 인지해야 합니다. 동맥경화가 아직 오지 않은 '위협 요인' 단계인지, 아니면 동맥경화가 이미 진행된 '뇌졸중 전 단계'인지 파악하고, 후자라면 필사적으로 건강 생활을 해야 합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=동맥경화" target="_blank">동맥경화</a>: 동맥 혈관 벽이 두꺼워지고 딱딱해져 탄력을 잃는 질환.</p>
+
+    <h3>[동맥경화 발생 과정 상세 설명] (00:08:05 - 00:11:11)</h3>
+    <ul>
+        <li><strong>혈관벽 손상:</strong> 고혈압(물리적), 잘못된 식이 습관 및 담배(화학적) 등으로 혈관벽에 상처가 납니다.</li>
+        <li><strong>콜레스테롤 침착:</strong> 혈액 내 과잉 콜레스테롤(필수 영양소이지만 과잉 시 문제)이 상처 난 혈관벽에 박힙니다. 콜레스테롤은 포도당을 통해 우리 몸 모든 세포가 만들며, 간에서 특히 많이 만듭니다.</li>
+        <li><strong>염증 반응 및 죽상경화증:</strong> 박힌 콜레스테롤을 대식세포가 잡아먹다가 터지고, 이 과정이 반복되면서 혈관벽에 콜레스테롤 덩어리(종괴)가 생기며 만성 염증이 유발됩니다. 이를 죽상경화증이라고 합니다. 이 과정은 몇 년에서 10년에 걸쳐 서서히 진행됩니다.</li>
+        <li><strong>혈전 형성 및 뇌경색:</strong> 흐물흐물한 콜레스테롤 덩어리가 혈압 때문에 터지면, 혈소판이 출혈로 착각하고 혈전을 만들어 혈관을 막습니다. 20년간 서서히 진행된 동맥경화가 30분 만에 뇌경색을 유발할 수 있습니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=고지혈증" target="_blank">고지혈증</a>: 혈액 속에 지방 성분(콜레스테롤, 중성지방)이 과도하게 많은 상태.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=죽상경화증" target="_blank">죽상경화증</a>: 동맥경화의 일종으로, 혈관 내벽에 콜레스테롤 등이 쌓여 덩어리(죽종)를 형성하고 혈관이 좁아지는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=혈소판" target="_blank">혈소판</a>: 혈액 응고 작용에 관여하는 세포 성분.</p>
+
+    <h3>[동맥경화의 주요 위험 요인 및 검사] (00:11:11 - 00:12:23)</h3>
+    <p>동맥경화를 키우는 요인은 당뇨, 고혈압, 담배, 콜레스테롤입니다. 이러한 위험 요인이 중첩되면 동맥경화 발생이 빨라집니다. 가장 간단한 동맥경화 검사는 경동맥초음파입니다. 경동맥 상태를 통해 몸 전체의 동맥경화 정도를 추정할 수 있으며, 이 검사를 통해 본인의 상태를 파악하고 관리해야 합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=경동맥%20초음파" target="_blank">경동맥 초음파</a>: 목에 있는 경동맥의 상태를 초음파로 검사하여 동맥경화 정도를 평가하는 검사.</p>
+
+    <h3>[뇌혈관 질환 예방의 단계별 관리] (00:12:23 - 00:13:09)</h3>
+    <p>본인의 단계에 맞춰 과학적으로 증명된 처방을 따르면 질병의 진행을 멈출 수 있습니다. 2단계(동맥경화 초기)에서 멈추면 평생 뇌졸중이 안 생길 수 있고, 3단계(뇌졸중 발생)가 생겼어도 교훈을 통해 회복하고 정상적인 생활을 할 수 있습니다. 핵심은 젊었을 때 위험 요인이 생기지 않게 하거나, 생겼다면 혈관에 영향을 주지 않도록 관리하는 것입니다. 뇌혈관 질환은 단독으로 발생하는 병이 아니라 위험 요인에 의해 단계적으로 쌓이는 합병증입니다.</p>
+
+    <h3>[건강한 생활 습관의 중요성] (00:13:09 - 00:14:31)</h3>
+    <p>여러분들이 상식적으로 알고 있는 건강 생활 습관이 뇌혈관 질환 예방의 핵심입니다:</p>
+    <ul>
+        <li><strong>식습관:</strong> 골고루 먹기 (많이 먹는 것이 아님).</li>
+        <li><strong>체중 관리:</strong> 너무 찌거나 빠지지 않도록 적정 체중 유지.</li>
+        <li><strong>운동:</strong> 하루 1시간 이상 유산소 운동 (과격하지 않게, 힘들면 나눠서).</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=유산소%20운동" target="_blank">유산소 운동</a>: 산소를 충분히 사용하여 지방을 태우고 심폐 기능을 강화하는 운동 (걷기, 달리기, 수영 등).</p>
+        <li><strong>검진:</strong> 1년에 한 번 콜레스테롤과 혈당 검사 (이상 시 3~6개월에 한 번).</li>
+        <li><strong>금연 및 절주:</strong> 담배는 당장 끊고, 술은 절주.</li>
+        <li><strong>숙면:</strong> 충분한 수면.</li>
+        <li><strong>혈압 관리:</strong> 스스로 혈압계를 통해 평생 관리.</li>
+    </ul>
+    <p>이러한 습관은 평균 수명 80세 이상 시대에 건강한 혈관 상태를 연장하기 위한 필수적인 대비책입니다.</p>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 뇌출혈의 위험성:</b> 뇌경색보다 <strong>사망률(40%)이 훨씬 높고</strong>, 뇌의 물리적 취약성, 혈액 성분의 독성, 과잉 염증 반응 때문에 <span class="highlight">치료가 어렵고 치명적</span>입니다.
+                </div>
+                <div class="section">
+                    <b>📊 동맥류 조기 진단:</b> 40세 이상이라면 <span class="highlight">MRA 검사</span>를 통해 뇌동맥류를 조기 발견하고, 혈관 조영술과 코일 색전술로 <span class="highlight">평생 예방 가능</span>합니다. 검사 시 1.5 테슬라 이상 장비를 갖춘 건강검진센터를 활용하면 좋습니다.
+                </div>
+                <div class="section">
+                    <b>🧮 동맥경화 발생 과정:</b> 혈관 손상(고혈압, 담배, 식습관) → 콜레스테롤 침착 → 만성 염증 → 죽상경화증 형성 → 혈전 발생으로 인한 뇌경색으로 진행됩니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 예방 및 관리:</b> 동맥경화 위험 요인(고혈압, 당뇨, 담배, 콜레스테롤)을 철저히 관리하고, <span class="highlight">경동맥 초음파</span>로 동맥경화 단계를 확인하여 맞춤형 예방이 중요합니다. 골고루 먹기, 체중 관리, 유산소 운동, 금연/절주, 숙면, 혈압/혈당/콜레스테롤 정기 검진 및 관리가 필수적입니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                뇌혈관 질환은 갑자기 발생하는 것이 아니라, 생활 습관에 의해 단계적으로 쌓이는 합병증이므로 젊었을 때부터 꾸준한 건강 관리가 필요합니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
+```
+# 의사들 밥줄 끊길 각오로 말합니다” 뇌출혈 터지기 싫다면, 지금 당장 바꾸세요! 기름 낀 혈관, 시원하게 싹 씻어내세요 (서울대병원 이승훈 교수)
+
+**videoId**: HYuN5r9EQ7U
+**링크**: https://www.youtube.com/watch?v=HYuN5r9EQ7U
+**제목**: 의사들 밥줄 끊길 각오로 말합니다” 뇌출혈 터지기 싫다면, 지금 당장 바꾸세요! 기름 낀 혈관, 시원하게 싹 씻어내세요 (서울대병원 이승훈 교수)
+**영상 길이**: 00시간14분31초(014분)
+
+## 개요
+이 영상은 서울대학교병원 신경과 이승훈 교수가 뇌졸중과 심근경색, 특히 뇌출혈과 뇌경색의 위험성과 예방 방법을 설명합니다. 뇌출혈이 뇌경색보다 치명적인 이유와 뇌의 특성, 그리고 동맥류로 인한 지주막하 출혈의 위험성 및 MRA 검사를 통한 조기 진단 및 치료의 중요성을 강조합니다. 또한, 동맥경화의 발생 과정과 주요 위험 요인(고혈압, 당뇨, 담배, 콜레스테롤)을 설명하며, 건강한 생활 습관을 통해 뇌혈관 질환을 예방할 수 있음을 역설합니다.
+
+## 내용
+
+*   **[서론: 뇌혈관 질환 예방의 중요성]** (00:00:00 - 00:00:09)
+    뇌졸중이나 심근경색은 멸종이 가능한 질병으로, 예방할 수 있는 명백한 방법이 존재합니다. 평생 뇌졸중이 생기지 않게 만드는 것이 의료 전문가들이 바라는 가장 바람직한 방법입니다.
+
+*   **[연사 소개]** (00:00:21 - 00:00:30)
+    신간 '뇌가 멈추기 전에'를 저술한 서울대학교 병원 신경과 이승훈 교수가 연사로 나섭니다.
+
+*   **[뇌출혈의 높은 위험성]** (00:00:34 - 00:00:42)
+    뇌출혈은 뇌경색보다 훨씬 위험합니다. 뇌경색의 사망률은 약 5%인 반면, 뇌출혈은 40%에 달합니다.
+
+*   **[뇌출혈이 치명적인 이유 1: 뇌의 물리적 특성]** (00:00:42 - 00:01:02)
+    다른 중요한 장기들은 압력이 세 혈관벽을 지지하지만, 뇌는 비중이 물과 같아 혈관벽에 가해지는 압력을 지지하지 못하고 쉽게 파열됩니다. 작은 혈관이 터져도 뇌의 압력 평형이 이루어질 때까지 터져 큰 혈종이 될 수 있습니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌졸중" target="_blank">뇌졸중</a>: 뇌에 혈액 공급이 중단되거나 뇌혈관이 터져서 뇌 기능에 문제가 생기는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=심근경색" target="_blank">심근경색</a>: 심장 근육에 혈액을 공급하는 관상동맥이 막혀 심장 근육이 손상되는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌경색" target="_blank">뇌경색</a>: 뇌혈관이 막혀 뇌 조직으로 가는 혈액 공급이 중단되어 뇌 조직이 죽는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌출혈" target="_blank">뇌출혈</a>: 뇌혈관이 터져 뇌 조직 안이나 주변에 피가 고이는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=혈종" target="_blank">혈종</a>: 혈액이 조직이나 장기 내에 고여 형성된 덩어리.</p>
+
+*   **[뇌출혈이 치명적인 이유 2: 뇌세포의 취약성 및 혈액의 독성]** (00:01:03 - 00:02:26)
+    뇌세포는 우리 몸에서 가장 약한 세포로, 보호하기 위해 두개골, 세 개의 뇌막, 뇌척수액 등 다양한 보호 장치가 있지만, 출혈이 생기면 취약합니다. 혈관 밖으로 나온 혈액은 조직에서 낯선 물질로 인식되며, 특히 적혈구 내의 해머글로빈은 신경 독성을 가져 신경세포를 죽입니다. 또한, 혈액 응고 과정에서 생성되는 스롬빈 단백질도 독성을 유발합니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=해머글로빈" target="_blank">해머글로빈</a>: 적혈구 내에 있는 단백질로, 산소를 운반하는 역할을 함.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=스롬빈" target="_blank">스롬빈</a>: 혈액 응고 과정에서 중요한 역할을 하는 효소.</p>
+
+*   **[뇌출혈이 치명적인 이유 3: 몸의 과잉 염증 반응]** (00:02:26 - 00:03:01)
+    몸은 외부의 적이 침입했다고 판단하여 백혈구가 혈액을 잡아먹는 염증 반응을 일으킵니다. 이 과정에서 뇌세포가 파괴되며, 혈액의 물리적 압력, 화학적 손상, 과잉 염증 반응이 복합적으로 뇌 손상을 심화시킵니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=염증" target="_blank">염증</a>: 외부 물질이나 손상에 대한 몸의 방어 반응으로, 붓고 붉어지며 열이 나고 통증이 생기는 현상.</p>
+
+*   **[뇌출혈 치료의 어려움]** (00:03:01 - 00:03:58)
+    급성 충수염 수술 시 복강을 씻어내듯이, 뇌출혈도 혈액을 없애는 것이 중요하지만 뇌는 그렇게 할 수 없습니다. 뇌가 물과 비슷한 비중이라 혈액을 닦아내는 순간 뇌가 손상되기 때문에 시도해서는 안 됩니다. 뇌는 자정 작용에 의존하거나 강력한 항염증제를 사용하는 방법 외에는 물리적 시술이 어렵습니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=급성%20충수염" target="_blank">급성 충수염</a>: 맹장 끝에 달린 충수돌기에 염증이 생기는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=복강" target="_blank">복강</a>: 복벽으로 둘러싸여 위, 장, 간 등 소화기관이 들어있는 공간.</p>
+
+*   **[지주막하 출혈과 동맥류의 위험성]** (00:04:52 - 00:05:24)
+    뇌출혈 중 뇌 조직 외부의 큰 혈관이 터지는 지주막하 출혈은 사망률이 40~50%에 달하며, 특히 40~50대 젊은 나이에 급사를 유발할 수 있습니다. 85%가 뇌동맥류 파열로 발생하며, 동맥류는 혈관벽이 풍선처럼 부풀어 오르는 것입니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=동맥류" target="_blank">동맥류</a>: 혈관벽이 약해져 풍선처럼 부풀어 오르는 상태.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=지주막하%20출혈" target="_blank">지주막하 출혈</a>: 뇌를 싸고 있는 막 중 지주막 아래 공간에 출혈이 발생하는 질환. 주로 뇌동맥류 파열로 발생.</p>
+
+*   **[동맥류의 조기 진단과 예방]** (00:05:24 - 00:06:23)
+    혈관은 증상을 느끼지 못하며, 몇 센티미터 크기의 동맥류도 환자는 자각하지 못합니다. 40세가 넘는다면 MRA 검사를 통해 동맥류를 조기에 발견할 수 있습니다. 발견 시 혈관 조영술을 통해 코일을 넣어 막으면 파열 가능성을 평생 예방할 수 있습니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=MRA" target="_blank">MRA</a>: Magnetic Resonance Angiography의 약자로, 자기장을 이용하여 혈관의 상태를 촬영하는 검사.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=코일%20색전술" target="_blank">코일 색전술</a>: 혈관 내에 코일을 삽입하여 동맥류나 기형 혈관을 막는 시술.</p>
+
+*   **[MRA 검사 비용 절감 팁]** (00:06:23 - 00:07:37)
+    대학병원과 같은 3차 병원의 MRA 검사비는 비급여 진료비가 가장 높습니다. 비급여 진료를 본인이 부담하는 경우, 주변의 건강검진센터나 MRI 센터에서 가격을 문의하고 장비의 테슬라(Tesla)를 확인하는 것이 좋습니다. 3 테슬라(최고 수준) 또는 1.5 테슬라 이상의 고해상도 MRI 장비를 저렴하게 이용할 수 있는 곳을 찾아 검사하는 것을 추천합니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=MRI" target="_blank">MRI</a>: Magnetic Resonance Imaging의 약자로, 자기장을 이용하여 인체 내부를 촬영하는 검사.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=테슬라" target="_blank">테슬라</a>: 자기장의 세기를 나타내는 단위로, MRI 장비의 성능을 나타내는 지표로 사용됨. 숫자가 높을수록 해상도가 높음.</p>
+
+*   **[뇌졸중 예방의 단계별 접근]** (00:07:40 - 00:08:05)
+    뇌졸중은 평생 안 생기게 만들 수 있는 병입니다. 50대 이후라면 본인의 건강 단계를 정확히 인지해야 합니다. 동맥경화가 아직 오지 않은 '위협 요인' 단계인지, 아니면 동맥경화가 이미 진행된 '뇌졸중 전 단계'인지 파악하고, 후자라면 필사적으로 건강 생활을 해야 합니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=동맥경화" target="_blank">동맥경화</a>: 동맥 혈관 벽이 두꺼워지고 딱딱해져 탄력을 잃는 질환.</p>
+
+*   **[동맥경화 발생 과정 상세 설명]** (00:08:05 - 00:11:11)
+    1.  **혈관벽 손상:** 고혈압(물리적), 잘못된 식이 습관 및 담배(화학적) 등으로 혈관벽에 상처가 납니다.
+    2.  **콜레스테롤 침착:** 혈액 내 과잉 콜레스테롤(필수 영양소이지만 과잉 시 문제)이 상처 난 혈관벽에 박힙니다. 콜레스테롤은 포도당을 통해 우리 몸 모든 세포가 만들며, 간에서 특히 많이 만듭니다.
+    3.  **염증 반응 및 죽상경화증:** 박힌 콜레스테롤을 대식세포가 잡아먹다가 터지고, 이 과정이 반복되면서 혈관벽에 콜레스테롤 덩어리(종괴)가 생기며 만성 염증이 유발됩니다. 이를 죽상경화증이라고 합니다. 이 과정은 몇 년에서 10년에 걸쳐 서서히 진행됩니다.
+    4.  **혈전 형성 및 뇌경색:** 흐물흐물한 콜레스테롤 덩어리가 혈압 때문에 터지면, 혈소판이 출혈로 착각하고 혈전을 만들어 혈관을 막습니다. 20년간 서서히 진행된 동맥경화가 30분 만에 뇌경색을 유발할 수 있습니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=고지혈증" target="_blank">고지혈증</a>: 혈액 속에 지방 성분(콜레스테롤, 중성지방)이 과도하게 많은 상태.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=죽상경화증" target="_blank">죽상경화증</a>: 동맥경화의 일종으로, 혈관 내벽에 콜레스테롤 등이 쌓여 덩어리(죽종)를 형성하고 혈관이 좁아지는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=혈소판" target="_blank">혈소판</a>: 혈액 응고 작용에 관여하는 세포 성분.</p>
+
+*   **[동맥경화의 주요 위험 요인 및 검사]** (00:11:11 - 00:12:23)
+    동맥경화를 키우는 요인은 당뇨, 고혈압, 담배, 콜레스테롤입니다. 이러한 위험 요인이 중첩되면 동맥경화 발생이 빨라집니다. 가장 간단한 동맥경화 검사는 경동맥초음파입니다. 경동맥 상태를 통해 몸 전체의 동맥경화 정도를 추정할 수 있으며, 이 검사를 통해 본인의 상태를 파악하고 관리해야 합니다.
+    <p class="definition">※ <a href="https://oo.ai/search?q=경동맥%20초음파" target="_blank">경동맥 초음파</a>: 목에 있는 경동맥의 상태를 초음파로 검사하여 동맥경화 정도를 평가하는 검사.</p>
+
+*   **[뇌혈관 질환 예방의 단계별 관리]** (00:12:23 - 00:13:09)
+    본인의 단계에 맞춰 과학적으로 증명된 처방을 따르면 질병의 진행을 멈출 수 있습니다. 2단계(동맥경화 초기)에서 멈추면 평생 뇌졸중이 안 생길 수 있고, 3단계(뇌졸중 발생)가 생겼어도 교훈을 통해 회복하고 정상적인 생활을 할 수 있습니다. 핵심은 젊었을 때 위험 요인이 생기지 않게 하거나, 생겼다면 혈관에 영향을 주지 않도록 관리하는 것입니다. 뇌혈관 질환은 단독으로 발생하는 병이 아니라 위험 요인에 의해 단계적으로 쌓이는 합병증입니다.
+
+*   **[건강한 생활 습관의 중요성]** (00:13:09 - 00:14:31)
+    여러분들이 상식적으로 알고 있는 건강 생활 습관이 뇌혈관 질환 예방의 핵심입니다:
+    *   **식습관:** 골고루 먹기 (많이 먹는 것이 아님).
+    *   **체중 관리:** 너무 찌거나 빠지지 않도록 적정 체중 유지.
+    *   **운동:** 하루 1시간 이상 유산소 운동 (과격하지 않게, 힘들면 나눠서).
+    <p class="definition">※ <a href="https://oo.ai/search?q=유산소%20운동" target="_blank">유산소 운동</a>: 산소를 충분히 사용하여 지방을 태우고 심폐 기능을 강화하는 운동 (걷기, 달리기, 수영 등).</p>
+    *   **검진:** 1년에 한 번 콜레스테롤과 혈당 검사 (이상 시 3~6개월에 한 번).
+    *   **금연 및 절주:** 담배는 당장 끊고, 술은 절주.
+    *   **숙면:** 충분한 수면.
+    *   **혈압 관리:** 스스로 혈압계를 통해 평생 관리.
+    이러한 습관은 평균 수명 80세 이상 시대에 건강한 혈관 상태를 연장하기 위한 필수적인 대비책입니다.
+
+## 요약
+이승훈 교수는 뇌졸중과 심근경색이 예방 가능한 질병임을 강조하며, 특히 치명적인 뇌출혈의 원인과 예방에 대해 설명합니다. 뇌출혈이 뇌경색보다 사망률이 높고, 뇌의 약한 특성과 혈액 성분의 독성, 몸의 과잉 염증 반응 때문에 치료가 어렵다고 설명합니다. 뇌는 물리적인 치료가 어려우므로 조기 예방이 필수적입니다. 지주막하 출혈의 주원인인 뇌동맥류는 MRA 검사를 통해 40대 이후부터 조기 발견하여 코일 색전술로 예방할 수 있으며, 검사 비용 절감 팁으로 건강검진센터의 1.5 테슬라 이상 MRI 장비를 추천합니다.
+
+뇌졸중의 주요 원인인 동맥경화는 고혈압, 당뇨, 담배, 콜레스테롤 등 생활 습관병에서 비롯됩니다. 혈관벽 손상 → 콜레스테롤 침착 → 만성 염증 → 죽상경화증 → 혈전 형성의 단계로 진행되어 뇌경색을 유발합니다. 경동맥 초음파로 동맥경화 진행 단계를 확인하고, 본인의 단계에 맞춰 철저한 건강 관리를 통해 질병의 진행을 막을 수 있습니다. 최종적으로 교수는 균형 잡힌 식사, 적정 체중 유지, 규칙적인 유산소 운동, 혈압/혈당/콜레스테롤 관리, 금연/절주, 충분한 수면 등 상식적인 건강 생활 습관이 뇌혈관 질환을 예방하는 핵심임을 강조합니다.

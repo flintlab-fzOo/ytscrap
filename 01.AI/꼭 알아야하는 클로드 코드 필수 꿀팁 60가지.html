@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꼭 알아야하는 클로드 코드 필수 꿀팁 60가지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            padding-left: 10px;
+            border-left: 4px solid #4dd0e1;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>꼭 알아야하는 클로드 코드 필수 꿀팁 60가지</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> a1a9wV88MSM</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=a1a9wV88MSM" target="_blank">https://www.youtube.com/watch?v=a1a9wV88MSM</a></p>
+        <p><strong>제목:</strong> 꼭 알아야하는 클로드 코드 필수 꿀팁 60가지</p>
+        <p><strong>영상 길이:</strong> 00시간18분20초 (18분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 Claude Code(클로드 코드)를 처음 사용하거나 이미 사용 중인 개발자를 위한 60가지 필수 꿀팁을 제공합니다. CLI 기본기부터 Interactive Mode 명령어, <code>claude.md</code> 파일 활용법, IDE 연동, 그리고 Anthropic(앤트로픽)이 직접 추천하는 고급 활용 팁까지, 클로드 코드의 효율성을 극대화하는 다양한 방법을 상세히 설명합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[CLI 기본기]</h3>
+    <ul>
+        <li><strong>클로드 코드 설치 방법</strong> (0:26)<br>
+            <code>npm install -g @anthropic-ai/claude-code</code> 명령어를 통해 클로드 코드를 전역으로 설치합니다.</li>
+        <li><strong>클로드 코드 시작 방법</strong> (0:38)<br>
+            터미널에 <code>claude</code>를 입력하여 클로드 코드와의 채팅 창을 실행할 수 있습니다.</li>
+        <li><strong>프롬프트 동시 입력</strong> (0:50)<br>
+            <code>claude "프롬프트 내용"</code> 형식으로 명령어를 실행함과 동시에 프롬프트를 입력하여 프로젝트 분석을 시작할 수 있습니다.</li>
+        <li><strong>데이터 파이핑</strong> (1:06)<br>
+            <code>cat &lt;파일&gt; | claude</code>와 같이 파이프를 통해 클로드 코드에 데이터를 직접 주입하여 사용할 수 있습니다. 이는 헤드리스 모드와 함께 유용합니다.</li>
+        <li><strong>최근 세션 이어가기</strong> (1:24)<br>
+            <code>claude -c</code> 또는 <code>claude --continue</code>를 입력하여 현재 디렉터리에서 최근에 진행했던 세션을 바로 이어서 시작할 수 있습니다.</li>
+        <li><strong>원하는 세션 이어가기</strong> (1:39)<br>
+            <code>claude -r</code> 또는 <code>claude --resume</code>을 입력하여 여러 세션 목록 중 원하는 세션을 선택하여 이어서 작업할 수 있습니다.</li>
+        <li><strong>클로드 코드 업데이트</strong> (1:58)<br>
+            <code>claude update</code> 명령어로 클로드 코드를 최신 버전으로 업데이트할 수 있습니다.</li>
+        <li><strong>특정 모델 선택</strong> (2:05)<br>
+            <code>claude --model &lt;모델이름&gt;</code> 플래그를 사용하여 클로드 코드를 시작할 때 특정 모델(예: Sonnet, Opus)을 지정할 수 있습니다.</li>
+        <li><strong>헤드리스 모드 실행</strong> (2:17)<br>
+            <code>claude -P "프롬프트 내용"</code> 플래그를 사용하여 인터랙티브 모드 없이 클로드 코드를 실행하고 응답을 즉시 받아볼 수 있습니다. 이는 프로그래밍 방식 또는 멀티 에이전트 모드에서 유용합니다.</li>
+        <li><strong>JSON 아웃풋 포맷</strong> (2:43)<br>
+            <code>--output-format json</code> 플래그를 추가하여 헤드리스 모드에서 응답을 JSON 형식으로 받아 데이터를 다루기 쉽게 합니다.</li>
+        <li><strong>로그 디버깅 (Verbose)</strong> (3:04)<br>
+            <code>--verbose</code> 플래그를 사용하여 더 상세한 로그를 출력하게 하여 특정 작업 디버깅 시 유용하게 활용할 수 있습니다.</li>
+    </ul>
+
+    <h3>[Interactive Mode 슬래시 커맨드]</h3>
+    <ul>
+        <li><strong>헬프 (<code>/help</code>)</strong> (3:22)<br>
+            모든 슬래시 커맨드 및 기능에 대한 상세 설명을 볼 수 있습니다.</li>
+        <li><strong>클리어 (<code>/clear</code>)</strong> (3:42)<br>
+            대화 이력을 비우고 컨텍스트 윈도우를 확보하여 새로운 내용을 다룰 때 헬로시네이션 가능성을 낮춥니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=헬로시네이션" target="_blank">헬로시네이션</a>: 인공지능이 사실이 아닌 내용을 사실인 것처럼 생성하거나 환각처럼 잘못된 정보를 제공하는 현상.</p></li>
+        <li><strong>컴팩트 (<code>/compact [유지할 내용]</code>)</strong> (4:02)<br>
+            대화를 요약하고 압축하여 컨텍스트 윈도우를 확보합니다. 오토컴팩트 방지를 위해 적절한 시기에 수동으로 사용하는 것이 좋습니다.</li>
+        <li><strong>컨픽 (<code>/config</code>)</strong> (4:30)<br>
+            오토컴팩트 요소, 투두리스트, 버버스 아웃풋 등 다양한 클로드 코드 설정을 변경할 수 있습니다.</li>
+        <li><strong>모델 (<code>/model</code>)</strong> (4:47)<br>
+            Opus, Sonnet, Default(토큰 사용량에 따라 Opus/Sonnet 자동 전환), Opus-Plan(계획 시 Opus 사용) 등 원하는 모델을 선택할 수 있습니다.</li>
+        <li><strong>코스트 (<code>/cost</code>)</strong> (5:15)<br>
+            API 모드 사용 시 토큰 사용량과 비용을 확인할 수 있습니다 (구독자는 해당 없음).</li>
+        <li><strong>스테이터스 (<code>/status</code>)</strong> (5:28)<br>
+            계정 및 시스템 상태를 손쉽게 확인할 수 있습니다.</li>
+        <li><strong>닥터 (<code>/doctor</code>)</strong> (5:34)<br>
+            설치 및 환경을 점검하고 체크리스트를 확인할 수 있습니다.</li>
+        <li><strong>이닛 (<code>/init</code>)</strong> (5:42)<br>
+            프로젝트를 초기화하고 클로드 코드가 프로젝트 전체를 분석하여 필수 요약 내용들을 <code>claude.md</code> 파일에 저장하도록 합니다.</li>
+        <li><strong>메모리 (<code>/memory</code>)</strong> (6:02)<br>
+            <code>claude.md</code> 파일을 직접 수정하여 프로젝트 메모리(해당 프로젝트에만 적용)나 사용자 메모리(모든 프로젝트에 적용)를 관리할 수 있습니다.</li>
+        <li><strong>빠른 메모리 추가 (<code>#&lt;추가 내용&gt;</code>)</strong> (6:20)<br>
+            <code>#</code>을 누르고 추가하고 싶은 내용을 입력하면 <code>claude.md</code> 파일에 빠르게 추가됩니다.</li>
+        <li><strong>권한 (<code>/permissions</code>)</strong> (6:28)<br>
+            클로드 코드가 사용할 수 있는 도구 권한을 관리하고 업데이트할 수 있습니다.</li>
+        <li><strong>버그 (<code>/bug</code>)</strong> (6:40)<br>
+            Anthropic에 클로드 코드 관련 버그 리포트를 직접 보낼 수 있습니다.</li>
+        <li><strong>리뷰 (<code>/review</code>)</strong> (6:47)<br>
+            연동된 GitHub 레포지토리에서 Pull Request를 받아와 클로드 코드가 리뷰하도록 할 수 있습니다.</li>
+        <li><strong>PR 커멘트 (<code>/prcomments</code>)</strong> (6:55)<br>
+            특정 Pull Request의 모든 커멘트를 분석하여 개선 사항을 파악할 수 있습니다.</li>
+        <li><strong>로그인/로그아웃 (<code>/login</code>, <code>/logout</code>)</strong> (7:06)<br>
+            계정을 전환하거나 로그아웃할 수 있어 멀티 테넌시 환경에서 여러 계정을 운영할 때 유용합니다.</li>
+        <li><strong>터미널 셋업 (<code>/terminal-setup</code>)</strong> (7:26)<br>
+            줄바꿈 방식을 Shift+Enter 또는 Backspace+Enter로 설정할 수 있습니다.</li>
+        <li><strong>VIM 모드 (<code>/vim</code>)</strong> (7:37)<br>
+            대화창에서 VIM 단축키를 사용하여 텍스트 편집 효율을 높일 수 있습니다.</li>
+        <li><strong>에이전트 (<code>/agents</code>)</strong> (7:51)<br>
+            커스텀 서브 에이전트를 일괄적으로 관리하여 특정 작업에 특화된 에이전트를 미리 생성하고 활용할 수 있습니다.</li>
+        <li><strong>MCP (<code>/mcp</code>)</strong> (8:20)<br>
+            현재 프로젝트와 연결된 MCP(Multi-Code-Project)들의 상태를 한눈에 확인할 수 있습니다.</li>
+        <li><strong>아웃풋 스타일 (<code>/output-style</code>)</strong> (8:27)<br>
+            클로드 코드가 출력하는 스타일을 Explanatory, Learning과 같은 기본 세팅으로 변경하거나 직접 커스텀 포맷을 만들 수 있습니다.</li>
+        <li><strong>스테이터스 라인 (<code>/status-line</code>) (8:53)<br>
+            터미널 하단의 정보 표시줄에 현재 사용 중인 모델 이름 등 원하는 정보를 커스텀하여 표시할 수 있습니다.</li>
+    </ul>
+
+    <h3>[Claude.md에 대한 모든 것]</h3>
+    <ul>
+        <li><strong>클로드 코드의 효율 극대화</strong> (9:27)<br>
+            <code>claude.md</code> 파일은 프로젝트의 구조, 폴더 구조, 중요한 기능 설명 등을 요약하여 클로드 코드가 전체 프로젝트를 스캔하지 않아도 되도록 하여 퍼포먼스를 압도적으로 높입니다.</li>
+        <li><strong>클로드.md 파일 종류</strong> (9:47)
+            <ul>
+                <li><strong>엔터프라이즈 파일</strong>: 회사 코딩 스탠다드나 기업 전반적인 룰을 저장합니다.</li>
+                <li><strong>프로젝트 메모리 파일</strong>: 해당 프로젝트 관련 룰을 저장합니다.</li>
+                <li><strong>사용자 메모리 파일</strong>: 사용자 개인이 사용하는 룰을 저장합니다.</li>
+                <li><strong>프로젝트 로컬 메모리 파일</strong>: 프로젝트 관련 룰 중 개인적으로 사용할 룰만 저장합니다.</li>
+            </ul>
+        </li>
+        <li><strong>파일 태그하는 방법 (<code>@&lt;파일경로&gt;</code>)</strong> (10:23)<br>
+            <code>@</code>을 사용하여 절대 경로 또는 상대 경로로 특정 파일을 <code>claude.md</code>에 태그할 수 있습니다.</li>
+        <li><strong>Nesting(중첩) 활용</strong> (10:38)<br>
+            폴더 내부에 <code>claude.md</code> 파일을 생성하여 해당 폴더에 진입할 때만 파일을 읽도록 설정하여 컨텍스트 사용을 최적화할 수 있습니다.</li>
+    </ul>
+
+    <h3>[IDE 연동하기]</h3>
+    <ul>
+        <li><strong>플러그인 설치</strong> (11:03)<br>
+            클로드 코드 플러그인을 설치하면 터미널과 IDE가 바로 연동됩니다.</li>
+        <li><strong>빠른 실행 단축키</strong> (11:12)<br>
+            Windows: <code>Ctrl + Esc</code>, Mac: <code>Cmd + Esc</code>를 사용하여 클로드 코드를 빠르게 실행할 수 있습니다.</li>
+        <li><strong>코드 하이라이트</strong> (11:21)<br>
+            IDE에서 코드를 하이라이트하면 해당 영역이 클로드 코드의 문맥으로 자동 주입됩니다.</li>
+        <li><strong>디프(Diff) 기능 활용</strong> (11:32)<br>
+            Visual Studio Code, IntelliJ 등 디프 기능이 있는 IDE를 사용하면 변경 사항을 디프 뷰와 연동하여 확인할 수 있습니다.</li>
+        <li><strong>파일 참조 단축키</strong> (11:42)<br>
+            Mac: <code>Cmd + Option + K</code>, Windows: <code>Alt + Ctrl + K</code>를 사용하여 파일을 빠르게 참조할 수 있습니다.</li>
+        <li><strong>외부 IDE 연동</strong> (11:54)<br>
+            <code>/id</code> 명령어를 통해 현재 터미널이 실행 중인 IDE가 아닌 다른 IDE와 클로드 코드를 연동할 수 있습니다.</li>
+    </ul>
+
+    <h3>[엔트로픽이 직접 알려주는 꿀팁]</h3>
+    <ul>
+        <li><strong>GitHub CLI 설치</strong> (12:17)<br>
+            GitHub CLI를 설치하여 커밋 분석, 롤백, Pull Request 생성 등 복잡한 GitHub 워크플로우를 클로드 코드와 함께 쉽게 다룰 수 있습니다.</li>
+        <li><strong>MCP(Multi-Code-Project) 사용</strong> (12:36)<br>
+            Supabase, Playwright 등 다양한 MCP를 클로드 코드와 함께 사용하여 LLM의 한계를 뛰어넘는 유용한 작업들을 수행할 수 있습니다. 사용자 레벨에 정의하여 모든 프로젝트에 전반적으로 적용 가능합니다.</li>
+        <li><strong>커스텀 슬래시 커맨드 사용</strong> (13:04)<br>
+            자주 사용하는 GitHub 관련, 테스트 관련 등의 명령어를 커스텀 슬래시 커맨드로 미리 만들어 반복적으로 활용할 수 있으며, <code>argument</code> 값을 사용하여 프롬프트를 받을 수도 있습니다.</li>
+        <li><strong>커스텀 슬래시 커맨드 스코프 조절</strong> (13:31)<br>
+            프로젝트 관련 커맨드는 프로젝트 스코프에, 전반적으로 사용하고 싶은 커맨드는 사용자 스코프에 정의하여 중복 정의를 피할 수 있습니다.</li>
+        <li><strong>Explain, Plan, Commit 순서 따르기</strong> (13:50)<br>
+            클로드 코드와의 대화 시 충분한 시간을 갖고 프로젝트를 분석(Explain)하고, 작업 계획(Plan)을 세운 후, 작업을 집행하고 커밋(Commit)하는 순서를 따르는 것이 효율적입니다. 문맥이 많고 가이드라인이 명확할수록 더 정확한 작업을 수행할 수 있습니다.</li>
+        <li><strong>Thinking Token 활용</strong> (14:12)<br>
+            <code>Think</code>, <code>Think Hard</code>, <code>Think Harder</code>, <code>UltraThink</code> 순서로 더 많은 토큰을 배정하여 클로드 코드가 더 깊이 생각하도록 유도할 수 있지만, 프로세싱 시간이 길어질 수 있음을 유의해야 합니다.</li>
+        <li><strong>TDD(Test-Driven Development) 적극 활용</strong> (14:30)<br>
+            클로드 코드에게 예상 Input/Output 값을 기반으로 테스트 코드를 먼저 작성하도록 지시하고, 테스트 실패를 확인한 후 구현을 작성하도록 유도합니다. 테스트를 먼저 커밋하고 테스트를 통과하는 코드를 작성할 때까지 반복하는 것이 좋습니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=TDD" target="_blank">TDD</a>: Test-Driven Development (테스트 주도 개발)의 약자로, 실제 코드를 작성하기 전에 해당 코드가 잘 작동하는지 검증하는 테스트 코드를 먼저 작성하고, 그 테스트를 통과하는 프로그램을 만드는 개발 방법론.</p></li>
+        <li><strong>스크린샷 적극 활용</strong> (14:51)<br>
+            Playwright나 Puppeteer 같은 MCP를 사용하여 자동으로 페이지 스크린샷을 찍고 클로드 코드에 주입하여 작업 효율을 높일 수 있습니다.</li>
+        <li><strong>YOLO 모드 (Dangerous Escape Permissions Flag)</strong> (15:03)<br>
+            <code>Dangerous Escape Permissions Flag</code>를 사용하면 사용자 허락 없이 클로드 코드가 더욱 자유롭게 코딩할 수 있도록 설정할 수 있습니다. 안전을 위해 Docker의 Dev Container 활용을 권장합니다.</li>
+        <li><strong>클로드 코드를 선생님으로 사용</strong> (15:23)<br>
+            새로운 코드베이스를 이해해야 할 때 클로드 코드에게 전반적인 내용부터 세부적인 부분까지 점차 상세하게 질문하여 학습에 활용할 수 있습니다.</li>
+        <li><strong>Prompt는 항상 상세하게</strong> (15:39)<br>
+            구체적인 파일명, Edge Case 포함 여부, Mocking 지시 등 명확하고 상세하게 프롬프트를 작성할수록 더 정확한 결과를 얻을 수 있습니다.</li>
+        <li><strong>이미지 전달</strong> (15:56)<br>
+            스크린샷을 찍어 드래그 앤 드롭하거나 이미지 파일을 복사한 후 Ctrl+V(맥에서도 Ctrl+V)로 클로드 코드에 이미지를 전달하여 활용할 수 있습니다.</li>
+        <li><strong>파일 리스토어 (Tab 사용)</strong> (16:22)<br>
+            Tab 키를 사용하여 원하는 파일들을 쉽게 탐색하고 리스토어할 수 있습니다.</li>
+        <li><strong>ESC 두려워하지 않기</strong> (16:29)<br>
+            클로드 코드가 잘못된 방향으로 작업을 진행할 경우 과감하게 ESC를 눌러 작업을 취소하여 컨텍스트 오염을 방지해야 합니다.</li>
+        <li><strong>Rollback 명령</strong> (16:45)<br>
+            클로드 코드는 변경사항이나 커밋된 사항을 롤백하는 능력이 뛰어나므로, 기존 커밋으로 롤백하거나 변경사항을 되돌릴 때 명확하게 명령하면 쉽게 처리합니다.</li>
+        <li><strong>체크리스트나 스크래치패드 활용</strong> (17:05)<br>
+            여러 스텝에 걸친 복잡한 작업을 할 경우 클로드 코드에게 Markdown 체크리스트를 사용하도록 명령하여 롱러닝 태스크를 효율적으로 수행하도록 할 수 있습니다.</li>
+        <li><strong>작업과 검증 분리</strong> (17:21)<br>
+            하나의 에이전트로 코딩 작업을 한 후, <code>clear</code> 명령으로 대화 내역을 삭제하거나 다른 서브 에이전트를 생성하여 결과를 검증함으로써 독립된 관점에서 작업을 수행할 수 있습니다.</li>
+        <li><strong>Work Tree 사용</strong> (17:39)<br>
+            Work Tree를 사용하면 여러 브랜치 환경을 쉽게 나누고 독립적으로 작업할 수 있습니다. GitHub와 연동하여 여러 작업을 동시에 실행하고 Pull Request로 병합하는 워크플로우를 구축하면 효율적입니다.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <p>이 영상은 Claude Code 사용자들을 위한 60가지 필수 꿀팁을 소개합니다. CLI 명령어를 이용한 설치 및 시작, 세션 관리, 모델 선택, 헤드리스 모드 활용법을 설명하고, Interactive Mode에서는 <code>/help</code>, <code>/clear</code>, <code>/compact</code>, <code>/model</code> 등 핵심 슬래시 커맨드를 통해 컨텍스트 관리 및 설정 변경 방법을 알려줍니다. 특히 <code>claude.md</code> 파일을 통해 프로젝트 구조 및 중요 정보를 요약하여 AI의 성능을 최적화하는 방법과, IDE 연동(플러그인, 단축키, Diff 기능)을 통한 효율적인 작업 환경 구축을 강조합니다. 마지막으로, Anthropic이 제안하는 고급 팁으로 GitHub CLI 활용, MCP 연동, 커스텀 슬래시 커맨드, TDD, 스크린샷 활용, Thinking Token 조절, 작업과 검증 분리, Work Tree 사용 등을 통해 클로드 코드의 잠재력을 최대한 발휘하는 전략을 제시합니다. 전체적으로 클로드 코드의 활용도를 높이고 개발 워크플로우를 개선하는 데 필요한 실용적인 정보들을 담고 있습니다.</p>
+
+</body>
+</html>
