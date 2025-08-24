@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제미나이가 연 600원？…구글, 미친 가격 뭐길래</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; padding: 8px 20px; }
+            h3 { font-size: 18px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            h1 { font-size: 20px; padding-bottom: 10px; }
+            h2 { font-size: 18px; padding: 6px 15px; }
+            h3 { font-size: 16px; }
+            .video-meta { padding: 10px; font-size: 14px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>제미나이가 연 600원？…구글, 미친 가격 뭐길래</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> CSMRNKqtQCs</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=CSMRNKqtQCs" target="_blank">https://www.youtube.com/watch?v=CSMRNKqtQCs</a></p>
+        <p><strong>제목:</strong> 제미나이가 연 600원？…구글, 미친 가격 뭐길래</p>
+        <p><strong>영상 길이:</strong> 00시간01분26초(086분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 구글이 자사의 인공지능 모델인 제미나이와 클라우드 서비스를 미국 연방정부기관에 파격적인 초저가로 제공하기로 한 소식을 다룹니다. 구글의 제안은 앞서 오픈AI가 제시한 가격보다 훨씬 낮은 수준이며, 이는 AI 업계의 주요 기업들이 정부 조달 시장에서 치열한 가격 경쟁에 돌입했음을 보여줍니다. 이러한 초저가 정책이 앞으로 AI 시장의 판세에 어떤 영향을 미칠지 주목됩니다.</p>
+
+    <h2>내용</h2>
+    <ul>
+        <li><strong>[AI 시장의 가격 경쟁]</strong> (00:00:00) 구글이 자사의 인공지능 모델 제미나이와 클라우드 서비스를 미국 연방정부기관에 파격적인 가격으로 제공합니다.</li>
+        <li><strong>[구글의 파격적인 제안]</strong> (00:00:09) 구글은 연방정부기관들이 내년까지 연간 0.47달러에 정부용 제미나이를 사용할 수 있다고 발표했습니다. 이는 오픈AI가 정부에 챗GPT를 1년간 1달러에 제공하겠다고 밝힌 것보다 절반 가까이 낮은 가격입니다.</li>
+        <li><strong>[주요 AI 기업들의 초저가 경쟁]</strong> (00:00:27) AI 업계의 양대 축인 오픈AI와 구글, 그리고 엔슬오피(Anthropic)까지 모두 초저가 경쟁에 뛰어든 상황입니다.</li>
+        <li><strong>[정부 기관의 AI 도입 기회]</strong> (00:00:36) 연방정부기관은 내년까지 파격적으로 저렴한 가격에 최신 AI 모델을 도입할 수 있게 되었습니다.</li>
+        <li><strong>[구글 CEO의 비전]</strong> (00:00:43) 구글의 순더르 피차이 CEO는 연방기관들이 중요한 임무를 수행하는 데 있어 제미나이와 보안 클라우드 인프라가 큰 혁신을 가져올 것이라고 강조했습니다.</li>
+        <li><strong>[과거 협력 사례]</strong> (00:00:54) 구글은 지난 4월에도 연방총무청(GSA)과 협력하여 워크스페이스 도구를 71% 할인된 가격에 공급한 바 있습니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=연방총무청" target="_blank">연방총무청(GSA)</a>: 미국 정부의 행정 및 조달을 담당하는 독립 기관으로, 정부 기관에 건물, 장비, 서비스 등을 제공하고 관리합니다.</p>
+        </li>
+        <li><strong>[미 연방총무청의 입장]</strong> (00:01:04) 미 연방총무청은 이번 합의가 트럼프 행정부의 AI 혁신 리더십 덕분에 가능했다며, 정부 차원의 기술 혁신을 적극 뒷받침하겠다는 입장을 밝혔습니다.</li>
+        <li><strong>[AI 시장의 향방]</strong> (00:01:15) AI 경쟁이 민간을 넘어 미국 정부 조달 시장까지 번지고 초저가 정책까지 등장한 만큼, 앞으로의 판세가 어디로 흘러갈지 주목됩니다.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 구글의 파격적인 AI 제공:</b> 구글은 미국 연방정부기관에 AI 모델 제미나이와 클라우드 서비스를 <span class="highlight">연간 0.47달러</span>에 제공합니다. 이는 오픈AI의 챗GPT(연간 1달러)보다 훨씬 낮은 가격입니다.
+                </div>
+                <div class="section">
+                    <b>📊 AI 업계의 초저가 경쟁:</b> 오픈AI, 구글, 엔슬오피 등 주요 AI 기업들이 <span class="highlight">정부 조달 시장에서 치열한 가격 경쟁</span>에 돌입했습니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 정부 기관의 AI 도입 가속화:</b> 이러한 초저가 정책은 연방정부기관의 최신 AI 모델 <span class="highlight">도입을 가속화</span>할 것으로 예상됩니다. 구글은 이미 워크스페이스 도구도 대폭 할인하여 제공한 바 있습니다.
+                </div>
+                <div class="section">
+                    <b>📈 시장 판세 변화 주목:</b> AI 경쟁이 민간을 넘어 정부 조달 시장까지 확대되면서, 앞으로 AI 시장의 <span class="highlight">판도 변화</span>에 귀추가 주목됩니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                AI 기술 도입의 문턱을 낮추고 정부 효율성을 높이려는 움직임이 가속화될 것으로 보입니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <p>해당 영상은 주식 매매와 관련된 직접적인 내용을 다루지 않아 해당 항목은 생략합니다.</p>
+
+</body>
+</html>
