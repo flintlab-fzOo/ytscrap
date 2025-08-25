@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBS 뉴스특보 - 한미 정상회담</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #b2ebf2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>SBS 뉴스특보 - 한미 정상회담</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> Ml6Cafhq-GA</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=Ml6Cafhq-GA" target="_blank">https://www.youtube.com/watch?v=Ml6Cafhq-GA</a></p>
+        <p><strong>제목:</strong> SBS 뉴스특보 - 한미 정상회담</p>
+        <p><strong>영상 길이:</strong> 00시간34분23초(34분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 뉴스 특보는 이재명 대통령과 트럼프 미국 대통령 간의 한미 정상회담 소식을 다룹니다. 비공개 오찬을 겸한 회담의 진행 상황과 주요 논의 내용, 그리고 회담 이후의 전망에 대해 정치부 기자의 설명을 통해 전달합니다. 특히 조선업 협력, 트럼프 대통령의 '숙청' 발언 해명, 북한 관계 개선 방안, 주한미군 문제, 한미일 협력, 그리고 트럼프 대통령의 방한 가능성 등 다양한 외교 현안이 다뤄졌습니다. 전반적으로 긴장 속에서도 화기애애한 분위기 속에서 주요 논의가 이루어졌으며, 향후 실무적인 후속 작업이 중요함을 강조합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[정상회담 현황] 비공개 오찬 회담 종료 임박 및 공동 기자회견 불발 (00:00:03)</h3>
+    <ul>
+        <li>이재명 대통령과 트럼프 미국 대통령의 오찬을 겸한 비공개 회담이 거의 끝나가고 있다는 소식이 전해졌습니다. (00:00:03)</li>
+        <li>현재로서는 공동 기자회견은 계획되어 있지 않으며, 지난 한일정상회담과 달리 합의된 절차가 없었기 때문으로 보입니다. (00:00:28)</li>
+        <li>관세협상, 방위비, 안보 등 여전히 쟁점으로 남아 있는 다양한 내용들로 인해 양국의 합의된 내용이 담기는 공동 기자회견은 어렵다는 관측이 지배적입니다. (00:01:07)</li>
+    </ul>
+
+    <h3>[정상회담 현황] 회담 일정 지연 및 종료 (00:01:36)</h3>
+    <ul>
+        <li>백악관에 이재명 대통령의 차량이 대기하고 있는 모습이 포착되어 비공개 오찬이 거의 끝나가는 것으로 예상되었습니다. (00:01:36)</li>
+        <li>원래 우리 시간으로 새벽 1시(현지 시간 낮 1시)로 예정되었던 회담은 약 30분 늦은 1시 43분에 시작되었습니다. (00:01:59)</li>
+        <li>30분 정도로 예정되었던 회담이 2시 36분에 종료되며 거의 1시간 가까이 진행되었습니다. (00:02:22)</li>
+        <li>권혁기 의전 비서관이 먼저 나오는 모습이 보이며 곧 이재명 대통령의 이동이 있을 것으로 예상되었습니다. (00:02:38)</li>
+        <li>이전의 모두 발언과 기자 질의응답이 30분 예상과 달리 1시간 가까이 진행되어, 오찬을 비롯한 전체적인 일정이 지연되었습니다. (00:03:02)</li>
+    </ul>
+
+    <h3>[주요 논의 사항] 조선업 협력 강화 (00:04:05)</h3>
+    <ul>
+        <li>이재명 대통령과 트럼프 대통령은 조선업에 대해 공통적인 인식을 보였습니다. (00:04:05)</li>
+        <li>한국은 관세협상 과정에서 미국의 조선업 재건 프로젝트인 <span class="highlight">마스카(MASGA)</span>에 1,500억 달러 투자, 1,000억 달러 구매를 약속하며 관세협상을 타결한 바 있습니다. (00:04:30)</li>
+        <li>트럼프 대통령은 모두 발언에서 자국 조선업의 재건을 위해 한국 조선업과의 협력을 강조했습니다. (00:05:06)</li>
+    </ul>
+
+    <h3>[주요 논의 사항] 트럼프 대통령의 '숙청' 발언 해명 (00:05:24)</h3>
+    <ul>
+        <li>트럼프 대통령이 한미 정상회담을 앞두고 '트루스 소셜'과 언론 인터뷰에서 한국의 '숙청 또는 혁명' 가능성을 언급했으나, 모두 발언에서는 "오해인 것 같다"는 입장을 보였습니다. (00:05:24)</li>
+        <li>기자 질문에 트럼프 대통령은 "소식통(인텔)으로부터 들었고 추후 더 논의해봐야 한다"면서도, 한국에서 일어날 법한 일이 아닐 것이라고 확신한다고 말했습니다. (00:06:21)</li>
+        <li>이재명 대통령은 작년 12.3 비상계엄 사태 특검 수사 진행 상황을 설명하며, 미군 부대가 아닌 한국군 통제 시스템에 대한 점검이었다고 해명하여 오해를 불식시켰습니다. (00:07:01)</li>
+    </ul>
+
+    <h3>[주요 논의 사항] 북한 관계 개선 의지 확인 (00:07:53)</h3>
+    <ul>
+        <li>양국 정상의 대화에서 대북 관계 및 김정은 위원장과의 만남이 비중 있게 다뤄졌습니다. (00:08:02)</li>
+        <li>이재명 대통령은 트럼프 대통령의 전 세계 평화 기여를 평가하며 한반도 평화에 대한 역할을 주문하고, 농담 삼아 트럼프 타워를 북한에 지을 수 있다는 이야기도 했습니다. (00:08:17)</li>
+        <li>이 대통령은 트럼프를 '피스메이커'로, 자신은 '페이스메이커'로 지원하겠다는 표현으로 화기애애한 분위기를 만들었습니다. (00:09:04)</li>
+        <li>트럼프 대통령은 김정은 위원장과의 친분 관계를 강조하며 올해 안에 만날 것을 기대하고, 현 이재명 정부의 대북 접근법을 긍정적으로 평가했습니다. (00:09:25)</li>
+    </ul>
+
+    <h3>[주요 논의 사항] 한미 동맹의 미래와 주한미군 (00:10:02)</h3>
+    <ul>
+        <li>이재명 대통령은 한미동맹을 군사 분야뿐만 아니라 경제, 과학기술 분야까지 확장하는 미래형 동맹으로 발전시키고자 한다고 밝혔습니다. (00:10:11)</li>
+        <li>트럼프 대통령은 주한미군 관련 발언에서, 과거 발언처럼 "미군이 4만 명 주둔하고 있다"고 재차 언급하며, 평택 미군기지 부대가 "무상으로 준 게 아니라 빌려준 것"이라며 토지 소유권 및 비용 절감 가능성에 대한 구상을 내비쳤습니다. (00:10:55)</li>
+        <li>이 발언이 주한미군의 장기 주둔 의지인지, 아니면 비용 문제를 강조하는 것인지 등 다양한 해석이 나왔으며, 확대 정상회담에서 구체적인 내용이 오갔을 것으로 보입니다. (00:11:44)</li>
+    </ul>
+
+    <h3>[주요 논의 사항] 한미일 협력의 중요성 재확인 (00:12:29)</h3>
+    <ul>
+        <li>이재명 대통령의 방미 전 방일 행보는 한미일 공조를 강조하기 위한 행보로 해석되었습니다. (00:13:02)</li>
+        <li>트럼프 대통령은 일본이 한국과 좋은 관계를 유지하길 원하며, 한일 관계 개선을 기대했습니다. (00:13:46)</li>
+        <li>트럼프 대통령은 위안부 사안을 직접 언급하며 "껄끄러운 부분이 남아있고 해결되지 않았다"고 지적했습니다. (00:14:01)</li>
+        <li>이재명 대통령은 한일 관계 수습이 더 나은 한미 관계 발전에 필요하며, 이를 위해 트럼프 대통령을 만나기 전 일본을 먼저 찾았다고 다시 한번 언급했습니다. (00:14:25)</li>
+    </ul>
+
+    <h3>[향후 일정/전망] 트럼프 대통령의 방한 가능성 (00:15:02)</h3>
+    <ul>
+        <li>트럼프 대통령은 APEC 정상회담을 계기로 한국을 방문할 가능성에 대해 긍정적인 답변을 내놓았으며, 무역 관련 회담을 위해 방문할 것 같다고 언급했습니다. (00:15:02)</li>
+        <li>방문 시 중국이나 북한 김정은 위원장과의 만남 가능성도 가볍게 언급했습니다. (00:15:25)</li>
+    </ul>
+
+    <h3>[대통령 동정] 정상회담 종료 및 다음 일정 (00:15:38)</h3>
+    <ul>
+        <li>한미 정상회담이 공식 종료되었으며, 백악관 현지 영상에서 관계자들이 나오는 모습이 포착되었습니다. (00:15:38)</li>
+        <li>이재명 대통령은 이어서 한미 비즈니스 라운드테이블 행사에 참석할 예정이며, 한국과 미국의 기업인들이 모여 민간 투자 계획 등이 발표될 가능성이 있습니다. (00:15:53)</li>
+        <li>공동 기자회견은 없는 것으로 보이며, 이재명 대통령은 다음 일정으로 이동했습니다. (00:18:02)</li>
+    </ul>
+
+    <h3>[향후 일정/전망] 정상회담 후속 작업 (00:18:40)</h3>
+    <ul>
+        <li>정상회담 이후에도 국내에서 주한미군 토지 소유, 관세협상(알래스카 LNG 및 합작법인) 등 세부적인 사안에 대한 후속 조율 작업이 계속될 것으로 예상됩니다. (00:19:13)</li>
+        <li>특히 조선업 협력과 관련하여 미군 함정을 해외 조선소에서 건조할 수 없도록 제한하는 <a href="https://oo.ai/search?q=톨레프슨법" target="_blank">톨레프슨법</a>에 대한 예외 요청이 있었을 가능성이 주목됩니다. (00:20:56)</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=톨레프슨법" target="_blank">톨레프슨법</a>: 미국 해군 함정을 미국 내 조선소에서 건조해야 한다는 내용을 담은 법률로, 외국 조선소의 미군 함정 건조를 제한한다.</p>
+
+    <h3>[향후 일정/전망] 대북 관계 개선 전략 (00:21:43)</h3>
+    <ul>
+        <li>이재명 대통령은 북한과의 관계 개선에 대해 인내를 가지고 완화 조치를 계속 해나가겠다는 구상을 가지고 있습니다 (대북 확성기 철거, 대북 전단 중지 등). (00:26:36)</li>
+        <li>한반도 비핵화를 위한 로드맵(먼저 멈추고, 축소하고, 비핵화)을 제시했으며, 이를 위해 미국과의 협력이 중요함을 강조했습니다. (00:22:50)</li>
+        <li>북한이 미국과만 협상하려는 '통미봉남' 전략에 당하지 않도록 슬기로운 역할이 중요하다고 언급했습니다. (00:23:34)</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=통미봉남" target="_blank">통미봉남</a>: 북한이 남한을 배제하고 미국과 직접 대화하려는 외교 전략.</p>
+
+    <h3>[정상회담 현황] 화기애애했던 회담 분위기 및 선물 교환 (00:24:05)</h3>
+    <ul>
+        <li>돌출 발언으로 인한 긴장감 속에서도 두 정상은 악수와 미소, 농담을 주고받으며 전반적으로 화기애애한 분위기를 연출했습니다. (00:24:22)</li>
+        <li>이재명 대통령은 방명록 작성에 사용한 펜을 트럼프 대통령에게 선물하며 한미 간 우호 분위기를 조성하고 아이스브레이킹 전략을 사용했습니다. (00:24:52)</li>
+    </ul>
+
+    <h3>[대통령 동정] 최종 이동 및 마지막 일정 (00:28:08)</h3>
+    <ul>
+        <li>강유정 대변인, 강경한 주미대사 내정자 등 관계자들이 먼저 퇴장한 후 이재명 대통령이 모습을 드러냈습니다. (00:28:08)</li>
+        <li>백악관 의전 담당 관계자들과 인사를 나눈 뒤 성조기와 태극기를 단 차량에 탑승하여 백악관을 출발했습니다. (00:32:12)</li>
+        <li>오늘 일정으로는 비즈니스 라운드테이블 행사와 전략국제문제연구소 <a href="https://oo.ai/search?q=CSIS" target="_blank">CSIS</a>에서의 정책 연설이 남아있습니다. (00:29:41)</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=CSIS" target="_blank">CSIS</a>: Center for Strategic and International Studies의 약자로, 미국의 대표적인 외교안보 분야 싱크탱크.</p>
+    <ul>
+        <li>내일(26일)에는 펜실베이니아주 필라델피아에 있는 하나오션이 인수한 필리조선소를 방문할 예정입니다. (00:30:00)</li>
+    </ul>
+
+    <h3>[정상회담 현황] 최종 평가 (00:32:48)</h3>
+    <ul>
+        <li>비공개 업무 오찬의 구체적인 내용은 추가 확인이 필요하지만, 공개 정상회담은 우려했던 돌발 상황 없이 화기애애하게 진행되었습니다. (00:33:06)</li>
+        <li>특히 북한과의 관계, 한미동맹 재확인 등에 대한 의미 있는 발언이 나왔다는 점에서 긍정적인 평가를 내릴 수 있습니다. (00:33:53)</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>한미 정상회담 핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 비공개 오찬 및 공동 기자회견 불발:</b> 이재명 대통령과 트럼프 대통령의 비공개 오찬 회담은 약 1시간가량 진행되었으나, 관세·방위비 등 쟁점 사안으로 인해 <span class="highlight">공동 기자회견은 개최되지 않았습니다.</span>
+                </div>
+                <div class="section">
+                    <b>📊 조선업 협력 및 '숙청' 발언 해명:</b> 양국 정상은 <span class="highlight">조선업 협력 강화에 공감</span>했으며, 트럼프 대통령의 한국 내 '숙청' 발언은 이재명 대통령의 적극적인 해명으로 <span class="highlight">오해가 해소</span>되었습니다.
+                </div>
+                <div class="section">
+                    <b>🤝 대북 관계 개선 의지 확인:</b> 이재명 대통령은 트럼프 대통령에게 한반도 평화에 대한 <span class="highlight">'피스메이커' 역할</span>을 주문했고, 트럼프 대통령은 김정은 위원장과의 만남에 대한 기대를 표명하며 <span class="highlight">현 정부의 대북 접근법을 긍정적으로 평가</span>했습니다.
+                </div>
+                <div class="section">
+                    <b>🌍 한미 동맹 및 주한미군:</b> 이재명 대통령은 동맹의 군사 외 경제·과학기술 분야 확장을 강조했으며, 트럼프 대통령은 <span class="highlight">주한미군 주둔 토지 소유권 및 비용 문제</span>를 언급해 향후 논의 여지를 남겼습니다.
+                </div>
+                <div class="section">
+                    <b>🎁 화기애애한 분위기 조성:</b> 돌발 발언에도 불구하고 두 정상은 펜 선물 교환 및 농담을 통해 <span class="highlight">긴장감을 완화하고 우호적인 분위기</span> 속에서 회담을 마무리했습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                전반적으로 우려를 불식시키며 긍정적인 분위기였으나, 주요 현안에 대한 실무적 후속 조율이 중요할 것으로 전망됩니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <p>해당 내용은 주식 매매와 직접적인 관련이 없으므로, 이 항목은 생략합니다.</p>
+</body>
+</html>
