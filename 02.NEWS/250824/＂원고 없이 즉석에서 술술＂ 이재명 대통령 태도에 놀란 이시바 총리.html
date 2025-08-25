@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>＂원고 없이 즉석에서 술술＂ 이재명 대통령 태도에 놀란 이시바 총리</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px solid #e0f2f7;
+            padding-bottom: 5px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+
+        /* Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 44px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 24px; padding-bottom: 10px; margin-bottom: 20px; }
+            h2 { font-size: 20px; padding: 8px 20px; margin: 30px 0 12px; }
+            h3 { font-size: 18px; margin: 20px 0 10px; }
+            .video-meta { padding: 10px; }
+            .video-meta p { font-size: 14px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            h1 { font-size: 20px; padding-bottom: 8px; margin-bottom: 15px; }
+            h2 { font-size: 18px; padding: 6px 15px; margin: 25px 0 10px; }
+            h3 { font-size: 16px; margin: 18px 0 8px; }
+            .video-meta { padding: 8px; }
+            .video-meta p { font-size: 13px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>＂원고 없이 즉석에서 술술＂ 이재명 대통령 태도에 놀란 이시바 총리</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> V-jYEGdpM9U</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=V-jYEGdpM9U" target="_blank">https://www.youtube.com/watch?v=V-jYEGdpM9U</a></p>
+        <p><strong>제목:</strong> ＂원고 없이 즉석에서 술술＂ 이재명 대통령 태도에 놀란 이시바 총리</p>
+        <p><strong>영상 길이:</strong> 00시간01분50초(110분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 이시바 총리(영상 내 언급 기준)와 이지멘 대통령(영상 내 언급 기준) 간의 외교적 대화를 담고 있습니다. 이시바 총리는 이지멘 대통령의 방문을 환영하며, 한일 양국 관계의 안정적 발전과 한미일 삼국 연계 강화의 중요성을 강조합니다. 이에 이지멘 대통령은 총리에게 방문에 대한 감사를 표하고, 한일 양국이 공동의 이익을 추구하며 협력해 나갈 수 있음을 언급합니다. 두 정상은 솔직한 의견 교환을 통해 좋은 결과를 만들기를 기대합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[이시바 총리의 환영사 및 협력 강조]</h3>
+    <ul>
+        <li><strong>이지멘 대통령 방문 환영</strong> (00:00:00 - 00:00:07): 이지멘 대통령의 (일본) 방문이 순조롭게 완료되었음을 환영하고 말씀드립니다.</li>
+        <li><strong>논의 기대 및 기쁨 표명</strong> (00:00:07 - 00:00:16): 이번 주에 중요한 현안들에 대해 논의할 수 있기를 기대하며, 그러한 기회가 주어져서 정말 기쁘게 생각합니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=현안" target="_blank">현안</a>: 현재 당면해 있거나 해결해야 할 중요한 문제나 안건.</p>
+        </li>
+        <li><strong>한일 관계 발전의 중요성</strong> (00:00:16 - 00:00:23): 한일 양국의 안정적인 관계 발전은 양국 모두의 이익이 됩니다.</li>
+        <li><strong>지역 전체 이익 기여</strong> (00:00:23 - 00:00:27): 동시에 지역 전체의 이익에도 기여할 것입니다.</li>
+        <li><strong>한미일 연계 강화의 중요성</strong> (00:00:27 - 00:00:35): 또한 일본, 한국, 미국의 연계 강화 또한 매우 중요하다고 생각합니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=연계" target="_blank">연계</a>: 단순한 연결을 넘어 협력하거나 공동의 목표를 추구하기 위해 긴밀히 관계를 맺는 것.</p>
+        </li>
+        <li><strong>대통령과의 공감대 형성</strong> (00:00:35 - 00:00:45): 이러한 점들에 대해 대통령께서 (저와) 같은 인식을 가지고 계신다는 것에 큰 의미가 있습니다.</li>
+        <li><strong>솔직한 의견 교환</strong> (00:00:45 - 00:00:48): 많은 가능성에 대해 솔직한 의견 교환이 이루어졌습니다.</li>
+    </ul>
+
+    <h3>[이지멘 대통령의 답사 및 협력 의지]</h3>
+    <ul>
+        <li><strong>총리에 대한 감사 표명</strong> (00:00:51 - 00:00:58): 총리님께 제 방문에 대해 진심으로 감사드립니다.</li>
+        <li><strong>한일 양국의 공동 이익</strong> (00:00:58 - 00:01:08): 저는 이전에 이런 표현을 한 적이 있습니다만, 한국과 일본은 양국의 이익을 같이 합니다.</li>
+        <li><strong>관계 발전을 위한 노력</strong> (00:01:09 - 00:01:14): 좋은 점은 서로 노력하고, 필요한 것에 대해서는 조정하며</li>
+        <li><strong>양국 협력 관계 구축</strong> (00:01:18 - 00:01:23): 양국(한국과 일본)의 이익을 위한 관계를 협력해 나갈 수 있습니다.</li>
+        <li><strong>총리 발언 인용 및 방문의 의미</strong> (00:01:23 - 00:01:33): 총리께서 말씀하신 것처럼, 한국 대통령이 일본을 방문하는 것은 처음입니다.</li>
+        <li><strong>한일 관계의 중요성 강조</strong> (00:01:34 - 00:01:39): 한국과 일본 관계를 중요하게 생각하고 있음을 알아주십시오.</li>
+        <li><strong>총리와의 친분 언급</strong> (00:01:39 - 00:01:45): (총리님과는) 두 번째 대화인데, 아주 친절한 친구라고 말씀들 하십니다.</li>
+        <li><strong>대화를 통한 긍정적 결과 기대</strong> (00:01:46 - 00:01:50): 오늘도 대화를 통해 좋은 결과를 만들어내기를 바랍니다. 기대합니다.</li>
+    </ul>
+
+    <h2>마무리: 핵심 내용 요약 📝</h2>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 이시바 총리 환영사:</b> 이지멘 대통령의 일본 방문을 환영하며, <span class="highlight">한일 관계 발전 및 한미일 연계 강화의 중요성</span>을 강조했습니다.
+                </div>
+                <div class="section">
+                    <b>📊 이지멘 대통령 답사:</b> 총리에게 감사를 표하고, <span class="highlight">한일 양국이 공동의 이익을 추구하며 협력할 의지</span>를 밝혔습니다.
+                </div>
+                <div class="section">
+                    <b>🤝 관계 목표:</b> 양국이 좋은 점은 상호 노력하고 필요한 부분은 조정하여 <span class="highlight">긍정적인 협력 관계를 구축</span>하는 것입니다.
+                </div>
+                <div class="section">
+                    <b>🗣️ 대화의 기대:</b> 두 정상 모두 솔직한 의견 교환을 통해 <span class="highlight">좋은 결과를 만들어내기를 기대</span>했습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                본 요약은 제공된 영상 자막 내용을 바탕으로 작성되었습니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
