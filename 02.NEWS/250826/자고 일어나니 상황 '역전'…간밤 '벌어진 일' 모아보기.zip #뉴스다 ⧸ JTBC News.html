@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자고 일어나니 상황 '역전'…간밤 '벌어진 일' 모아보기.zip #뉴스다 ⧸ JTBC News</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #004d40;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0f7fa;
+            padding-bottom: 8px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #00796b;
+            text-align: center;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px; /* Adjust margin-top to separate from main text */
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .video-meta {
+                padding: 10px;
+            }
+            .video-meta p {
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 6px 10px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>자고 일어나니 상황 '역전'…간밤 '벌어진 일' 모아보기.zip #뉴스다 ⧸ JTBC News</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> RfqHv1OW324</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=RfqHv1OW324" target="_blank">https://www.youtube.com/watch?v=RfqHv1OW324</a></p>
+        <p><strong>영상 길이:</strong> 00시간09분42초(009분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 이재명 대통령과 도널드 트럼프 미국 대통령의 첫 정상회담 내용을 보도합니다. 회담은 돌발 변수 우려에도 불구하고 북한과 골프 등의 대화로 화기애애한 분위기 속에서 진행되었으며, 한미 동맹의 확장과 조선업 협력, 북미 관계 개선 가능성 등 폭넓은 주제가 논의되었습니다. 특히 트럼프 대통령의 돌발 SNS 발언이 있었으나, 이 대통령의 해명으로 상황이 원만하게 정리되었고, 트럼프 대통령은 연내 김정은 위원장 및 시진핑 주석과의 만남 의지를 표명하며 경주 APEC 참석 가능성도 시사했습니다. 이재명 대통령의 트럼프 취향을 저격한 맞춤형 펜 선물도 화제가 되었습니다.</p>
+
+    <h2>내용</h2>
+    <ul>
+        <li><strong>[한미 정상회담] 이재명 대통령과 트럼프 대통령 첫 만남</strong> (00:00:00)<br>
+            이재명 대통령과 트럼프 미국 대통령이 오늘 새벽 처음으로 마주 앉았습니다.</li>
+        <li><strong>[회담 분위기] 북한과 골프 언급으로 화기애애</strong> (00:00:07)<br>
+            돌발 변수 우려에 긴장감도 돌았으나, 이재명 대통령이 꺼낸 북한과 골프 얘기에 정상회담장은 화기애애해졌습니다.</li>
+        <li><strong>[트럼프 평가] 남북 문제 해결 능력 긍정 평가</strong> (00:00:24)<br>
+            트럼프 대통령은 이 대통령이 그 누구보다 남북 문제를 잘 풀어갈 수 있을 것이라고 평가했습니다.</li>
+        <li><strong>[한미 동맹] 군사 넘어 경제·과학기술 분야 확장 제안</strong> (00:00:38)<br>
+            이 대통령은 한미 동맹을 군사 분야뿐만 아니라 경제 및 과학기술 분야까지 확장해 미래형으로 발전시켰으면 좋겠다고 말했습니다.</li>
+        <li><strong>[조선업 협력] 트럼프, 미국 조선업 부흥 위한 한국 협력 강조</strong> (00:00:49)<br>
+            트럼프 대통령은 한국과의 협력을 통해 미국에서 선박이 다시 건조되길 바라며, 미국의 조선업을 한국과 협력해 부흥시킬 기회를 갖게 되기를 바란다고 강조했습니다.</li>
+        <li><strong>[회담 시간 및 형식] 공개회담 54분, 비공개 확대회담 및 업무 오찬 포함 총 2시간 20분</strong> (00:01:05)<br>
+            공개회담은 질의응답을 포함해 54분간 진행되었고, 이어 비공개 확대회담과 업무 오찬까지 총 2시간 20분가량 회담이 진행됐습니다.</li>
+        <li><strong>[주요 논의 사항] 경제 통상 안정화, 동맹 관계 현대화, 대미 투자 세부 논의 가능성</strong> (00:01:17)<br>
+            회담에서는 양국 간 경제 통상 분야 안정화와 동맹 관계의 현대화 등이 주로 논의된 것으로 보이며, 지난달 타결한 관세협상과 관련한 대미 투자 3,500억 달러의 세부 내용과 추가 투자 규모 등이 논의 테이블에 올랐을 가능성도 있습니다.</li>
+        <li><strong>[회담 분위기 평가] 강유정 대변인 브리핑: 화기애애, 호감과 신뢰 구축</strong> (00:02:03)<br>
+            우리 측 강유정 대변인은 한미 정상회담이 시종일관 화기애애한 분위기 속에서 진행됐으며, 두 정상이 서로를 향한 호감과 신뢰를 쌓는 시간이었다고 평가했습니다.</li>
+        <li><strong>[트럼프의 돌발 발언 논란] '숙청', '교회 압수수색', '군기지 정보 입수' 언급</strong> (00:03:22)<br>
+            회담 직전, 트럼프 대통령은 자신의 <span class="highlight">트루스 소셜</span> 계정을 통해 한국에서 숙청이나 혁명이 일어나는 것 같다며 글을 올렸고, 한국의 새 정부가 교회를 악랄하게 압수수색하고 군기지에 들어와 정보를 입수했다고 말해 논란이 되었습니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=트루스 소셜" target="_blank">트루스 소셜</a>: 도널드 트럼프 전 미국 대통령이 설립한 소셜 미디어 플랫폼.</p>
+        </li>
+        <li><strong>[돌발 발언 해명 및 일단락] 이재명 대통령의 한국군 통제 시스템 점검 설명, 트럼프 대통령의 오해 확신</strong> (00:03:41)<br>
+            이에 대해 이 대통령은 한국이 내란 혼란을 극복한 지 얼마 안 된 상태라며, 미군이 아니라 한국군의 통제 시스템을 점검한 것 같다고 설명했습니다. 트럼프 대통령은 오해임을 확신한다고 밝히면서 상황이 일단락되었습니다. 이 과정에서 트럼프 대통령은 자신을 수사했던 특검위를 떠올리며 농담을 던져 긴장감을 누그러뜨리기도 했습니다.</li>
+        <li><strong>[북미 관계] 트럼프 대통령, 김정은 위원장과 연내 재회 의지 표명</strong> (00:05:01)<br>
+            트럼프 대통령은 올해 안에 김정은 위원장과 다시 만날 수 있다면서 북미 정상회담의 의지를 밝혔고, 이 대통령의 대북 접근 방법에 대해 긍정적으로 평가했습니다. 이 대통령 역시 남북 관계 문제를 풀 수 있는 유일한 사람은 트럼프 대통령이라고 언급했습니다.</li>
+        <li><strong>[APEC 참석 및 북미중 정상회담 가능성] 트럼프, 경주 APEC 참석 의향, 김정은·시진핑 만남 가능성 언급</strong> (00:06:12)<br>
+            트럼프 대통령은 오는 10월 말 경주에서 열리는 <span class="highlight">APEC</span> 정상회의에 참석할 의향이 있다고 밝혔으며, 이 자리에서 김정은 북한 국무위원장이나 시진핑 중국 국가 주석을 만날 가능성에 대해서도 긍정적 반응을 보였습니다. 그는 김 위원장과 여전히 좋은 관계이며, 빨리 만나고 싶다고 언급했습니다.
+            <p class="definition">※ <a href="https://oo.ai/search?q=APEC" target="_blank">APEC</a>: Asia-Pacific Economic Cooperation의 약자로, 아시아 태평양 지역의 경제 성장을 촉진하고 무역 및 투자 자유화를 추구하는 21개 회원국 간의 협력체.</p>
+        </li>
+        <li><strong>[이재명 대통령의 선물] 트럼프 취향 저격 마커펜 선물</strong> (00:08:12)<br>
+            이재명 대통령은 트럼프 대통령에게 자신이 서명한 펜을 즉석에서 선물했습니다. 이 펜은 트럼프 대통령의 두꺼운 사인 펜(마커) 선호 취향을 저격한 것으로, 한국에서 수공으로 특수 제작되었으며 태극 문양과 공황 각인이 새겨져 만드는 데 두 달이 걸렸습니다.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 만남 및 분위기:</b> 이재명 대통령과 트럼프 대통령의 첫 정상회담은 북한과 골프 이야기로 <span class="highlight">화기애애한 분위기</span> 속에서 진행되었습니다.
+                </div>
+                <div class="section">
+                    <b>📊 주요 논의:</b> 한미 동맹의 군사 넘어 <span class="highlight">경제·과학기술 분야 확장</span>, 미국 조선업 부흥을 위한 <span class="highlight">한국 협력</span>, 경제 통상 안정화, 대미 투자 등이 논의되었습니다.
+                </div>
+                <div class="section">
+                    <b>⚠️ 돌발 발언 해프닝:</b> 트럼프 대통령의 SNS <span class="highlight">돌발 발언(숙청, 교회 압수수색 등)</span>은 이재명 대통령의 한국군 통제 시스템 점검 설명으로 <span class="highlight">오해가 해소</span>되었습니다.
+                </div>
+                <div class="section">
+                    <b>🤝 북미 관계 개선 기대:</b> 트럼프 대통령은 <span class="highlight">김정은 위원장과 연내 재회 의지</span>를 표명하고, <span class="highlight">경주 APEC 참석</span> 및 시진핑 주석과의 만남 가능성도 언급했습니다.
+                </div>
+                <div class="section">
+                    <b>🎁 특별한 선물:</b> 이재명 대통령은 트럼프 대통령의 <span class="highlight">마커펜 선호 취향을 저격한 특별 제작 펜</span>을 선물하여 친밀한 분위기를 더했습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                한미 정상회담을 통해 양국 간 협력 관계를 강화하고, 북미 및 아시아 지역 정세에 긍정적인 영향을 미칠 수 있는 발판을 마련했습니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
