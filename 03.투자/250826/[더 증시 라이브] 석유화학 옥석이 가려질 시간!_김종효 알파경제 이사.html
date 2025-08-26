@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[더 증시 라이브] 석유화학 옥석이 가려질 시간!_김종효 알파경제 이사</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-left: 5px solid #4db6ac;
+            padding-left: 10px;
+            font-weight: 700;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        strong {
+            color: #004d40;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>[더 증시 라이브] 석유화학 옥석이 가려질 시간!_김종효 알파경제 이사</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> wdCQqQb5zC8</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=wdCQqQb5zC8" target="_blank">https://www.youtube.com/watch?v=wdCQqQb5zC8</a></p>
+        <p><strong>제목:</strong> [더 증시 라이브] 석유화학 옥석이 가려질 시간!_김종효 알파경제 이사</p>
+        <p><strong>영상 길이:</strong> 00시간12분58초 (012분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>본 영상은 알파경제 김종효 이사와 함께 국내외 정치적 상황 및 한미 정상회담 결과를 바탕으로 주식 시장의 흐름을 분석하고, 특히 석유화학 산업의 구조조정 동향과 그에 따른 투자 전략을 제시합니다. 중국과 한국의 강력한 구조조정 움직임 속에서 살아남거나 오히려 수혜를 입을 수 있는 기업들을 구체적으로 언급하며, 석유화학 업종의 '변곡점'이 도래하고 있음을 강조합니다.</p>
+
+    <h2>내용</h2>
+    <h3>[정치 및 대외 관계 평가] 야당 대표 선출과 한미 정상회담의 시장 영향 (00:00:04)</h3>
+    <ul>
+        <li>새로운 야당 대표 선출(이재명 대표 언급은 잘못된 정보, 당시 국민의힘 당대표 선출이었을 가능성 높음) 및 한미 정상회담 결과가 주식 시장에 미치는 영향을 논의합니다.</li>
+        <li>특히 한미 정상회담에서 평택 주한미군에 대한 미국의 유연성과 주도권 강화 뉘앙스가 북한 및 중국에 민감한 반응을 불러일으킬 수 있음을 지적합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=극우%20성향" target="_blank">극우 성향</a>: 정치적 스펙트럼에서 극단적으로 보수적이고 민족주의적인 경향을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뉘앙스" target="_blank">뉘앙스</a>: 말이나 글에서 느껴지는 미묘한 느낌이나 어감을 뜻합니다.</p>
+
+    <h3>[국내 정치와 경제 영향] 야당의 행보와 경제적 파급효과 (00:01:14)</h3>
+    <ul>
+        <li>경제 회복과 민생 안정을 목표로 하는 상황에서 야당의 정책 방향이 경제에 부정적인 영향을 줄 수 있다고 우려합니다.</li>
+        <li>하지만 야당이 실질적인 결정권이나 입법 권한이 부족하여 단기적으로는 시장에 미치는 영향이 제한적일 것이라고 평가합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=자충수" target="_blank">자충수</a>: 바둑에서 유래한 말로, 스스로에게 불리한 결과를 가져오는 행동을 뜻합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=내부%20총질" target="_blank">내부 총질</a>: 조직 내부에서 서로 공격하고 비난하며 분열을 일으키는 행위를 비유적으로 이르는 말입니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=정책의%20일반성" target="_blank">정책의 일반성</a>: 정책이 특정 집단이나 상황에만 적용되는 것이 아니라, 보편적으로 모든 대상에게 일관되게 적용되는 성질을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=합리적" target="_blank">합리적</a>: 이치에 맞고 타당하다는 의미로, 어떤 판단이나 행동이 논리적이고 효율적임을 나타냅니다.</p>
+
+    <h3>[시장 전반적인 평가] 지수 등락 예측과 특정 섹터 분석 (00:04:11)</h3>
+    <ul>
+        <li>현재 시장은 큰 상승이나 하락 없이 횡보할 가능성이 높다고 판단합니다.</li>
+        <li>조선, 방산, 원전 등 일부 섹터에서 나오는 차익실현 매물은 전형적인 '새로운 소식에 대한 반응'으로 해석하며, 반도체나 자동차 같은 주요 업종의 급락은 없다고 분석합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=차익실현%20매물" target="_blank">차익실현 매물</a>: 주식이나 다른 투자 자산의 가격이 상승했을 때, 투자자가 이익을 확정하기 위해 팔아치우는 물량을 말합니다.</p>
+
+    <h3>[북한 핵 협상 전망] 미국의 대북 전략과 북한의 대응 (00:04:52)</h3>
+    <ul>
+        <li>평택 지도가 거꾸로 등장한 것과 같은 제스처는 북한을 협상장으로 끌어내기 위한 노력의 일환일 수 있지만, 북한이 러시아와 중국으로부터 원유, 곡물 등 생필품을 받고 있어 미국의 규제 완화에 대한 필요성을 느끼지 못하고 있다고 평가합니다.</li>
+        <li>미국이 북한을 협상장으로 끌어내기 위해서는 현재보다 더 강력한 반대급부가 필요하지만, 현실적으로 그런 당근을 주기는 어려울 것으로 전망하며 협상 타결이 쉽지 않을 것이라고 예측합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=당근" target="_blank">당근</a>: 이 비유적인 표현은 협상을 위해 제공하는 보상이나 유인책을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=생필품" target="_blank">생필품</a>: 일상생활을 영위하는 데 반드시 필요한 물품을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뜨뜨미지근하다" target="_blank">뜨뜨미지근하다</a>: 어떤 일에 대해 열정이나 적극성 없이 미온적이거나 시큰둥한 태도를 보이는 것을 의미합니다.</p>
+
+    <h3>[화학 산업] 국내외 구조조정 동향과 과잉공급 해소 기대 (00:06:03)</h3>
+    <ul>
+        <li>화학 산업은 국내뿐만 아니라 중국에서도 강력한 구조조정이 진행 중이며, 이는 국내 화학 산업에 긍정적인 영향을 미칠 수 있다고 설명합니다.</li>
+        <li>중국은 9월에 화학 공장 40%에 대한 강력한 구조조정을 하달할 것으로 예상되며, 이는 연말까지 진행될 예정입니다.</li>
+        <li>한국도 석유화학 25% 구조조정을 연말까지 완료할 계획입니다.</li>
+        <li>이러한 구조조정은 전 세계 에틸렌 공급량의 약 5% 감소 효과를 가져올 것으로 전망하며, 이는 엄청난 물량이라고 강조합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=구조조정" target="_blank">구조조정</a>: 기업이나 조직의 체질을 개선하기 위해 인원 감축, 사업 재편 등 대대적인 변화를 꾀하는 것을 말합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=과잉공급" target="_blank">과잉공급</a>: 특정 상품이나 서비스의 공급량이 시장의 수요량보다 훨씬 많은 상태를 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=하달" target="_blank">하달</a>: 윗사람이 아랫사람에게 명령, 지시, 통지 등을 내리거나 전달하는 것을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=시한" target="_blank">시한</a>: 어떤 일이나 행위를 마쳐야 할 정해진 마지막 기한을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=정유%20시설" target="_blank">정유 시설</a>: 원유를 정제하여 휘발유, 경유 등 다양한 석유 제품을 생산하는 설비 및 공장을 의미합니다.</p>
+
+    <h3>[화학 산업] 대한유화의 강점과 상승 요인 (00:07:41)</h3>
+    <ul>
+        <li>대한유화가 최근 신고가를 기록하며 급등하는 이유로 높은 가동률(95%)과 견실한 재무구조를 꼽습니다.</li>
+        <li>다른 화학 기업들이 생산하면 손실이 나는 상황에서, 대한유화는 손익분기점(BEP)에 근접하는 생산이 가능하여 가동률을 유지할 수 있었다고 설명합니다.</li>
+        <li>또한, 자회사인 코리아 에어텍과 한주의 턴어라운드가 빠르게 진행되어 하반기 순현금 플러스 전환이 예상됩니다.</li>
+        <li>이는 화학 산업 구조조정 시 가장 빠르게 이익이 증가할 수 있는 기업으로 대한유화를 부각시키는 요인입니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=반사이익" target="_blank">반사이익</a>: 어떤 기업이나 산업이 경쟁자나 다른 외부 요인으로 인해 예상치 못하게 얻게 되는 이익을 말합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=BEP" target="_blank">BEP</a>: Break-Even Point의 약자로, 손익분기점을 의미합니다. 총수익과 총비용이 같아 이익도 손실도 없는 지점을 말합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=턴어라운드" target="_blank">턴어라운드</a>: 기업의 실적이 적자에서 흑자로 돌아서거나, 부진한 실적에서 벗어나 개선되는 현상을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=순현금%20플러스" target="_blank">순현금 플러스</a>: 기업이 보유한 현금성 자산이 차입금 등 유동성 부채보다 많은 상태를 의미하며, 재무 건전성이 좋다는 것을 나타냅니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=업사이드" target="_blank">업사이드</a>: 주식이나 자산의 가격이 앞으로 상승할 수 있는 잠재적인 폭이나 가능성을 의미합니다.</p>
+
+    <h3>[화학 산업] 중국 구조조정의 국내 기업 영향 (00:09:47)</h3>
+    <ul>
+        <li>중국의 과잉공급 구조조정은 중국 내수율 상승 문제를 완화하고, 결과적으로 한국 기업의 공급 부담을 덜어줄 것으로 예상합니다.</li>
+        <li>이는 국내 화학 기업 주가 반등의 주요 원인이며, 롯데케미칼 등 다른 기업들도 함께 반등하는 이유라고 설명합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=내수율" target="_blank">내수율</a>: 특정 제품의 생산량 중 국내에서 소비되는 비율을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=변곡점" target="_blank">변곡점</a>: 그래프나 추세에서 기울기가 변하는 지점으로, 어떤 상황이나 흐름이 전환되는 중요한 시점을 비유적으로 표현할 때 사용됩니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=너%20죽고%20나%20죽자식" target="_blank">너 죽고 나 죽자식</a>: 극단적인 경쟁이나 대립으로 인해 양쪽 모두에게 피해가 가거나 파멸에 이르는 상황을 비유적으로 이르는 말입니다.</p>
+
+    <h3>[화학 산업] 주요 주목 기업 및 투자 전략 (00:11:41)</h3>
+    <ul>
+        <li>화학 산업이 '변곡점'에 진입했으며, 과거의 '너 죽고 나 죽자식' 경쟁 구도에서 벗어날 가능성이 높다고 판단합니다.</li>
+        <li>단기적으로는 구조조정의 수혜를 가장 빠르게 받을 수 있는 대한유화와 같은 기업을, 중장기적으로는 안정적인 포트폴리오와 자금 여력을 갖춘 LG화학 같은 기업을 주목할 것을 권합니다.</li>
+        <li>또한, 특정 분야에서 세계 1위 경쟁력을 가진 국도화학(에폭시 수지 세계 1위)처럼 구조조정 영향이 덜한 기업에도 관심을 가질 필요가 있다고 조언합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=포트폴리오" target="_blank">포트폴리오</a>: 투자에서 여러 종류의 자산에 분산 투자하여 위험을 줄이고 수익을 극대화하는 자산 구성을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=자금%20여력" target="_blank">자금 여력</a>: 기업이나 개인이 재정적으로 사용할 수 있는 여유 자금을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=스페셜티" target="_blank">스페셜티</a>: 특수하거나 고부가가치 제품을 의미하며, 주로 특정 용도나 고객층을 위해 개발된 화학 제품을 지칭할 때 사용될 때 사용됩니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=에폭시%20수지" target="_blank">에폭시 수지</a>: 강력한 접착력과 내화학성을 지닌 고분자 물질로, 코팅제, 접착제, 복합재료 등 다양한 산업 분야에 사용되는 특수 합성수지입니다.</p>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 정치·대외 이슈:</b> 야당의 행보와 한미 정상회담 등 정치적 요인들은 <span class="highlight">단기 시장 영향이 제한적</span>일 것으로 분석됩니다. 북한 핵 협상 또한 현재로서는 큰 진전이 어려울 전망입니다.
+                </div>
+                <div class="section">
+                    <b>📊 석유화학 산업 변곡점:</b> 중국(40%)과 한국(25%)의 강력한 <span class="highlight">화학 산업 구조조정</span>이 진행 중이며, 이는 전 세계 에틸렌 공급량을 약 5% 감소시켜 업황 개선의 중요한 변곡점이 될 것입니다.
+                </div>
+                <div class="section">
+                    <b>📈 대한유화 주목:</b> 대한유화는 높은 가동률(95%), 견실한 재무구조, 자회사 턴어라운드를 통해 <span class="highlight">가장 빠르게 이익이 증가</span>할 수 있는 기업으로 꼽힙니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 투자 유망 기업:</b> 구조조정 수혜 기업(대한유화), 안정적 포트폴리오 기업(LG화학), 독보적인 시장 지위 기업(국도화학 - 에폭시 수지 세계 1위) 등 <span class="highlight">옥석 가리기가 중요</span>합니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                석유화학 업종은 구조조정을 통해 새로운 성장 기회를 맞이할 것으로 예상되며, 기업별 특성을 고려한 전략적 접근이 필요합니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>구조조정 수혜 기업</strong>: 국내외 화학 산업의 구조조정으로 인해 공급 과잉 문제가 해소될 것으로 예상되므로, 재무 구조가 견실하고 가동률이 높아 빠르게 이익 개선이 가능한 기업(예: 대한유화)을 우선적으로 고려할 필요가 있습니다.</li>
+        <li><strong>안정적 포트폴리오 및 자금 여력</strong>: 중장기적으로는 포트폴리오가 안정되어 있고 자금 여력이 충분하여 외부 환경 변화에 유연하게 대응할 수 있는 대형 화학 기업(예: LG화학)에 대한 관심이 필요합니다.</li>
+        <li><strong>독보적인 기술력/시장 점유율 기업</strong>: 구조조정의 직접적인 영향이 적거나, 특정 분야에서 세계 시장을 선도하는 독보적인 기술력이나 시장 점유율을 가진 기업(예: 에폭시 수지 세계 1위인 국도화학)은 안정적인 성장을 기대할 수 있습니다.</li>
+        <li><strong>정치적 노이즈는 제한적 영향</strong>: 국내 정치적 갈등이나 대외 관계의 미묘한 변화는 단기적인 시장 심리에 영향을 줄 수 있지만, 실제 기업의 펀더멘털이나 중장기적인 산업 구조 변화에 미치는 영향은 제한적일 수 있음을 인지하고 투자에 임해야 합니다.</li>
+    </ul>
+</body>
+</html>
