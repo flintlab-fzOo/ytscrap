@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주식) 가격 조정 기간 조정 끝낸 분할매수할 종목! [개미대학]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px; /* Adjust margin-top to fit better after a paragraph */
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>(주식) 가격 조정 기간 조정 끝낸 분할매수할 종목! [개미대학]</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> eFET2NMYGoc</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=eFET2NMYGoc" target="_blank">https://www.youtube.com/watch?v=eFET2NMYGoc</a></p>
+        <p><strong>영상 길이:</strong> 00시간02분28초(2분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 '개미댁마스터 전석'이 AI를 활용하여 가격 조정과 기간 조정을 마친 후 분할 매수하기 좋은 종목을 분석하고 추천하는 과정을 소개합니다. DOE와 두산 두 종목을 예시로 들어, AI 시스템이 차트 분석과 펀드멘털 분석을 통해 최종 투자 전략을 도출하는 방식을 설명하며, 초보 및 고수 투자자 모두에게 유용한 정보를 제공합니다.</p>
+
+    <h2>내용</h2>
+    <h3>[도입] 분할 매수하기 좋은 종목 소개 (00:00:00)</h3>
+    <ul>
+        <li>개미댁마스터 전석이 가격 조정과 기간 조정을 마친, 분할 매수하기 좋은 종목들을 소개합니다. 특히 22일선 첫 눌림목에 해당하는 "아주 이쁜 차트"를 가진 종목이 나왔다고 언급합니다.</li>
+    </ul>
+
+    <h3>[DOE 종목 분석 시작] (00:00:13)</h3>
+    <ul>
+        <li>첫 번째 소개 종목은 'DOE'이며, AI를 통한 분석 과정을 시연합니다.</li>
+    </ul>
+
+    <h3>[AI 차트 분석 과정] (00:00:16)</h3>
+    <ul>
+        <li>AI 시스템에 DOE 차트를 입력하면, 먼저 파동, 거래량, 패턴 점수를 기반으로 1차 해석이 이루어집니다.</li>
+        <li>이어서 '개미댁'만의 노하우가 집약된 AI 2차 분석(세력 매집, 패턴, 주도주 특성 학습)이 진행됩니다.</li>
+        <li>마지막 3차 해석에서는 차트 점수가 좋게 나온 종목에 대해 세력의 존재 유무를 추가로 분석합니다.</li>
+    </ul>
+
+    <h3>[DOE AI 분석 결과 및 펀드멘털의 중요성] (00:00:40)</h3>
+    <ul>
+        <li>DOE는 최종 차트 점수 84점(B등급)을 받았습니다.</li>
+        <li>영상에서는 차트 분석만큼 펀드멘털(기업 본질적 가치) 분석의 중요성을 강조하며, 초보 투자자들이 기업의 사업 내용을 확인하지 않는 경우가 많다고 지적합니다.</li>
+        <li>'개미댁' AI 시스템은 기업의 사업 포트폴리오, 경영진 비전, 사업 경영력, 실적 등 펀드멘털 분석까지 종합적으로 지원합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=펀드멘털" target="_blank">펀드멘털</a>: 기업의 본질적인 가치와 재무 건전성을 나타내는 지표들(매출, 이익, 자산, 부채 등)을 의미합니다. 이는 기업의 성장 잠재력과 안정성을 평가하는 데 중요한 역할을 합니다.</p>
+
+    <h3>[DOE 종합 분석 결과 및 투자 전략] (00:01:13)</h3>
+    <ul>
+        <li>차트와 펀드멘털 분석을 종합한 DOE의 최종 점수는 84점, 세력 존재율은 68%, 매집 본전은 50,000원으로 나타났습니다.</li>
+        <li>AI는 DOE에 대해 중기 분할 매수 및 보유 전략이 적합하다고 제안합니다.</li>
+        <li>60,000원 돌파 시 중장기 강세가 전망되며, 고점은 63,600원으로 제시됩니다.</li>
+        <li>현재 가격 조정과 기간 조정이 모두 완료되어 "굉장히 좋은 자리"라고 평가하며 매수를 권유합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=분할%20매수" target="_blank">분할 매수</a>: 주식을 한 번에 전부 매수하는 대신, 여러 차례에 나누어 매수함으로써 평균 매수 단가를 조절하고 투자 위험을 분산하는 전략입니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=가격%20조정" target="_blank">가격 조정</a>: 주가가 단기간에 과도하게 상승한 후, 적정한 수준으로 되돌아오거나 하락하는 현상을 의미합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=기간%20조정" target="_blank">기간 조정</a>: 주가가 특정 기간 동안 큰 변동 없이 횡보하거나 약보합세를 유지하면서, 다음 추세 전환을 준비하는 과정을 의미합니다.</p>
+
+    <h3>[두산 종목 분석 예시] (00:01:37)</h3>
+    <ul>
+        <li>두 번째 분석 종목으로 최근 대주주 양도세 및 정치적 이슈로 하락했던 '두산'을 선정하여 AI 분석을 시연합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=대주주%20양도세" target="_blank">대주주 양도세</a>: 주식을 양도할 때, 특정 기준(지분율, 금액 등)을 초과하는 대주주에게 부과되는 세금으로, 시장의 매도세에 영향을 줄 수 있습니다.</p>
+
+    <h3>[두산 AI 분석 결과 및 투자 전략] (00:01:45)</h3>
+    <ul>
+        <li>두산은 1차 해석과 2차 분석을 거쳐 B+ 등급, 88점이라는 높은 점수를 받았습니다.</li>
+        <li>펀드멘털(이슈, 성장 담보, 실적, 구조적 성장) 분석을 포함한 최종 종합 결론은 88점, 세력 존재율 72%입니다.</li>
+        <li>두산에 대해서도 중장기 분할 매수 보유 전략이 유효하다는 AI의 결론이 도출됩니다.</li>
+    </ul>
+
+    <h3>[결론] AI 분석의 유용성 (00:02:22)</h3>
+    <ul>
+        <li>이러한 AI 기반 주식 분석 시스템은 초보 투자자뿐만 아니라 고수 투자자 모두에게 100% 실질적인 도움을 줄 것이라고 강조하며 영상을 마무리합니다.</li>
+    </ul>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ AI 기반 종목 발굴:</b> <span class="highlight">개미댁 AI 시스템</span>은 가격 및 기간 조정이 완료된 유망 종목을 선별합니다.
+                </div>
+                <div class="section">
+                    <b>📊 종합 분석:</b> AI는 <span class="highlight">차트(파동, 거래량, 패턴, 세력 유무)와 펀드멘털(사업 포트폴리오, 경영진 비전, 실적 등)</span>을 결합하여 분석합니다.
+                </div>
+                <div class="section">
+                    <b>📈 구체적인 전략 제시:</b> DOE와 두산 사례에서 보듯, 최종 점수와 함께 <span class="highlight">분할 매수, 보유 기간, 목표가</span> 등 상세한 투자 전략을 제공합니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 투자자 지원:</b> 펀드멘털 분석의 중요성을 강조하며, <span class="highlight">초보 투자자도 기업의 본질적 가치를 쉽게 파악</span>할 수 있도록 돕습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                이 시스템은 투자자들이 합리적인 판단을 내리는 데 큰 도움을 주어, 초보와 고수 모두에게 유용합니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><b>가격 및 기간 조정 완료 종목</b>: 충분히 조정을 거쳐 바닥을 다진 종목을 매수 후보로 고려해야 합니다.</li>
+        <li><b>22일선 눌림목</b>: 단기 이동평균선인 22일선 부근에서의 눌림목은 기술적으로 좋은 매수 타이밍이 될 수 있습니다.</li>
+        <li><b>차트 분석과 펀드멘털 분석의 균형</b>: 차트 패턴만 볼 것이 아니라, 기업의 사업 내용, 경영진 비전, 실적, 성장 잠재력 등 펀드멘털을 반드시 함께 고려하여 투자해야 합니다.</li>
+        <li><b>AI 시스템 활용</b>: AI의 객관적인 데이터를 활용하여 세력의 존재율, 매집 본전, 적합한 매매 전략(중기 분할 매수, 보유 전략) 등을 참고할 수 있습니다.</li>
+        <li><b>고점 대비 현재 위치 파악</b>: 과거 고점 대비 현재 주가가 어느 위치에 있는지 파악하여 잠재적인 상승 여력을 가늠하는 것이 중요합니다.</li>
+        <li><b>대주주 양도세 등 외부 요인 확인</b>: 주가에 영향을 미칠 수 있는 정치적, 제도적 이슈(예: 대주주 양도세)도 면밀히 검토해야 합니다.</li>
+    </ul>
+</body>
+</html>
