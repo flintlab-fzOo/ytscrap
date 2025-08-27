@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대박! 딱 한번 이거 먹고 중독됐어요📍너무 맛있어서 가족들이 주말마다 이것만 찾아요👍</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #00796b;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>대박! 딱 한번 이거 먹고 중독됐어요📍너무 맛있어서 가족들이 주말마다 이것만 찾아요👍</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> cbfCvgSg2TQ</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=cbfCvgSg2TQ" target="_blank">https://www.youtube.com/watch?v=cbfCvgSg2TQ</a></p>
+        <p><strong>영상 길이:</strong> 00시간02분30초 (2분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>돼지고기 목살을 튀기지 않고 감자전분으로 바삭하게 구워, 새콤달콤한 소스와 함께 즐기는 요리 레시피입니다. 양념치킨이나 탕수육과 같은 중독성 있는 맛을 내어 온 가족이 좋아하는 메뉴로, 기름지지 않고 간편하게 만들 수 있습니다.</p>
+
+    <h2>내용</h2>
+    <ul>
+        <li><strong>[재료 손질]</strong> 돼지고기 목살 500g을 먹기 좋은 한입 크기로 썰어줍니다. (00:00:09)</li>
+        <li><strong>[밑간하기]</strong> 썰어둔 돼지고기에 소주 2스푼, 소금 1/3스푼, 후추 약간을 넣고 조물조물 버무려 밑간을 해줍니다. (00:00:19)
+            <p class="definition">※ <a href="https://oo.ai/search?q=밑간" target="_blank">밑간</a>: 재료의 본래 맛을 살리거나 잡내를 제거하고, 나중에 넣을 양념이 잘 배도록 하기 위해 조리 전에 미리 소금, 후추 등으로 가볍게 하는 양념입니다.</p>
+        </li>
+        <li><strong>[전분 코팅]</strong> 밑간한 고기에 감자전분 3스푼을 수북하게 넣고, 전분이 고루 묻도록 잘 버무려 코팅해줍니다. 전분을 물에 불리지 않아도 바삭한 식감을 낼 수 있습니다. (00:00:28)</li>
+        <li><strong>[고기 굽기]</strong> 중불로 달군 프라이팬에 식용유를 넉넉히 두르고, 전분 코팅한 돼지고기를 서로 달라붙지 않게 간격을 띄워 올려 익혀줍니다. (00:00:43)</li>
+        <li><strong>[굽기 팁]</strong> 초반에는 자주 뒤집지 않고, 바닥이 노릇하게 익었을 때 한 번 뒤집어줍니다. 뒤집은 후부터는 자유롭게 뒤적이며 구워도 괜찮습니다. (00:00:57)</li>
+        <li><strong>[굽기 완료]</strong> 노릇노릇하게 구워진 돼지고기는 잠시 한쪽에 꺼내 둡니다. (00:01:14)</li>
+        <li><strong>[소스 만들기]</strong> 고추장 1스푼, 케첩 1스푼, 진간장 1스푼, 소주 1스푼, 식초 2스푼, 물엿 3스푼, 다진 마늘 반 스푼, 물 2스푼을 프라이팬에 넣고 중불에 끓입니다. (00:01:31)</li>
+        <li><strong>[소스 졸이기]</strong> 양념을 잘 섞어가며 2분 정도 바글바글 끓여 살짝 졸여, 먹기 좋은 농도의 소스를 만듭니다. (00:01:52)</li>
+        <li><strong>[볶아주기]</strong> 졸여진 소스에 미리 구워둔 돼지고기를 모두 넣고, 소스와 어우러지도록 중불에 섞어가며 볶아줍니다. (00:01:59)</li>
+        <li><strong>[요리 완성 및 맛 평가]</strong> 튀기지 않아 기름지지 않지만 전분 코팅으로 바삭한 고기와 새콤달콤한 소스가 어우러져 양념치킨 또는 탕수육 같은 중독성 있는 맛을 냅니다. (00:02:07)</li>
+    </ul>
+
+    <h2>마무리: 핵심 내용 요약 📝</h2>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>요리 핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 번째 핵심:</b> <span class="highlight">돼지고기 목살을 튀기지 않고 조리!</span> 기름지지 않고 건강하게 바삭한 식감을 즐길 수 있습니다.
+                </div>
+                <div class="section">
+                    <b>📊 두 번째 핵심:</b> <span class="highlight">감자전분 코팅으로 바삭함 극대화!</span> 물에 불리지 않고 전분만 입혀도 뛰어난 바삭함을 선사합니다.
+                </div>
+                <div class="section">
+                    <b>🧮 세 번째 핵심:</b>
+                    <div class="formula">새콤달콤 소스 황금비율 = (고추장 1 + 케첩 1 + 간장 1 + 소주 1 + 식초 2 + 물엿 3 + 다진 마늘 0.5 + 물 2)</div>
+                </div>
+                <div class="section">
+                    <b>👩‍💻 네 번째 핵심:</b> <span class="highlight">양념치킨과 탕수육의 완벽한 조화!</span> 중독성 강한 맛으로 온 가족이 좋아하는 특별한 메뉴입니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                간단한 재료로 쉽게 만들 수 있으며, 주말 별미나 술안주로도 좋습니다.
+            </div>
+        </div>
+    </div>
+
+    <p data-ke-size="size16">&nbsp;</p>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <p>해당 없음</p>
+</body>
+</html>
