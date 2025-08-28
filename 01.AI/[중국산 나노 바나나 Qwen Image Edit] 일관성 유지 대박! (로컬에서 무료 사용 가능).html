@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[중국산 나노 바나나 Qwen Image Edit] 일관성 유지 대박! (로컬에서 무료 사용 가능)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #e0f2f7;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 20px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 15px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 8px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 25px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 25px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            p, li {
+                font-size: 15px;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            p, li {
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[중국산 나노 바나나 Qwen Image Edit] 일관성 유지 대박! (로컬에서 무료 사용 가능)</h1>
+
+        <div class="video-meta">
+            <p><strong>videoId:</strong> w_a6rlZSgns</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=w_a6rlZSgns" target="_blank">https://www.youtube.com/watch?v=w_a6rlZSgns</a></p>
+            <p><strong>영상 길이:</strong> 00시간07분57초 (7분)</p>
+        </div>
+
+        <h2>개요</h2>
+        <p>이 영상은 알리바바의 오픈소스 AI 이미지 편집 모델인 'Qwen Image Edit'을 소개하고, 로컬 환경에서 무료로 설치하고 사용하는 방법을 안내합니다. 구글의 Gemini 모델과 유사하게 이미지의 일관성을 유지하며 섬세한 수정을 가능하게 하는 이 모델의 강력한 기능을 실제 예시와 함께 보여주며, 오픈소스 AI의 활용 가치를 강조합니다.</p>
+
+        <h2>내용</h2>
+
+        <h3>[서론] Qwen Image Edit 소개 (00:00:00 - 00:00:34)</h3>
+        <ul>
+            <li>영상의 도입부에서 머리카락이 있던 이미지에서 머리카락이 사라진 완성 이미지를 보여주며 Qwen Image Edit 모델의 기능을 시각적으로 강조합니다. (00:00:00 - 00:00:08)</li>
+            <li>구글의 Gemini 2.1 Flash 이미지 모델처럼 이미지의 일관성을 유지하며 수정하는 Qwen Image Edit 모델을 소개합니다. (00:00:11 - 00:00:34)</li>
+        </ul>
+
+        <h3>[모델 개요] Qwen Image Edit 특징 (00:00:35 - 00:01:42)</h3>
+        <ul>
+            <li>Qwen Image Edit는 <a href="https://oo.ai/search?q=오픈소스 모델" target="_blank">오픈소스 모델</a>이며, <a href="https://oo.ai/search?q=Hugging Face" target="_blank">Hugging Face</a>에서 다운로드 가능하고 이미 5만 회 이상 다운로드되었습니다. (00:00:35 - 00:00:45)</li>
+            <p class="definition">※ <a href="https://oo.ai/search?q=오픈소스 모델" target="_blank">오픈소스 모델</a>: 소스 코드가 공개되어 누구나 자유롭게 사용, 수정, 배포할 수 있는 소프트웨어 모델.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=Hugging Face" target="_blank">Hugging Face</a>: AI 모델, 데이터셋, 데모 등을 공유하고 탐색할 수 있는 선도적인 플랫폼.</p>
+            <li>20GB 크기의 Qwen 이미지 모델 위에 구축되었으며, 기존 이미지를 포토샵처럼 미세하게 수정하는 데 특화되어 있습니다. (00:00:48 - 00:01:06)</li>
+            <li>예시: 옆모습 이미지를 앞모습으로 바꾸기, 자동차 옆모습을 앞모습으로 바꾸기 등. (00:01:06 - 00:01:19)</li>
+            <li>사진을 아바타 형식으로 그리거나, 특정 텍스트를 이미지에 삽입, 심지어 머리카락 제거 같은 정교한 수정도 가능합니다. (00:01:28 - 00:01:42)</li>
+        </ul>
+
+        <h3>[경쟁 및 적용 분야] AI 이미지 편집 기술의 발전 (00:01:43 - 00:02:32)</h3>
+        <ul>
+            <li>원본 이미지와 수정된 이미지의 높은 일관성을 강조하며, N 글자만 파란색으로 바꾸는 예시를 통해 디자인 패러다임의 변화를 설명합니다. (00:01:43 - 00:01:57)</li>
+            <li>Google의 신모델과 더불어 Alibaba Qwen의 기술력이 뛰어나며, 미국과 중국의 AI 기술 경쟁 상황을 언급합니다. (00:01:58 - 00:02:11)</li>
+            <li>장소, 옷, 문자 등 다양한 요소를 이미지 내에서 수정할 수 있어 활용도가 매우 높습니다. (00:02:11 - 00:02:23)</li>
+            <li>현재는 중국어와 영어만 잘 지원하지만, 그 디테일이 인상적입니다. (00:02:24 - 00:02:32)</li>
+        </ul>
+
+        <h3>[실습 가이드] Qwen Image Edit 설치 및 사용법 (00:02:32 - 00:05:01)</h3>
+        <ul>
+            <li>고정 댓글의 교육 링크(philosophy ai naver)에서 튜토리얼 텍스트 파일을 다운로드합니다. (00:02:32 - 00:02:44)</li>
+            <li>첫 번째 단계는 <a href="https://oo.ai/search?q=ComfyUI" target="_blank">ComfyUI</a> 설치입니다. 웹사이트 링크를 통해 다운로드할 수 있습니다. (00:02:44 - 00:03:07)</li>
+            <p class="definition">※ <a href="https://oo.ai/search?q=ComfyUI" target="_blank">ComfyUI</a>: 스테이블 디퓨전(Stable Diffusion)과 같은 이미지 생성 AI 모델을 그래픽 인터페이스로 쉽게 조작할 수 있도록 돕는 워크플로우 기반의 사용자 인터페이스.</p>
+            <li>두 번째 단계는 Qwen Image Edit 모델 다운로드입니다. Hugging Face 페이지에서 <a href="https://oo.ai/search?q=디퓨전 모델" target="_blank">디퓨전 모델</a>, <a href="https://oo.ai/search?q=LoRA" target="_blank">LoRA</a>, <a href="https://oo.ai/search?q=Text-Encoder" target="_blank">Text-Encoder</a>, <a href="https://oo.ai/search?q=VAE" target="_blank">VAE</a> 파일 4가지를 다운로드합니다. (00:03:07 - 00:03:57)</li>
+            <p class="definition">※ <a href="https://oo.ai/search?q=디퓨전 모델" target="_blank">디퓨전 모델</a>: 확산 모델. 노이즈(잡음)에서 이미지를 생성하거나, 이미지를 노이즈로 되돌리는 과정을 학습하여 이미지를 생성하거나 편집하는 AI 모델.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=LoRA" target="_blank">LoRA</a>: Low-Rank Adaptation의 약자로, 대규모 AI 모델을 전체적으로 재학습시키지 않고 일부 가중치만 효율적으로 미세 조정하여 특정 작업에 맞게 최적화하는 기술.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=Text-Encoder" target="_blank">Text-Encoder</a>: 텍스트 인코더. AI 모델이 이해할 수 있도록 텍스트 프롬프트(명령어)를 숫자 형태의 데이터로 변환하는 부분.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=VAE" target="_blank">VAE</a>: Variational AutoEncoder의 약자로, 이미지와 같은 데이터를 압축(인코딩)하고 다시 복원(디코딩)하는 데 사용되는 신경망. 디퓨전 모델에서는 이미지의 세부적인 특징을 효율적으로 다루는 역할을 합니다.</p>
+            <li>다운로드한 파일들을 ComfyUI 설치 폴더 내의 <code>models/checkpoints</code>, <code>models/lora</code>, <code>models/vae</code>, <code>models/text-encoders</code> 경로에 각각 배치합니다. (00:03:58 - 00:05:01)</li>
+        </ul>
+
+        <h3>[워크플로우 로드 및 실행] (00:05:01 - 00:06:12)</h3>
+        <ul>
+            <li>Qwen Image Edit 공식 문서에서 JSON <a href="https://oo.ai/search?q=워크플로우" target="_blank">워크플로우</a> 파일을 다운로드합니다. (00:05:01 - 00:05:17)</li>
+            <p class="definition">※ <a href="https://oo.ai/search?q=워크플로우" target="_blank">워크플로우</a>: 어떤 작업을 수행하기 위한 일련의 순서나 단계. ComfyUI에서는 노드와 연결선으로 구성된 작업 흐름을 의미.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=JSON 파일" target="_blank">JSON 파일</a>: JavaScript Object Notation의 약자로, 컴퓨터에서 정보를 저장하고 교환하는 데 사용되는 가벼운 데이터 형식.</p>
+            <li>ComfyUI를 실행하고 '파일 열기'를 통해 다운로드한 워크플로우 JSON 파일을 불러옵니다. (00:05:31 - 00:06:00)</li>
+            <li>워크플로우에 모델, 인코더, VAE 등이 올바르게 로드되었는지 확인합니다. (00:06:00 - 00:06:12)</li>
+        </ul>
+
+        <h3>[실제 시연] 머리카락 제거 예시 (00:06:13 - 00:06:49)</h3>
+        <ul>
+            <li>이미지를 업로드하고, 수정 사항을 텍스트로 입력합니다. (00:06:13 - 00:06:31)</li>
+            <li>"remove the strand of hair from the plate"라는 프롬프트를 사용하여 접시의 머리카락을 제거하는 과정을 시연합니다. (00:06:36 - 00:06:45)</li>
+            <li>원본 이미지의 머리카락이 완성된 이미지에서 감쪽같이 사라진 결과를 보여주며 모델의 성능에 놀라움을 표합니다. (00:06:45 - 00:06:49)</li>
+        </ul>
+
+        <h3>[오픈소스 AI의 가치] (00:06:50 - 00:07:40)</h3>
+        <ul>
+            <li>Qwen Image Edit처럼 <a href="https://oo.ai/search?q=로컬" target="_blank">로컬</a>에서 무료로 사용할 수 있는 오픈소스 AI의 가치를 강조합니다. (00:06:50 - 00:07:01)</li>
+            <p class="definition">※ <a href="https://oo.ai/search?q=로컬" target="_blank">로컬</a>: 인터넷에 연결된 서버가 아닌, 사용자 자신의 컴퓨터 환경에서 직접 소프트웨어를 실행하는 방식.</p>
+            <li>오픈소스 AI는 다룰 줄 아는 사람에게는 다이아몬드 같고, 모르는 사람에게는 돌멩이와 같다고 비유합니다. (00:07:05 - 00:07:14)</li>
+            <li><a href="https://oo.ai/search?q=API" target="_blank">API</a> 비용 없이 무료로 사용할 수 있지만, 사용 방법을 익히기 위한 학습이 필요함을 언급합니다. (00:07:18 - 00:07:27)</li>
+            <p class="definition">※ <a href="https://oo.ai/search?q=API" target="_blank">API</a>: Application Programming Interface의 약자로, 서로 다른 소프트웨어 시스템이 통신하고 데이터를 교환할 수 있도록 정의된 규칙 집합.</p>
+            <li>어느 정도 컴퓨터 지식이 필요하지만, AI를 무료로 쓸 수 있는 가치를 고려하면 충분히 시도해 볼 만하다고 강조합니다. (00:07:30 - 00:07:40)</li>
+        </ul>
+
+        <h3>[결론 및 당부] (00:07:40 - 00:07:57)</h3>
+        <ul>
+            <li>Qwen Image Edit 모델에 대한 소개를 마무리하며, 관심 있는 독자들에게 직접 사용해보고 의견을 공유해달라고 요청합니다. (00:07:40 - 00:07:49)</li>
+            <li>영상을 끝까지 시청하고 실습해본 이들에게 격려의 메시지를 전달합니다. (00:07:51 - 00:07:53)</li>
+            <li>좋아요와 구독을 부탁하며 영상을 마칩니다. (00:07:54 - 00:07:57)</li>
+        </ul>
+
+        <h2>요약</h2>
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ Qwen Image Edit 모델 소개:</b> 알리바바의 <a href="https://oo.ai/search?q=오픈소스 모델" target="_blank">오픈소스 AI</a>로, 구글의 Gemini 모델과 유사하게 이미지의 <span class="highlight">일관성을 유지하며 정교한 편집</span>이 가능합니다.
+                    </div>
+                    <div class="section">
+                        <b>📊 주요 기능:</b> 이미지의 <span class="highlight">객체 제거(예: 머리카락), 텍스트 삽입 및 수정, 외관 편집</span> 등 포토샵 같은 미세한 수정이 특징입니다.
+                    </div>
+                    <div class="section">
+                        <b>💻 설치 및 사용법:</b> <a href="https://oo.ai/search?q=ComfyUI" target="_blank">ComfyUI</a>를 설치하고, <a href="https://oo.ai/search?q=Hugging Face" target="_blank">Hugging Face</a>에서 <a href="https://oo.ai/search?q=디퓨전 모델" target="_blank">디퓨전 모델</a>, <a href="https://oo.ai/search?q=LoRA" target="_blank">LoRA</a>, <a href="https://oo.ai/search?q=Text-Encoder" target="_blank">Text-Encoder</a>, <a href="https://oo.ai/search?q=VAE" target="_blank">VAE</a> 파일을 다운로드하여 해당 경로에 배치한 후, <a href="https://oo.ai/search?q=워크플로우" target="_blank">워크플로우</a> JSON 파일을 ComfyUI에 로드하여 사용합니다.
+                    </div>
+                    <div class="section">
+                        <b>💰 오픈소스 AI의 가치:</b> <a href="https://oo.ai/search?q=API" target="_blank">API</a> 비용 없이 <span class="highlight">로컬에서 무료로 사용</span>할 수 있으며, 학습을 통해 누구나 활용 가능한 강력한 도구입니다.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    영상을 참고하여 직접 설치하고 사용해보며 AI 이미지 편집의 놀라운 변화를 경험해보세요.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
