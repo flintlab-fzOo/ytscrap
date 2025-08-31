@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 상한가, 급등 종목과 이유： 동일스틸럭스, 삼영엠텍, SGA, 청담글로벌, HJ중공업, 모비스, 뉴키즈온, 범한퓨얼셀, 동방선기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00796b;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 20px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid #4dd0e1;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 15px;
+        }
+        .single-summary-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4pt;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 15px auto;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 10px 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            p, li {
+                font-size: 15px;
+            }
+            .single-summary-card {
+                padding: 18px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 18px;
+                padding: 8px 15px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+            p, li {
+                font-size: 14px;
+            }
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px;
+            }
+        }
+        .disclaimer {
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>오늘 상한가, 급등 종목과 이유： 동일스틸럭스, 삼영엠텍, SGA, 청담글로벌, HJ중공업, 모비스, 뉴키즈온, 범한퓨얼셀, 동방선기</h1>
+        
+        <div class="video-meta">
+            <p><strong>videoId:</strong> ZmNJWvebQP0</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=ZmNJWvebQP0" target="_blank">https://www.youtube.com/watch?v=ZmNJWvebQP0</a></p>
+            <p><strong>영상 길이:</strong> 00시간12분22초 (12분)</p>
+        </div>
+
+        <h2>개요</h2>
+        <p>2024년 8월 29일 금요일, 코스피 지수는 0.32% 하락한 3,186.01 포인트, 코스닥 지수는 0.19% 하락한 796.91 포인트로 마감했습니다. 외국인은 매도, 기관과 개인은 매수로 대응하는 혼조세 속에서도 총 28개 종목이 10% 이상 급등했으며, 이 중 동일스틸럭스, 삼영엠텍, SGA 3종목이 상한가를 기록했습니다. 주요 급등 테마는 조선, 반도체, 핵융합 에너지, 저출산 관련주였으며, 울타뷰티의 호실적에 따른 화장품 관련주 일부 상승도 관찰되었습니다. 반면, 텔콘 RF제약은 유상증자 신주 상장을 앞두고 권리 매도 첫날 하한가를 기록했습니다.</p>
+
+        <h2>내용</h2>
+        <h3>[시장 현황]</h3>
+        <ul>
+            <li><strong>코스피 지수 마감</strong> (00:00:06): 0.32% 하락한 3,186.01 포인트. 외국인 매도, 기관 및 개인 매수. 코스피 거래 대금 8조 원.</li>
+            <li><strong>코스닥 지수 마감</strong> (00:00:21): 0.19% 하락한 796.91 포인트.</li>
+        </ul>
+        <h3>[오늘의 급등/상한가/하한가 종목]</h3>
+        <ul>
+            <li><strong>10% 이상 급등 종목</strong> (00:00:38): 총 28종목 (코스피 4종목, 코스닥 24종목).</li>
+            <li><strong>상한가 종목</strong> (00:00:46): 동일스틸럭스, 삼영엠텍, SGA (총 3종목).</li>
+            <li><strong>하한가 종목</strong> (00:00:51): 텔콘 RF제약 (1종목).</li>
+        </ul>
+        <h3>[조선 테마]</h3>
+        <ul>
+            <li><strong>한미 조선 협력 기대감</strong> (00:01:04): 트럼프 정부가 한국에서 미국 군함을 건조할 수 있도록 하는 방안 검토 중. 미국 '번스 톨레프슨 법' 우회 방안 논의 예정.</li>
+            <li><strong>캐나다 잠수함 프로젝트</strong> (00:01:45): 한화오션과 HD현대중공업이 원팀을 구성하여 캐나다 잠수함 12척 도입 사업 최종 결선에 진출. 총 60조 원 규모의 사상 최대 방산 수출 계약 기대감.
+                <ul>
+                    <li>수주 시 STX엔진, 범한퓨얼셀 등 국내 밸류체인 기업 전반 수혜 전망.</li>
+                </ul>
+                <p class="definition">※ <a href="https://oo.ai/search?q=밸류체인" target="_blank">밸류체인</a>: 기업이 제품이나 서비스를 생산하고 고객에게 전달하기까지 거치는 모든 활동을 가치 창출의 관점에서 분석한 연속적인 과정.</p>
+            </li>
+            <li><strong>하나엔진 차세대 엔진 생산 성공</strong> (00:02:36): 세계 최초 에코잔형가스 운반선용 가변 압축비 기술 적용 차세대 엔진 생산 성공 발표. 삼성중공업 카타르 프로젝트 선박에 탑재 예정.</li>
+            <li><strong>동일스틸럭스 강세</strong> (00:03:05): 화인베스틸의 2대 주주이자 자회사 대선조선을 통해 함정 유지보수 정비 분야 진출 기대감.</li>
+            <li><strong>범한퓨얼셀 강세</strong> (00:03:17): 한화오션을 고객사로 두고 있다는 사실 부각.</li>
+        </ul>
+        <h3>[화장품 테마]</h3>
+        <ul>
+            <li><strong>울타뷰티 호실적 및 전망 상향</strong> (00:03:24): 미국의 대표 화장품 유통업체 울타뷰티가 2분기 호실적을 바탕으로 연간 매출 및 이익 전망치를 상향 조정. 해외 시장 공략 가속화.</li>
+        </ul>
+        <h3>[반도체 테마]</h3>
+        <ul>
+            <li><strong>미국 2분기 GDP 성장률</strong> (00:03:56): 이전 분기 대비 3.3% 증가 (시장 전망치 상회)로 견고한 경제 성장세 확인. 미국 3대 지수 모두 상승 마감.</li>
+            <li><strong>삼성전자 HBM 시장 점유율 확대 기대</strong> (00:04:16): KB증권, 삼성전자 3분기 영업이익 개선 및 내년 HBM 시장 점유율 확대 전망. HBM4 내부 양산 승인 및 4분기 초기 생산 단계 진입 예상.</li>
+            <li><strong>PSK 강세</strong> (00:04:45): 미국과 중국 간 반도체 갈등 심화에 따른 반사수혜 기대. 한국투자증권은 TSMC의 중국산 장비 배제 결정으로 PSK의 점유율 확대 전망. 목표 주가 39,000원 제시 (정규장 종가 24,500원).</li>
+        </ul>
+        <h3>[개별 이슈]</h3>
+        <ul>
+            <li><strong>SGA, 썸에이지, SGA솔루션즈</strong> (00:05:24): 급등 이유 미파악. 최근 가상자산 신사업 기대감으로 강세 보인 바 있음. (비트코인 가격은 횡보 중)</li>
+            <li><strong>모비스</strong> (00:05:43): 미국의 핵융합 스타트업 커먼웰스 퓨전 시스템즈가 엔비디아와 구글 등으로부터 8.63억 달러 신규 투자 유치 소식에 핵융합 에너지 관련주 강세.</li>
+            <li><strong>뉴키즈온</strong> (00:06:10): 보건복지부 내년 예산안에서 저출산·고령화 핵심 분야 예산 집중 및 올해 합계 출산율 2년 연속 증가 전망에 저출산 관련주 상승.</li>
+            <li><strong>코퍼스코리아</strong> (00:06:34): 급등 이유 미파악. 55만 주 규모의 전환청구권 행사(발행주식 총수 대비 1.4%)를 앞두고 있으며, 전환가액 1,261원 대비 현재 주가 1,601원으로 차익 실현 가능성.</li>
+            <li><strong>프로티나, 아모센스, 캐리</strong> (00:06:55): 급등 이유 미파악.</li>
+            <li><strong>DND파마텍</strong> (00:07:00): 미국 FDA의 대사 이상 지방간염(MASH) 신약 임상 기준 완화 검토 소식에 관련 임상(DD01 임상 2상) 진행 중인 점 부각. 한미약품, 올릭스 등도 관련 신약 개발 중.</li>
+            <li><strong>네오크레마</strong> (00:07:27): 사상 최대 실적 기록 및 저분자 혐오펩타이드 상업화 단계 진입 분석에 강세. 한양증권은 네오크레마 원료의 글로벌 대형 유통사 공급 및 국내 비만 치료제 기업 대비 극심한 저평가 상태로 판단.</li>
+            <li><strong>퀀타메트릭스</strong> (00:08:08): 미국 정부 주도 감염병 대응 펀드의 지원 대상으로 국내 기업 최초 선정. 신생아 혈액에서 6시간 내 50종 이상 균 검출 기술 과제 수행.</li>
+            <li><strong>영흥</strong> (00:08:35): 여당의 자사주 소각 의무화 추진 소식에 자사주 비중이 32%로 높은 영흥이 부각되며 강세. 9월 정기국회에서 상법 개정안 심사 및 통과 여부가 주요 쟁점.</li>
+        </ul>
+        <h3>[하한가 종목] 텔콘 RF제약</h3>
+        <ul>
+            <li><strong>유상증자 권리 매도 첫날 하한가</strong> (00:09:11): 주주 배정 후 일반 공모 유상증자 추가 상장 공시 후 권리 매도 가능 첫날 하한가 마감.
+                <p class="definition">※ <a href="https://oo.ai/search?q=권리매도" target="_blank">권리매도</a>: 유상증자 등으로 신주를 받을 권리가 있는 투자자가, 신주가 상장되기 전에 그 권리를 팔아 이익을 확정하는 행위. 보통 구주와 신주가 합쳐져 거래되기 전, 신주가 상장될 예정일보다 앞서 구주를 매도하는 방식.</p>
+                <ul>
+                    <li>9월 2일 382만 주(발행가 3,835원) 추가 상장 예정. 오늘 정규장 종가는 2,290원.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>[시장별 거래량/거래대금 상위 종목]</h3>
+        <ul>
+            <li><strong>코스피 거래량 상위</strong> (00:10:00): HJ중공업(급등), 세진중공업, NK, 삼성전자, 하나엔진(급등), 영흥(급등), 삼성중공업, 두산애너빌리티, STX엔진, 화인베스틸(급등).
+                <ul>
+                    <li>HJ중공업, 하나엔진, 화인베스틸은 조선 관련주. 영흥은 자사주 비중 상위 기업.</li>
+                </ul>
+            </li>
+            <li><strong>코스닥 거래량 상위</strong> (00:10:38): 썸에이지(급등), 이스트아시아홀딩스, 에코, 현대ADM, SGA솔루션즈(급등), 모비스(급등), 동방성기(급등), 코닉오토메이션, 삼영엠텍(급등), SGA(급등).
+                <ul>
+                    <li>썸에이지, SGA솔루션즈, SGA는 가상자산 관련주. 모비스는 핵융합 에너지 관련주. 동방성기, 삼영엠텍은 조선 관련주.</li>
+                </ul>
+            </li>
+            <li><strong>코스피 거래대금 상위</strong> (00:11:18): 삼성전자, 하이닉스, HJ중공업(급등), 하나오션, 하나엔진(급등), 두산에너빌리티, HD현대중공업, 현대로템, HD한국조선해양, 세진중공업.
+                <ul>
+                    <li>HJ중공업, 하나엔진은 조선 기업.</li>
+                </ul>
+            </li>
+            <li><strong>코스닥 거래대금 상위</strong> (00:11:42): 알테오젠, 로보티즈, D&D파마텍(급등), 에센시스, 범한퓨얼셀(급등), G2G바이오, 삼영엠텍(급등), 현대ADM, ABL바이오, 현대엠스.
+                <ul>
+                    <li>D&D파마텍은 대사 이상 지방간염 관련. 범한퓨얼셀은 한화오션 고객사 부각. 삼영엠텍은 조선기자재 기업.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>요약</h2>
+        <div class="single-summary-card-container">
+            <div class="single-summary-card">
+                <div class="card-header">
+                    <span class="card-header-icon">💡</span>
+                    <h3><b>오늘의 시장 핵심 요약</b></h3>
+                </div>
+                <div class="card-content">
+                    <div class="section">
+                        <b>✨ 시장 동향:</b> 코스피/코스닥 하락세 속 <span class="highlight">28개 종목 급등</span>, 동일스틸럭스, 삼영엠텍, SGA 상한가 기록.
+                    </div>
+                    <div class="section">
+                        <b>🚢 조선 테마 강세:</b> 트럼프 발 <span class="highlight">한미 군함 건조 검토</span>, 캐나다 잠수함 사업 기대감, 하나엔진 차세대 기술 성공 등으로 관련주 동반 상승.
+                    </div>
+                    <div class="section">
+                        <b>📈 반도체 기대감:</b> 견조한 미국 GDP와 <span class="highlight">삼성전자 HBM 시장 확대 전망</span>, 미중 갈등 수혜로 PSK 강세.
+                    </div>
+                    <div class="section">
+                        <b>⚡️ 기타 테마 부각:</b> <span class="highlight">핵융합 에너지</span>(모비스), <span class="highlight">저출산</span>(뉴키즈온), <span class="highlight">자사주 소각 이슈</span>(영흥) 등 정책 및 산업 이슈에 따른 급등.
+                    </div>
+                    <div class="section">
+                        <b>⚠️ 하한가 종목:</b> <span class="highlight">텔콘 RF제약</span>은 유상증자 신주 상장 전 권리 매도로 하한가 기록, 오버행 리스크 주의.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    투자 시 테마의 지속성, 개별 기업의 펀더멘탈, 그리고 오버행 리스크를 종합적으로 고려해야 합니다.
+                </div>
+            </div>
+        </div>
+
+        <h2>매매관련 고려해야 할 사항</h2>
+        <div class="info-box">
+            <ul>
+                <li><strong>테마성 강세 종목 분석:</strong> 조선, 핵융합 에너지, 저출산 관련주 등 특정 테마에 묶여 급등한 종목의 경우, 해당 테마의 지속 가능성과 실적 연계성을 면밀히 분석해야 합니다. 특히 캐나다 잠수함 사업이나 한미 조선 협력 같은 대형 프로젝트는 장기적인 관점에서 기업 가치에 큰 영향을 미칠 수 있습니다.</li>
+                <li><strong>개별 기업의 독점적 기술 및 경쟁 우위:</strong> 하나엔진의 차세대 엔진 기술, PSK의 미중 반도체 갈등 반사수혜, 네오크레마의 혐오펩타이드 상업화, 퀀타메트릭스의 정부 펀드 선정 등 독점적이거나 경쟁 우위에 있는 기술/사업을 가진 기업들은 지속적인 상승 모멘텀을 가질 수 있으므로 사업 내용과 성장성을 심층적으로 검토해야 합니다.</li>
+                <li><strong>재료 소멸 및 오버행 리스크:</strong> 텔콘 RF제약의 하한가 사례처럼 유상증자, 전환사채(CB) 전환 등 추가 상장 물량이 있는 종목은 '권리 매도'와 '오버행' 리스크가 존재하므로 투자 시 매우 신중해야 합니다. 코퍼스코리아의 경우에도 전환청구권 행사 물량과 전환가격을 고려하여 매매 시점을 신중하게 결정해야 합니다.</li>
+                <li><strong>정책 변화 및 규제:</strong> 여당의 자사주 소각 의무화 추진과 같은 정책적 변화는 영흥과 같은 자사주 비중 상위 기업에 직접적인 영향을 미칠 수 있습니다. 이러한 정책 동향을 주시하며 관련 기업의 주가 흐름을 분석하는 것이 중요합니다.</li>
+                <li><strong>실적과 전망:</strong> 울타뷰티의 호실적 발표나 삼성전자의 HBM 시장 점유율 확대 전망처럼 기업의 실적 개선 및 긍정적인 미래 전망은 주가 상승의 강력한 동인이 됩니다. 실적 발표 시즌에는 특히 기업의 재무 상태와 사업 전망을 꼼꼼히 확인해야 합니다.</li>
+                <li><strong>미파악 급등 종목 주의:</strong> SGA, 썸에이지, SGA솔루션즈, 프로티나, 아모센스, 캐리 등 급등 이유가 명확히 파악되지 않는 종목은 테마나 뉴스에 의한 일시적 변동성일 수 있으므로 투자에 각별한 주의가 필요합니다.</li>
+            </ul>
+        </div>
+        
+        <p class="disclaimer">해당 내용은 AI가 작성한 내용으로 부분 잘못된 내용일수 있습니다.</p>
+    </div>
+</body>
+</html>
