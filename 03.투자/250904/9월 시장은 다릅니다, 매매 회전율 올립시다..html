@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9월 시장은 다릅니다, 매매 회전율 올립시다.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px dashed #b2ebf2;
+            padding-bottom: 5px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .info-box, .warning-box {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>9월 시장은 다릅니다, 매매 회전율 올립시다.</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> vp7sMsWIfo0</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=vp7sMsWIfo0" target="_blank">https://www.youtube.com/watch?v=vp7sMsWIfo0</a></p>
+        <p><strong>제목:</strong> 9월 시장은 다릅니다, 매매 회전율 올립시다.</p>
+        <p><strong>영상 길이:</strong> 00시간12분54초(012분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 9월 4일 VIP 전용 방송 내용을 담고 있으며, LG이노텍의 단기 매매 청산 결과와 미국 및 국내 증시 현황을 분석합니다. 특히 9월 시장은 단기 매매와 높은 매매 순환율을 목표로 하며, 보유 종목들의 현황과 향후 투자 전략을 공유합니다. 종목 선정 시 기대감뿐 아니라 시장에서의 부각 가능성, 테마의 연속성, 외국인 관심 여부, 그리고 정책 및 실적의 중요성을 강조합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[LG이노텍 매매 결과]</h3>
+    <ul>
+        <li>LG이노텍 전량 매도 (00:00:00)
+            <ul>
+                <li>현재 시점에서 172,200원에 전량 매도하여 전량 수익 청산.</li>
+                <li>이번 주 화요일에 진입하여 오늘 개장 직후 매도.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[9월 매매 전략]</h3>
+    <ul>
+        <li>9월은 단기 매매를 통한 매매 순환 강조 (00:00:17)
+            <ul>
+                <li>보유 기간을 짧게 가져가고 매매 순환율을 높일 계획을 밝혔다.</li>
+                <li>현재 계획대로 현금 회전이 잘 이루어지고 있으며, 계속해서 순환 매매 종목을 추적할 예정이다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[전일 미국 증시 분석]</h3>
+    <ul>
+        <li>미국 3대 증시 마감 현황 (00:00:51)
+            <ul>
+                <li>나스닥 종합 1.02%, S&P500 0.51% 상승 마감.</li>
+                <li>필라델피아 반도체 지수 0.23%, 다우지수 0.05% 하락 마감.</li>
+            </ul>
+        </li>
+        <li>나스닥 상승 요인 분석 (00:01:10)
+            <ul>
+                <li>매크로 호조가 아닌 알파벳(구글 모회사)의 급등이 나스닥을 견인.</li>
+                <li>구글의 반독전법 논란 해소: 연방법원이 구글 크롬 사업 매각 불필요 판결, 불확실성 해소.</li>
+                <li>밸류 평가 기대감 및 주요 기관들의 목표주가 상향 조정으로 강세.</li>
+                <li>애플 또한 아이폰에 구글 검색 기능 사전 탑재 가능성 분석으로 강세, 나스닥 상승 견인.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=매크로" target="_blank">매크로</a>: 거시경제. 한 국가 또는 지역 전체의 경제 현상을 다루는 분야. 거시경제 지표는 국가의 전반적인 경제 상황을 나타낸다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=반독전법" target="_blank">반독전법</a>: 독점을 방지하고 시장 경쟁을 촉진하기 위한 법률. 주로 독과점적 지위를 이용한 불공정 행위를 규제한다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=밸류" target="_blank">밸류</a>: 기업의 본질적인 가치 또는 그 가치에 대한 평가. 주식 시장에서는 기업의 재무 상태, 성장 가능성 등을 종합적으로 고려한 가치를 의미한다.</p>
+
+    <h3>[LG이노텍 매수/매도 관점 복기]</h3>
+    <ul>
+        <li>LG이노텍 매수 관점 (00:03:45)
+            <ul>
+                <li>아이폰 관련주로 부각 (9월 9일 아이폰 신규 출시 기대).</li>
+                <li>화웨이, 삼성, 애플 등 주요 모바일 제조사의 신규폰 출시 일정들이 겹쳐 모바일 테마 전체에 주목.</li>
+                <li>LG이노텍은 아이폰 출시 일정이 가장 뒤여서 불확실성이 적고, 하단 추세와 지지가 견고하다고 판단.</li>
+                <li>기술적 흐름상 저점이 계속 올라가 추세가 상승하고 있었고, 장기 이동평균선을 돌파하려는 힘을 모으는 구간에서 소폭 돌파를 예상하고 진입.</li>
+                <li>수급이 강한 종목은 아니었지만, 리스크 없이 안전하게 수익을 낼 수 있는 종목으로 판단.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=장기평" target="_blank">장기평</a>: 장기 이동평균선의 줄임말. 특정 기간(예: 60일, 120일) 동안의 주가 평균을 이어서 만든 선으로, 주가의 장기적인 추세나 지지/저항을 파악하는 데 사용된다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=괴리" target="_blank">괴리</a>: 둘 이상이 서로 어긋나 동떨어져 있음. 여기서는 주가와 특정 지표 또는 예상치 간의 차이를 의미한다.</p>
+    <ul>
+        <li>LG이노텍 매도 관점 (00:05:48)
+            <ul>
+                <li>모바일 관련 일정들의 해석에 대한 불확실성.</li>
+                <li>테마 수급 변화: 이전에는 삼성전기 수급을 따라 움직이는 경향이 있었으나, 오늘 삼성전기 수급이 몰려도 LG이노텍이 따라가지 못하는 모습 포착.</li>
+                <li>삼성전자 일정을 앞두고 대장주로 수급이 뺏기고 있다고 판단.</li>
+                <li>단기 관점이었고 약 5%의 수익률을 보이고 있었으므로, 깔끔하게 매도하는 것이 현명하다고 판단.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[국내 증시 개장 현황]</h3>
+    <ul>
+        <li>9월 4일 국내 증시 개장 직후 (00:03:07)
+            <ul>
+                <li>코스피 0.31%, 코스닥 0.73% 상승 폭을 키워감.</li>
+                <li>외국인과 기관의 수급 동향이 강하거나 긍정적이지 않아 아직 증시 방향을 신뢰하기는 애매하다고 판단, 차분히 관망.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=수급%20동향" target="_blank">수급 동향</a>: 주식 시장에서 매수(수요)와 매도(공급)의 흐름을 나타내는 지표. 특정 종목이나 시장 전체의 가격 움직임을 예측하는 데 중요한 역할을 한다.</p>
+
+    <h3>[현재 보유 종목 현황]</h3>
+    <ul>
+        <li>[보유 종목 - 이름 미상] (00:07:04)
+            <ul>
+                <li>차익 물량을 걷어내고 매수세가 이어지며 10선 돌파 기대.</li>
+                <li>매도 물량이 많이 나왔고, 이제 매도보다 매수가 부각될 가격대로 판단.</li>
+                <li>단기 관점이 아닌 중장기 관점 종목으로, 떨어질 때마다 매수하여 비중을 실었고 현재 수익권 진입.</li>
+                <li>정부 정책 기조에 발맞춰 움직이는 기업이므로 중장기적으로 성장성을 지켜볼 예정, 동일 관점으로 홀딩.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=홀딩" target="_blank">홀딩</a>: 주식이나 기타 자산을 매도하지 않고 계속 보유하는 행위.</p>
+    <ul>
+        <li>[보유 종목 2 - 이름 미상 (**) ] (00:07:52)
+            <ul>
+                <li>현재 5% 정도 수익권. 단기적으로 부각될 모멘텀이 많다고 판단.</li>
+                <li>아이오니스 원료 공급 관련 모멘텀.</li>
+                <li>중국, 러시아, 북한 연합 움직임에 미국이 러시아에 추가 제재를 언급하고 있고, 중국에 대한 제재 가능성도 높음.</li>
+                <li>다음 카드는 생물보안법이 될 것이며, 국내에서 1순위로 부각될 수 있는 기업이라고 전망.</li>
+                <li>현재 고점일 수 있다는 의견도 있지만, 개인적으로는 생각이 다르다며 동일 관점으로 홀딩.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=모멘텀" target="_blank">모멘텀</a>: 주식 시장에서 특정 주가 또는 시장이 특정 방향으로 움직이는 데 영향을 미치는 동력이나 추진력. 주가 상승 또는 하락의 촉매제 역할을 한다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=생물보안법" target="_blank">생물보안법</a>: 생명공학 및 바이오 산업에서 국가 안보와 관련된 기술 및 데이터를 보호하기 위한 법률. 특히 외국 기업과의 협력이나 기술 유출 등을 규제할 수 있다.</p>
+    <ul>
+        <li>[GST] (00:08:42)
+            <ul>
+                <li>슈팅이 나오며 현재 7% 정도 수익률 돌파.</li>
+                <li>전일에도 특정 이슈 없는 매수세 (4억)가 있었고, 오늘 수급도 나쁘지 않음.</li>
+                <li>액침 냉각, 삼성전자 납품, AI 반도체 장비 시장에서 중요한 모멘텀을 가지고 지켜보는 종목.</li>
+                <li>많은 기업들이 4분기에 장비 납품을 받아야 하는 상황이므로 차분한 관점으로 지켜볼 예정.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=액침%20냉각" target="_blank">액침 냉각</a>: 서버나 고성능 컴퓨팅 장비에서 발생하는 열을 효율적으로 제거하기 위해 장비를 전도성 액체에 직접 담가 냉각하는 기술.</p>
+
+    <h3>[9월 포트폴리오 및 투자 전략]</h3>
+    <ul>
+        <li>9월 포트폴리오 견고화 (00:09:26)
+            <ul>
+                <li>9월은 매집의 시간이 될 것이라 예상했고, 현재 매수/비중 확대 종목에 현금을 사용하며 좋은 결과를 확인 중.</li>
+                <li>하반기에 접어들며 예상했던 모멘텀들이 증시에서 부각되고 있어 포트폴리오에 대한 기대가 높다.</li>
+            </ul>
+        </li>
+        <li>중장기 포트폴리오 구성 (00:10:00)
+            <ul>
+                <li>반도체, 정책, AI, 바이오 분야에서 최선호 종목들을 보유하고 있다고 판단.</li>
+                <li>증시 모멘텀 반응에 따라 9월 중순 전 한 종목 정도 추가 가능성을 시사.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[매매 종목 선정 시 고려 사항]</h3>
+    <ul>
+        <li>주린이가 놓치기 쉬운 관점 (00:10:27)
+            <ul>
+                <li>모든 종목/테마는 기대감을 가지고 있지만, 중요한 것은 '그 기대감과 재료가 지금 시장에서 부각될 만한지' 여부.</li>
+                <li>순환, 일정 등 다양한 요소를 종합적으로 보았을 때 해당 재료나 테마가 시장에서 부각되기 적합한지를 판단하는 것이 중요.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=주린이" target="_blank">주린이</a>: 주식 투자를 시작한 지 얼마 되지 않은 초보 투자자를 일컫는 말로, '주식'과 '어린이'의 합성어이다.</p>
+
+    <h3>[테마 분석의 중요성]</h3>
+    <ul>
+        <li>테마 구분 기준 (00:11:10)
+            <ul>
+                <li><strong>연속성이 있는 테마인가, 없는 테마인가:</strong> 연속성 없는 테마는 이슈가 끝나면 매매 관점이 제한적이다.</li>
+                <li><strong>외국인이 관심을 갖는 테마인가, 아닌가:</strong> 외국인이 관심을 갖지 않으면 수급이 들어오기 어렵고 주가가 오르기 쉽지 않다. 한국 증시는 전 세계 시가총액의 2~3%에 불과하여 외국인 자본에 크게 휘둘릴 수밖에 없다. 조선의 미국 전략 납품, 무기 수출, 아이폰 신제품 출시 등 외국인이 알 수밖에 없는 이슈가 중요하다.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=테마" target="_blank">테마</a>: 주식 시장에서 특정 이슈나 산업군에 따라 함께 움직이는 종목들의 집합. 특정 트렌드나 뉴스에 의해 형성된다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=파이" target="_blank">파이</a>: 전체 시장의 크기나 점유율을 비유적으로 이르는 말.</p>
+
+    <h3>[항상 부각되는 테마]</h3>
+    <ul>
+        <li>두 가지 중요한 테마 (00:12:12)
+            <ul>
+                <li><strong>정책:</strong> "정책에 반하는 종목을 하지 말라"는 주식 격언처럼, 정부 정책 기조와 함께 성장할 수 있는 기업을 고르는 것이 매우 중요하다.</li>
+                <li><strong>실적:</strong> 기업은 이윤 창출을 목표로 하며, 가치 평가의 1순위는 '돈을 얼마나 벌고 있는지'와 '돈을 얼마나 가지고 있는지'이므로 실적이 좋은 기업은 항상 부각될 수밖에 없다.</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=격언" target="_blank">격언</a>: 오랜 경험을 통해 얻은 교훈이나 지혜를 간결하게 표현한 말.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=이윤" target="_blank">이윤</a>: 기업 활동을 통해 벌어들인 총수익에서 비용을 제외한 순수한 이익.</p>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 9월 매매 전략:</b> <span class="highlight">단기 매매와 높은 매매 회전율</span>을 통해 수익을 추구하며, LG이노텍 매매를 통해 전략의 유효성을 확인.
+                </div>
+                <div class="section">
+                    <b>📊 증시 분석:</b> 미국 나스닥은 <span class="highlight">알파벳/애플 급등</span>으로 상승, 국내 증시는 수급 상황을 지켜보며 신중한 접근.
+                </div>
+                <div class="section">
+                    <b>📈 보유 종목 현황:</b> 중장기 종목들은 <span class="highlight">정책, AI, 바이오 등 모멘텀</span>을 기반으로 견조하며, 9월 중 추가 편입 가능성도 있음.
+                </div>
+                <div class="section">
+                    <b>🔎 투자 원칙:</b> 종목 선정 시 <span class="highlight">시장 부각 가능성, 테마의 연속성, 외국인 관심, 그리고 정책 및 실적</span>이라는 근본적 요소를 종합적으로 고려해야 함.
+                </div>
+            </div>
+            <div class="card-footer">
+                9월 시장 변화에 맞춰 유연한 매매 전략과 근본적인 기업 분석이 중요합니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>9월 시장 전략</strong>: 단기 매매에 집중하고, 보유 기간을 짧게 가져가며 매매 순환율을 높이는 전략을 고려해야 합니다.</li>
+        <li><strong>매수/매도 관점 복기</strong>: 성공적인 매매 경험을 통해 수익을 얻는 과정뿐만 아니라, 매수 및 매도 결정의 근거를 명확히 이해하고 복기하는 것이 중요합니다.</li>
+        <li><strong>테마 선정의 중요성</strong>:
+            <ul>
+                <li><strong>시장 부각 적합성</strong>: 모든 종목에 기대감이 있지만, 현재 시장에서 해당 재료나 테마가 부각되기 적합한 시점인지를 판단하는 것이 핵심입니다. (순환, 일정 등을 종합 고려)</li>
+                <li><strong>테마의 연속성</strong>: 단발성 이슈보다는 지속적인 성장이 기대되는 '연속성 있는' 테마를 선별해야 합니다.</li>
+                <li><strong>외국인 관심</strong>: 국내 증시는 외국인 자본의 영향이 크므로, 외국인 투자자들이 관심을 가질 만한 글로벌 이슈와 연결된 테마를 주목하는 것이 유리합니다.</li>
+            </ul>
+        </li>
+        <li><strong>근본적인 투자 기준</strong>:
+            <ul>
+                <li><strong>정부 정책</strong>: 정부 정책 기조에 발맞춰 성장할 수 있는 기업을 선택하는 것이 중요합니다. 정책에 반하는 종목은 피하는 것이 좋습니다.</li>
+                <li><strong>기업 실적</strong>: 기업의 본질적인 가치는 이윤 창출 능력에 있으므로, 꾸준히 돈을 벌고 재무 상태가 건전한 기업의 실적을 최우선으로 고려해야 합니다.</li>
+            </ul>
+        </li>
+        <li><strong>중장기 포트폴리오 관리</strong>: 단기 매매와 더불어 반도체, 정책, AI, 바이오 등 미래 성장 동력과 관련된 최선호 종목들을 중장기 관점으로 꾸준히 관리하고, 시장 모멘텀 변화에 따라 추가 편입을 고려할 수 있습니다.</li>
+        <li><strong>리스크 관리</strong>: 수급이 예상과 다르게 움직이거나 대장주로 수급이 뺏기는 등의 변화가 감지될 경우, 단기 수익권이라면 과감하게 매도하여 리스크를 줄이는 판단이 필요합니다.</li>
+    </ul>
+
+</body>
+</html>
