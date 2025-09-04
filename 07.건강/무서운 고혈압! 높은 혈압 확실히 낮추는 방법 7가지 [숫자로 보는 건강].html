@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무서운 고혈압! 높은 혈압 확실히 낮추는 방법 7가지 [숫자로 보는 건강]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-left: 4px solid #4dd0e1;
+            padding-left: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>무서운 고혈압! 높은 혈압 확실히 낮추는 방법 7가지 [숫자로 보는 건강]</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> LzHMy2ScdhA</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=LzHMy2ScdhA" target="_blank">https://www.youtube.com/watch?v=LzHMy2ScdhA</a></p>
+        <p><strong>제목:</strong> 무서운 고혈압! 높은 혈압 확실히 낮추는 방법 7가지 [숫자로 보는 건강]</p>
+        <p><strong>영상 길이:</strong> 00시간07분36초 (007분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 고혈압의 원인, 위험성, 그리고 혈압을 낮추기 위한 구체적인 생활 습관 개선 방법 6가지와 약물 치료의 중요성에 대해 설명합니다. 고혈압은 '조용한 살인자'로 불리며, 특별한 증상 없이 서서히 몸을 망가뜨리므로 정기적인 관리와 적극적인 치료가 필요함을 강조합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[고혈압의 미지수와 확실한 위험] (00:00:00 ~ 00:00:11)</h3>
+    <p>고혈압의 정확한 원인은 의사들도 명확히 알지 못하지만, 높은 혈압을 방치하는 것이 몸에 매우 해롭다는 사실은 분명합니다. 국내 약 1,300만 명 이상이 고혈압을 앓고 있습니다.</p>
+
+    <h3>[혈관 노화의 비유: 상수도관] (00:00:32 ~ 00:01:00)</h3>
+    <p>상수도관이 물의 압력으로 인해 시간이 지나면 노후되고, 과도한 물 흐름이나 노폐물 축적으로 압력이 오르면 문제가 발생하듯, 우리 몸의 혈관도 심장에서 혈액을 높은 압력으로 보내면서 노화됩니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=노후화" target="_blank">노후화</a>: 시설이나 기계 따위가 오래되어 제 기능을 다하기 어렵게 되는 현상.</p>
+
+    <h3>[고혈압의 메커니즘과 합병증] (00:01:00 ~ 00:01:43)</h3>
+    <p>혈관이 딱딱해지거나 혈액량이 증가하여 혈관벽에 가해지는 압력이 높아지면 심장과 혈관에 무리가 가는데, 이를 고혈압이라고 합니다.</p>
+    <p>고혈압을 방치하면 협심증, 심근경색, 심부전, 뇌졸중과 같은 심뇌혈관 질환을 포함해 만성콩팥병, 치매, 골다공증 등 다양한 합병증을 유발합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=고혈압" target="_blank">고혈압</a>: 혈압이 정상 범위보다 지속적으로 높은 상태. 보통 수축기 혈압 140mmHg 이상 또는 이완기 혈압 90mmHg 이상을 의미.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=협심증" target="_blank">협심증</a>: 심장으로 가는 혈액 공급이 부족하여 가슴에 통증이 발생하는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=심근경색" target="_blank">심근경색</a>: 심장 근육에 혈액 공급이 완전히 중단되어 심장 근육이 괴사하는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=심부전" target="_blank">심부전</a>: 심장이 혈액을 충분히 공급하지 못해 몸의 요구를 충족시키지 못하는 상태.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=뇌졸중" target="_blank">뇌졸중</a>: 뇌로 가는 혈액 공급에 문제가 생겨 뇌 기능이 손상되는 질환. 뇌경색과 뇌출혈 포함.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=만성콩팥병" target="_blank">만성콩팥병</a>: 콩팥 기능이 3개월 이상 점진적으로 저하되는 질환.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=치매" target="_blank">치매</a>: 뇌 기능 손상으로 인해 기억력, 사고력, 행동 능력 등이 저하되는 증후군.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=골다공증" target="_blank">골다공증</a>: 뼈의 밀도가 낮아져 약해지고 부러지기 쉬운 상태.</p>
+
+    <h3>[고혈압: 전 세계 사망 질병 부담 1위] (00:01:43 ~ 00:02:01)</h3>
+    <p>세계보건기구(WHO)에 따르면 고혈압은 전 세계 사망을 포함한 질병 부담의 20%를 차지하며, 담배, 비만, 운동 부족, 스트레스를 제치고 위험인자 중 1위를 차지합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=세계보건기구" target="_blank">세계보건기구</a>: 국제 연합 산하의 보건 전문 국제기구(World Health Organization, WHO).</p>
+
+    <h3>[고혈압의 별명: 조용한 살인자] (00:02:06 ~ 00:02:44)</h3>
+    <p>고혈압은 증상이 없어 '조용한 살인자'라고 불립니다. 불편함이 없어 혈압이 높은지 알기 어렵고, 진단받아도 치료를 망설이는 경우가 많습니다.</p>
+    <p>높은 혈압이 당장 문제가 되는 것이 아니라, 5년, 10년 이상 혈관에 문제가 누적되다가 20년 후에 심각한 증상이 발생하므로, 증상이 없어도 정기적인 혈압 측정이 중요합니다.</p>
+
+    <h3>[고혈압의 원인과 유전적 소인] (00:02:48 ~ 00:03:00)</h3>
+    <p>건강한 생활 습관을 유지했음에도 고혈압이 생기는 경우가 있는데, 이는 어느 정도 유전적 소인이 작용하기 때문입니다 (연구에 따르면 약 30% 기여).</p>
+    <p>여러 유전자가 복합적으로 작용하며 생활 습관과도 상호작용합니다.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=유전적 소인" target="_blank">유전적 소인</a>: 어떤 질병이나 특성을 가질 가능성이 유전자에 의해 predisposed된 경향.</p>
+
+    <h3>[나이가 들면 혈압이 오르는 이유] (00:03:00 ~ 00:03:28)</h3>
+    <p>연세가 들면 혈압이 올라가는 것은 피할 수 없는 부분입니다. 국내 60대 성인의 고혈압 유병률은 50%, 70세 이상은 65%에 달합니다.</p>
+
+    <h2>[혈압을 낮추는 7가지 방법: 생활 습관 관리]</h2>
+
+    <h3>[1. 싱겁게 먹기] (00:03:32 ~ 00:04:00)</h3>
+    <ul>
+        <li>소금은 혈액량을 결정하고 혈압을 높이는 주요 원인이므로 싱겁게 먹는 것만으로도 수축기 혈압을 약 5mmHg 낮출 수 있습니다.</li>
+        <li>국물 섭취를 줄이고 건더기 위주로 먹는 것이 좋습니다.</li>
+        <li>요즘 유행하는 '단짠' 음식과 외식을 피하는 것이 중요합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=수축기 혈압" target="_blank">수축기 혈압</a>: 심장이 수축하여 혈액을 내보낼 때 혈관벽에 가해지는 가장 높은 압력. 일반적으로 혈압 측정 시 위에 있는 숫자.</p>
+
+    <h3>[2. 건강한 식단] (00:04:01 ~ 00:04:21)</h3>
+    <ul>
+        <li>한국인은 탄수화물 섭취를 줄이고 단백질 섭취를 늘리는 것이 좋습니다.</li>
+        <li>신선한 채소와 과일을 다양한 색깔별로 골고루 섭취하며, 육류에 많은 포화지방산과 튀김의 트랜스지방은 피해야 합니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=포화 지방산" target="_blank">포화 지방산</a>: 주로 동물성 식품에 많으며, 과도하게 섭취 시 혈중 콜레스테롤 수치를 높여 심혈관 질환 위험을 증가시키는 지방산.</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=트랜스 지방" target="_blank">트랜스 지방</a>: 액체 식물성 기름을 고체 상태로 가공하는 과정에서 생성되는 지방으로, 심혈관 질환 위험을 높이는 것으로 알려져 있습니다.</p>
+
+    <h3>[3. 절주] (00:04:21 ~ 00:04:38)</h3>
+    <ul>
+        <li>음주 다음 날 혈압이 높아지는 경향이 있습니다.</li>
+        <li>하루 와인 한 잔 정도는 건강에 이로울 수 있다는 이야기도 있지만, 국내에서는 한 잔으로 끝나지 않는 경우가 많으므로 소주 반병 이상은 독약으로 생각하고 자제하는 것이 좋습니다.</li>
+    </ul>
+
+    <h3>[4. 건강한 체중 유지] (00:04:38 ~ 00:04:55)</h3>
+    <ul>
+        <li>체중을 5kg 감량하면 수축기 혈압을 4~5mmHg 낮출 수 있습니다.</li>
+        <li>적정 체중인 BMI 22.5에서 25 사이를 유지하는 것이 여러 성인병 예방과 건강한 장수에 도움이 됩니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=BMI" target="_blank">BMI</a>: Body Mass Index의 약자로, 체질량 지수를 의미합니다. 체중(kg)을 키(m)의 제곱으로 나눈 값으로, 비만도를 측정하는 데 사용됩니다.</p>
+
+    <h3>[5. 운동] (00:04:55 ~ 00:05:52)</h3>
+    <ul>
+        <li>땀이 날 정도의 중등도 유산소 운동을 일주일에 150분 이상 하면 혈압이 5~8mmHg 낮아집니다. 최소 2시간 반 이상을 권장하며, 더 많이 할수록 좋습니다.</li>
+        <li>퇴근길 30분 빠르게 걷기(주 5일) 또는 주말에 2시간 반 등산 등 생활 습관에 맞춰 실천할 수 있습니다.</li>
+        <li>근력 운동을 추가하면 심폐 지구력 및 근력 향상에 추가적인 이득이 있어 적극 권장됩니다.</li>
+        <li>다만, 평소 혈압이 매우 높거나 조절이 안 되는 고혈압 환자는 근력 운동 시 혈압이 일시적으로 오를 수 있으므로 주의해야 합니다. 약물로 혈압이 잘 관리되는 경우에는 유산소 및 근력 운동을 병행하는 것이 좋습니다.</li>
+    </ul>
+    <p class="definition">※ <a href="https://oo.ai/search?q=중등도 유산소 운동" target="_blank">중등도 유산소 운동</a>: 숨이 가쁘지만 대화는 할 수 있는 정도의 강도로 심장 박동 수를 증가시키는 운동. 빠르게 걷기, 조깅, 수영 등이 해당.</p>
+
+    <h3>[6. 금연] (00:05:52 ~ 00:06:01)</h3>
+    <ul>
+        <li>고혈압 환자는 심뇌혈관 질환 위험이 높으므로, 흡연은 그 위험을 더욱 증가시킵니다. 금연은 강력히 권장됩니다.</li>
+    </ul>
+
+    <h2>[혈압을 낮추는 7가지 방법: 혈압약 규칙적 복용] (00:06:01 ~ 00:07:36)</h2>
+    <ul>
+        <li>가장 효과적인 방법은 혈압약을 규칙적으로 복용하는 것입니다.</li>
+        <li>고혈압 초기 진단 시 3개월 정도 생활 습관 교정을 시도하지만, 혈압이 잘 조절되는 경우는 10%에 불과하고, 그 노력을 장기간 유지하는 사람은 많지 않습니다.</li>
+        <li>혈압약은 인류가 만든 약 중 가장 안전하고 효과적이며, 전 세계적으로 수많은 검증을 거쳐 부작용이 심한 약들은 이미 퇴출되었습니다.</li>
+        <li>초기 복용 시 어지럼증 같은 부작용은 혈압이 낮아지면서 몸이 적응하는 과정이며, 대부분 한 달 이내에 사라집니다. 드물게 콩팥 기능 저하나 다리 부종 등이 나타날 수 있으나, 약 중단 시 호전되므로 의사와 상의해야 합니다.</li>
+        <li>혈압약은 내성이나 의존성이 없어 오래 복용해도 효과가 떨어지지 않으며, 여러 질환을 예방하고 건강하게 오래 살게 해주는 효과가 잘 증명되어 있습니다.</li>
+        <li>건강한 생활 습관과 함께 혈압약을 꾸준히 복용하는 것이 건강한 노후를 위한 최고의 대책입니다.</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>고혈압 관리 핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 번째 핵심:</b> <span class="highlight">고혈압은 '조용한 살인자'</span>로, 증상이 없어 인지하기 어렵지만 방치 시 심각한 합병증(심뇌혈관 질환, 만성콩팥병, 치매 등)을 유발합니다. 전 세계 사망 질병 부담 1위입니다.
+                </div>
+                <div class="section">
+                    <b>📊 두 번째 핵심:</b> <span class="highlight">정기적인 혈압 측정과 관리가 필수</span>입니다. 유전적 소인과 나이의 영향도 있지만, 생활 습관 개선을 통해 충분히 관리 가능합니다.
+                </div>
+                <div class="section">
+                    <b>🧮 세 번째 핵심:</b> <span class="highlight">혈압을 낮추는 7가지 방법</span>
+                    <ul>
+                        <li>1. 싱겁게 먹기 (수축기 혈압 5mmHg 감소)</li>
+                        <li>2. 건강한 식단 (탄수화물 줄이고 단백질 늘리기)</li>
+                        <li>3. 절주 (과도한 음주 자제)</li>
+                        <li>4. 건강한 체중 유지 (5kg 감량 시 수축기 혈압 4~5mmHg 감소)</li>
+                        <li>5. 운동 (주 150분 이상 중등도 유산소 + 근력 운동)</li>
+                        <li>6. 금연 (심뇌혈관 질환 위험 감소)</li>
+                        <li>7. <strong>혈압약 규칙적 복용 (가장 효과적이고 안전한 방법)</strong></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <b>👩‍💻 네 번째 핵심:</b> <span class="highlight">혈압약은 가장 효과적이고 안전한 약</span>입니다. 초기 부작용은 적응 과정이며, 내성이나 의존성 없이 장기 복용 시 질병 예방 및 건강 수명 연장에 크게 기여합니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                건강한 생활 습관과 꾸준한 혈압약 복용으로 건강한 노후를 준비하세요.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
