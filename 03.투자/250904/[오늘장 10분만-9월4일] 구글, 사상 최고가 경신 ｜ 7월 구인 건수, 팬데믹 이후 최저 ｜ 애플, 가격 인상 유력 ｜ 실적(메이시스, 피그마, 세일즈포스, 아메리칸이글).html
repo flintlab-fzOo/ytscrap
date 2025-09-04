@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘장 10분만-9월4일] 구글, 사상 최고가 경신 ｜ 7월 구인 건수, 팬데믹 이후 최저 ｜ 애플, 가격 인상 유력 ｜ 실적(메이시스, 피그마, 세일즈포스, 아메리칸이글)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+            box-sizing: border-box;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #004d40;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>오늘장 10분만-9월4일] 구글, 사상 최고가 경신 ｜ 7월 구인 건수, 팬데믹 이후 최저 ｜ 애플, 가격 인상 유력 ｜ 실적(메이시스, 피그마, 세일즈포스, 아메리칸이글)</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> yAHkZjZdIbY</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=yAHkZjZdIbY" target="_blank">https://www.youtube.com/watch?v=yAHkZjZdIbY</a></p>
+        <p><strong>영상 길이:</strong> 00시간15분01초(15분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>9월 4일 미국 증시는 약화된 고용 지표와 연방준비제도(Fed)의 베이지북 보고서 발표로 금리 인하 기대감이 높아지며 나스닥과 S&P 500 지수가 상승했습니다. 특히 구글이 사상 최고가를 경신하고 애플이 검색 계약 소송에서 큰 수혜를 입으며 시장을 견인했습니다. 메이시스와 아메리칸 이글은 예상을 뛰어넘는 호실적으로 소비 시장에 대한 긍정적 시그널을 보냈으나, 세일즈포스, HPE, 피그마 등은 기대에 못 미치거나 락업 해제 우려로 시간외 하락했습니다. 연준 인사들은 금리 인하의 필요성을 언급했지만, 물가 상승 압력과 연준 독립성 논란은 여전히 시장의 주요 변수로 작용하고 있습니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[주요 지수 동향]</h3>
+    <ul>
+        <li>시장 분위기 변화 및 3대 지수 흐름 (00:00:25)</li>
+        <li>S&P 500: 0.51% 상승, 6448.26 기록 (00:00:38)</li>
+        <li>나스닥: 1.03% 상승, 21497.7선 기록 (애플 강세) (00:00:43)</li>
+        <li>다우지수: 0.05% 하락, 45271.23 기록 (일부 종목 부진) (00:00:54)</li>
+    </ul>
+
+    <h3>[상품 시장 동향]</h3>
+    <ul>
+        <li>금값: 0.81% 상승, 트로이온스당 $3621.20 (사상 최고가 경신) (00:01:03)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=트로이온스" target="_blank">트로이온스</a>: 금, 은 등 귀금속의 중량을 측정하는 단위. 1트로이온스는 약 31.1035그램에 해당한다.</p>
+        <li>유가: 2.5% 하락, 배럴당 $63선 (00:01:15)</li>
+    </ul>
+
+    <h3>[채권 및 통화 시장]</h3>
+    <ul>
+        <li>10년물 국채금리: 5.8BP 하락, 4.219% 기록 (00:01:21)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=BP" target="_blank">BP</a>: Basis Point의 약자로, 금융 시장에서 이자율이나 수익률의 변화를 나타내는 단위. 1BP는 0.01% 포인트에 해당한다.</p>
+        <li>달러인덱스: 98.15로 하락 (00:01:29)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=달러인덱스" target="_blank">달러인덱스</a>: 주요 6개국 통화(유로, 엔, 파운드, 캐나다 달러, 스웨덴 크로네, 스위스 프랑) 대비 미국 달러화의 평균적인 가치를 측정하는 지수.</p>
+    </ul>
+
+    <h3>[시장 심리 및 암호화폐]</h3>
+    <ul>
+        <li>변동성 지수 (VIX): 4% 하락, 16.35 기록 (시장 회복 조짐) (00:01:35)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=VIX" target="_blank">VIX</a>: Volatility Index의 약자로, 미국 주식 시장의 미래 변동성에 대한 시장의 기대치를 측정하는 지수. 일반적으로 VIX 지수가 높으면 시장의 불안정성이 크다는 것을 의미한다.</p>
+        <li>러셀 2000: 0.1% 상승 (하락폭 회복) (00:01:57)</li>
+        <li>암호화폐 시장 강세 (00:02:04)
+            <ul>
+                <li>비트코인 (코인베이스 기준): 0.8% 상승, $112,000선 (00:02:07)</li>
+                <li>이더리움: 3.4% 상승, $4,400선 회복 (00:02:14)</li>
+                <li>리플, 솔라나: 보합권 (00:02:21)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[주요 기업 및 섹터 흐름 (히트맵)]</h3>
+    <ul>
+        <li>다우지수 편입 종목: 보험, 에너지 섹터 약세, 은행주 보합 (00:02:25)</li>
+        <li>구글: 9% 이상 급등 (소송 결과 영향) (00:02:46)</li>
+        <li>애플: 3.8% 상승 (구글과의 계약 유지 및 시장 상승 주도) (00:02:51)</li>
+        <li>테슬라: 1.44% 상승 (00:03:00)</li>
+        <li>엔비디아: 0.09% 약보합 (00:03:03)</li>
+        <li>브로드컴: 1.3% 하락 (실적 발표 앞두고 부진) (00:03:07)</li>
+        <li>기타 반도체주: 크게 오르지 못함 (00:03:12)</li>
+        <li>세일즈포스: 정규장 상승, 시간외 하락 (00:03:20)</li>
+        <li>아마존, 메타, 마이크로소프트: 보합권 (00:03:24)</li>
+        <li>산업재, 통신주: 약세 (00:03:29)</li>
+    </ul>
+
+    <h3>[주요 경제 지표: 고용]</h3>
+    <ul>
+        <li>7월 구인 건수 (JOLTS): 718만 건 기록 (팬데믹 이후 최저, 시장 예상치 740만 건 하회) (00:03:38)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=JOLTS" target="_blank">JOLTS</a>: Job Openings and Labor Turnover Survey의 약자로, 미국 노동부가 발표하는 구인·이직 보고서. 구인 건수, 채용, 퇴직, 해고 등의 데이터를 포함하여 노동 시장의 역동성을 보여준다.</p>
+        <li>고용 시장 약화 현실화 우려 (00:04:01)</li>
+        <li>고용률 (3.3%), 해고율 (1.1%), 채용/해직 인원: 거의 변동 없음 (00:04:11)</li>
+        <li>자발적 퇴사율: 2% (정체, 새로운 취업에 대한 자신감 부족 시사) (00:04:19)</li>
+        <li>결론: 해고는 덜하나 신규 채용은 어려운 환경 (00:04:35)</li>
+    </ul>
+
+    <h3>[연준(Fed) 통화 정책 전망]</h3>
+    <ul>
+        <li>9월 금리 동결 가능성: 4.6%로 하락 (00:04:43)</li>
+        <li>금리 인하 가능성: 95.4%로 상승 (고용 약화 기대 반영) (00:04:52)</li>
+        <li>채권 금리에 부정적 영향 (00:04:57)</li>
+    </ul>
+
+    <h3>[연준 베이지북 보고서]</h3>
+    <ul>
+        <li>필라델피아 연은 집계 (00:05:03)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=베이지북" target="_blank">베이지북</a>: 미국 연방준비제도(Fed)가 연 8회 발표하는 미국 경제 동향 보고서. 12개 연방준비은행 지역의 경제 활동에 대한 설문조사 및 정보 수집을 바탕으로 작성된다.</p>
+        <li>주요 내용: 성장 둔화, 고용 약화, 물가 상승 동시 관측 (00:05:12)</li>
+        <li>경제 활동: 12개 지역 연은 모두 거의 변화 없음 (00:05:27)</li>
+        <li>고용: 11곳 보합, 1곳 완만하게 감소 (00:05:38)</li>
+        <li>소비 지출: 대부분 지역 보합세 또는 감소 (물가 상승으로 가계 지출 감당 어려움) (00:05:50)</li>
+        <li>물가: 거의 모든 지역에서 관세가 인상 요인으로 작용 (00:06:13)</li>
+        <li>원자재 가격 상승 부담 (00:06:22)</li>
+        <li>10곳 완만한 물가 상승, 2곳 큰 물가 상승 (00:06:29)</li>
+        <li>결론: 연준, 약화 징후 감지 시작했지만 물가 불안감 상존 (00:06:06)</li>
+    </ul>
+
+    <h3>[연준 인사 발언]</h3>
+    <ul>
+        <li>크리스토퍼 월러 이사: 금리 인하 주장 (00:06:50)
+            <ul>
+                <li>논리: 노동 시장 약화 시 빠르게 악화 가능성, 선제 대응 필요 (00:06:59)</li>
+                <li>관세는 지켜볼 시간 있지만 노동 시장은 그렇지 않다 (00:07:12)</li>
+                <li>현재 금리 수준이 중립 금리 대비 1.0~1.5% 높다고 판단 (00:07:16)</li>
+            </ul>
+        </li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=중립금리" target="_blank">중립 금리</a>: 경제가 인플레이션이나 디플레이션 압력 없이 잠재 성장률을 달성할 수 있도록 하는 이론적인 기준 금리 수준.</p>
+        <li>라파엘 보스틱 애틀랜타 연은 총재: 이번 FOMC 금리 인하 가능성 열려 있음 (00:07:34)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=FOMC" target="_blank">FOMC</a>: Federal Open Market Committee의 약자로, 미국 연방준비제도(Fed)의 주요 통화 정책 결정 기구.</p>
+            <ul>
+                <li>파월 의장이 문을 열었음 (00:07:39)</li>
+                <li>향후 고용 보고서 및 소비자 물가 지수 확인 필요 (00:07:45)</li>
+            </ul>
+    </ul>
+
+    <h3>[연준 독립성 논란]</h3>
+    <ul>
+        <li>스티븐 미란 Fed 이사 지명자: 통화 정책 독립성 중요성 강조했지만, 과거 행보 우려 (00:07:53)</li>
+        <li>리사 쿡 이사 사임 관련: 공화당 의원들 (톰 틸리스, 마이클 라운즈) 소송 해결 전 인선 반대 (연말까지 논란 지속 예상) (00:08:14)</li>
+    </ul>
+
+    <h3>[개별 기업 이슈 및 실적]</h3>
+    <ul>
+        <li><strong>구글</strong>: 9% 상승, 주당 $231 (사상 최고가 경신) (00:08:43)
+            <ul>
+                <li>기업 분할 이슈 해소 후 실적 반영 (00:08:52)</li>
+            </ul>
+        </li>
+        <li><strong>애플</strong>: 구글 독점 계약 소송 결과로 큰 수혜 (00:09:01)
+            <ul>
+                <li>구글로부터 검색 공급 조건으로 연간 $200억 수취 (서비스 매출의 1/5, 전체 매출의 5%) 유지 (00:09:05)</li>
+                <li>다른 업체 (OpenAI, 퍼플렉시티 등)와 AI 검색 파트너십 가능성 열림 (협상 우위 확보) (00:09:20)</li>
+                <li>월가 평가: 애플에 매우 좋은 시나리오, 하방 리스크 제거 (00:09:50)</li>
+                <li>블룸버그 단독 보도: 내년에 자체 AI 기반 검색 도구 '월든 날리지 앤서스' 선보일 예정 (00:10:20)</li>
+                <li>아이폰 신제품 가격 인상 유력 (00:10:52)
+                    <ul>
+                        <li>JPMorgan, Jefferies 전망 (00:10:58)</li>
+                        <li>관세 비용 (이번 분기 $11억), 카메라 모듈/반도체 가격 상승 (00:11:15)</li>
+                        <li>전략: 기본 모델 용량 상향 조정 (예: $1099부터 시작) (00:11:31)</li>
+                        <li>평균 판매 가격 $50 이상 증가 예상 (00:11:46)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>메이시스</strong>: 정규장 20% 상승, 시간외 23% 상승 (00:11:51)
+            <ul>
+                <li>125개 매장 리뉴얼 후 매출 1.1% 증가 (00:12:09)</li>
+                <li>조정 주당 순익 $0.41 (시장 예상의 두 배 이상) (00:12:13)</li>
+                <p class="definition">※ <a href="https://oo.ai/search?q=컨센서스" target="_blank">컨센서스</a>: 금융 시장 분석가들이 예측하는 특정 기업의 실적이나 경제 지표의 평균 또는 일반적인 예상치.</p>
+                <li>블루밍데일스 (고급 백화점) 3.6%, 블룸워큐리 (화장품 유통) 1.2% 성장 (00:12:21)</li>
+                <li>미국 소비 시장 일부 회복 가능성 시사 (00:12:34)</li>
+            </ul>
+        </li>
+        <li><strong>아메리칸 이글</strong>: 시간외 23% 상승 (00:12:39)
+            <ul>
+                <li>시디니 스위니 등 모델 기용 마케팅 효과 (00:12:43)</li>
+                <li>조정 주당 순익 $0.45 (전년비 15% 증가, 컨센서스 두 배 이상) (00:12:53)</li>
+                <li>매출 전년비 3% 감소, 에어리 매출 회복 (00:12:59)</li>
+            </ul>
+        </li>
+        <li><strong>세일즈포스</strong>: 시간외 4% 하락 (00:13:06)
+            <ul>
+                <li>예상치 부합했으나 기대 이상은 아님 (00:13:10)</li>
+                <li>Q2 매출 $102억, 조정 주당 순익 $2.91 (컨센서스 상회) (00:13:23)</li>
+                <li>Q3 및 연간 매출 전망치도 소폭 상회 (00:13:29)</li>
+            </ul>
+        </li>
+        <li><strong>휴렛팩커드 엔터프라이즈 (HPE)</strong>: 시간외 3% 하락 (00:13:43)
+            <ul>
+                <li>매출 및 조정 주당 순익 예상치 소폭 상회 (00:13:52)</li>
+                <li>Q4 매출 전망치 예상치 부합 수준 (성장 동력 부족 우려) (00:13:56)</li>
+            </ul>
+        </li>
+        <li><strong>피그마</strong>: 시간외 10% 하락 (00:14:06)
+            <ul>
+                <li>실적 좋았으나 내일 락업 물량 해제 우려 (00:14:10)</li>
+                <p class="definition">※ <a href="https://oo.ai/search?q=락업%20물량" target="_blank">락업 물량</a>: 기업 공개(IPO) 후 일정 기간 동안 대주주나 기관 투자자들이 보유한 주식을 매도하지 못하도록 제한하는 조치. 락업 기간이 끝나면 대량 매도 가능성 때문에 주가에 부담을 줄 수 있다.</p>
+                <li>순 유질 고객 지출 지표 하락 (132% → 129%) (00:14:15)</li>
+            </ul>
+        </li>
+        <li><strong>록히드 마틴</strong>: 0.76% 하락 (00:14:27)
+            <ul>
+                <li>미 국방부로부터 패트리엇 미사일 $998억 규모 수주 소식 있었음 (주가에는 반영 안 됨) (00:14:29)</li>
+            </ul>
+        </li>
+        <li><strong>코닝</strong>: 1.27% 상승 (00:14:38)
+            <ul>
+                <li>중국, 미국산 광섬유에 반덤핑 관세 부과 소식 있었으나 상승 (00:14:40)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[향후 주요 일정]</h3>
+    <ul>
+        <li>내일 (9월 5일): ADP 민간 고용 데이터, 서비스 PMI 지표 공개 (00:14:45)</li>
+        <p class="definition">※ <a href="https://oo.ai/search?q=PMI" target="_blank">PMI</a>: Purchasing Managers' Index의 약자로, 기업 구매 담당자들을 대상으로 한 설문조사를 통해 경기 동향을 파악하는 지표. 50 이상이면 경기 확장, 50 이하면 경기 위축을 의미한다.</p>
+        <li>장 마감 후: 브로드컴 실적 발표 (반도체 시장 전반 영향 예상) (00:14:51)</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><strong>핵심 요약</strong></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 시장 동향:</b> <span class="highlight">나스닥/S&P 500 상승, 다우 하락</span>. 금값 최고가 경신, 유가 하락. 금리 인하 기대감 상승 (고용 약화 징후).
+                </div>
+                <div class="section">
+                    <b>📊 경제 지표:</b> 7월 구인 건수 <span class="highlight">팬데믹 이후 최저</span>(718만 건). 연준 베이지북: 성장 둔화, 고용 약화, 물가 상승 동시 관측.
+                </div>
+                <div class="section">
+                    <b>🏦 연준 정책:</b> 9월 금리 동결 가능성 4.6%로 하락, 인하 가능성 <span class="highlight">95.4%로 상승</span>. 월러 이사 금리 인하 주장, 보스틱 총재 FOMC 인하 가능성 언급. 독립성 논란 지속.
+                </div>
+                <div class="section">
+                    <b>📈 주요 기업:</b> <span class="highlight">구글 사상 최고가(+9%)</span>, 애플 소송 수혜(+3.8%) 및 아이폰 가격 인상 유력. 메이시스(+20%) 및 아메리칸 이글(+23%) 호실적. 세일즈포스(-4%), HPE(-3%), 피그마(-10%)는 기대 미달/락업 우려로 하락.
+                </div>
+            </div>
+            <div class="card-footer">
+                다음 주 고용 및 CPI 지표, 브로드컴 실적 발표가 시장의 주요 변수가 될 전망입니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>거시 경제 지표 주시:</strong> 약화되는 고용 지표와 연준의 금리 인하 시사 발언은 긍정적이나, 물가 상승 압력과 관세 이슈는 여전히 불확실성을 높이고 있습니다. 다음 주 고용 보고서와 CPI 지수를 통해 추가적인 시장 방향을 파악해야 합니다.</li>
+        <li><strong>금리 인하 기대감과 채권 시장:</strong> 금리 인하 기대감이 높아지면 채권 금리가 하락하는 경향이 있습니다. 이는 성장주와 기술주에는 긍정적일 수 있지만, 금융주에는 부정적일 수 있습니다.</li>
+        <li><strong>기업별 차등화된 접근:</strong> 구글, 애플, 메이시스, 아메리칸 이글처럼 긍정적인 이슈나 실적을 발표한 기업은 강세를 보였지만, 기대에 못 미치거나 특정 리스크(락업 해제 등)를 가진 기업은 하락했습니다. 개별 기업의 펀더멘탈과 모멘텀을 면밀히 분석해야 합니다.</li>
+        <li><strong>반도체 섹터의 변동성:</strong> 엔비디아와 같은 선두주는 보합세를 보였고, 브로드컴은 실적 발표를 앞두고 하락하는 등 반도체 섹터 내에서도 차별화된 움직임이 나타나고 있습니다. 전반적인 반도체 시장의 방향은 브로드컴 실적 발표 후 더욱 명확해질 수 있습니다.</li>
+        <li><strong>연준 독립성 논란:</strong> 연준의 독립성 관련 정치적 잡음은 통화 정책의 예측 가능성을 저해할 수 있는 요인이므로 지속적인 관심이 필요합니다.</li>
+    </ul>
+</body>
+</html>
