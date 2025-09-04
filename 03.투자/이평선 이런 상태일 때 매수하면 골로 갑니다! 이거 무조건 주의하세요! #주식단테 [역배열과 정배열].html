@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이평선 이런 상태일 때 매수하면 골로 갑니다! 이거 무조건 주의하세요! #주식단테 [역배열과 정배열]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+            box-sizing: border-box;
+        }
+        h1, h2, h3 {
+            color: #004d40;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #b2ebf2;
+        }
+        h1 {
+            font-size: 28px;
+            color: #00796b;
+            text-align: center;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #004d40;
+        }
+
+        /* Summary Card Styles */
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; padding: 8px 18px; }
+            h3 { font-size: 18px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 20px; }
+            h2 { font-size: 18px; padding: 6px 15px; }
+            h3 { font-size: 16px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+        }
+    </style>
+</head>
+<body>
+    <h1>이평선 이런 상태일 때 매수하면 골로 갑니다! 이거 무조건 주의하세요! #주식단테 [역배열과 정배열]</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> yb5l_1N1Cn8</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=yb5l_1N1Cn8" target="_blank">https://www.youtube.com/watch?v=yb5l_1N1Cn8</a></p>
+        <p><strong>제목:</strong> 이평선 이런 상태일 때 매수하면 골로 갑니다! 이거 무조건 주의하세요! #주식단테 [역배열과 정배열]</p>
+        <p><strong>영상 길이:</strong> 00시간03분52초(232분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>이 영상은 주식 매매 시 이동평균선(이평선)의 '역배열' 상태에서 발생할 수 있는 위험을 경고하고, 안전한 매수 시점을 판단하는 기준을 제시합니다. 특히 떨어지는 주식을 성급하게 잡는 것의 위험성을 강조하며, 특정 지표(나폭가대)나 이평선 돌파를 통한 추세 전환 확인의 중요성을 설명합니다.</p>
+
+    <h2>내용</h2>
+    <ul>
+        <li>
+            <p><strong>[매매 시 추세의 중요성]</strong> (00:00:00,880)</p>
+            <ul>
+                <li>주식 매매 시에는 기존 추세(예: 하락 추세)를 벗어나는 움직임이 좋은 신호입니다. 추세를 벗어날 듯하다가 다시 밀리면 그 지점이 고점이 될 수 있으니 주의해야 합니다.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>[장기 이평선 역배열 시 주의사항]</strong> (00:00:10,640)</p>
+            <ul>
+                <li>장기 이동평균선 3개가 역배열되어 있는 경우, 이 중 하나라도 역전(골든크로스)이 발생해야 저점으로 볼 수 있습니다.</li>
+                <li>역배열 상태에서 주가가 계속 하락하고 있는 종목은 절대 매수해서는 안 됩니다. 이러한 종목을 잡으면 큰 손실로 이어질 수 있습니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=역배열" target="_blank">역배열</a>: 단기 이동평균선이 장기 이동평균선 아래에 위치하는 형태로, 주가 하락 추세나 침체기를 나타내는 신호.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=골든크로스" target="_blank">골든크로스</a>: 단기 이동평균선이 장기 이동평균선을 상향 돌파하는 현상으로, 주가 상승 추세로의 전환을 암시하는 매수 신호.</p>
+        </li>
+        <li>
+            <p><strong>[급등주의 시작점과 매수 시점]</strong> (00:00:29,120)</p>
+            <ul>
+                <li>모든 급등주는 역배열 상태에서 시작되는 경우가 많지만, 이 의미를 정확히 이해해야 합니다.</li>
+                <li>역배열이 진행되고 주가가 계속 떨어지고 있는 상황에서는 매수하면 안 됩니다.</li>
+                <li>안전한 매수 시점은 역배열 상태에서 5일 이동평균선(오일선)이 '초록색선'(예: 112일선)을 뚫고 올라와 안착하는 때입니다.</li>
+                <li>이때는 저점을 정확히 잡기보다는, 하락 추세가 상승 추세로 전환되는 변곡점을 포착하는 전략입니다.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>[실제 차트 예시 및 매매 전략 심화]</strong> (00:01:10,680)</p>
+            <ul>
+                <li>과거 종목(LI, MS 등) 차트를 예시로, 역배열 구간에서 짧은 수익을 노리더라도 5일선이 '초록색선'을 돌파해야 합니다.</li>
+                <li>주가가 하락 중일 때는 절대 매수하지 말고, 5일선이 초록색선을 뚫고 안착해야 단기적인 추세 전환을 기대할 수 있습니다.</li>
+                <li>중장기적인 추세 전환은 224일선, 112일선 등 모든 장기 이동평균선 위에 주가가 안착해야 합니다.</li>
+                <li>초록색선 밑에서 5일선이 반등하더라도, 초록색선을 제대로 돌파하지 못하면 다시 하락할 위험이 큽니다.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>[역배열에서의 예외적 매수 기회: 나폭가대]</strong> (00:02:06,060)</p>
+            <ul>
+                <li>역배열 상태에서 매수할 수 있는 유일한 예외는 '나폭가대' 신호가 발생했을 때입니다.</li>
+                <li>나폭가대는 5일선과 다른 주요 이평선(예: 초록색선) 간의 '이격'이 크게 벌어져 주가가 과도하게 하락한 상태에서 나타나는 저점 매수 신호입니다.</li>
+                <li>나폭가대 신호가 뜨는 시점에 매수하거나, 5일선이 초록색선을 확실히 돌파해야 합니다.</li>
+                <li>단, 엘리엇 파동 1, 2, 3파 이후에 나타나는 나폭가대 신호는 피하는 것이 좋습니다.</li>
+                <li>역배열 상태에서는 최소한 61일선을 뚫는 것을 확인해야 합니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=나폭가대" target="_blank">나폭가대</a>: (화자가 사용하는 고유 지표) 주가가 단기간에 과도하게 하락하여 이동평균선과 주가 사이에 큰 이격이 발생했을 때 나타나는 저점 매수 신호. 일반적으로 과매도 상태에서 발생.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=이격" target="_blank">이격</a>: 주가와 이동평균선 사이의 거리.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=엘리엇파동" target="_blank">엘리엇 파동</a>: 주가 움직임을 파동 형태로 분석하는 이론으로, 1파, 2파, 3파 등 특정 패턴을 통해 시장 추세를 예측.</p>
+        </li>
+        <li>
+            <p><strong>[핵심 매매 기준 요약 및 실제 적용]</strong> (00:02:48,920)</p>
+            <ul>
+                <li>주식 매매 시 역배열 상태에서 매수하는 두 가지 기준은 <strong>나폭가대</strong> 신호가 뜨거나, 5일선이 초록색선을 <strong>뚫어올리는 것</strong>입니다.</li>
+                <li>최근 <strong>내 오리진</strong>과 같은 종목에서 나폭가대 신호가 발생했고, 만약 5일선이 112일선을 돌파하면 일정 기간 버티는 전략이 필요합니다.</li>
+                <li>어설프게 매수하면 손실을 볼 수 있으니 신중해야 합니다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>역배열 매매, 성공을 위한 핵심 가이드</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 위험 경고:</b> 역배열 상태에서 하락 중인 주식은 <span class="highlight">절대 매수 금지</span>! 큰 손실로 이어질 수 있습니다.
+                </div>
+                <div class="section">
+                    <b>📊 매수 기준 1 (추세 전환):</b> 5일선이 장기 이평선(예: 초록색선/112일선)을 <span class="highlight">확실히 돌파하고 안착</span>할 때 매수 기회를 노립니다. 이는 추세 전환의 신호입니다.
+                </div>
+                <div class="section">
+                    <b>🧮 매수 기준 2 (과매도 활용):</b> 역배열에서도 '나폭가대'와 같이 <span class="highlight">주가-이평선 이격이 과도하게 벌어진</span> 과매도 시점에만 예외적으로 매수를 고려할 수 있습니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 추가 주의사항:</b> 엘리엇 파동 1, 2, 3파 이후의 나폭가대 신호는 <span class="highlight">피하는 것이 좋으며</span>, 중장기 추세는 모든 장기 이평선 안착으로 확인합니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                불필요한 손실을 피하고, 정확한 매수 타이밍을 잡기 위한 핵심 기준입니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>역배열 하락 추세 중 매수 금지</strong>: 장기 이평선이 역배열 상태에서 주가가 계속 하락하는 종목은 피해야 합니다. 이는 추가 하락의 가능성이 높습니다.</li>
+        <li><strong>추세 전환 확인 필수</strong>: 저점을 잡으려 하기보다는, 5일선이 장기 이평선(예: 초록색선 또는 112일선)을 돌파하고 안착하는 등 명확한 추세 전환 신호를 확인한 후 매수에 들어가는 것이 안전합니다.</li>
+        <li><strong>'나폭가대' 신호 활용</strong>: 역배열 상태에서 주가와 이평선 간 이격이 크게 벌어져 과매도 상태를 나타내는 '나폭가대' 신호가 발생했을 때만 예외적으로 매수를 고려할 수 있습니다.</li>
+        <li><strong>엘리엇 파동 후 나폭가대 주의</strong>: 엘리엇 파동 1, 2, 3파 이후에 나타나는 나폭가대 신호는 신중하게 접근해야 합니다.</li>
+        <li><strong>중장기 이평선 안착 확인</strong>: 중장기적인 상승 추세로의 전환을 위해서는 주가가 224일선, 112일선 등 주요 장기 이평선을 모두 돌파하고 그 위에 안착하는 것을 확인해야 합니다.</li>
+        <li><strong>경험치를 통한 기준 설정</strong>: 본인의 경험을 바탕으로 61일선이나 22일선과 같은 추가적인 기준을 설정하여 매매에 활용할 수 있습니다.</li>
+    </ul>
+</body>
+</html>
