@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전세계 흔드는 쿨재팬 심상치 않습니다 (서병수 애널리스트)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #004d40;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box; /* 패딩과 테두리가 요소의 전체 너비와 높이에 포함되도록 보장 */
+            height: auto; /* 기본 높이를 자동으로 설정하여 콘텐츠에 따라 유연하게 조절 */
+            min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정: 768px 이하 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px; /* 작은 화면을 위해 패딩을 약간 줄임 */
+                height: auto; /* 콘텐츠에 맞춰 높이 자동 조절 */
+                min-height: unset; /* aspect-ratio로 인한 최소 높이 제한 해제 */
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px; /* 모바일에서 아이콘 크기 조정 */
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px; /* 모바일에서 헤더 제목 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-content {
+                font-size: 15px; /* 모바일에서 내용 글꼴 크기 조정 */
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px; /* 모바일에서 섹션 간 간격 조정 */
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em; /* 수식 글꼴 크기 조정 */
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+
+        /* 모바일 맞춤 조정: 480px 이하 */
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>전세계 흔드는 쿨재팬 심상치 않습니다 (서병수 애널리스트)</h1>
+    <div class="video-meta">
+        <p><strong>videoId:</strong> swMEJfQW5IE</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=swMEJfQW5IE" target="_blank">https://www.youtube.com/watch?v=swMEJfQW5IE</a></p>
+        <p><strong>제목:</strong> 전세계 흔드는 쿨재팬 심상치 않습니다 (서병수 애널리스트)</p>
+        <p><strong>영상 길이:</strong> 01시간01분12초(061분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>일본 주식 시장은 최근 사상 최고가를 경신하며 뜨거운 관심을 받고 있습니다. 서병수 애널리스트는 이러한 시장의 흐름을 단순히 지수 상승으로 보지 않고, 실제로 어떤 종목들이 시장을 견인하고 있는지 심층적으로 분석합니다. 그는 일본 경제의 구조적 변화, 글로벌 트렌드와의 합치, 그리고 기업들의 체질 개선 및 주주환원 정책을 통해 현재 일본 증시의 강세가 지속될 것이라고 전망합니다. 특히, AI, MZ세대 소비재, 금융, 방산, 부동산 등 5가지 핵심 테마를 중심으로 시가총액 상위권 기업들의 투자 매력을 구체적으로 제시하며, 여전히 저평가된 우량 기업들이 많다는 점을 강조합니다.</p>
+
+    <h2>내용</h2>
+    <ul>
+        <li><strong>[서론] 일본 주식 시장 현황 및 애널리스트 소개</strong>
+            <ul>
+                <li>일본 주식 시장의 호황과 사상 최고가 경신 (00:00:04)</li>
+                <li>서병수 애널리스트 소개 및 개인 투자 현황 (00:00:15)
+                    <ul>
+                        <li>미국 주식 70%, 일본 주식 30% 투자 (00:00:49)</li>
+                        <li>국내 주식은 직업상 투자하지 않음 (00:01:03)</li>
+                    </ul>
+                </li>
+                <li>일본 증시 분석의 필요성: 어떤 종목이 상승했는가? (00:01:18)
+                    <ul>
+                        <li>신고가를 치는 종목들이 주도주이며, 앞으로도 계속 갈 것이라는 전망 (00:02:27)</li>
+                        <li>시가총액 100위권 이내의 종목들 분석 목표 (00:03:01)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[일본 증시 분석] 지수 현황 및 밸류에이션</strong>
+            <ul>
+                <li>일본 증시 차트 분석 (월봉/주봉) (00:04:08)
+                    <ul>
+                        <li>닛케이 225보다 토픽스 지수를 더 중요하게 봐야 함 (00:04:41)</li>
+                        <li>역사적 신고가 돌파 후 1년 6~7개월 조정 후 재차 상승 (00:05:36)</li>
+                    </ul>
+                </li>
+                <li>일본 증시 밸류에이션 (PER 기준) (00:06:30)
+                    <ul>
+                        <li>PER 15.9배로 미국(23배), 선진국(20배)보다 낮은 수준 (00:07:02)</li>
+                        <li>개별 기업의 글로벌 경쟁력 회복, 주주환원 강화로 PER 상승 여력 충분 (00:07:29)</li>
+                        <p class="definition">※ <a href="https://oo.ai/search?q=PER" target="_blank">PER</a>: Price-to-Earnings Ratio의 약자로, 주가를 주당순이익으로 나눈 값. 주식의 상대적인 고평가 또는 저평가 여부를 판단하는 지표.</p>
+                        <p class="definition">※ <a href="https://oo.ai/search?q=주주환원" target="_blank">주주환원</a>: 기업이 주주들에게 이익을 돌려주는 활동으로, 배당금 지급, 자사주 매입 및 소각 등이 포함됨.</p>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[주도 섹터 분석] 시가총액 상위 종목의 희비</strong>
+            <ul>
+                <li>시가총액 상위 30개 종목의 최근 수익률 분석 (2024년 8월 말 기준) (00:08:33)
+                    <ul>
+                        <li><strong>승자</strong>: 은행/보험 (미쓰비시 UFJ, 미즈호, 스미토모 미쓰이 금융지주 등), 소프트뱅크, 반도체 장비 (어드밴테스트), 종합상사, IT 인프라 솔루션 (미쓰비시 전기, 후지쯔), 방산 (00:10:43)</li>
+                        <li><strong>패자</strong>: 자동차 (도요타, 혼다), 의류 (유니클로), 공장 설비 (키엔스), 제약, 통신, 화학 (시네츠 화학), 일부 반도체 장비 (도쿄 일렉트론) (00:09:34)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[상승 테마 1] 은행 및 금융주</strong>
+            <ul>
+                <li>주요 은행/보험사 주가 상승 (00:13:00)
+                    <ul>
+                        <li>3대 은행: 미즈호 파이낸셜, 미쓰비시 UFJ 파이낸셜, 스미토모 미쓰이 파이낸셜 (00:13:00)</li>
+                        <li>3대 보험사: 도쿄해상, 솜포홀딩스 (00:13:21)</li>
+                    </ul>
+                </li>
+                <li>상승 요인 분석 (00:14:02)
+                    <ul>
+                        <li><strong>밸류업 정책</strong>: 배당 및 주주환원 확대 (00:14:48)</li>
+                        <li><strong>체질 개선</strong>: 비효율적 자산 정리 및 구조조정 (00:14:05)
+                            <ul>
+                                <li>정책 보유주(계열사 간 상호 지분) 대대적 매각을 통한 ROE, PBR 개선 (00:16:01)</li>
+                                <p class="definition">※ <a href="https://oo.ai/search?q=ROE" target="_blank">ROE</a>: Return on Equity의 약자로, 자기자본이익률. 기업이 자기자본을 활용하여 얼마나 많은 이익을 창출했는가를 나타내는 지표.</p>
+                                <p class="definition">※ <a href="https://oo.ai/search?q=PBR" target="_blank">PBR</a>: Price-to-Book Ratio의 약자로, 주가순자산비율. 주가를 주당순자산으로 나눈 값으로, 기업의 자산 가치 대비 주가 수준을 보여줌.</p>
+                            </ul>
+                        </li>
+                        <li><strong>금리 상승</strong>: 스프레드 개선으로 이익 증가 (00:16:54)</li>
+                        <li><strong>경제 성장</strong>: GDP 및 자산 가격 상승, 기업 실적 개선 (00:17:11)</li>
+                        <li><strong>해외 진출 확대</strong>: 미국, 유럽 등 선진국 시장에서 M&A 활발 (00:17:40)</li>
+                        <li><strong>디지털 자산 투자</strong>: 암호화폐 거래소 및 스테이블 코인 유통 주도 (00:18:55)
+                            <ul>
+                                <li><strong>SBI 홀딩스</strong>: 은행, 증권, 보험 및 암호화폐 사업 영위, 매출의 8% 이상이 암호화폐에서 발생, 리플(XRP) 주요 주주 (00:19:32)</li>
+                                <li>라쿠텐 은행 및 스미신 SBI 인터넷은행 등 인터넷은행 성장 (00:21:04)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[상승 테마 2] AI 관련주</strong>
+            <ul>
+                <li>소프트뱅크 그룹, 어드밴테스트, NEC 등 주요 AI 관련주 부상 (00:23:49)</li>
+                <li>일본 전선주 테마 (00:24:44)
+                    <ul>
+                        <li>고성능 전선 수요 폭증: 데이터센터, AI 시대 필수 (00:24:50)</li>
+                        <li><strong>후지쿠라</strong>, 스미토모 전기 공업, 후루카와 전기 (00:25:05)</li>
+                    </ul>
+                </li>
+                <li>개별 기업 상세 (00:25:42)
+                    <ul>
+                        <li><strong>소프트뱅크 그룹</strong>: 네이버-야후재팬 합작 '라인 야후' 장악, 일본어 AI 데이터 확보, 반도체 설계 ARM 지분 보유, 라피더스(2나노 파운드리) 주요 주주, 오픈AI와 합작 법인 설립 및 투자 확대 (00:25:42)</li>
+                        <li><strong>어드밴테스트</strong>: AI 반도체 후공정 테스트 패키징 장비 세계 1위 (00:26:43)</li>
+                        <li><strong>NEC/후지쯔</strong>: IT 인프라 솔루션(SI) 회사로 일본 디지털 전환 주도, 해외 매출 비중 확대, AI 관련 가치 재평가 (00:27:07)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[상승 테마 3] MZ세대 소비 감성 및 콘텐츠</strong>
+            <ul>
+                <li>일본 문화 소비재의 글로벌 MZ세대 유행 (00:33:15)
+                    <ul>
+                        <li>중국인 관광객 및 소비 증가, 서구권 관광객 유입 (00:33:24)</li>
+                        <li>IP 기반 게임, 애니메이션, 캐릭터 상품 호황 (00:33:43)
+                            <ul>
+                                <li>애니메이션 해외 매출 비중 50% 이상, '귀멸의 칼날' 등 인기 애니메이션 성공 (00:34:06)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>주요 기업 (00:31:38)
+                    <ul>
+                        <li><strong>소니</strong>: 콘텐츠 매출이 전사 매출의 66%, 영업이익의 76% 차지. 게임(플레이스테이션), 음악(애니메이션 포함), 영화 등 주요 사업. 애니메이션 사업부의 성장 잠재력 강조 (00:31:38)</li>
+                        <li><strong>아식스</strong>: MZ세대 감성을 사로잡는 운동화로 인기 (00:36:40)</li>
+                        <li><strong>산리오</strong>: 헬로키티 외 쿠로미, 시나모롤 등 캐릭터 사업 호황 (00:31:51)</li>
+                        <li><strong>닌텐도</strong>: 스위치 2 등 게임기 및 게임 콘텐츠 인기 (00:38:38)</li>
+                        <li><strong>반다이남코</strong>: 장난감 및 게임(엘든링) 사업 성장 (00:38:55)</li>
+                        <li><strong>코나미</strong>: 게임 사업 성장 (00:39:07)</li>
+                    </ul>
+                </li>
+                <li>외식, 패션, 잡화, 스포츠 (시총 100위권 외) (00:39:36)
+                    <ul>
+                        <li><strong>젠쇼 홀딩스 (스키야)</strong>: 쇠고기 덮밥 프랜차이즈, 동남아 시장 호응 (00:40:08)</li>
+                        <li><strong>푸드앤라이프 (스시로)</strong>: 회전초밥 프랜차이즈, 중국 시장 대박 (00:40:00)</li>
+                        <li><strong>양품계획 (무인양품)</strong>: 잡화/라이프스타일 브랜드, 중국 시장에서 폭발적 인기 (00:41:13)</li>
+                        <li><strong>요넥스</strong>: 배드민턴/테니스 용품, 중국 시장에서 인기 (00:42:10)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[상승 테마 4] 글로벌 공급망 및 지정학적 갈등 대응</strong>
+            <ul>
+                <li>글로벌 공급망 균열 심화에 따른 원자재, 에너지 확보 중요성 증대 (00:45:46)</li>
+                <li><strong>일본 종합상사</strong>: 원자재, 에너지 확보 및 사업 연계 역량 탁월 (00:45:58)
+                    <ul>
+                        <li>버핏의 투자 (미쓰비시 상사) 및 추가 투자 가능성 (00:46:42)</li>
+                        <li><strong>마루베니</strong> 등 원자재 노출도 적으면서 유통/무역에 능한 기업 선호 (00:44:00)</li>
+                    </ul>
+                </li>
+                <li><strong>방위산업</strong>: 일본의 국방력 강화 및 해외 수출 확대 (00:47:15)
+                    <ul>
+                        <li>호주 차세대 호위함 사업에서 한국 제치고 일본(미쓰비시 중공업) 승리 (00:47:31)</li>
+                        <li><strong>미쓰비시 중공업</strong>: 육해공군, 사이버, 우주 종합 방산 (00:47:43)</li>
+                        <li><strong>미쓰비시 전기</strong>: 미사일, 레이더 (00:47:56)</li>
+                        <li><strong>IHI</strong>: 항공기 엔진 등 엔진 사업 (00:48:02)</li>
+                        <li><strong>가와사키 중공업</strong>: 잠수함, 헬기 (00:48:02)</li>
+                    </ul>
+                </li>
+                <li><strong>도쿄가스</strong>: 미국 케인즈빌 지역 가스전 확보, LNG 물류 유통 트레이딩 등 종합 밸류 체인 구축 (00:48:31)</li>
+            </ul>
+        </li>
+        <li><strong>[상승 테마 5] 부동산 및 인프라</strong>
+            <ul>
+                <li>일본 부동산 가격 상승 및 도심 재개발 (00:48:57)
+                    <ul>
+                        <li>명목 물가 상승 및 인플레이션 구간 진입 (00:50:28)</li>
+                        <li>외국인 관광객 급증, 젊은 층 도심 유입 및 취업 증가 (00:50:38)</li>
+                    </ul>
+                </li>
+                <li>주요 기업 (00:49:12)
+                    <ul>
+                        <li><strong>미쓰비시 부동산, 스미토모 부동산</strong>: 도심지 부동산 가격 상승 수혜 (00:49:25)</li>
+                        <li><strong>노무라 부동산</strong> (00:49:36)</li>
+                    </ul>
+                </li>
+                <li><strong>철도 회사</strong>: 관광객 증가에 따른 여객 수요 증가 및 보유 부지 개발 (00:49:45)
+                    <ul>
+                        <li>동일본 여객 철도, 센트럴 철도 (00:49:47)</li>
+                        <li><strong>세이부 홀딩스</strong>: 철도 기반 부동산 사업 확장, 유통 부동산 매출 60% 이상 (00:51:17)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>[결론] 일본 주식 시장에 대한 투자 관점</strong>
+            <ul>
+                <li>다섯 가지 테마 모두 긍정적이며, 닛케이 ETF보다는 개별 주도주 투자가 유효 (00:52:13)</li>
+                <li>글로벌 트렌드와 일치하며, 일본 기업들의 경쟁력과 밸류에이션 매력 여전 (00:53:05)</li>
+                <li>일본 정부의 '쿨재팬' 슬로건과 문화 콘텐츠 강점 (00:54:02)</li>
+                <li>한국 투자자들이 일본 주식에 대한 관심이 부족하며, 정보 습득을 통한 투자 기회 강조 (00:56:06)</li>
+                <li>일본 개인 투자자들은 아직 보수적이며, 해외 투자자들의 시각과 차이 (00:58:25)</li>
+                <li>일본 주식 시장은 과거 한국의 가치 투자 초창기 또는 암호화폐 초기와 유사한 단계 (00:59:05)</li>
+                <li>일본 기업들은 주주환원에 적극적이며, 유상증자보다는 자사주 매입/소각, 배당을 선호 (01:00:44)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 첫 번째 핵심:</b> <span class="highlight">일본 증시의 5대 핵심 상승 테마</span>는 금융, AI, MZ세대 소비재/콘텐츠, 글로벌 공급망/지정학적 갈등 대응, 부동산/인프라입니다.
+                </div>
+                <div class="section">
+                    <b>📊 두 번째 핵심:</b> <span class="highlight">금융주는 체질 개선, 금리 인상, 해외 진출, 디지털 자산 투자</span>에 힘입어 높은 성장을 보이며, SBI 홀딩스 같은 혁신 기업이 시장을 주도하고 있습니다.
+                </div>
+                <div class="section">
+                    <b>🧮 세 번째 핵심:</b> <span class="highlight">AI 관련주는 소프트뱅크 그룹, 어드밴테스트(반도체 장비), NEC(IT 솔루션)</span> 등이 일본의 디지털 전환과 글로벌 AI 트렌드에 맞춰 주가를 견인하고 있습니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 네 번째 핵심:</b> <span class="highlight">MZ세대 소비재 및 콘텐츠 기업(소니, 아식스, 산리오, 닌텐도 등)</span>은 '쿨재팬' 문화의 글로벌 확산과 관광객 증가에 힘입어 높은 인기를 누리고 있습니다.
+                </div>
+                <div class="section">
+                    <b>📈 다섯 번째 핵심:</b> <span class="highlight">종합상사, 방산 기업, 도쿄가스</span> 등은 글로벌 공급망 균열과 지정학적 갈등 심화 속에서 자원 및 안보 분야의 핵심 역량으로 가치를 인정받고 있으며, <span class="highlight">부동산 및 철도 기업</span>은 인플레이션과 관광 수요 증가로 상승세를 보입니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                일본 증시는 특정 대형 기업보다 글로벌 트렌드에 부합하고 경쟁력을 갖춘 기업들을 중심으로 상승하고 있으며, 여전히 투자 매력이 높은 기회를 제공하고 있습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <div style="background-color: #e0f2f7; border-left: 4px solid #4dd0e1; padding: 15px; margin: 20px 0; border-radius: 0 8px 8px 0;">
+        <b>💡 알아두세요!</b><br>
+        일본 주식 시장은 과거와 달리 기업 체질 개선과 주주환원 문화가 정착되고 있어, 단순히 과거의 일본 증시 흐름으로 판단하기보다는 개별 기업의 펀더멘털과 성장 잠재력을 면밀히 검토하는 것이 중요합니다.
+    </div>
+    <ul>
+        <li><strong>주도주 투자 전략</strong>: 일본 증시 전체 ETF보다는 시장을 견인하는 특정 섹터 및 개별 주도주에 대한 투자가 효과적입니다. 특히 시가총액 100위권 이내에 있으면서 높은 수익률을 기록 중인 기업들에 주목할 필요가 있습니다.</li>
+        <li><strong>바텀업 방식 접근</strong>: 개별 기업의 경쟁력, 글로벌 트렌드 부합 여부, 주주환원 정책 등을 꼼꼼히 살펴 투자 대상을 선별하는 바텀업 방식의 접근이 중요합니다.</li>
+        <li><strong>밸류에이션 매력</strong>: 일본 기업들의 PER이 아직 미국이나 선진국 대비 낮은 수준이므로, 기업 가치 대비 저평가된 우량 기업을 발굴하는 기회가 될 수 있습니다.</li>
+        <li><strong>주주환원 정책 확인</strong>: 일본 기업들이 과거와 달리 자사주 매입/소각, 배당 확대 등 적극적인 주주환원 정책을 펼치고 있으므로, 이를 투자 결정에 중요한 요소로 고려해야 합니다.</li>
+        <li><strong>정보 비대칭 활용</strong>: 한국 투자자들에게 아직 일본 기업 정보가 부족하다는 점을 역이용하여, 기업 IR 자료나 사업보고서 등을 통해 직접 정보를 습득하는 노력이 필요합니다. 이를 통해 현지 개인 투자자들보다 한 발 앞선 투자를 할 수 있습니다.</li>
+    </ul>
+</body>
+</html>
