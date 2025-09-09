@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 상한가, 급등 종목과 이유： 동일스틸럭스, 삼현, 셀루메드, 디에이피, 일승, 상상인증권, 원익홀딩스, 조선선재, 뉴로핏</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #00796b;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-left: 5px solid #4dd0e1;
+            padding-left: 10px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px; font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px; padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px; line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px; font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px; padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>오늘 상한가, 급등 종목과 이유： 동일스틸럭스, 삼현, 셀루메드, 디에이피, 일승, 상상인증권, 원익홀딩스, 조선선재, 뉴로핏</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> hWgOLSkpy6E</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=hWgOLSkpy6E" target="_blank">https://www.youtube.com/watch?v=hWgOLSkpy6E</a></p>
+        <p><strong>제목:</strong> 오늘 상한가, 급등 종목과 이유： 동일스틸럭스, 삼현, 셀루메드, 디에이피, 일승, 상상인증권, 원익홀딩스, 조선선재, 뉴로핏</p>
+        <p><strong>영상 길이:</strong> 00시간11분01초 (661분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>2023년 9월 9일 화요일 국내 주식 시장의 주요 동향과 10% 이상 급등한 종목들을 테마별 및 개별 이슈별로 분석합니다. 코스피와 코스닥 지수 현황을 시작으로, 조선, 반도체 CXL, 로봇, 증권, 건설, 제약 바이오 등 주요 테마의 상승 배경과 관련 종목들의 움직임을 상세히 다룹니다. 또한, 개별 이슈로 급등한 종목들과 시장별 거래량 및 거래대금 상위 종목들도 함께 살펴봅니다.</p>
+
+    <h2>내용</h2>
+    <ul>
+        <li>
+            <h3>[시장 동향] 코스피 및 코스닥 지수 마감 현황 (00:00:05)</h3>
+            <ul>
+                <li>코스피 지수는 1.26% 상승한 3260.05 포인트로 마감했습니다.</li>
+                <li>외국인과 기관은 매수, 개인은 매도로 대응했으며, 코스피 거래 대금은 10조 원을 기록했습니다.</li>
+                <li>코스닥 지수는 0.76% 상승한 824.82 포인트로 마감했습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[급등 종목 현황] 10% 이상 급등 종목 및 상한가 종목 (00:00:36)</h3>
+            <ul>
+                <li>오늘 10% 이상 급등한 종목은 총 34종목(코스피 9종목, 코스닥 25종목)입니다.</li>
+                <li>상한가 종목은 동일스틸럭스, 삼현, 셀루메드, DAP 4종목입니다.</li>
+                <li>하한가 종목은 없었습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[테마 분석] 1. 조선 테마 (00:01:02)</h3>
+            <ul>
+                <li>한미 간 조선 협력 기대감 지속: 미국이 한국에서 미국 군함을 건조할 수 있는 방안을 검토 중이며, 관련 회의가 조만간 개최될 예정입니다.</li>
+                <li>정부 당국자들은 회의 참석을 위해 다음 주 월요일 미국으로 출국할 예정입니다.</li>
+                <li>다만, 시총 상위 조선 기업들은 최근 강세에 따른 차익 실현 매물로 대부분 하락세를 보였습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[테마 분석] 2. 반도체 CXL 테마 (00:01:47)</h3>
+            <ul>
+                <li>삼성전자와 SK하이닉스가 마벨의 CXL 제품 호환성 테스트에 통과했다는 소식이 전해졌습니다.</li>
+                <li>마벨은 미국의 반도체 설계 기업으로 브로드컴과 함께 신흥 강자로 불립니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=CXL" target="_blank">CXL</a>: Compute Express Link의 약자로, 반도체와 가속기 등 여러 부품을 효율적이고 빠르게 연결하는 기술을 담은 칩을 의미합니다.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=HBM" target="_blank">HBM</a>: High Bandwidth Memory의 약자로, 기존 D램보다 데이터 처리 속도를 혁신적으로 높인 고성능 메모리 반도체입니다.</p>
+            <ul>
+                <li>CXL이 HBM에 이어 반도체 기업들의 새로운 수익 창출원이 될 것이라는 기대감이 커지고 있습니다.</li>
+                <li>미국 상무부가 국내 반도체 기업들의 중국 공장 반도체 장비 반입을 연간 단위로 승인하는 방안을 검토 중이며, 이는 시장의 우려를 일부 해소하는 요소로 작용하고 있습니다.</li>
+                <li>SK하이닉스는 대신증권의 3분기 실적 전망치 상향 조정 소식에 3.9% 강세로 마감했습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[테마 분석] 3. 로봇 테마 (00:02:59)</h3>
+            <ul>
+                <li><strong>노란봉투법</strong>이 내년 3월부터 시행될 예정입니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=노란봉투법" target="_blank">노란봉투법</a>: 노동조합 및 노동관계조정법 개정안의 별칭으로, 파업으로 인한 기업의 손해배상 청구 및 가압류를 제한하고 사용자 범위를 확대하는 내용을 담고 있습니다.</p>
+            <ul>
+                <li>이 법 시행으로 원청의 책임이 확대되고 노동조합의 교섭 및 파업이 잦아질 것이라는 우려가 제기되면서, 대기업들이 리스크 회피를 위해 로봇 투자를 늘릴 것이라는 기대감이 형성되었습니다.</li>
+                <li><strong>삼현</strong>은 고아중 자율주행 로봇 상용개발을 국내 최초로 완료했다고 밝히며 상한가로 마감했습니다 (00:03:53). 이 로봇은 제조, 물류, 조선 등 산업에서 경쟁력을 발휘하며, 11월 로보월드 박람회에서 공개될 예정이고 글로벌 기업과의 수주 계약을 논의 중입니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[테마 분석] 4. 증권 테마 (00:04:10)</h3>
+            <ul>
+                <li>대통령이 대주주 기준 상향 방안을 긍정적으로 검토하겠다고 밝혔습니다.</li>
+                <li>이는 정부가 종목당 50억 원이던 주식 양도소득세 대주주 기준을 10억 원으로 낮추려던 계획에 대한 우려(증시 악영향, 코스피 5000시대 목표 충돌)를 해소할 수 있다는 기대감을 불러일으켰습니다.</li>
+                <li>증시 활성화 기대감에 증권사들이 강세로 마감했습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[테마 분석] 5. 건설 테마 (00:04:54)</h3>
+            <ul>
+                <li>정부가 수도권 주택 부족 해소를 위해 주택 공급 확대 방안을 발표하며, 2030년까지 수도권에 총 135만 가구를 공급 목표를 제시했습니다 (매년 27만 가구 착공).</li>
+                <li>이 소식에 일부 건설 기업들이 상승세를 보였습니다.</li>
+                <li><strong>금강공업</strong>은 자회사 삼미금속이 국내 선박엔진 제조 기업과 선박엔진 핵심 소재 공급 계약을 체결했다고 밝히며 강세 마감했습니다 (00:05:17). 이 소재는 STX엔진 등을 거쳐 HD현대중공업 등 조선사에 적용될 예정입니다. 삼미금속은 현재 IBK스펙과의 합병을 통해 코스닥 상장을 추진 중입니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[테마 분석] 6. 제약 바이오 테마 (00:05:50)</h3>
+            <ul>
+                <li>정부가 바이오 산업을 미래 성장 동력으로 육성하기 위한 전략을 발표했습니다 (글로벌 바이오 5대 강국 도약, 바이오 의약품 수출 2배 확대, 블록버스터 신약 3개 창출, 임상시험 3위 달성 목표).</li>
+                <li>미국의 금리 인하 기대감도 바이오 기업들의 상승세에 영향을 미쳤습니다.</li>
+                <li><strong>뉴로핏</strong>은 일본 도쿄도 건강장수 의료센터와 뇌신경 퇴화 영상 분석 소프트웨어 '뉴로핏 아쿠아' 공급 계약을 체결하며 일본 시장에 본격 진출한다고 밝혔습니다 (00:06:18). 또한, 최근 국제알츠하이머병재단과 업무 협약을 체결한 바 있습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[개별 이슈] 셀루메드 & 인스코비 (00:06:52)</h3>
+            <ul>
+                <li><strong>셀루메드</strong>는 하반기 건설 및 의료기기 사업 성장을 가속화하겠다고 밝혔습니다.</li>
+                <li>최대주주인 <strong>인스코비</strong>도 셀루메드의 소송 합의금 마련 및 재무구조 개선을 위한 자산 매각 협의를 진행 중이라고 밝혔습니다.</li>
+                <li>두 종목 모두 관리 종목 해제 기대감으로 동반 강세를 보였습니다.</li>
+                <li><strong>인스코비</strong>는 SGR소프트와 업무 협약을 체결하여 온라인 스토어 및 AI 서비스를 개발하고 지역 소상공인과의 협력을 진행할 예정입니다 (00:07:15).</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[개별 이슈] 한국 주강 (00:07:41)</h3>
+            <ul>
+                <li>급등 이유는 파악되지 않았으나, 철강 기업으로 부각되며 강세를 보였다는 분석이 있습니다.</li>
+                <li>여야 국회의원들이 철강 산업 경쟁력 회복을 위한 'K-스틸법'을 발의하며 국가 지원 제도적 틀 마련을 추진 중입니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[개별 이슈] 한스바이오메드 (00:08:01)</h3>
+            <ul>
+                <li>새로운 개념의 스킨 부스터 제품 '셀르디엠'을 오는 29일 정식 출시한다고 밝혔습니다.</li>
+                <li>미용기기 및 의료기기 기업들은 최근 <strong>리주란</strong>의 인기(연어 세포 DNA 주사제, 피부 탄력 및 재생 효과)로 미국인들의 한국 방문이 증가했다는 소식에 상승세를 보인 바 있습니다.</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[시장별 거래량 상위] 코스피 시장 (00:08:52)</h3>
+            <ul>
+                <li>상위 종목: NK, 상상인증권, 삼성전자, HJ중공업, 미래에셋증권, 동방, 세진중공업, 금강공업, SK증권, 화인베스틸.</li>
+                <li>10% 이상 상승 종목: 상상인증권 (증권사), 미래에셋증권 (증권사), 금강공업 (건설/철강, 자회사 삼미금속 선박엔진 소재 수주), 화인베스틸 (철강/조선기자재).</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[시장별 거래량 상위] 코스닥 시장 (00:09:27)</h3>
+            <ul>
+                <li>상위 종목: KD, CP시스템, 원익홀딩스, 보성파워텍, 일승, 한국선제, 오리엔탈전공, 대창솔루션, 클로보트, 미투온.</li>
+                <li>10% 이상 상승 종목: KD (건설), 원익홀딩스 (로봇 관련주), 일승 (조선기자재), 한국선제 (조선기자재), 클로보트 (로봇 관련주).</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[시장별 거래대금 상위] 코스피 시장 (00:10:01)</h3>
+            <ul>
+                <li>상위 종목: SK하이닉스, 삼성전자, 두산에너빌리티, HJ중공업, 이수페타시스, 한화오션, 네이버, 미래에셋증권, 세진중공업, LG화학.</li>
+                <li>10% 이상 상승 종목: 미래에셋증권 (증권사).</li>
+            </ul>
+        </li>
+        <li>
+            <h3>[시장별 거래대금 상위] 코스닥 시장 (00:10:19)</h3>
+            <ul>
+                <li>상위 종목: 클로보트, 원익홀딩스, 삼현, 알테오젠, 오리엔탈전공, 현대임스, 뉴로핏, LNC바이오, 일승, 하나마이크론.</li>
+                <li>10% 이상 상승 종목: 클로보트 (로봇 관련주), 원익홀딩스 (로봇 관련주), 삼현 (로봇 관련주, 고아중 자율주행 로봇 상용개발 완료), 뉴로핏 (의료 AI, 일본 의료센터 계약), 일승 (조선기자재), 하나마이크론 (반도체 관련주).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>요약</h2>
+    <p>9월 9일 국내 주식 시장은 코스피 1.26%, 코스닥 0.76% 상승으로 마감했으며, 총 34개 종목이 10% 이상 급등했습니다. 주요 상승 동력은 <strong>조선 테마</strong>의 한미 군함 건조 협력 기대감, <strong>반도체 CXL 테마</strong>의 삼성/하이닉스 마벨 CXL 호환성 테스트 통과 및 중국 반도체 장비 연간 승인 검토 소식, <strong>로봇 테마</strong>의 노란봉투법 시행에 따른 대기업 로봇 투자 확대 전망, <strong>증권 테마</strong>의 대주주 기준 완화 검토 가능성, <strong>건설 테마</strong>의 수도권 주택 공급 확대 방안 발표, 그리고 <strong>제약 바이오 테마</strong>의 정부 육성 전략 및 금리 인하 기대감입니다.</p>
+    <p>개별 종목으로는 로봇 관련주 <strong>삼현</strong>이 고아중 자율주행 로봇 상용개발 완료 소식에 상한가를 기록했으며, <strong>셀루메드</strong>와 <strong>인스코비</strong>는 관리 종목 해제 기대감으로 강세를 보였습니다. <strong>금강공업</strong>은 자회사 삼미금속의 선박엔진 핵심 소재 공급 계약으로, <strong>뉴로핏</strong>은 일본 의료센터와의 소프트웨어 공급 계약으로 주목받았습니다. 또한, <strong>한국 주강</strong>은 K-스틸법 발의로 철강 기업으로서, <strong>한스바이오메드</strong>는 신제품 출시 및 리주란의 인기로 상승세를 이어갔습니다. 거래량 및 거래대금 상위 종목에서도 증권, 로봇, 조선기자재, 반도체 관련주들의 활발한 움직임이 관찰되었습니다.</p>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>테마주 변동성:</strong> 특정 정책(노란봉투법, 주택 공급 확대, 바이오 육성)이나 기술 이슈(CXL)에 민감하게 반응하는 테마주는 급등 가능성이 크지만, 단기적인 이슈에 그칠 수 있으므로 심층적인 기업 분석과 함께 신중한 접근이 필요합니다.</li>
+        <li><strong>차익 실현 압력:</strong> 급등세를 보인 종목들은 단기간 내 차익 실현 매물이 출회될 수 있습니다. 특히 시총 상위 조선 기업들이 하락세를 보인 것처럼, 과열 구간에서의 추격 매수는 피하고 분할 매도 또는 관망 전략을 고려해야 합니다.</li>
+        <li><strong>정책 변화의 영향:</strong> 대주주 기준 완화와 같은 정부 정책 변화는 시장 전반이나 특정 섹터에 긍정적인 영향을 미칠 수 있습니다. 그러나 정책의 실제 시행 여부, 구체적인 내용, 그리고 시장에 미칠 파급 효과를 면밀히 분석한 후 투자 결정을 내려야 합니다.</li>
+        <li><strong>개별 기업 이슈 검토:</strong> 자회사 계약, 신제품 출시, 관리 종목 해제 기대감 등 개별 기업의 호재성 뉴스는 주가에 강력한 영향을 미 미칠 수 있습니다. 하지만 이러한 이슈의 지속성과 기업의 펀더멘탈을 함께 고려하여 장기적인 관점에서 접근하는 것이 중요합니다.</li>
+        <li><strong>정보의 신뢰성 확인:</strong> 언론을 통한 단독 기사나 소문성 정보는 빠르게 주가에 반영될 수 있으나, 때로는 불확실하거나 과장된 내용일 수 있습니다. 정보의 출처와 신뢰성을 확인하고, 기업의 공식 발표를 통해 사실 관계를 검토하는 보수적인 투자 자세가 요구됩니다.</li>
+    </ul>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><strong>핵심 요약</strong></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <strong>✨ 시장 상승 요인:</strong> <span class="highlight">한미 조선 협력, CXL 기술 기대, 로봇 투자 확대, 대주주 기준 완화 검토, 주택 공급 확대, 바이오 산업 육성 전략</span> 등 다양한 호재가 시장을 견인했습니다.
+                </div>
+                <div class="section">
+                    <strong>📊 주요 급등 테마:</strong> <strong>조선, 반도체 CXL, 로봇, 증권, 건설, 제약 바이오</strong> 섹터가 강세를 보였습니다.
+                </div>
+                <div class="section">
+                    <strong>🚀 상한가 종목:</strong> <strong>동일스틸럭스, 삼현, 셀루메드, DAP</strong>이 상한가를 기록하며 투자자들의 관심을 집중시켰습니다.
+                </div>
+                <div class="section">
+                    <strong>⚠️ 투자 시 주의:</strong> 테마주의 <span class="highlight">변동성</span>, 급등 후 <span class="highlight">차익 실현 매물</span> 출회 가능성, <span class="highlight">정책 변화의 불확실성</span>, 그리고 <span class="highlight">정보의 신뢰성</span>을 항상 확인해야 합니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                본 분석은 2023년 9월 9일 시장 데이터를 기반으로 작성되었습니다. 투자 결정 시 참고 자료로 활용하시기 바랍니다.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
