@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[오늘장 10분만-9월11일] 오라클, +35.95% 폭등 ｜ 시놉시스, -35.84% 폭락 ｜ 도이치방크, 연말 S&P500 7000간다 ｜ 폴란드, 러 드론 격추</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            padding: 10px 25px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            body { font-size: 15px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; padding: 8px 15px; }
+            h3 { font-size: 18px; margin: 20px 0 10px; }
+            .video-meta p { font-size: 14px; }
+            .definition { font-size: 0.85em; padding: 6px 10px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+            .single-summary-card .card-content .section { margin-bottom: 8px; }
+            .single-summary-card .card-content .formula { padding: 5px 8px; font-size: 0.85em; }
+            .single-summary-card .card-footer { font-size: 13px; padding-top: 10px; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 20px; }
+            h2 { font-size: 18px; padding: 6px 10px; }
+            h3 { font-size: 16px; margin: 15px 0 8px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+            .single-summary-card .card-content .section { margin-bottom: 6px; }
+            .single-summary-card .card-content .formula { padding: 4px 6px; font-size: 0.8em; }
+            .single-summary-card .card-footer { font-size: 12px; padding-top: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>[오늘장 10분만-9월11일] 오라클, +35.95% 폭등 ｜ 시놉시스, -35.84% 폭락 ｜ 도이치방크, 연말 S&P500 7000간다 ｜ 폴란드, 러 드론 격추</h1>
+
+    <div class="video-meta">
+        <p><strong>videoId:</strong> 0rdRF6YWDL8</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=0rdRF6YWDL8" target="_blank">https://www.youtube.com/watch?v=0rdRF6YWDL8</a></p>
+        <p><strong>제목:</strong> [오늘장 10분만-9월11일] 오라클, +35.95% 폭등 ｜ 시놉시스, -35.84% 폭락 ｜ 도이치방크, 연말 S&P500 7000간다 ｜ 폴란드, 러 드론 격추</p>
+        <p><strong>영상 길이:</strong> 00시간17분47초 (17분)</p>
+    </div>
+
+    <h2>개요</h2>
+    <p>2024년 9월 11일 시장은 AI 테마의 강력한 상승과 비AI 섹터의 부진으로 양극화된 모습을 보였습니다. 오라클은 OpenAI와의 대규모 계약 소식과 함께 36% 폭등하며 시장을 견인했고, 창업자 래리 앨리슨은 세계 1위 부자 자리에 올랐습니다. 반면 시놉시스는 실적 부진과 중국 관련 계약 실패로 35% 급락했습니다. 예상보다 낮은 생산자 물가 지수(PPI) 발표는 연준의 통화 정책 완화 기대를 높였으나, 연준 인사 관련 논란과 러시아-폴란드 간 지정학적 긴장도 함께 부각되었습니다.</p>
+
+    <h2>내용</h2>
+
+    <h3>[시장 동향]</h3>
+    <ul>
+        <li><strong>주요 지수 (00:00:43)</strong>
+            <ul>
+                <li>오라클이 시장을 견인했으나, 애플과 아마존의 부진으로 기대보다 상승폭이 제한되었습니다.</li>
+                <li><strong>S&P500 지수</strong>: 0.3% 상승한 6532.04로 사상 최고치를 경신했습니다.</li>
+                <li><strong>나스닥 지수</strong>: 0.03% 상승한 21886.06을 기록했습니다.</li>
+                <li><strong>다우존스 지수</strong>: 주요 대형 종목의 하락으로 0.48% 내린 45490.92를 기록했습니다.</li>
+                <li><strong>러셀 2000</strong>: 유난히 힘이 없어 0.18% 하락 마감했습니다.</li>
+            </ul>
+        </li>
+        <li><strong>상품 가격 및 채권 금리 (00:01:18)</strong>
+            <ul>
+                <li><strong>금값</strong>: 0.04% 소폭 하락한 트로이온스당 3680.7달러를 기록했습니다.</li>
+                <li><strong>유가</strong>: 63.77달러로 거의 변화가 없었습니다.</li>
+                <li><strong>국채 금리</strong>: 10년 만기 미국 국채 금리가 2.7bp 하락한 4.047%를 기록하며 연준의 통화 정책 완화 가능성에 대한 기대가 반영되었습니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=bp" target="_blank">bp</a>: Basis Point의 약자로, 금융 시장에서 금리나 수익률 변화를 나타내는 단위. 1bp는 0.01%.</p>
+        </li>
+        <li><strong>변동성 지수 및 달러 인덱스 (00:01:47)</strong>
+            <ul>
+                <li><strong>변동성 지수(VIX)</strong>: 2% 상승하여 15선 중반에 도달했습니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=VIX" target="_blank">VIX</a>: Cboe Volatility Index의 약자로, 미국 시카고옵션거래소에 상장된 S&P 500 지수옵션의 향후 30일간의 변동성에 대한 시장의 기대를 나타내는 지수. 시장의 공포 지수로 불림.</p>
+            <ul>
+                <li><strong>달러인덱스</strong>: 97.8까지 소폭 상승했습니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=달러인덱스" target="_blank">달러인덱스</a>: 유로, 엔, 파운드, 캐나다 달러, 스웨덴 크로네, 스위스 프랑 등 6개 주요 통화에 대한 미국 달러의 평균적인 가치를 측정하는 지수.</p>
+        </li>
+        <li><strong>암호화폐 시장 (00:02:17)</strong>
+            <ul>
+                <li>돈이 풀릴 것이라는 기대로 위험자산인 암호화폐 시장은 상승했습니다.</li>
+                <li><strong>비트코인</strong>: 2% 상승하여 11만 3천 달러 선.</li>
+                <li><strong>이더리움</strong>: 1% 상승하여 4300달러 선.</li>
+                <li><strong>리플</strong>: 0.7% 상승.</li>
+                <li><strong>솔라나</strong>: 2% 상승하여 220달러 선.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[주요 기업 및 섹터 동향]</h3>
+    <ul>
+        <li><strong>AI 테마 관련 강세 종목 (00:02:42)</strong>
+            <ul>
+                <li>AI 테마에 엮인 기업들은 강한 상승을 보였습니다.</li>
+                <li><strong>오라클</strong>: 장중 40% 이상 상승 후 36% 급등 마감 (1992년 이후 최고치).</li>
+                <li><strong>팔란티어</strong>: 2% 상승.</li>
+                <li><strong>엔비디아</strong>: 3.8% 상승.</li>
+                <li><strong>브로드컴</strong>: 9.7% 상승.</li>
+                <li><strong>AMD</strong>: 2% 상승.</li>
+                <li><strong>마이크론</strong>: 3% 상승.</li>
+                <li><strong>인텔</strong>: 장초반 부진 후 상승 전환.</li>
+                <li><strong>전력 관련 기업</strong>: 오라클 데이터센터 전력 수요 증가 전망에 G번오바, 컨스탈레이션 에너지 등 강세.</li>
+                <li><strong>GE</strong>: 항공 관련 2.4% 상승.</li>
+            </ul>
+        </li>
+        <li><strong>AI 비관련 또는 부진 종목 (00:03:44)</strong>
+            <ul>
+                <li>그렇지 않은 종목들은 하락폭이 크게 나타났습니다.</li>
+                <li><strong>아마존</strong>: 오라클에 점유율을 뺏길 수 있다는 우려로 3% 하락.</li>
+                <li><strong>애플</strong>: 아이폰 실망감으로 3% 급락.</li>
+                <li><strong>세일즈포스</strong>: 3% 넘게 하락.</li>
+                <li><strong>IBM, 액센츄어</strong>: 하락.</li>
+                <li><strong>노보노디스크</strong>: 대규모 구조조정 소식에 하락, 상대적으로 <strong>일라이 릴리</strong>는 0.55% 상승.</li>
+                <li><strong>경기 방어 종목</strong>: 월마트, 코스트코, 통신주 등은 상승폭이 미미하거나 보합.</li>
+            </ul>
+        </li>
+        <li><strong>오라클 폭등 상세 (00:09:26)</strong>
+            <ul>
+                <li><strong>주가</strong>: 35.95% 폭등 (하루 상승폭으로는 1992년 이후 최대).</li>
+                <li><strong>실적 발표</strong>: 자녀 이행 의무(RPO)가 4,550억 달러에 달한다고 발표. 이는 지난 4분기 대비 2배 이상, 이전 분기 대비 4배를 넘어서는 엄청난 규모입니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=RPO" target="_blank">RPO</a>: Remaining Performance Obligations의 약자로, 고객과 계약된 서비스나 제품을 미래에 제공할 의무가 있는 금액.</p>
+            <ul>
+                <li><strong>OpenAI 계약</strong>: 월스트리트저널 보도에 따르면 오픈AI와 5년간 3,000억 달러 규모의 데이터센터 계약을 체결했습니다. 이로 인해 4.5 기가와트 규모의 전력이 필요할 것으로 추정됩니다.</li>
+                <li><strong>목표가 상향</strong>: 제프리스는 오라클 목표가를 270달러에서 360달러로 상향 조정하는 등 월가에서 기업가치 재평가 논리가 확산.</li>
+                <li><strong>비판적 시각</strong>: 일부에서는 RPO가 기존 고객의 재계약 물량일 수 있어 순수한 신규 수주만으로 보기는 어렵다는 지적도 있습니다.</li>
+                <li><strong>래리 앨리슨</strong>: 오라클 창업자 래리 앨리슨 회장은 하루 만에 1,090억 달러의 자산이 늘어나 세계 1위 부자 자리에 올랐습니다 (순자산 4,041억 달러, 한화 약 560조 원).</li>
+            </ul>
+        </li>
+        <li><strong>시놉시스 폭락 상세 (00:11:51)</strong>
+            <ul>
+                <li><strong>주가</strong>: 35% 폭락.</li>
+                <li><strong>3분기 실적</strong>: 매출액 17억 4천만 달러, 조정 주당 순이익(EPS) 3.39달러로 모두 시장 컨센서스를 하회했습니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=EPS" target="_blank">EPS</a>: Earnings Per Share의 약자로, 기업이 일정 기간 벌어들인 순이익을 발행 주식수로 나눈 값. 주당 순이익.</p>
+            <ul>
+                <li><strong>4분기 전망</strong>: 주당 순이익을 2.80달러로 제시, 시장 예상치의 절반 수준. 연간 EPS도 3달러 하향 조정된 12.8달러로 전망했습니다.</li>
+                <li><strong>실적 하락 원인</strong>:
+                    <ul>
+                        <li>중국과의 다년간 계약 실패.</li>
+                        <li>인텔로 추정되는 대형 파운드리 업체의 내부 문제로 인한 수익 회수 지연.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=파운드리" target="_blank">파운드리</a>: 반도체 위탁 생산 전문 기업 또는 그런 사업 방식.</p>
+            <ul>
+                <li><strong>내부 구조조정</strong>: 인력 감축, 내부 IP 개편, NCIS 인수 후 사업 시너지 모색 등 압박을 받고 있습니다.</li>
+            </ul>
+        </li>
+        <li><strong>아마존 동향 (00:13:13)</strong>
+            <ul>
+                <li><strong>사업 진행</strong>: AI 관련 비용 효율화 진행 중.</li>
+                <li><strong>자율주행</strong>: 라스베이거스에서 자율주행 로보택시 '죽스(Zoox)' 일반 운행 시작.</li>
+                <li><strong>AR 안경</strong>: 코드명 '제이호크'로 증강 현실(AR) 안경 개발 중.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=AR" target="_blank">AR</a>: Augmented Reality의 약자로, 실제 환경에 가상 정보를 덧씌워 보여주는 기술(증강현실).</p>
+            <ul>
+                <li><strong>넷플릭스 파트너십</strong>: 넷플릭스와 광고 파트너십을 맺었으나, 주가에는 큰 영향이 없었습니다 (넷플릭스 1.23% 하락).</li>
+            </ul>
+        </li>
+        <li><strong>클라르나 상장 (00:13:59)</strong>
+            <ul>
+                <li><strong>주가</strong>: 상장 직후 공모가 대비 30% 급등 후 14% 상승 마감. 시가총액 200억 달러.</li>
+                <li><strong>사업</strong>: '지금 사고 나중에 결제하기(BNPL)' 옵션으로 성장한 대출 업체. 디지털 은행 사업 확장을 위한 자금 조달 차원.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=BNPL" target="_blank">BNPL</a>: Buy Now, Pay Later의 약자로, 물건을 먼저 구매하고 나중에 할부로 대금을 지불하는 서비스.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=IPO" target="_blank">IPO</a>: Initial Public Offering의 약자로, 기업이 주식을 일반 투자자에게 공개적으로 처음 판매하는 것(기업공개).</p>
+        </li>
+        <li><strong>반도체 섹터 동향 (00:14:35)</strong>
+            <ul>
+                <li><strong>TSMC</strong>: 8월 매출 33.8% 증가, AI 반도체 수요의 강력함을 반증.</li>
+                <li><strong>ARM</strong>: 9.47% 상승.</li>
+                <li><strong>마이크론</strong>: 3.52% 상승.</li>
+                <li><strong>퀄컴</strong>: 0.18% 상승. BMW 전기차에 '스냅드래곤 라이드파일럿' 탑재 예정.</li>
+            </ul>
+        </li>
+        <li><strong>노보노디스크 인력 조정 및 실적 전망 하향 (00:15:14)</strong>
+            <ul>
+                <li><strong>인력 조정</strong>: 전 세계 인력의 11.5%를 조정할 예정.</li>
+                <li><strong>성장률 전망</strong>: 연간 영업이익 성장률 전망치를 기존 10~16%에서 4~10%로 크게 하향 조정.</li>
+            </ul>
+        </li>
+        <li><strong>유나이티드 헬스그룹 주가 안정화 (00:15:31)</strong>
+            <ul>
+                <li><strong>주가</strong>: 0.33% 하락하며 소폭 조정.</li>
+                <li><strong>수익 우려 해소</strong>: 메디케어 어드밴티지 스타 등급에서 78%의 고객을 확보했다는 소식으로 수익 우려를 해소. 번스타인, 모건스탠리 등 월가 은행들이 긍정적 평가 보고서 발행.</li>
+            </ul>
+        </li>
+        <li><strong>테피스트리 투자자 행사 (00:15:56)</strong>
+            <ul>
+                <li><strong>자사주 매입</strong>: 2028 회계연도까지 30억 달러 규모 자사주 매입 계획 발표.</li>
+                <li><strong>코치 브랜드 육성</strong>: 코치를 100억 달러 매출 브랜드로 키우고, Z세대에 집중하여 신발 카테고리까지 확장할 계획 발표.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=Z세대" target="_blank">Z세대</a>: 1990년대 중반에서 2000년대 초반에 태어난 세대를 지칭.</p>
+        </li>
+        <li><strong>힘스 앤 허스 (00:16:19)</strong>
+            <ul>
+                <li><strong>주가</strong>: 0.02% 상승으로 거의 보합.</li>
+                <li><strong>신제품</strong>: FDA 승인을 받은 테스토스테론 치료제를 내년부터 독점 공개할 예정.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=FDA" target="_blank">FDA</a>: Food and Drug Administration의 약자로, 미국 식품의약국. 식품, 의약품, 화장품, 의료기기 등의 안전성을 관리하고 승인하는 정부 기관.</p>
+        </li>
+        <li><strong>우버 및 도어대시의 신사업 (00:16:31)</strong>
+            <ul>
+                <li><strong>우버</strong>: 조비(Joby)와 파트너십을 통해 블레이드(항공 모빌리티)를 우버 앱에 통합하고 내년부터 항공 택시 사업을 본격화할 예정. 주가는 보합권.</li>
+                <li><strong>도어대시</strong>: 샌프란시스코에서 알파벳의 윙(Wing) 항공기를 이용한 드론 배송 첫 시설을 구축.</li>
+            </ul>
+        </li>
+        <li><strong>웨어러블 디바이시스 주가 급등 (00:16:55)</strong>
+            <ul>
+                <li><strong>주가</strong>: 407% 폭등.</li>
+                <li><strong>원인</strong>: 제스처 및 음성 인식을 통한 생체 인증 특허 취득 소식.</li>
+            </ul>
+        </li>
+        <li><strong>팔란티어 및 치폴레 소식 (00:17:07)</strong>
+            <ul>
+                <li><strong>팔란티어</strong>: 영국 육군용 전장 시뮬레이션 공급 계약으로 2.7% 상승.</li>
+                <li><strong>치폴레</strong>: 싱가포르(내년) 및 한국(SPC와 파트너십) 진출 소식.</li>
+            </ul>
+        </li>
+        <li><strong>쿠팡 주주 소송 기각 (00:17:20)</strong>
+            <ul>
+                <li><strong>주가</strong>: 조정을 받았지만, 뉴욕 맨해튼 법원이 2021년 상장 당시 제기되었던 주주 집단 소송을 기각했다는 판결이 뒤늦게 알려졌습니다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[거시 경제 지표 및 정책]</h3>
+    <ul>
+        <li><strong>생산자 물가 지수(PPI) 발표 (00:04:47)</strong>
+            <ul>
+                <li><strong>헤드라인 PPI</strong>: 전월 대비 -0.1% 기록 (시장 예상 0.3% 상승).</li>
+                <li><strong>연간 PPI</strong>: 2.6% 상승 (시장 예상 3.3% 상승)으로 예상보다 크게 낮았습니다.</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=PPI" target="_blank">PPI</a>: Producer Price Index의 약자로, 생산자 물가지수. 생산자가 국내 시장에서 판매하는 상품과 서비스의 가격 변동을 측정하는 지표.</p>
+            <ul>
+                <li><strong>근원 PPI</strong>: 식품과 에너지를 제외한 항목도 월간 0.3%, 연간 2.8%로 예상보다 낮았습니다.</li>
+                <li><strong>원인</strong>: 기업들이 마진을 줄여 비용을 흡수했고, 기계류 및 차량 부품 도매 마진이 -3.9%를 기록하며 물가 상승분을 제한했습니다. 이는 물가 압력이 완화될 수 있다는 기대를 키웠습니다.</li>
+            </ul>
+        </li>
+        <li><strong>연준 통화 정책 완화 기대 (00:06:12)</strong>
+            <ul>
+                <li><strong>FMC 금리 인하 가능성</strong>: 이번 달 FOMC에서 25bp 금리 인하 가능성이 90%에 육박 (한때 100% 가까이).</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=FMC" target="_blank">FMC</a>: Federal Open Market Committee의 약자로, 연방공개시장위원회. 미국 연방준비제도 이사회 산하 기구로, 금리 정책을 결정하는 역할을 함.</p>
+            <ul>
+                <li><strong>추가 인하 가능성</strong>: 10월 추가 인하 73%, 12월 추가 인하 66%로, 올해 총 3번의 금리 인하에 시장이 무게를 두고 있습니다.</li>
+            </ul>
+        </li>
+        <li><strong>연준 인사 관련 논란 (00:06:33)</strong>
+            <ul>
+                <li><strong>리사 쿡 이사 지위 유지</strong>: 트럼프 행정부의 해임 시도에도 불구하고, 법원 판결로 리사 쿡 연준 이사는 자리를 지키게 되었습니다. 법원은 해임 사유가 직책 수행 이후의 사건에 적용되어야 하며, 자의적 해석은 해임 방지 조항을 무력화한다고 판단했습니다.</li>
+                <li><strong>스티브 미란 이사 승인</strong>: 스티브 미란 연준 이사는 상원 은행 회의에서 13대 1로 빠르게 승인되었으나, 이는 연준 독립성에 대한 우려를 낳고 있습니다. 통상적인 검토 과정보다 훨씬 빠르게 인준이 이루어졌다는 비판이 제기되었습니다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[지정학적 리스크]</h3>
+    <ul>
+        <li><strong>러시아-폴란드 드론 사건 (00:08:21)</strong>
+            <ul>
+                <li>러시아 드론이 폴란드 영토를 침범하는 사건이 발생했습니다.</li>
+                <li><strong>폴란드 반응</strong>: 나토 조약 4조를 발동하여 나토 협약 국가에 대한 침략으로 규정하고 대응을 모색 중.</li>
+                <li><strong>러시아 해명</strong>: 우크라이나 군수공장을 표적으로 했다가 드론이 잘못 갔다고 해명하며 협의 입장을 보였습니다.</li>
+                <li><strong>트럼프 입장</strong>: 트럼프 대통령은 이 사건을 인지하고 있다는 글을 올렸으나, 러시아를 잠재우려는 시도조차 언급하지 않아 유럽연합과의 온도 차가 발생하고 있습니다.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>[향후 주요 일정]</h3>
+    <ul>
+        <li><strong>소비자 물가 지수(CPI) 발표 (00:17:33)</strong>: 내일 오전에 공개되며 시장의 흐름을 좌우할 것으로 예상됩니다.</li>
+        <li><strong>기업 실적 발표</strong>: 크로거와 워더빈의 실적이 예정되어 있습니다.</li>
+    </ul>
+
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><strong>핵심 요약</strong></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ AI 테마의 극명한 양극화:</b> <strong>오라클</strong>은 OpenAI와의 대규모 계약 및 낮은 생산자 물가 지수(PPI) 발표로 연준의 통화 정책 완화 기대가 커지면서 <span class="highlight">36% 폭등</span>했습니다. 반면 <strong>시놉시스</strong>는 중국 관련 계약 실패와 부진한 실적으로 <span class="highlight">35% 폭락</span>했습니다. 애플과 아마존도 하락세를 보였습니다.
+                </div>
+                <div class="section">
+                    <b>📊 연준 통화 정책 완화 기대감 증대:</b> 예상보다 낮은 PPI 발표는 물가 압력 완화에 대한 기대를 키웠고, 이에 따라 이번 달 FOMC에서 <span class="highlight">25bp 금리 인하 가능성이 90%에 육박</span>하며 올해 총 3번의 인하 가능성에 시장이 무게를 두고 있습니다.
+                </div>
+                <div class="section">
+                    <b>⚠️ 지정학적 리스크 및 연준 독립성 논란:</b> 러시아 드론의 폴란드 영토 침범 사건은 지정학적 긴장을 고조시켰고, 연준 인사 승인 과정에서의 <span class="highlight">독립성 훼손 논란</span>도 지속되고 있습니다.
+                </div>
+                <div class="section">
+                    <b>🗓️ 주요 관전 포인트:</b> 내일 발표될 <strong>소비자 물가 지수(CPI)</strong>가 시장의 향방을 결정할 주요 변수가 될 것입니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                본 요약은 2024년 9월 11일 시장 마감 기준으로 작성되었습니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>AI 테마의 지속적인 강세와 양극화</strong>: AI 관련 기업과 비관련 기업 간의 주가 흐름 차이가 심화되고 있습니다. 투자 시 AI 테마의 실제 수혜 여부와 기업의 펀더멘탈을 면밀히 분석해야 합니다. 급등한 종목의 과열 여부와 급락한 종목의 저평가 가능성을 동시에 고려해야 합니다.</li>
+        <li><strong>인플레이션 지표와 연준 정책 변화</strong>: 생산자 물가지수(PPI)가 예상보다 낮게 나오면서 연준의 금리 인하 기대가 커지고 있습니다. 내일 발표될 소비자 물가지수(CPI) 역시 매우 중요하며, 인플레이션 완화 신호가 지속될 경우 시장 전반에 긍정적인 영향을 미칠 수 있습니다. 반대로 예상치보다 높게 나올 경우 시장의 실망 매물이 나올 수 있으므로, 지표 발표 전후의 시장 변동성에 대비해야 합니다.</li>
+        <li><strong>지정학적 리스크 모니터링</strong>: 러시아-폴란드 드론 사건과 같은 지정학적 긴장은 예상치 못한 시장 충격을 줄 수 있습니다. 특히 에너지 가격이나 특정 섹터에 영향을 미칠 수 있으므로 관련 뉴스를 지속적으로 모니터링해야 합니다.</li>
+        <li><strong>개별 기업의 실적 및 전망</strong>: 오라클의 RPO 증가나 시놉시스의 계약 실패 사례에서 보듯이, 개별 기업의 실적 발표와 향후 전망은 주가에 즉각적이고 큰 영향을 미칩니다. 주요 기업들의 실적 시즌에는 실적 내용과 가이던스(guidance)를 꼼꼼히 확인하고 투자 전략에 반영해야 합니다. 특히 대규모 계약이나 구조조정 소식은 기업의 장기적인 성장성 또는 리스크를 판단하는 중요한 단서가 됩니다.</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 건강 맞춤 3일 영양 식단 (초보자용)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 기본 설정 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fcf8f3; /* 따뜻한 배경색 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* 그림자 강화 */
+            border-radius: 20px; /* 둥근 모서리 강화 */
+            margin: 30px 0;
+            padding: 45px;
+            box-sizing: border-box;
+            position: relative; /* 스크롤 버튼을 위해 */
+        }
+
+        /* 헤더 */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #FFC1CC 0%, #FF99AA 100%); /* 부드러운 그라데이션 */
+            border-radius: 20px 20px 0 0;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 3.2em; /* 폰트 크기 증가 */
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2); /* 그림자 강화 */
+            letter-spacing: -1px;
+        }
+
+        header p {
+            color: #fff;
+            font-size: 1.2em;
+            margin-top: 15px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* 공통 스타일 */
+        h2 {
+            color: #e63946; /* 강렬한 포인트 색상 */
+            font-size: 2.4em;
+            border-bottom: 3px solid #ffb2b2;
+            padding-bottom: 15px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 6px;
+            background-color: #ff99aa; /* 하단 장식 */
+            border-radius: 3px;
+        }
+
+        h3 {
+            color: #e63946;
+            font-size: 2em;
+            margin-top: 45px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        h4 {
+            color: #333; /* 텍스트 색상 변경 */
+            font-size: 1.5em;
+            margin-top: 35px;
+            margin-bottom: 18px;
+            border-left: 6px solid #ffc1cc; /* 왼쪽 테두리 색상 변경 */
+            padding-left: 15px;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 12px;
+            font-weight: 400;
+            color: #555;
+        }
+
+        ul, ol {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 25px;
+        }
+
+        ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        ul li::before {
+            content: '🌟'; /* 아이콘 변경 */
+            position: absolute;
+            left: 0;
+            color: #ff99aa;
+            font-weight: bold;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+            padding-left: 5px;
+            counter-increment: step-counter;
+            position: relative;
+            color: #555;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        ol li::before {
+            content: counter(step-counter) ". ";
+            color: #e63946; /* 색상 변경 */
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+        strong {
+            color: #e63946;
+            font-weight: 700;
+        }
+
+        /* 목차 */
+        .table-of-contents {
+            background-color: #fff0f5; /* 부드러운 배경 */
+            border: 1px solid #ffdddd;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .table-of-contents h3 {
+            color: #e63946;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            text-align: center;
+        }
+        .table-of-contents ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 0;
+        }
+        .table-of-contents li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .table-of-contents li::before {
+            content: none;
+        }
+        .table-of-contents a {
+            display: block;
+            background-color: #ffc1cc;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .table-of-contents a:hover {
+            background-color: #e63946;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* 재료 목록 스타일 */
+        .ingredients-list {
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .ingredients-category {
+            flex: 1;
+            min-width: 280px;
+            background-color: #fffaf0; /* 부드러운 색상 */
+            border: 1px solid #ffe0e0;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease;
+        }
+        .ingredients-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+
+        .ingredients-category h5 {
+            color: #e63946;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .ingredients-category h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background-color: #ff99aa;
+        }
+
+        .ingredients-category ul {
+            padding-left: 0;
+        }
+        .ingredients-category ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        .ingredients-category ul li::before {
+            content: '💖'; /* 작은 하트 아이콘 */
+            color: #ff99aa;
+            left: 0;
+            font-size: 0.8em;
+        }
+
+
+        /* 식단 카드 스타일 */
+        .day-section {
+            background-color: #fdfdfd;
+            border-radius: 18px;
+            padding: 35px;
+            margin-bottom: 50px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .day-section h3 {
+            font-size: 2.2em;
+            color: #e63946;
+            margin-top: 0;
+            margin-bottom: 35px;
+            background-color: #fff5f8;
+            padding: 18px;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+
+        .meal-card {
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .meal-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .meal-card h4 {
+            font-size: 1.8em;
+            color: #e63946;
+            margin-bottom: 18px;
+            padding-left: 0;
+            border-left: none;
+            text-align: center;
+            position: relative;
+        }
+        .meal-card h4::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: #ffc1cc;
+        }
+
+        .meal-icon {
+            display: block;
+            font-size: 2.8em; /* 아이콘 크기 증가 */
+            text-align: center;
+            margin-bottom: 15px;
+            color: #e63946;
+        }
+
+        .recipe-section {
+            background-color: #fffbfd; /* 더 부드러운 색상 */
+            border-left: 5px solid #ff99aa; /* 테두리 강화 */
+            padding: 25px 30px;
+            margin-top: 30px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: inset 3px 0 8px rgba(0,0,0,0.03); /* 내부 그림자 효과 */
+        }
+
+        .recipe-section h5 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-weight: 700;
+            border-bottom: 1px dotted #ffdddd;
+            padding-bottom: 8px;
+        }
+
+        .recipe-section ol li strong {
+            color: #e63946;
+            font-weight: 700;
+        }
+        
+        /* 유의사항 */
+        .notes {
+            background-color: #fff0f5;
+            border: 1px solid #ffc1cc;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .notes h3 {
+            color: #e63946;
+            border-bottom: 2px solid #ff99aa;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-size: 2em;
+            text-align: center;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .notes ul li::before {
+            content: '💡';
+            color: #ff99aa;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #777;
+            font-size: 0.95em;
+            margin-top: 60px;
+            background-color: #fce4ec; /* 부드러운 배경 */
+            width: 100%;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* 스크롤 투 탑 버튼 */
+        #scrollToTopBtn {
+            display: none; /* 숨김 */
+            position: fixed; /* 고정 위치 */
+            bottom: 30px; /* 하단 30px */
+            right: 30px; /* 우측 30px */
+            z-index: 99; /* 다른 요소 위에 표시 */
+            border: none; /* 테두리 없음 */
+            outline: none; /* 포커스 아웃라인 없음 */
+            background-color: #e63946; /* 배경색 */
+            color: white; /* 텍스트 색상 */
+            cursor: pointer; /* 클릭 가능한 커서 */
+            padding: 15px 20px; /* 패딩 */
+            border-radius: 50%; /* 원형 */
+            font-size: 24px; /* 폰트 크기 */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #d62f3c; /* 호버 시 색상 */
+            transform: translateY(-5px);
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 2em;
+                margin-top: 40px;
+            }
+            h3 {
+                font-size: 1.7em;
+                margin-top: 30px;
+            }
+            h4 {
+                font-size: 1.3em;
+                margin-top: 25px;
+            }
+            .table-of-contents ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .table-of-contents a {
+                width: 80%;
+                text-align: center;
+            }
+            .ingredients-list {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .ingredients-category {
+                min-width: unset;
+                width: 100%;
+            }
+            .day-section {
+                padding: 25px;
+            }
+            .meal-card {
+                padding: 20px;
+            }
+            .meal-icon {
+                font-size: 2.2em;
+            }
+            .recipe-section {
+                padding: 20px 20px;
+            }
+            #scrollToTopBtn {
+                padding: 12px 16px;
+                font-size: 20px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💖 건강 맞춤 3일 영양 식단 🍳</h1>
+        <p>심혈관 건강을 고려한, 요리 초보도 쉽게 따라 할 수 있는 맛있고 건강한 식단입니다.</p>
+        <p>갖고 있는 재료를 활용하고, 부족한 재료는 신선하게 채워 보세요!</p>
+    </header>
+
+    <div class="container">
+        <!-- 목차 영역 -->
+        <div class="table-of-contents">
+            <h3>📖 목차</h3>
+            <ul>
+                <li><a href="#health-guidelines">건강 관리 유의사항</a></li>
+                <li><a href="#ingredients-overview">필요 재료 한눈에 보기</a></li>
+                <li><a href="#day1">☀️ 첫째 날</a></li>
+                <li><a href="#day2">☁️ 둘째 날</a></li>
+                <li><a href="#day3">🌙 셋째 날</a></li>
+                <li><a href="#final-notes">마무리 건강 팁</a></li>
+            </ul>
+        </div>
+
+        <!-- 특별 고려사항 섹션 -->
+        <section class="notes" id="health-guidelines">
+            <h3>💡 건강 관리 특별 유의사항 (심부전, 고혈압, 고지혈증, 심혈관)</h3>
+            <ul>
+                <li><strong>나트륨(소금) 최소화:</strong> 모든 요리에서 소금, 간장, 된장, 고추장 사용량을 최대한 줄여주세요. 다시마, 멸치 등으로 육수를 내어 감칠맛을 더하고, 마늘, 양파, 파, 후추, 허브 등 자연 향신료로 풍미를 살려주세요. 저염 간장을 사용하시는 것을 권장합니다.</li>
+                <li><strong>지방 섭취 조절:</strong> 동물성 지방과 포화지방 섭취를 줄이고, 식물성 기름(올리브유, 들기름 등)도 소량만 사용하세요. 튀기기보다는 찌거나 굽거나 삶는 조리법을 주로 사용합니다.</li>
+                <li><strong>콜레스테롤 관리:</strong> 등푸른생선(고등어, 삼치 등)을 통해 오메가-3 지방산을 섭취하고, 채소와 통곡물 위주의 식단으로 섬유질 섭취를 늘려 혈중 콜레스테롤 수치 관리에 도움을 줍니다. 달걀은 노른자보다는 흰자 위주로 드시는 것이 좋습니다.</li>
+                <li><strong>당분 섭취 제한:</strong> 설탕은 극히 소량만 사용하거나 아예 사용하지 않는 것을 권장합니다. 단맛은 과일이나 채소의 자연적인 단맛으로 대체하세요.</li>
+                <li><strong>채소와 통곡물 충분히 섭취:</strong> 매 끼니 신선한 채소와 통곡물(현미밥, 잡곡밥)을 충분히 섭취하여 섬유질과 비타민, 미네랄을 보충합니다.</li>
+                <li><strong>싱겁게 먹는 습관:</strong> 처음에는 싱겁게 느껴질 수 있지만, 점차 익숙해지면 재료 본연의 맛을 즐길 수 있게 됩니다. 장기적인 건강을 위해 꾸준히 실천하는 것이 중요합니다.</li>
+            </ul>
+        </section>
+
+        <!-- 재료 현황 섹션 -->
+        <h2 id="ingredients-overview">✨ 필요 재료 한눈에 보기</h2>
+        <div class="ingredients-list">
+            <div class="ingredients-category">
+                <h5>🏡 가지고 있는 재료</h5>
+                <ul>
+                    <li>양파 (다양한 요리에 활용)</li>
+                    <li>마늘 (거의 모든 한식 요리의 기본)</li>
+                    <li>설탕 (아주 소량, 풍미 조절용)</li>
+                </ul>
+            </div>
+            <div class="ingredients-category">
+                <h5>🛒 구입해야 할 주요 재료</h5>
+                <ul>
+                    <li><strong>단백질:</strong> 닭가슴살, 두부, 흰살 생선(대구, 동태), 표고버섯, 계란(흰자 위주)</li>
+                    <li><strong>채소:</strong> 애호박, 당근, 파프리카, 브로콜리, 시금치, 콩나물, 배추, 무, 대파, 쑥갓, 제철 과일(베리류 등)</li>
+                    <li><strong>곡물/면:</strong> 쌀(현미, 잡곡 포함), 오트밀, 통밀, 당면</li>
+                    <li><strong>양념/기타:</strong> 저염 간장, 참기름(아주 소량), 들기름(아주 소량), 카레 가루(저염), 플레인 요거트(무가당), 멸치 다시마 육수 팩 (혹은 멸치, 다시마), 미역</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📆 3일 식단 추천</h2>
+
+        <section class="day-section" id="day1">
+            <h3>☀️ 첫째 날: 담백하고 편안한 시작</h3>
+
+            <div class="meal-card">
+                <span class="meal-icon">🥣</span>
+                <h4>아침: 저염 닭가슴살 채소죽</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/4개, 마늘 1쪽</li>
+                        <li><strong>[구입]</strong> 닭가슴살 100g, 쌀 1/2컵, 당근 1/4개, 애호박 1/4개, 물 4컵, 참기름 아주 소량 (1/2 작은술), 저염 국간장(선택, 아주 소량)</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>재료 준비:</strong> 쌀은 씻어서 30분 이상 불려둡니다. 닭가슴살은 잘게 다지고, 양파, 마늘, 당근, 애호박도 잘게 다져줍니다. (아주 작게 썰면 죽이 더 부드러워져요!)</li>
+                        <li><strong>닭가슴살 볶기:</strong> 냄비에 참기름을 아주 살짝 두르고, 다진 마늘과 양파를 넣어 향이 올라올 때까지 볶아줍니다. (중불)</li>
+                        <li><strong>채소 볶기:</strong> 닭가슴살을 넣고 겉면이 하얗게 변할 때까지 볶다가, 다진 당근과 애호박을 넣고 살짝 더 볶아줍니다.</li>
+                        <li><strong>쌀과 물 넣고 끓이기:</strong> 불려둔 쌀을 넣고 투명해질 때까지 볶은 후, 물 4컵을 붓습니다. 강불에서 끓이다가 끓기 시작하면 약불로 줄여 뚜껑을 닫고 20-30분간 저어가며 끓여줍니다. 쌀알이 퍼지고 죽 농도가 될 때까지 조리합니다.</li>
+                        <li><strong>간 맞추기:</strong> 죽이 완성되면 필요하다면 저염 국간장을 아주 소량 넣어 간을 맞춥니다. 소금을 넣어야 한다면 정말 최소한만 넣어주세요. (소금 대신 마늘과 양파로 풍미를 충분히 냈으니 가능한 한 넣지 않는 것이 좋습니다.)</li>
+                        <li><strong>완성:</strong> 따뜻하게 그릇에 담아냅니다.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <span class="meal-icon">🍲</span>
+                <h4>점심: 담백한 두부 버섯전골 (1인용)</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/4개, 마늘 1쪽</li>
+                        <li><strong>[구입]</strong> 두부 1/2모, 표고버섯 2개, 느타리버섯 한 줌, 배추 2-3잎, 대파 1/4대, 멸치 다시마 육수 (팩 또는 멸치, 다시마로 직접 낸 것) 3컵, 저염 국간장 1/2 작은술, 후추 약간</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>재료 준비:</strong> 두부는 먹기 좋은 크기로 썰고, 표고버섯과 느타리버섯은 손질하여 준비합니다. 배추는 길게 썰고, 양파는 채 썰고, 대파는 어슷 썰어줍니다. 마늘은 다지거나 편으로 썰어줍니다.</li>
+                        <li><strong>육수 내기:</strong> 멸치 다시마 육수 팩이 있다면 끓는 물에 넣어 육수를 냅니다. 직접 낸다면 멸치와 다시마를 물에 넣고 10분 정도 끓여 건져냅니다.</li>
+                        <li><strong>재료 담기:</strong> 작은 냄비에 썰어둔 배추, 양파를 깔고, 그 위에 두부, 버섯들을 예쁘게 돌려 담습니다.</li>
+                        <li><strong>끓이기:</strong> 준비된 육수를 붓고, 다진 마늘(또는 편 마늘)과 저염 국간장을 넣어줍니다. (간은 나중에 다시 조절할 수 있으니 처음엔 아주 소량만 넣으세요.) 강불에서 끓기 시작하면 중약불로 줄여 채소와 버섯이 부드러워질 때까지 5-7분간 끓여줍니다.</li>
+                        <li><strong>간 조절 및 마무리:</strong> 마지막에 대파를 넣고 한소끔 더 끓인 후, 후추를 살짝 뿌려줍니다. 부족하면 저염 국간장을 아주 조금 더 추가할 수 있지만, 되도록 육수와 채소의 맛을 살리는 것이 좋습니다.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <span class="meal-icon">🍚</span>
+                <h4>저녁: 통밀 현미밥과 채소 듬뿍 닭가슴살 볶음</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/4개, 마늘 2쪽, 설탕 아주 소량 (1/2 작은술 미만)</li>
+                        <li><strong>[구입]</strong> 통밀 현미밥 1공기, 닭가슴살 120g, 파프리카(색깔별) 1/2개, 브로콜리 1/4송이, 애호박 1/4개, 저염 간장 1큰술, 참기름 아주 소량 (1/2 작은술), 후추 약간</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>재료 준비:</strong> 닭가슴살은 먹기 좋은 크기로 썰고, 저염 간장(아주 소량), 후추로 밑간을 해둡니다. 양파는 채 썰고, 마늘은 편으로 썰거나 다져줍니다. 파프리카, 브로콜리, 애호박도 먹기 좋게 썰어줍니다. 브로콜리는 끓는 물에 살짝 데쳐 찬물에 헹궈 준비하면 좋습니다.</li>
+                        <li><strong>닭가슴살 볶기:</strong> 프라이팬에 식용유(또는 올리브유)를 아주 살짝 두르고, 다진 마늘과 양파를 넣어 향이 올라올 때까지 볶습니다. 닭가슴살을 넣고 겉면이 익을 때까지 볶아줍니다.</li>
+                        <li><strong>채소 넣고 볶기:</strong> 파프리카, 애호박, 데친 브로콜리를 넣고 닭가슴살과 함께 볶아줍니다. 채소가 너무 물러지지 않도록 아삭한 식감을 살립니다.</li>
+                        <li><strong>양념하기:</strong> 저염 간장 1큰술과 설탕 아주 소량(선택사항, 생략 가능)을 넣고 빠르게 볶아줍니다. 마지막으로 참기름을 아주 소량만 넣고 불을 끕니다.</li>
+                        <li><strong>완성:</strong> 따뜻한 통밀 현미밥과 함께 접시에 담아냅니다.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="day-section" id="day2">
+            <h3>☁️ 둘째 날: 상큼하고 다채로운 맛</h3>
+
+            <div class="meal-card">
+                <span class="meal-icon">🥛</span>
+                <h4>아침: 오트밀 과일 요거트 (무설탕)</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[구입]</strong> 오트밀 1/2컵, 플레인 요거트 (무가당) 1컵, 제철 과일 (블루베리, 딸기 등 베리류 또는 사과, 바나나) 한 줌</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>오트밀 준비:</strong> 오트밀을 그릇에 담고, 물이나 우유(저지방)를 오트밀이 잠길 정도로 부어 전자레인지에 1-2분 돌리거나, 끓는 물을 살짝 부어 3-5분 불려줍니다. (취향에 따라 따뜻하게 또는 차갑게)</li>
+                        <li><strong>과일 손질:</strong> 제철 과일은 깨끗하게 씻어 먹기 좋은 크기로 썰어줍니다.</li>
+                        <li><strong>담기:</strong> 불린 오트밀 위에 플레인 요거트 (무가당)를 붓고, 손질한 과일을 예쁘게 올려줍니다.</li>
+                        <li><strong>완성:</strong> 설탕이나 꿀은 추가하지 않고, 과일의 자연적인 단맛으로 즐깁니다. (견과류를 소량 추가해도 좋지만, 고지혈증 관리 중이라면 양에 주의하세요.)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <span class="meal-icon">🥗</span>
+                <h4>점심: 저염 채소 듬뿍 비빔밥 (양념간장 활용)</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/4개, 마늘 1쪽</li>
+                        <li><strong>[구입]</strong> 밥 1공기 (현미밥 추천), 시금치 한 줌, 콩나물 한 줌, 당근 1/4개, 애호박 1/4개, 계란 흰자 2개 (노른자 제외), 김가루 약간 (선택), 저염 간장 1큰술, 참기름 아주 소량 (1/2 작은술)</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>밥 준비:</strong> 현미밥을 미리 지어 준비합니다.</li>
+                        <li><strong>채소 손질 및 데치기:</strong> 시금치와 콩나물은 깨끗하게 씻어 끓는 물에 살짝 데친 후 찬물에 헹궈 물기를 꼭 짜줍니다. 당근과 애호박은 채 썰어줍니다.</li>
+                        <li><strong>채소 볶기 (각각):</strong> 프라이팬에 식용유를 아주 살짝 두르고, 다진 마늘 약간(1/2쪽)을 넣어 향을 낸 후, 채 썬 당근, 애호박을 각각 소금 아주 소량(또는 간장 아주 소량)으로 간하여 볶아줍니다. 데친 시금치와 콩나물도 각각 소금 아주 소량(또는 간장 아주 소량), 참기름 아주 소량을 넣어 조물조물 무쳐줍니다.</li>
+                        <li><strong>계란 흰자 지단:</strong> 계란 흰자를 잘 풀어서 약불에 얇게 지단을 부친 후 채 썰어줍니다.</li>
+                        <li><strong>저염 양념간장 만들기:</strong> 저염 간장 1큰술, 다진 마늘 1/2쪽, 참기름 아주 소량, 물 1큰술을 섞어 양념간장을 만듭니다. (고추장 대신 사용하며, 나트륨 섭취를 줄일 수 있습니다.)</li>
+                        <li><strong>담아내기:</strong> 그릇에 밥을 담고, 준비한 모든 채소와 계란 흰자 지단을 색깔별로 예쁘게 올립니다. 김가루를 좋아한다면 살짝 뿌려도 좋습니다.</li>
+                        <li><strong>완성:</strong> 만든 저염 양념간장을 비빔밥에 뿌려 맛있게 비벼 먹습니다.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <span class="meal-icon">🐟</span>
+                <h4>저녁: 담백한 흰살 생선찜 (대구 또는 동태)</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 마늘 2쪽</li>
+                        <li><strong>[구입]</strong> 대구 또는 동태 필레 150g, 무 50g, 대파 1/2대, 청양고추 1/2개 (선택, 매운맛을 좋아한다면), 저염 간장 1큰술, 물 2큰술, 들기름 아주 소량 (1/2 작은술), 생강 슬라이스 2조각 (선택, 비린 맛 제거)</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>재료 준비:</strong> 생선 필레는 흐르는 물에 헹궈 물기를 제거합니다. 무는 나박 썰고, 대파는 어슷 썰어줍니다. 마늘은 편으로 썰고, 청양고추는 송송 썰어줍니다.</li>
+                        <li><strong>양념장 만들기:</strong> 저염 간장 1큰술, 물 2큰술, 다진 마늘(또는 편 마늘), 들기름 아주 소량을 섞어 양념장을 만듭니다. (청양고추를 넣는다면 이때 함께 넣어줍니다.)</li>
+                        <li><strong>찜기에 올리기:</strong> 찜기(또는 냄비에 찜용 채반)에 물을 붓고 끓입니다. 찜용 그릇에 무를 깔고, 그 위에 생선 필레를 올립니다. 생선 위에 생강 슬라이스를 올리면 비린 맛 제거에 도움이 됩니다.</li>
+                        <li><strong>찌기:</strong> 찜기가 뜨거워지면 생선 그릇을 넣고 뚜껑을 닫아 10-15분간 쪄줍니다. 생선 두께에 따라 시간을 조절합니다. (생선 살이 하얗게 익으면 됩니다.)</li>
+                        <li><strong>양념 뿌리기:</strong> 생선이 다 익으면 찜기에서 꺼내 대파와 양념장을 위에 골고루 뿌려줍니다.</li>
+                        <li><strong>완성:</strong> 따뜻할 때 바로 드세요. 담백하고 촉촉한 생선살을 즐길 수 있습니다.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="day-section" id="day3">
+            <h3>🌙 셋째 날: 영양 가득, 든든한 마무리</h3>
+
+            <div class="meal-card">
+                <span class="meal-icon">🍳</span>
+                <h4>아침: 애호박 계란말이 & 현미밥</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/8개, 마늘 1/2쪽 (선택)</li>
+                        <li><strong>[구입]</strong> 계란 흰자 3개 (노른자 제외), 애호박 1/4개, 당근 1/8개 (선택), 현미밥 1공기, 식용유 아주 소량</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>재료 준비:</strong> 애호박과 당근, 양파는 아주 잘게 다져줍니다. 마늘도 아주 소량만 다져줍니다.</li>
+                        <li><strong>계란물 만들기:</strong> 계란 흰자를 그릇에 풀고, 다져놓은 채소들을 모두 넣어 잘 섞어줍니다. (소금은 넣지 않거나, 정말 아주 소량만 넣으세요.)</li>
+                        <li><strong>계란말이 만들기:</strong> 달군 프라이팬에 식용유를 아주 살짝 두르고, 약불로 줄입니다. 계란물을 1/3정도만 부어 얇게 펴줍니다.</li>
+                        <li><strong>말아주기:</strong> 계란물이 80% 정도 익었을 때 한쪽 끝부터 돌돌 말아줍니다. 남은 계란물을 다시 부어 앞서 말아둔 계란말이와 연결하여 다시 말아줍니다. 이 과정을 반복하여 원하는 두께의 계란말이를 만듭니다.</li>
+                        <li><strong>썰기:</strong> 완성된 계란말이는 한 김 식힌 후 먹기 좋은 크기로 썰어줍니다.</li>
+                        <li><strong>완성:</strong> 따뜻한 현미밥과 함께 담백한 아침 식사를 즐깁니다.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <span class="meal-icon">🍛</span>
+                <h4>점심: 닭가슴살 채소 카레 (저염, 저지방)</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/2개, 마늘 2쪽</li>
+                        <li><strong>[구입]</strong> 닭가슴살 100g, 감자 1/2개, 당근 1/2개, 브로콜리 1/4송이, 저염 카레 가루 2-3큰술, 물 2컵, 현미밥 1공기, 식용유 아주 소량</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>재료 준비:</strong> 닭가슴살, 감자, 당근, 양파는 깍둑썰기 해줍니다. 브로콜리는 먹기 좋은 크기로 잘라 끓는 물에 살짝 데쳐둡니다. 마늘은 다져줍니다.</li>
+                        <li><strong>재료 볶기:</strong> 냄비에 식용유를 아주 살짝 두르고 다진 마늘과 양파를 먼저 볶아 향을 냅니다. 양파가 투명해지면 닭가슴살을 넣고 겉면이 익을 때까지 볶아줍니다.</li>
+                        <li><strong>채소 넣고 볶기:</strong> 깍둑썰기 한 감자와 당근을 넣고 2-3분 더 볶아줍니다.</li>
+                        <li><strong>물과 카레 가루 넣기:</strong> 물 2컵을 붓고 감자가 반쯤 익을 때까지 끓입니다. 감자가 익으면 불을 잠시 끄고 저염 카레 가루를 조금씩 넣어 잘 풀어줍니다. (뭉치지 않도록 주의!)</li>
+                        <li><strong>끓여주기:</strong> 카레 가루가 완전히 풀어지면 다시 약불로 끓여 카레가 걸쭉해질 때까지 저어줍니다. 마지막에 데쳐둔 브로콜리를 넣고 한소끔 더 끓여줍니다.</li>
+                        <li><strong>완성:</strong> 따뜻한 현미밥 위에 넉넉히 얹어 맛있게 즐깁니다. (카레에 소금이 이미 포함되어 있으니 추가적인 간은 하지 않는 것이 좋습니다.)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <span class="meal-icon">🍜</span>
+                <h4>저녁: 버섯 잡채 (당면 양 조절, 채소 듬뿍)</h4>
+                <div class="recipe-section">
+                    <h5>재료 (1인분):</h5>
+                    <ul>
+                        <li><strong>[가지고 있는]</strong> 양파 1/4개, 마늘 2쪽, 설탕 아주 소량 (1/2 작은술 미만)</li>
+                        <li><strong>[구입]</strong> 당면 50g, 표고버섯 2개, 시금치 한 줌, 당근 1/4개, 파프리카 1/2개 (색깔별), 저염 간장 1.5큰술, 참기름 아주 소량 (1/2 작은술), 후추 약간, 식용유 아주 소량</li>
+                    </ul>
+                    <h5>레시피:</h5>
+                    <ol>
+                        <li><strong>당면 불리기 및 삶기:</strong> 당면은 미지근한 물에 30분 이상 불려둡니다. 끓는 물에 불린 당면을 넣고 5-7분간 삶아줍니다. 삶은 당면은 찬물에 헹궈 물기를 빼고 식용유 아주 소량과 저염 간장 1/2큰술로 밑간 해둡니다. (붙지 않도록)</li>
+                        <li><strong>채소 손질 및 볶기 (각각):</strong> 시금치는 데쳐서 물기를 꼭 짜고, 저염 간장 아주 소량과 참기름 아주 소량으로 무쳐둡니다. 양파, 당근, 파프리카, 표고버섯은 채 썰어줍니다. 팬에 식용유를 아주 살짝 두르고 다진 마늘 약간(1쪽)을 넣은 후, 채소들을 각각 볶아줍니다. 볶을 때 소금은 넣지 않거나 아주 소량만 넣고 후추로 간을 합니다.</li>
+                        <li><strong>잡채 양념 만들기:</strong> 저염 간장 1큰술, 다진 마늘 1쪽, 설탕 아주 소량 (생략 가능), 후추 약간, 참기름 아주 소량을 섞어 양념장을 만듭니다.</li>
+                        <li><strong>모든 재료 섞기:</strong> 커다란 볼에 밑간 해둔 당면과 볶은 채소들을 모두 넣습니다. 만들어둔 양념장을 넣고 손으로 조물조물 버무리며 모든 재료가 잘 섞이도록 합니다. (간을 보시고 싱거우면 저염 간장을 아주 조금만 추가합니다.)</li>
+                        <li><strong>완성:</strong> 그릇에 예쁘게 담아냅니다. 채소 듬뿍 잡채는 영양 균형도 좋고 맛도 좋습니다.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 마무리 건강 팁 섹션 -->
+        <section class="notes" id="final-notes">
+            <h3>❤️ 식단 관리 추가 팁!</h3>
+            <ul>
+                <li><strong>수분 섭취 중요:</strong> 하루 8잔 이상의 물을 꾸준히 마셔주세요. 설탕이 첨가된 음료는 피하고, 차가운 물보다는 미지근한 물이 좋습니다.</li>
+                <li><strong>꾸준한 운동:</strong> 식단 관리와 함께 가벼운 유산소 운동(걷기, 조깅)을 꾸준히 병행하면 심혈관 건강에 더욱 좋습니다.</li>
+                <li><strong>정기적인 건강 검진:</strong> 현재 건강 상태를 주기적으로 확인하고, 필요하다면 의료진과 상담하여 식단이나 운동 계획을 조정하는 것이 중요합니다.</li>
+                <li><strong>스트레스 관리:</strong> 충분한 휴식과 수면, 스트레스 관리는 전반적인 건강에 긍정적인 영향을 미칩니다.</li>
+                <li><strong>재료의 신선도:</strong> 신선한 제철 재료를 사용하는 것이 맛과 영양 면에서 가장 좋습니다.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2023. 건강 가득 쉬운 식단 프로젝트. 모든 레시피는 여러분의 건강한 식생활을 응원합니다! ✨</p>
+    </footer>
+
+    <!-- 스크롤 최상단 이동 버튼 -->
+    <button onclick="topFunction()" id="scrollToTopBtn" title="위로 이동">⬆️</button>
+
+    <script>
+        // 스크롤 버튼 표시/숨김 및 기능
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("scrollToTopBtn").style.display = "none";
+            }
+        }
+
+        // 클릭 시 최상단으로 스크롤
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+</body>
+</html>
