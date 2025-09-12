@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 상한가, 급등 종목과 이유： 코오롱모빌리티그룹, 엠에스씨, 엠디바이스, 나우로보틱스, 사조동아원, 하나머티리얼즈, 한양디지텍, 엘앤씨바이오, 만호제강</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcfcfc;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 15px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+            border-bottom: 1px solid #e0f2f7;
+            padding-bottom: 5px;
+        }
+        strong {
+            font-weight: 700;
+            color: #004d40;
+        }
+        ul {
+            list-style-type: disc;
+            margin: 15px 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa; /* Light Teal for container background */
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2; /* Teal border for card */
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b; /* Dark Teal border for header */
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b; /* Dark Teal icon */
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b; /* Dark Teal header text */
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333; /* Main text color */
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40; /* Darker Teal for strong text */
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4; /* Yellow highlight as per original theme */
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa; /* Light Teal formula background */
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40; /* Darkest Teal for formula text */
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2; /* Light Teal dashed border for footer */
+            margin-top: auto;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; padding: 8px 15px; }
+            h3 { font-size: 18px; }
+            .single-summary-card { padding: 18px; }
+            .single-summary-card .card-header-icon { font-size: 28px; margin-right: 10px; }
+            .single-summary-card .card-header h3 { font-size: 20px; }
+            .single-summary-card .card-content { font-size: 15px; line-height: 1.5; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 18px; padding: 6px 10px; }
+            h3 { font-size: 16px; }
+            .single-summary-card { padding: 15px; }
+            .single-summary-card .card-header-icon { font-size: 26px; }
+            .single-summary-card .card-header h3 { font-size: 18px; }
+            .single-summary-card .card-content { font-size: 14px; line-height: 1.4; }
+        }
+    </style>
+</head>
+<body>
+    <h1>오늘 상한가, 급등 종목과 이유： 코오롱모빌리티그룹, 엠에스씨, 엠디바이스, 나우로보틱스, 사조동아원, 하나머티리얼즈, 한양디지텍, 엘앤씨바이오, 만호제강</h1>
+
+    <div class="video-meta">
+            <p><strong>videoId:</strong> wJuJZyLIb6I</p>
+            <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=wJuJZyLIb6I" target="_blank">https://www.youtube.com/watch?v=wJuJZyLIb6I</a></p>
+            <p><strong>제목:</strong> 오늘 상한가, 급등 종목과 이유： 코오롱모빌리티그룹, 엠에스씨, 엠디바이스, 나우로보틱스, 사조동아원, 하나머티리얼즈, 한양디지텍, 엘앤씨바이오, 만호제강</p>
+            <p><strong>영상 길이:</strong> 00시간12분48초(012분)</p>
+        </div>
+
+    <p style="margin-bottom: 15px;">2024년 9월 12일 금요일, 코스피와 코스닥 지수는 미국 소비자 물가지수 및 실업수당 청구 건수 발표에 따른 금리 인하 기대감으로 각각 1.54%, 1.48% 상승하며 마감했습니다. 특히 반도체, 로봇, K-Food, 제약 바이오 테마를 중심으로 총 42개 종목이 10% 이상 급등했으며, 이 중 코오롱모빌리티그룹, MSC, M디바이스 3종목은 상한가를 기록했습니다. 주요 상승 테마와 개별 종목들의 급등 이유를 상세히 분석합니다.</p>
+
+    <h2>내용</h2>
+
+    <ul>
+        <li><b>[시장 동향]</b>
+            <ul>
+                <li>코스피 지수는 <strong>1.54% 상승한 3,395.54포인트</strong>로 마감 (0:05).
+                    <ul>
+                        <li>외국인과 기관은 매수, 개인은 매도로 대응 (0:14).</li>
+                        <li>거래 대금은 <strong>13조 원</strong> (0:18).</li>
+                    </ul>
+                </li>
+                <li>코스닥 지수는 <strong>1.48% 상승한 847.08포인트</strong>로 마감 (0:21).
+                    <ul>
+                        <li>외국인과 기관은 매수, 개인은 매도로 대응 (0:26).</li>
+                        <li>거래 대금은 <strong>8조 원</strong> (0:31).</li>
+                    </ul>
+                </li>
+                <li>총 <strong>42개 종목</strong>이 10% 이상 급등 (0:37).
+                    <ul>
+                        <li>코스피 7종목, 코스닥 35종목 (0:42).</li>
+                        <li>상한가 종목: <strong>코오롱모빌리티그룹, MSC, M디바이스</strong> (0:45).</li>
+                        <li>하한가 종목은 없었음 (0:50).</li>
+                    </ul>
+                </li>
+                <li>급등 종목 중 상위 30개는 <strong>4개 테마</strong>로 분류 가능 (0:53).</li>
+            </ul>
+        </li>
+        <li><b>[반도체 테마]</b> (1:03)
+            <ul>
+                <li>미국 8월 소비자 물가지수(CPI) 발표 (1:05).
+                    <ul>
+                        <li>전년 동기 대비 2.7%, 전월 대비 0.4% 상승 (1:09).</li>
+                        <li>시장 예상치를 벗어나지 않아 <strong>안도감 형성</strong> (1:16).</li>
+                    </ul>
+                </li>
+                <li>지난주 실업수당 청구 건수 <strong>26만 3천 건</strong> 기록 (1:17).
+                    <ul>
+                        <li>시장 전망치(23만 5천 건) 크게 상회 (1:26).</li>
+                        <li>고용시장 둔화 신호로 <strong>연준의 금리 인하 기대감 지속</strong> (1:30).</li>
+                    </ul>
+                </li>
+                <li>마이크론 테크놀로지 <strong>목표 주가 상향 리포트</strong> (1:38).
+                    <ul>
+                        <li>시티그룹, <strong>AI 데이터 센터 시장에서의 성장 잠재력 평가</strong> (1:45).</li>
+                        <li>목표 주가 150달러에서 175달러로 상향 (1:50).</li>
+                        <li>9월 23일 발표될 마이크론 실적 기대감 부각 (1:54).</li>
+                    </ul>
+                </li>
+                <li>SK하이닉스, <strong>세계 최초 HBM 개발 및 양산 체제 구축 발표</strong> (2:00).
+                    <ul>
+                        <li>AI 서비스 성능 최대 69% 향상, 데이터 병목 현상 해소, 데이터 센터 전력 비용 절감 기대 (2:10).</li>
+                    </ul>
+                </li>
+                <li>이러한 소식들로 <strong>반도체 기업들 강세 마감</strong> (2:23).</li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=소비자%20물가지수" target="_blank">소비자 물가지수(CPI)</a>: 소비자가 구매하는 상품과 서비스의 가격 변동을 측정하여 인플레이션 수준을 나타내는 지표.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=연준" target="_blank">연준(Fed)</a>: 미국 중앙은행인 연방준비제도(Federal Reserve System)의 약칭.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=HBM" target="_blank">HBM(High Bandwidth Memory)</a>: 고대역폭 메모리의 약자로, 기존 D램보다 데이터 처리 속도가 훨씬 빠른 차세대 메모리 기술.</p>
+        </li>
+        <li><b>[로봇 테마]</b> (2:27)
+            <ul>
+                <li><strong>노랑봉투법 내년 3월 시행</strong> 소식 (2:27).
+                    <ul>
+                        <li>원청 기업의 하청 노조에 대한 책임 확대 (2:35).</li>
+                        <li>노동조합의 원청과 직접 교섭 및 파업 증가 우려 (2:40).</li>
+                        <li><strong>대기업들의 로봇 투자 확대 기대감</strong>으로 이어짐 (2:47).</li>
+                    </ul>
+                </li>
+                <li><strong>나우로보틱스 (Nao Robotics), K-Humanoid 연합 신규 참가 기업 선정</strong> (2:53).
+                    <ul>
+                        <li>서울대, 카이스트, 삼성전자, SK 등 참여 (3:02).</li>
+                        <li>차세대 산업용 휴머노이드 로봇 개발 및 신개념 감속장치 로봇 적용 예정 (3:10).</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=노랑봉투법" target="_blank">노랑봉투법</a>: '노동조합 및 노동관계조정법' 개정안을 지칭하는 용어로, 기업의 손해배상 청구를 제한하고 하청 노동자의 단체교섭권을 인정하는 내용을 담고 있음.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=원청" target="_blank">원청</a>: 어떤 일을 직접 계약하여 수행하는 주체나 회사. <a href="https://oo.ai/search?q=하청" target="_blank">하청</a>: 원청으로부터 일을 위임받아 수행하는 회사.</p>
+        </li>
+        <li><b>[K-Food 테마]</b> (3:27)
+            <ul>
+                <li>넷플릭스 애니메이션 영화 <strong>'K-POP DEMONENTUS'의 인기</strong> (3:27).
+                    <ul>
+                        <li>'오징어 게임 시즌2'를 뛰어넘는 시청수 기록 (3:30).</li>
+                    </ul>
+                </li>
+                <li><strong>농심, 'K-POP DEMONENTUS' 콜라보 한정판 신라면 출시</strong> (3:32).
+                    <ul>
+                        <li>농심몰에서 <strong>1분 40초 만에 품절</strong> (3:35).</li>
+                        <li>9월 중순부터 농심 실적 기여, 4분기 이후 해외법인 실적 개선 전망 (3:38).</li>
+                    </ul>
+                </li>
+                <li><strong>'K-POP DEMONENTUS' 인기가 K-Food 수요로 연결될 기대감</strong> (3:49).
+                    <ul>
+                        <li>농심을 비롯한 식품 기업들 상승세 (3:54).</li>
+                    </ul>
+                </li>
+                <li><strong>MSC, 불닭볶음면 소스 원재료인 하바네로 시즈닝 납품</strong> 중 (3:58).</li>
+                <li><strong>사조동아원, 라면 원재료인 밀가루 사업 부각</strong> (4:05).</li>
+            </ul>
+        </li>
+        <li><b>[제약 바이오 테마]</b> (4:13)
+            <ul>
+                <li>정부, <strong>바이오 산업을 미래 성장 동력으로 육성 전략 발표</strong> (4:13).</li>
+                <li>미국의 <strong>금리 인하 기대감 지속으로 바이오 기업들 수혜</strong> (4:18).
+                    <ul>
+                        <li>임상 및 연구 과정에 대규모 자금 필요 (4:22).</li>
+                        <li>바이오 기업은 금리 인하 수혜주로 부각 (4:26).</li>
+                    </ul>
+                </li>
+                <li>정부 주도 육성 소식이 <strong>지속적인 호재로 작용</strong> (4:30).</li>
+                <li><strong>LNC바이오, '리토'의 국내 품귀 현상</strong> (4:40).
+                    <ul>
+                        <li>'리토'는 LNC바이오가 개발한 세포의 기질 기반 스킨 부스터 제품 (4:48).</li>
+                        <li>KB증권 보고서: 단기 모멘텀은 리토, 중장기 성장은 퇴행성 관절염 치료제 <strong>'메가카티'가 이끌 것으로 전망</strong> (4:54).</li>
+                    </ul>
+                </li>
+                <li>화장품 수출액 반등 가능성 전망 (5:09).</li>
+                <li><strong>메디포스트, 최대 2,500억 원 규모 자금 조달 추진</strong> (5:18).
+                    <ul>
+                        <li>BDA파트너스를 통해 1,500억 원, 기존 주주를 통해 1,000억 원 조달 (5:26).</li>
+                        <li>무릎 연골 결손 치료제 <strong>'카티스템'의 미국 임상 3상 준비 목적</strong> (5:36).</li>
+                    </ul>
+                </li>
+                <li><strong>보로노이, 표적 항암제 임상 결과 기대감</strong> (5:43).
+                    <ul>
+                        <li>다음 달 임상 결과 발표 예정 (5:48).</li>
+                        <li>최대 주주 주식 담보 대출 관련 <strong>반대 매매 리스크 해소</strong> (5:50).</li>
+                        <li><strong>전환사채 통한 연구 개발 자금 확보로 신약 개발 가속화</strong> (5:56).</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="definition">※ <a href="https://oo.ai/search?q=스킨%20부스터" target="_blank">스킨 부스터</a>: 피부 컨디션을 개선하고 노화 방지에 도움을 주는 화장품 또는 시술.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=퇴행성%20관절염%20치료제" target="_blank">퇴행성 관절염 치료제</a>: 관절 연골의 손상이나 퇴화로 인해 발생하는 통증과 염증을 완화하고, 연골 재생을 돕는 의약품.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=임상%203상" target="_blank">임상 3상</a>: 신약 개발 단계 중 하나로, 대규모 환자군을 대상으로 약물의 유효성과 안전성을 최종적으로 확인하는 단계.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=반대%20매매" target="_blank">반대 매매</a>: 주식 담보 대출 등에서 주가가 하락하여 담보 부족이 발생할 경우, 증권사가 반대 의사에 상관없이 주식을 강제로 매도하는 것.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=전환사채" target="_blank">전환사채(CB)</a>: 주식으로 전환할 수 있는 권리가 부여된 채권으로, 기업이 자금을 조달하는 방법 중 하나.</p>
+            <p class="definition">※ <a href="https://oo.ai/search?q=표적%20항암제" target="_blank">표적 항암제</a>: 암세포의 특정 유전자나 단백질을 표적으로 하여 암세포의 성장 및 분열을 억제하는 항암제.</p>
+        </li>
+        <li><b>[개별 이슈 종목]</b>
+            <ul>
+                <li><strong>코오롱모빌리티그룹</strong> (6:05).
+                    <ul>
+                        <li>코오롱의 <strong>공개 매수를 통한 완전 자회사 편입 기대감</strong> (6:08).</li>
+                        <li>보통주 90%, 우선주 73% 취득 공시 (6:15).</li>
+                        <li><strong>상장 폐지일은 내년 1월 7일 예정</strong> (6:32).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=공개%20매수" target="_blank">공개 매수</a>: 기업이 특정 주식의 지배권을 확보하거나 자회사로 편입하기 위해 주식 시장 외부에서 불특정 다수의 주주로부터 주식을 매수하는 행위.</p>
+                </li>
+                <li><strong>케어젠</strong> (6:37).
+                    <ul>
+                        <li>튀르키예 제약사 아타바이와 <strong>760만 달러 규모 건강기능식품 3종 공급 계약 체결</strong> (6:41).</li>
+                        <li>2년간 테스트 마케팅 후 대규모 장기 공급 계약 전환 예정 (6:51).</li>
+                        <li>튀르키예 시장 본격 진출 계획 (6:58).</li>
+                    </ul>
+                </li>
+                <li><strong>만호제강</strong> (7:03).
+                    <ul>
+                        <li>급등 이유 파악되지 않음 (7:06).</li>
+                        <li>최근 <strong>경영권 분쟁 관련 공시</strong> 있었음 (7:08).</li>
+                        <li>일본산/중국산 철강 제품에 대한 <strong>덤핑 방지 관세 부과 예고로 국산 철강 제품 수요 증가 전망</strong> (7:11).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=경영권%20분쟁" target="_blank">경영권 분쟁</a>: 기업의 경영권을 장악하기 위해 주주들 간에 벌어지는 다툼.</p>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=덤핑%20방지%20관세" target="_blank">덤핑 방지 관세</a>: 해외 기업이 자국 시장에 제품을 부당하게 싼 가격(덤핑)으로 판매하여 국내 산업에 피해를 줄 경우, 이를 막기 위해 부과하는 특별 관세.</p>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=공시" target="_blank">공시</a>: 기업이 투자자에게 중요한 정보를 알리는 행위.</p>
+                </li>
+                <li><strong>롯데손해보험</strong> (7:28).
+                    <ul>
+                        <li>신한금융그룹이 롯데손해보험 인수 검토 중이라는 단독 기사 전해지며 강세 (7:28).</li>
+                        <li>두 달간의 실사 마무리 후 결론 대기 중이라고 알려짐 (7:38).</li>
+                        <li><strong>장 마감 후, 신한금융지주는 해당 기사가 사실 무근이라고 공시</strong> (7:43).</li>
+                    </ul>
+                </li>
+                <li><strong>사토시홀딩스</strong> (7:50).
+                    <ul>
+                        <li>급등 이유 파악되지 않음 (7:50).</li>
+                        <li>최근 딥마인드에서 사명 변경, 지난 6월 <strong>스테이블 코인 사업 진출 발표</strong>로 강세 보인 바 있음 (7:54).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=스테이블%20코인" target="_blank">스테이블 코인</a>: 비트코인이나 이더리움처럼 가격 변동성이 큰 가상자산과 달리, 법정화폐나 다른 자산에 가치를 고정시켜 가격 안정성을 확보한 가상자산.</p>
+                </li>
+                <li><strong>고려아연</strong> (8:04).
+                    <ul>
+                        <li>영풍과의 <strong>경영권 분쟁 1년째 지속</strong> (8:04).</li>
+                        <li>내년 3월 이사 임기 만료로 <strong>주주총회 분쟁 재점화 전망</strong> (8:09).</li>
+                        <li>경영권 분쟁 재점화 기대감으로 강세 추정 (8:18).</li>
+                    </ul>
+                </li>
+                <li><strong>헥토파이낸셜</strong> (8:25).
+                    <ul>
+                        <li>리플(Ripple)의 <strong>한국 가상자산 관리 사업 추진</strong> 소식 (8:28).</li>
+                        <li>헥토파이낸셜이 리플의 <strong>스테이블 코인 결제 실증 프로젝트 진행</strong> 중인 사실 부각 (8:34).</li>
+                        <li>리플은 한국 사업을 위한 라이선스 부재로 국내 기업과의 파트너십 모색 중 (8:47).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=가상자산%20관리%20사업" target="_blank">가상자산 관리 사업</a>: 가상자산의 보관, 운용, 거래 등을 대행하거나 관련 서비스를 제공하는 사업.</p>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=실증%20프로젝트" target="_blank">실증 프로젝트</a>: 특정 기술이나 아이디어가 실제로 효과가 있는지 검증하기 위해 진행하는 시범 사업.</p>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=라이선스" target="_blank">라이선스</a>: 특정 활동을 할 수 있도록 법적으로 부여된 허가 또는 면허.</p>
+                </li>
+                <li><strong>KBI동양철관</strong> (8:56).
+                    <ul>
+                        <li><strong>주식 병합으로 인한 거래 재개 첫날 강세</strong> (8:59).</li>
+                        <li>8월 22일부터 주식 병합 결정에 따라 거래 정지된 바 있음 (9:02).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=주식%20병합" target="_blank">주식 병합</a>: 여러 개의 주식을 합쳐서 더 적은 수의 주식으로 만드는 것으로, 주로 주당 가격을 높이거나 유통 주식 수를 줄일 목적으로 사용됨.</p>
+                </li>
+                <li><strong>오아이맨컴퍼니</strong> (9:08).
+                    <ul>
+                        <li>급등 이유 파악되지 않음 (9:08).</li>
+                        <li>장 마감 후, 조이웍스의 호카리테일 오프라인 사업 부분 <strong>양수 결정 공시</strong> (9:12).</li>
+                        <li>사업 영역 확대 및 수익성 개선 목적, 양수 금액 250억 원, 예정일 9월 30일 (9:20).</li>
+                    </ul>
+                </li>
+                <li><strong>NK맥스</strong> (9:29).
+                    <ul>
+                        <li>급등 이유 파악되지 않음 (9:29).</li>
+                        <li>폴란드 법인이 <strong>환경사회지배구조(ESG) 평가 기관으로부터 실버 메달 획득</strong> 밝힌 바 있음 (9:33).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=ESG" target="_blank">ESG(Environmental, Social, Governance)</a>: 기업의 비재무적 성과를 측정하는 지표로, 환경 보호, 사회적 책임, 지배구조 개선 등 세 가지 요소를 의미.</p>
+                </li>
+                <li><strong>엘앤케이바이오 (LNK BIO)</strong> (9:42).
+                    <ul>
+                        <li><strong>글로벌 메이저 사와 파트너십 논의 중</strong>인 것으로 파악 (9:45).</li>
+                        <li>미국 전역 유통 전략 및 공동 마케팅 방안 협의, <strong>유통망 재편 가속화</strong> (9:53).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=유통망%20재편" target="_blank">유통망 재편</a>: 제품이나 서비스가 소비자에게 도달하는 경로(유통 채널)를 새롭게 구성하거나 변경하는 것.</p>
+                </li>
+            </ul>
+        </li>
+        <li><b>[시장별 거래량/거래대금 상위 종목]</b> (10:00)
+            <ul>
+                <li><strong>코스피 시장 (거래량 상위)</strong> (10:10)
+                    <ul>
+                        <li>상위 10개: 사조동아원, 삼성전자, 롯데손해보험, SK오션플랜트, KBI동양철관, 두산에너빌리티, 카카오, 삼성중공업, 두산퓨얼셀, 신성이엔지.</li>
+                        <li><strong>10% 이상 상승 종목</strong>: 사조동아원 (라면 원재료 밀가루 관련주), 롯데손해보험 (매각 기대감), KBI동양철관 (주식 병합 거래 재개).</li>
+                    </ul>
+                </li>
+                <li><strong>코스닥 시장 (거래량 상위)</strong> (10:47)
+                    <ul>
+                        <li>상위 10개: 빌리언스, 현대무벡스, 윈팩, 다날, 로보로보, PS엘렉트로닉스, 휴림로봇, 사이닉솔루션, 베셀, 신라젠.</li>
+                        <li><strong>10% 이상 상승 종목</strong>: 윈팩, 로보로보, PS엘렉트로닉스, 사이닉솔루션, 신라젠.
+                            <ul>
+                                <li>윈팩, 사이닉솔루션: <strong>반도체 관련주</strong> (11:08).</li>
+                                <li>로보로보: <strong>로봇 관련주</strong> (11:13).</li>
+                                <li>PS엘렉트로닉스: <strong>반도체, 스마트폰, 로봇 관련주</strong> (11:14).</li>
+                                <li>신라젠: <strong>바이오 기업, 항암제 임상 1상 변경 계획 승인</strong> (11:22).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>코스피 시장 (거래대금 상위)</strong> (11:30)
+                    <ul>
+                        <li>상위 10개: 삼성전자, SK하이닉스, 카카오, 두산에너빌리티, SK오션플랜트, 네이버, 농심, 한화오션, 두산퓨얼셀, 한미반도체.</li>
+                        <li><strong>10% 이상 상승 종목</strong>: 없음 (11:47).</li>
+                        <li><strong>참고</strong>: 카카오 (외국인/기관 양매수 속 9% 강세, AI 관련주 부각 분석) (11:51).</li>
+                    </ul>
+                    <p class="definition">※ <a href="https://oo.ai/search?q=양매수" target="_blank">양매수</a>: 외국인 투자자와 기관 투자자 모두가 특정 종목을 매수하는 상황을 의미.</p>
+                </li>
+                <li><strong>코스닥 시장 (거래대금 상위)</strong> (12:02)
+                    <ul>
+                        <li>상위 10개: 알테오젠, 나우로보틱스, 현대무벡스, 다날, LNC바이오, 지투지바이오, 로보로보, 사이닉솔루션, 클로버, 범한퓨얼셀.</li>
+                        <li><strong>10% 이상 상승 종목</strong>: 나우로보틱스, LNC바이오, 로보로보, 사이닉솔루션, 범한퓨얼셀.
+                            <ul>
+                                <li>나우로보틱스, 로보로보: <strong>로봇 관련주</strong> (12:25).</li>
+                                <li>LNC바이오: <strong>리토, 메가카티 통한 매출 성장 기대감</strong> (12:36).</li>
+                                <li>사이닉솔루션: <strong>반도체 기업</strong> (12:41).</li>
+                                <li>범한퓨얼셀: <strong>조선 및 수소 연료전지 관련주</strong> (12:44).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>마무리: 핵심 내용 요약 📝</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>오늘의 시장 및 급등 테마 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 시장 상승 동력:</b> <span class="highlight">미국 CPI 완화 및 실업수당 증가</span>로 인한 <strong>금리 인하 기대감</strong>. 국내 증시 전반적 강세.
+                </div>
+                <div class="section">
+                    <b>📊 주요 급등 테마:</b> <strong>반도체, 로봇, K-Food, 제약 바이오</strong> 섹터가 강세 주도.
+                </div>
+                <div class="section">
+                    <b>🤖 로봇 테마:</b> <span class="highlight">노랑봉투법 시행</span> 및 <strong>나우로보틱스</strong>의 K-Humanoid 연합 참여로 기업들의 로봇 투자 기대.
+                </div>
+                <div class="section">
+                    <b>🍜 K-Food 테마:</b> 넷플릭스 <strong>'K-POP DEMONENTUS' 인기</strong> 및 <strong>농심 콜라보 제품 품절</strong>로 K-Food 수요 증가. MSC, 사조동아원 등 수혜.
+                </div>
+                <div class="section">
+                    <b>💉 제약 바이오 테마:</b> <span class="highlight">정부 육성 정책</span>과 금리 인하 기대감, <strong>LNC바이오(리토, 메가카티), 메디포스트(자금조달), 보로노이(임상 기대)</strong> 등 개별 호재.
+                </div>
+            </div>
+            <div class="card-footer">
+                투자 결정 시에는 반드시 개별 기업의 상세 정보와 시장 상황을 추가로 확인해야 합니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <ul>
+        <li><strong>미국 경제 지표 확인</strong>: 미국 소비자 물가지수 및 실업률 지표는 연준의 금리 정책에 큰 영향을 미치므로, 발표 시마다 국내 증시에 미치는 영향을 주의 깊게 분석해야 합니다. 특히 금리 인하 기대감은 바이오, 반도체 등 자금 조달에 민감한 섹터에 긍정적인 영향을 줍니다.</li>
+        <li><strong>테마주 변동성 인지</strong>: 특정 이슈(예: 노랑봉투법, 애니메이션 인기)로 인한 테마주는 단기적인 급등락을 보일 수 있습니다. 해당 이슈의 지속 가능성과 기업의 실질적인 펀더멘탈 개선 여부를 함께 고려해야 합니다.</li>
+        <li><strong>기업 공시 및 뉴스 확인</strong>: 단독 기사나 소문성 정보에만 의존하기보다는, 기업의 공식적인 공시 내용을 확인하는 것이 중요합니다. 롯데손해보험 사례처럼, 루머는 빠르게 사실 무근으로 판명될 수 있습니다.</li>
+        <li><strong>경영권 분쟁 종목 주의</strong>: 경영권 분쟁은 단기적으로 주가에 급등락을 유발할 수 있지만, 기업의 장기적인 가치나 사업 안정성에는 불확실성을 더할 수 있습니다. 투자 전 충분한 분석이 필요합니다.</li>
+        <li><strong>신사업 진출 및 파트너십</strong>: 신규 사업 진출(예: 사토시홀딩스의 스테이블 코인, 헥토파이낸셜의 리플 파트너십)이나 글로벌 파트너십(예: LNK BIO)은 기업의 성장 동력이 될 수 있으나, 그 성공 가능성과 실제 실적 기여도를 면밀히 검토해야 합니다.</li>
+    </ul>
+
+</body>
+</html>
