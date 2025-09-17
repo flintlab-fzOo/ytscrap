@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(2부) 이런 영양제는 무조건 먹어야 합니다 (서울아산병원 알레르기내과 권혁수 교수)</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #004d40;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background: linear-gradient(to right, #00796b, #004d40);
+            margin: 35px 0 15px;
+            padding: 10px 25px;
+            border-bottom: 2px solid #b2ebf2;
+            border-radius: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-weight: 700;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h3 {
+            font-size: 20px;
+            color: #00796b;
+            margin: 25px 0 12px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        ul {
+            margin: 0 0 15px 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .video-meta {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+        }
+        .video-meta p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+        .video-meta a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-meta a:hover {
+            text-decoration: underline;
+        }
+        .definition {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #b2ebf2;
+            background-color: #f7fcff;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        .definition a {
+            color: #00796b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .definition a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #fff9c4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .info-box {
+            background-color: #e0f2f7;
+            border-left: 4px solid #4dd0e1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-box {
+            background-color: #fffde7;
+            border-left: 4px solid #fbc02d;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .single-summary-card-container {
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #e0f7fa;
+            margin: 20px 0;
+        }
+        .single-summary-card {
+            width: 100%;
+            max-width: 700px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #b2ebf2;
+            box-sizing: border-box;
+            height: auto;
+            min-height: unset;
+        }
+        .single-summary-card .card-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+        .single-summary-card .card-header-icon {
+            font-size: 34px;
+            color: #00796b;
+            margin-right: 14px;
+        }
+        .single-summary-card .card-header h3 {
+            font-size: 26px;
+            color: #00796b;
+            margin: 0;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        .single-summary-card .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 17px;
+            line-height: 1.65;
+            color: #333;
+        }
+        .single-summary-card .card-content .section {
+            margin-bottom: 10px;
+        }
+        .single-summary-card .card-content strong {
+            color: #004d40;
+            font-weight: 600;
+        }
+        .single-summary-card .card-content .highlight {
+            background-color: #fff9c4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .single-summary-card .card-content .formula {
+            background-color: #e0f7fa;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 5px;
+            color: #004d40;
+        }
+        .single-summary-card .card-footer {
+            font-size: 14px;
+            color: #777;
+            text-align: center;
+            padding-top: 12px;
+            border-top: 1px dashed #b2ebf2;
+            margin-top: auto;
+        }
+
+        /* 모바일 맞춤 조정 */
+        @media (max-width: 768px) {
+            .single-summary-card {
+                padding: 18px;
+                height: auto;
+                min-height: unset;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 28px;
+                margin-right: 10px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 20px;
+            }
+            .single-summary-card .card-content {
+                font-size: 15px;
+                line-height: 1.5;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 8px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 5px 8px;
+                font-size: 0.85em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 13px;
+                padding-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .single-summary-card {
+                padding: 15px;
+            }
+            .single-summary-card .card-header-icon {
+                font-size: 26px;
+            }
+            .single-summary-card .card-header h3 {
+                font-size: 18px;
+            }
+            .single-summary-card .card-content {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            .single-summary-card .card-content .section {
+                margin-bottom: 6px;
+            }
+            .single-summary-card .card-content .formula {
+                padding: 4px 6px;
+                font-size: 0.8em;
+            }
+            .single-summary-card .card-footer {
+                font-size: 12px;
+                padding-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>(2부) 이런 영양제는 무조건 먹어야 합니다 (서울아산병원 알레르기내과 권혁수 교수)</h1>
+    <div class="video-meta">
+        <p><strong>videoId:</strong> ZeVj7kLwZ8g</p>
+        <p><strong>링크:</strong> <a href="https://www.youtube.com/watch?v=ZeVj7kLwZ8g" target="_blank">https://www.youtube.com/watch?v=ZeVj7kLwZ8g</a></p>
+        <p><strong>제목:</strong> (2부) 이런 영양제는 무조건 먹어야 합니다 (서울아산병원 알레르기내과 권혁수 교수)</p>
+        <p><strong>영상 길이:</strong> 00시간36분02초 (36분)</p>
+    </div>
+
+    <p style="margin-bottom: 15px;">이 영상에서는 장 건강과 면역력의 밀접한 관계, 그리고 이를 위한 프리바이오틱스, 프로바이오틱스, 포스트바이오틱스의 중요성을 설명합니다. 특히 일상생활에서의 올바른 위생 습관과 함께 면역력 증진에 도움이 되는 필수 영양제 및 섭취 시 주의사항을 서울아산병원 알레르기내과 권혁수 교수가 의학적 관점에서 솔직하게 제시합니다.</p>
+
+    <h2>내용</h2>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[장 건강의 중요성] (00:04)</h3>
+    <p style="margin-bottom: 15px;">장에는 균이 가장 많으므로, <strong>좋은 균은 좋은 면역력과 직결</strong>됩니다.</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[프로바이오틱, 프리바이오틱, 포스트바이오틱 정의] (00:18)</h3>
+    <ul>
+        <li style="margin-bottom: 6px;"><strong>프로바이오틱 (Probiotic)</strong> (00:31): 우리 몸에 이로운 유익균(유산균)을 의미합니다.</li>
+        <li style="margin-bottom: 6px;"><strong>프리바이오틱 (Prebiotic)</strong> (00:37): 유익균이 잘 번식하고 성장할 수 있도록 돕는 먹이 성분입니다.</li>
+        <li style="margin-bottom: 6px;"><strong>포스트바이오틱 (Postbiotic)</strong> (00:46): 유익균이 프리바이오틱을 섭취하고 대사하는 과정에서 생성되는 유익한 물질들을 통칭합니다.
+            <ul>
+                <li style="margin-bottom: 6px;">대표적인 포스트바이오틱으로는 짧은 단쇄 지방산(아세트산, 프로피온산, 부티르산)이 있습니다.</li>
+                <p class="definition">※ <a href="https://oo.ai/search?q=단쇄_지방산" target="_blank">단쇄 지방산</a>: Short-Chain Fatty Acids (SCFAs)의 약자로, 장내 미생물이 식이섬유를 발효하여 생성하는 유기산입니다. 장 점막 세포의 주요 에너지원이며, 장 건강 및 전신 면역 조절에 중요한 역할을 합니다.</p>
+                <li style="margin-bottom: 6px;">부티르산 등은 T세포와 NK세포의 활성을 높여 면역 기능을 강화하고, 콜레스테롤 및 혈당 조절에도 기여하여 전반적인 염증 감소, 면역 조율, 호르몬 균형에 긍정적인 영향을 미칩니다. (01:08)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[프리바이오틱의 원리와 효과] (01:29)</h3>
+    <p style="margin-bottom: 15px;"><strong>돼지감자, 양파 껍질</strong> 등이 혈당과 콜레스테롤 조절에 좋다고 알려진 이유는 <strong>이눌린과 같은 프리바이오틱스가 풍부</strong>하여 장내 좋은 균을 증가시키고, 이 균들이 부티르산을 비롯한 유익한 포스트바이오틱스를 생성하기 때문입니다.</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[주요 프리바이오틱 종류 및 제품] (01:54)</h3>
+    <ul>
+        <li style="margin-bottom: 6px;"><strong>프락토올리고당 (FOS)</strong> (02:00): 양파, 치커리 뿌리, 마늘, 바나나, 아스파라거스 등에 풍부하며, 백설 프락토올리고당이나 종근당건강 락토핏 프리바이오틱스 FOS와 같은 제품으로도 시판되고 있습니다. (04:36, 21:56)</li>
+        <li style="margin-bottom: 6px;"><strong>갈락토올리고당 (GOS)</strong> (02:12): 엄마 모유에 많이 함유되어 있으며, 아기의 면역력 형성 및 장 건강에 중요한 역할을 합니다. K웰니스 마더스 올리고 등 제품으로도 판매됩니다. (04:53)
+            <ul>
+                <li style="margin-bottom: 6px;"><strong>모유 수유</strong>는 아기의 알레르기 및 천식 위험을 낮추는 데 중요하며, 이는 엄마 젖에 풍부한 갈락토올리고당이 아기의 장내 좋은 균총 형성을 돕기 때문입니다. (02:26)</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 6px;"><strong>이눌린</strong> (02:05, 03:07): 양파, 치커리 뿌리, 돼지감자 등에 많으며, 달콤한 맛이 있어 설탕 대용으로도 활용 가능합니다. 나우푸드 등 해외 직구 제품이나 치커리 뿌리 가루 형태로도 판매됩니다. (05:04, 22:06)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[프리바이오틱 섭취 시 주의사항] (03:33)</h3>
+    <div class="warning-box">
+        <b>⚠️ 주의하세요!</b><br>
+        <ul>
+            <li style="margin-bottom: 6px;"><strong>과민성 대장 증후군 환자</strong>는 프리바이오틱 섭취 시 장내 유산균 증가로 인한 가스 생성 및 복통, 설사 등이 심해질 수 있으므로 전문가와 상담 후 섭취 여부를 결정하거나 소량부터 조심스럽게 시작해야 합니다. (03:40)</li>
+            <li style="margin-bottom: 0;">일반인도 과다 섭취 시 복부 팽만이나 가스가 찰 수 있으므로, <strong>소량으로 시작하여 점진적으로 섭취량</strong>을 늘리며 몸이 적응하도록 하는 것이 중요합니다. (04:10)</li>
+        </ul>
+    </div>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[출산 방식과 면역력] (05:43)</h3>
+    <p style="margin-bottom: 15px;"><strong>자연 분만</strong> 시 아기는 산도를 통과하며 엄마의 질에 있는 다양한 유익균에 노출되어 장내 미생물총을 형성하고, 이는 면역력 발달에 긍정적인 영향을 미칩니다. (05:43)</p>
+    <p style="margin-bottom: 15px;"><strong>제왕절개</strong>로 태어난 아이들은 자연 분만 아기보다 알레르기 위험이 높을 수 있다는 연구 결과가 있으며, 이를 보완하기 위해 제왕절개 후 엄마의 질 분비물을 거즈에 묻혀 아기에게 발라주는 실험을 통해 균총 형성 효과를 확인한 연구도 있습니다. (11:22)</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[개인 위생과 면역력] (06:35)</h3>
+    <p style="margin-bottom: 15px;">몸에서 자연적으로 분비되는 <strong>기름(피지)과 피부에 서식하는 좋은 균총은 피부 장벽을 튼튼하게 하고 면역 반응을 조절</strong>하는 데 중요한 역할을 합니다. (07:17)</p>
+    <p class="definition">※ <a href="https://oo.ai/search?q=글리세롤" target="_blank">글리세롤</a>: 지방산의 한 종류로, 피부의 유익균이 사람의 피지(지방산)를 분해하여 생성합니다. 피부 상피세포에 닿아 피부 장벽 강화 및 건강한 기능 유지에 기여하며, 이는 오직 세균에 의해서만 만들어질 수 있습니다.</p>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">과도한 비누 사용은 피부의 좋은 균과 피지를 제거하여 피부 장벽을 손상시킬 수 있으므로, <strong>비누 사용을 줄이고 필요한 경우 약산성 비누</strong>를 사용하는 것이 좋습니다. (09:29)</li>
+        <li style="margin-bottom: 6px;">특히 어르신들의 피부 건조증과 가려움증은 피지 분비 감소가 주원인이므로, 비누 사용을 자제하고 보습제를 활용해야 합니다. (06:51)</li>
+        <li style="margin-bottom: 6px;">비누는 타인을 의식하는 행위이며, <strong>나 자신의 건강을 위해서는 최소한의 사용이 좋음</strong>을 강조합니다. (09:33)</li>
+        <li style="margin-bottom: 6px;">손 씻기 등 식중독균 예방을 위한 위생은 중요하지만, 일상적인 환경에서 <strong>다양한 균에 접촉하는 것은 면역 시스템을 교육하고 강화</strong>하는 데 도움이 됩니다. (20:01)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[프리바이오틱의 과학적 정의] (13:11)</h3>
+    <p style="margin-bottom: 15px;">프리바이오틱은 단순히 식이섬유가 많은 음식을 의미하는 것이 아니라, 두 가지 핵심 조건을 만족해야 합니다.</p>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">1) 위산이나 소화 효소에 분해되지 않고 <strong>대장까지 온전히 도달</strong>해야 합니다. (13:20)</li>
+        <li style="margin-bottom: 6px;">2) 장내 <strong>유익균만 선택적으로 증식</strong>시키고, 유해균의 성장은 억제해야 합니다. (13:29)</li>
+    </ul>
+    <p style="margin-bottom: 15px;">이러한 과학적 기준을 충족하는 것이 프락토올리고당, 갈락토올리고당, 이눌린 등입니다. 임상 연구에서도 아토피 피부염 환자들에게 프리바이오틱 섭취가 증상 호전에 도움을 준 사례가 있습니다. (14:23)</p>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[장 건강이 전신 건강에 미치는 영향] (14:51)</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">장내 유익균이 생성하는 포스트바이오틱스는 장벽 건강을 유지하고, 흡수되어 간으로 이동하여 <strong>콜레스테롤 합성 및 혈당 조절에 기여</strong>합니다. (14:51)</li>
+        <li style="margin-bottom: 6px;">대부분의 올리고당 및 식이섬유 제품에는 식약처 허가 문구로 콜레스테롤 조절, 혈당 조절, 체중 감량, 변비 예방 등의 효능이 기재되어 있습니다. (15:20)</li>
+        <li style="margin-bottom: 6px;">장내 유해균이 만들어내는 염증 물질은 몸을 위기 상황으로 인식하게 하여 <strong>식욕을 증가시키고 비만을 유발</strong>할 수 있습니다. (15:45)</li>
+        <li style="margin-bottom: 6px;">좋은 포스트바이오틱스는 피부, 기관지, 폐 등 전신 염증 조절 및 면역 조절에도 긍정적인 영향을 미칩니다. (16:40)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[알레르기와 환경] (17:28)</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">도시보다 시골에서 아토피 증상이 호전되는 경우가 있는데, 이는 스트레스, 미세먼지, 대기오염, 화학물질 등 도시 환경의 복합적인 요인이 면역에 악영향을 주기 때문입니다. (17:42)</li>
+        <li style="margin-bottom: 6px;">실제로 대로변 가까이에 사는 아이들이 아토피, 알레르기, 천식 발생 위험이 더 높다는 연구 결과도 있습니다. (19:14)</li>
+        <li style="margin-bottom: 6px;">화학물질로부터는 깨끗한 환경이 좋지만, <strong>다양한 미생물에 노출되는 것은 면역 시스템을 건강하게 만듭니다.</strong> (20:01)</li>
+        <li style="margin-bottom: 6px;">이미 알레르기가 있는 경우, 해당 알레르기 유발 물질과의 접촉은 피하되, 면역력 강화를 통해 증상을 최소화하는 노력이 필요합니다. (20:50)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[영양제 섭취에 대한 의학적 관점] (24:39)</h3>
+    <div class="info-box">
+        <b>💡 알아두세요!</b><br>
+        <ul style="margin: 0; padding: 0;">
+            <li style="margin-bottom: 6px;">의사들이 영양제 추천에 소극적인 이유는 <strong>영양제의 효과는 질병 치료약보다 현저히 미미</strong>하며, 환자들이 약 복용을 중단하고 영양제에만 의존할 위험이 있기 때문입니다. (24:49)</li>
+            <li style="margin-bottom: 6px;">영양제는 질병 치료의 보조제이며, <strong>예방 및 면역력 강화라는 측면에서 의미</strong>가 있습니다. (29:15)</li>
+            <li style="margin-bottom: 0;">제약 회사의 대규모 임상 투자 및 특허 문제로 인해, 영양제는 의약품처럼 엄격한 임상 연구를 거치기 어렵습니다. (28:33)</li>
+        </ul>
+    </div>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[필수 권장 영양제] (25:42)</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;"><strong>오메가-3, 비타민 D3, 마그네슘</strong>: 현대인이 꼭 섭취해야 할 필수 영양제로 권장됩니다. (25:42)</li>
+        <li style="margin-bottom: 0;">특히 <strong>비타민 D3와 오메가-3</strong>는 천식, 비염, 아토피의 유병률 감소 및 증상 완화에 도움이 된다는 연구 결과들이 많습니다. (31:11)</li>
+    </ul>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[섭취 주의 영양제] (32:01)</h3>
+    <div class="warning-box">
+        <b>⚠️ 주의하세요!</b><br>
+        <ul style="margin: 0; padding: 0;">
+            <li style="margin-bottom: 6px;"><strong>비타민 E</strong>: 인공적인 비타민 E를 고용량으로 섭취할 경우 사망률이 증가할 수 있다는 연구 결과가 있으므로, 영양제로 따로 섭취하는 것을 권장하지 않습니다. 아몬드 등 자연식품을 통한 섭취를 권장합니다. (32:01)</li>
+            <li style="margin-bottom: 0;"><strong>칼슘</strong>: 과다 섭취 시 사망률 증가 및 혈관 석회화를 유발할 수 있으므로, 영양제로 따로 섭취하는 것은 권장하지 않습니다. 비타민 D3만으로도 음식 내 칼슘 흡수 조절이 충분합니다. (32:08)</li>
+        </ul>
+    </div>
+
+    <h3 style="font-size: 20px; color: #00796b; margin: 25px 0 12px;">[비타민 D3와 K2] (33:50)</h3>
+    <ul style="margin: 0 0 15px 20px; padding: 0;">
+        <li style="margin-bottom: 6px;">뼈 건강을 위해 <strong>비타민 D3와 K2가 함께 함유된 제품</strong>을 섭취하는 것이 좋습니다.</li>
+        <li style="margin-bottom: 6px;"><strong>비타민 K2</strong>: 뼈 이외의 다른 조직(예: 혈관)에 칼슘이 침착되는 것을 예방하여 혈관 석회화를 막는 데 도움을 줍니다. (34:11)
+            <ul>
+                <li style="margin-bottom: 6px;">K2는 치즈, 김치 등 발효 식품에 풍부합니다. (33:56)</li>
+                <li style="margin-bottom: 0;">종합 비타민에 포함된 비타민 K는 보통 K1이므로, K2가 명시된 제품을 선택하는 것이 좋습니다. (34:40)</li>
+            </ul>
+        </li>
+        <li style="margin-bottom: 0;">어린이 성장기에는 칼슘과 비타민 D3 섭취가 많이 필요하지만, 성인은 음식으로 충분한 칼슘을 섭취할 수 있으므로 영양제 형태의 칼슘 과다 섭취는 주의해야 합니다. (35:35)</li>
+    </ul>
+
+    <h2>요약</h2>
+    <div class="single-summary-card-container">
+        <div class="single-summary-card">
+            <div class="card-header">
+                <span class="card-header-icon">💡</span>
+                <h3><b>핵심 요약</b></h3>
+            </div>
+            <div class="card-content">
+                <div class="section">
+                    <b>✨ 장 건강 & 면역력:</b> 장내 <span class="highlight">좋은 균(프로바이오틱스)이 많을수록</span> 면역 조절, 염증 감소, 혈당/콜레스테롤 조절에 유리합니다.
+                </div>
+                <div class="section">
+                    <b>📊 프리바이오틱스:</b> 유익균의 먹이인 <span class="highlight">프락토올리고당, 갈락토올리고당, 이눌린</span> 섭취를 권장하며, 소량부터 시작하여 몸이 적응하도록 해야 합니다.
+                </div>
+                <div class="section">
+                    <b>🧮 개인 위생:</b> <span class="highlight">과도한 비누 사용은 피하고</span> 약산성 비누를 사용하며, 다양한 미생물 접촉이 면역 시스템 발달에 중요합니다.
+                </div>
+                <div class="section">
+                    <b>👩‍💻 필수 영양제:</b> <strong>오메가-3, 비타민 D3, 마그네슘</strong>은 현대인에게 필수적으로 권장됩니다.
+                </div>
+                <div class="section">
+                    <b>🚨 주의 영양제:</b> <span class="highlight">인공 비타민 E와 과도한 칼슘 영양제는 사망률을 높일 수 있으므로</span> 섭취를 피해야 합니다. 비타민 D3는 K2와 함께 섭취 시 뼈 건강 및 혈관 보호에 좋습니다.
+                </div>
+            </div>
+            <div class="card-footer">
+                영양제는 치료의 보조제이며, 질병 발생 시 의학적 치료를 우선해야 합니다.
+            </div>
+        </div>
+    </div>
+
+    <h2>매매관련 고려해야 할 사항</h2>
+    <p style="margin-bottom: 15px;">해당 영상은 건강, 면역력, 영양제에 대한 의학적 정보 제공이 주된 내용이므로 주식 매매와 관련된 직접적인 고려 사항은 없습니다.</p>
+</body>
+</html>
